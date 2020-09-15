@@ -375,7 +375,7 @@ var searchData=
   ['tracked_5fof_5f_5149',['tracked_of_',['../classekf__bag_1_1EkfBagCsv.html#a57916a5d8456a24d7e6806ad7aa2ecb0',1,'ekf_bag::EkfBagCsv']]],
   ['trackedoffeatures_5150',['TrackedOFFeatures',['../classekf__bag_1_1TrackedOFFeatures.html',1,'ekf_bag::TrackedOFFeatures'],['../classekf__bag_1_1TrackedOFFeatures.html#a4d2b6075337e5ea3ec9da8a84ba8c0d5',1,'ekf_bag::TrackedOFFeatures::TrackedOFFeatures()']]],
   ['trackedsmfeatures_5151',['TrackedSMFeatures',['../classekf__bag_1_1TrackedSMFeatures.html',1,'ekf_bag::TrackedSMFeatures'],['../classekf__bag_1_1TrackedSMFeatures.html#afa540647fc50b76d62717338a2fe96b1',1,'ekf_bag::TrackedSMFeatures::TrackedSMFeatures()']]],
-  ['tracker_5152',['Tracker',['../structTracker.html',1,'Tracker'],['../structvive__localization_1_1Tracker.html',1,'vive_localization::Tracker'],['../structEndpoint.html#a12d13ddfdee733d313268ebabcece50e',1,'Endpoint::tracker()']]],
+  ['tracker_5152',['Tracker',['../structvive__localization_1_1Tracker.html',1,'vive_localization::Tracker'],['../structTracker.html',1,'Tracker'],['../structEndpoint.html#a12d13ddfdee733d313268ebabcece50e',1,'Endpoint::tracker()']]],
   ['tracker_5fcb_5153',['tracker_cb',['../structDriver.html#adc50e1ec306333628aca689f87568cf9',1,'Driver']]],
   ['tracker_5fcb_5ft_5154',['tracker_cb_t',['../hardware_2vive_2include_2vive_2vive_8h.html#a8bcd7e18777ba2d989900e158ba51234',1,'vive.h']]],
   ['tracker_5ft_5155',['tracker_t',['../hardware_2vive_2include_2vive_2vive_8h.html#a578b4fcac438b3918f840f21c8866128',1,'vive.h']]],
