@@ -145,7 +145,7 @@ var searchData=
   ['inserttrapezoid_2368',['InsertTrapezoid',['../namespaceplanner__trapezoidal.html#a1de1b202ed7ed192bbfacb2e1d04728d',1,'planner_trapezoidal']]],
   ['install_20for_20nasa_20users_2369',['Install for NASA users',['../install-NASA.html',1,'md_INSTALL']]],
   ['install_20for_20general_20users_2370',['Install for general users',['../install-nonNASA.html',1,'md_INSTALL']]],
-  ['install_2emd_2371',['INSTALL.md',['../INSTALL_8md.html',1,'(Global Namespace)'],['../doc_2general__documentation_2INSTALL_8md.html',1,'(Global Namespace)']]],
+  ['install_2emd_2371',['INSTALL.md',['../repo_2INSTALL_8md.html',1,'(Global Namespace)'],['../repo_2doc_2general__documentation_2INSTALL_8md.html',1,'(Global Namespace)']]],
   ['instance_2372',['Instance',['../classexecutive_1_1OpStateRepo.html#aa7599b39873dbffc60e3967f428f3916',1,'executive::OpStateRepo']]],
   ['instantiate_5ftest_5fcase_5fp_2373',['INSTANTIATE_TEST_CASE_P',['../test__sparse__map_8cxx.html#a7fc4bd701869920ae59d5325d94b54ca',1,'test_sparse_map.cxx']]],
   ['integrals_2374',['integrals',['../classtraj__opt_1_1BasisBundle.html#a912d1960da5405294e5ecea315eb197c',1,'traj_opt::BasisBundle']]],
