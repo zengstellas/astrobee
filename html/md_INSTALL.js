@@ -54,7 +54,8 @@ var md_INSTALL =
     [ "Docker build", "install-docker.html", [
       [ "Usage instructions for NASA users", "install-docker.html#autotoc_md153", [
         [ "Building the docker images", "install-docker.html#autotoc_md154", null ],
-        [ "Run the container", "install-docker.html#autotoc_md155", null ]
+        [ "Run the container", "install-docker.html#autotoc_md155", null ],
+        [ "Cross-compile Astrobee (NASA users only)", "install-docker.html#autotoc_md156", null ]
       ] ]
     ] ]
 ];
