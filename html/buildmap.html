@@ -287,10 +287,11 @@ Stage the feature counter utility (should be added to the install at one point)<
 <pre class="fragment">scp $SOURCE_PATH/localization/marker_tracking/ros/tools/features_counter.py mlp:
 </pre><h3><a class="anchor" id="autotoc_md248"></a>
 Launch the localization node on LLP</h3>
-<pre class="fragment">ssh llp
+<p>You will have to edit the file </p><pre class="fragment">/etc/robotname
+</pre><p>on MLP and LLP to replace the robot name with the robot you want to test. Plese don't forget to undo your changes at the end, as otherwise this robot will give wrong results for other users.</p>
+<p>Then launch localization: </p><pre class="fragment">ssh llp
 roslaunch astrobee astrobee.launch llp:=disabled mlp:=mlp nodes:=framestore,dds_ros_bridge,localization_node
-</pre><p>(TODO(oalexan1): Not sure if to set the robot name above. We are using one robot to localize with the data and map for another one.)</p>
-<h3><a class="anchor" id="autotoc_md249"></a>
+</pre><h3><a class="anchor" id="autotoc_md249"></a>
 Enable localization and the mapped landmark production (on MLP)</h3>
 <pre class="fragment">export ROS_MASTER_URI=http://llp:11311
 rosservice call /loc/ml/enable true
@@ -330,8 +331,9 @@ export ROS_MASTER_URI=http://127.0.0.1:11311/
 rm -fv $SOURCE_PATH/astrobee/resources/maps/iss.map
 ln -s $(pwd)/mymap.map $SOURCE_PATH/astrobee/resources/maps/iss.map
 </pre><p>Start the localization node: </p><pre class="fragment">roslaunch astrobee astrobee.launch mlp:=local llp:=disabled \
-  nodes:=framestore,localization_node
-</pre><p>Enable localization: </p><pre class="fragment">rosservice call /loc/ml/enable true
+  nodes:=framestore,localization_node robot:=$ASTROBEE_ROBOT
+</pre><p>Note how we specify the robot name at the end.</p>
+<p>Enable localization: </p><pre class="fragment">rosservice call /loc/ml/enable true
 </pre><p>Then, as above, one must play a bag while redirecting the existing /loc topics, and ensure that the images are published on /hw/cam_nav.</p>
 <p>The poses of the newly localized camera images can be displayed as:</p>
 <p>rostopic echo /loc/ml/features | grep -A 17 header:</p>
