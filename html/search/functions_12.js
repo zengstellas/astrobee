@@ -80,7 +80,7 @@ var searchData=
   ['registerdepthcamera_8183',['RegisterDepthCamera',['../classekf_1_1EkfWrapper.html#addda6963d6381da1acad4aa6363051f3',1,'ekf::EkfWrapper']]],
   ['registeropticalflowcamera_8184',['RegisterOpticalFlowCamera',['../classekf_1_1EkfWrapper.html#a44bebc4eefbd3b5b7dd5095a88b1a75e',1,'ekf::EkfWrapper']]],
   ['registrationcallback_8185',['RegistrationCallback',['../structlocalization__manager_1_1Pipeline.html#a0c793248f77ca2b628fb876b1ce19368',1,'localization_manager::Pipeline']]],
-  ['registrationorverification_8186',['RegistrationOrVerification',['../namespacesparse__mapping.html#aa24d0fa77f5d044cfd50d30ec077981c',1,'sparse_mapping::RegistrationOrVerification()'],['../build__map_8cc.html#a1a475b3fb9fb3173415882d49a5277bb',1,'RegistrationOrVerification():&#160;build_map.cc']]],
+  ['registrationorverification_8186',['RegistrationOrVerification',['../namespacesparse__mapping.html#a281aca88532d49ae464015d72a62ab75',1,'sparse_mapping::RegistrationOrVerification()'],['../build__map_8cc.html#a1a475b3fb9fb3173415882d49a5277bb',1,'RegistrationOrVerification():&#160;build_map.cc']]],
   ['registrationtimeoutcallback_8187',['RegistrationTimeoutCallback',['../structlocalization__manager_1_1Pipeline.html#a750d8717a9a94e6c47497cc596cd5dd5',1,'localization_manager::Pipeline']]],
   ['remainder_8188',['remainder',['../nvm__visualize_8cc.html#aacddf12bc51ea7953c78c7d2567be7ff',1,'nvm_visualize.cc']]],
   ['remove_8189',['remove',['../classconfig__reader_1_1WatchFiles_1_1Watch.html#afa87dec5b527cfc1f1689cb9089d1200',1,'config_reader::WatchFiles::Watch']]],

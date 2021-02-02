@@ -167,7 +167,7 @@ var searchData=
   ['registeropticalflowcamera_3829',['RegisterOpticalFlowCamera',['../classekf_1_1EkfWrapper.html#a44bebc4eefbd3b5b7dd5095a88b1a75e',1,'ekf::EkfWrapper']]],
   ['registerplanner_2esrv_3830',['RegisterPlanner.srv',['../RegisterPlanner_8srv.html',1,'']]],
   ['registrationcallback_3831',['RegistrationCallback',['../structlocalization__manager_1_1Pipeline.html#a0c793248f77ca2b628fb876b1ce19368',1,'localization_manager::Pipeline']]],
-  ['registrationorverification_3832',['RegistrationOrVerification',['../namespacesparse__mapping.html#aa24d0fa77f5d044cfd50d30ec077981c',1,'sparse_mapping::RegistrationOrVerification()'],['../build__map_8cc.html#a1a475b3fb9fb3173415882d49a5277bb',1,'RegistrationOrVerification():&#160;build_map.cc']]],
+  ['registrationorverification_3832',['RegistrationOrVerification',['../namespacesparse__mapping.html#a281aca88532d49ae464015d72a62ab75',1,'sparse_mapping::RegistrationOrVerification()'],['../build__map_8cc.html#a1a475b3fb9fb3173415882d49a5277bb',1,'RegistrationOrVerification():&#160;build_map.cc']]],
   ['registrationtimeoutcallback_3833',['RegistrationTimeoutCallback',['../structlocalization__manager_1_1Pipeline.html#a750d8717a9a94e6c47497cc596cd5dd5',1,'localization_manager::Pipeline']]],
   ['release_2emd_3834',['RELEASE.md',['../RELEASE_8md.html',1,'']]],
   ['reload_5fparams_5ftimer_3835',['reload_params_timer',['../fault__tester_8cc.html#ade2aaa82b626e1841d727a21c89035d8',1,'fault_tester.cc']]],
