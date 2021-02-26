@@ -93,12 +93,12 @@ $(document).ready(function(){initNavTree('install-docker.html',''); initResizabl
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md161"></a>
 Usage instructions for Docker</h1>
-<p>Here there are instructions on how to build and run the FSW using Docker.</p>
-<p>The docker image for the astrobee FSW is divided throughout 2 docker files.</p>
+<p>Here there are instructions on how to build and run the FSW using Docker. First, clone the flight software repository and media: </p><pre class="fragment">git clone https://github.com/nasa/astrobee.git $SOURCE_PATH
+git submodule update --init --depth 1 description/media
+</pre><p>The docker image for the astrobee FSW is divided throughout 2 docker files.</p>
 <p>Available docker files:</p>
 <p>astrobee_base_kinetic - Contains installation of all astrobee dependencies the Ubuntu 16.04 + ROS kinetic setup. astrobee_base_melodic - Contains installation of all astrobee dependencies the Ubuntu 18.04 + ROS melodic setup.</p>
 <p>astrobee_kinetic - Builds the astrobee FSW code on top of astrobee_base_kinetic. astrobee_melodic - Builds the astrobee FSW code on top of astrobee_base_melodic.</p>
-<p>rebuild_and_test_astrobee_kinetic - Rebuilds the astrobee FSW code on top of astrobee_kinetic and performs the unit tests. This makes for a faster rebuild leveraging the cached data and rebuilding only the nodes that were changed, for testing purposes only. rebuild_and_test_astrobee_melodic - Rebuilds the astrobee FSW code on top of astrobee_melodic and performs the unit tests. This makes for a faster rebuild leveraging the cached data and rebuilding only the nodes that were changed, for testing purposes only.</p>
 <h2><a class="anchor" id="autotoc_md162"></a>
 Building the docker images</h2>
 <p>To build the docker images, run: </p><pre class="fragment">./build.sh
