@@ -526,7 +526,6 @@ var searchData=
   ['cwaypoint_1008',['cwaypoint',['../classjsonloader_1_1Waypoint.html#a38f68f3cb9273b0858263a2c2fd3e8d2',1,'jsonloader::Waypoint']]],
   ['get_3c_20std_3a_3astring_20_3e_1009',['Get&lt; std::string &gt;',['../namespaceff__util.html#ac38cfab140ecb764563b65fd2e03a36f',1,'ff_util::Get&lt; std::string &gt;(const std::string &amp;name, std::string &amp;value)'],['../namespaceff__util.html#a800e361314434244922839cce856fb42',1,'ff_util::Get&lt; std::string &gt;(const std::string &amp;name, std::string &amp;value)']]],
   ['lim_3c_20std_3a_3astring_20_3e_1010',['Lim&lt; std::string &gt;',['../namespaceff__util.html#aead981a03953a49e17d02e85d6d54532',1,'ff_util']]],
-  ['creation_20of_20sparse_20maps_20for_20robot_20localization_1011',['Creation of sparse maps for robot localization',['../md_localization_sparse_mapping_readme.html',1,'']]],
-  ['creating_20a_20flight_20release_1012',['Creating a Flight Release',['../release.html',1,'md_doc_general_documentation_astrobee_usage']]],
-  ['set_3c_20std_3a_3astring_20_3e_1013',['Set&lt; std::string &gt;',['../namespaceff__util.html#a6ff3f858e1609463561ace9f58c38824',1,'ff_util::Set&lt; std::string &gt;(const std::string &amp;name, const std::string &amp;value)'],['../namespaceff__util.html#aa0a4f26ee25e50bc44aa6c661a134f4f',1,'ff_util::Set&lt; std::string &gt;(const std::string &amp;name, const std::string &amp;value)']]]
+  ['creating_20a_20flight_20release_1011',['Creating a Flight Release',['../release.html',1,'md_doc_general_documentation_astrobee_usage']]],
+  ['set_3c_20std_3a_3astring_20_3e_1012',['Set&lt; std::string &gt;',['../namespaceff__util.html#a6ff3f858e1609463561ace9f58c38824',1,'ff_util::Set&lt; std::string &gt;(const std::string &amp;name, const std::string &amp;value)'],['../namespaceff__util.html#aa0a4f26ee25e50bc44aa6c661a134f4f',1,'ff_util::Set&lt; std::string &gt;(const std::string &amp;name, const std::string &amp;value)']]]
 ];

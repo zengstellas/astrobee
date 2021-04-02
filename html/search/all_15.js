@@ -85,7 +85,7 @@ var searchData=
   ['user_5fcid_5fto_5fkeypoint_5fmap_5f_6083',['user_cid_to_keypoint_map_',['../structsparse__mapping_1_1SparseMap.html#a209518d0797ebb0a42289e40fb42ae3d',1,'sparse_mapping::SparseMap']]],
   ['user_5fpid_5fto_5fcid_5ffid_5f_6084',['user_pid_to_cid_fid_',['../structsparse__mapping_1_1SparseMap.html#a8168d7ccc64407ca6d13be2d37767515',1,'sparse_mapping::SparseMap']]],
   ['user_5fpid_5fto_5fxyz_5f_6085',['user_pid_to_xyz_',['../structsparse__mapping_1_1SparseMap.html#a7c5658449d8c6e9cc3c9275f9236a7a4',1,'sparse_mapping::SparseMap']]],
-  ['using_20faro_6086',['Using Faro',['../using_faro.html',1,'']]],
+  ['using_20faro_6086',['Using Faro',['../using_faro.html',1,'sparsemapping']]],
   ['using_5ffaro_2emd_6087',['using_faro.md',['../using__faro_8md.html',1,'']]],
   ['util_6088',['util',['../namespaceutil.html',1,'']]],
   ['util_2ecc_6089',['util.cc',['../util_8cc.html',1,'']]],
