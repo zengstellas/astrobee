@@ -4,7 +4,7 @@ var searchData=
   ['a_5fmax_5f_10551',['a_max_',['../classtraj__opt_1_1TrajectorySolver.html#a4311ab8ef780e3e9352b986d77e22f40',1,'traj_opt::TrajectorySolver']]],
   ['acc_10552',['acc',['../structIMU.html#a0dbe2b870698e2b74341a6fe1e458801',1,'IMU::acc()'],['../structtraj__opt_1_1Waypoint.html#a3600223f8a3e0b33ded884fb41ab5ea8',1,'traj_opt::Waypoint::acc()']]],
   ['acc_5fbias_10553',['acc_bias',['../structCalibration.html#aef8a3f6cc099541ccf7c5c0bf74951a1',1,'Calibration']]],
-  ['acc_5fscale_10554',['acc_scale',['../structCalibration.html#a2f4daf35848fbd76a0c5f3fec6f0ff1a',1,'Calibration::acc_scale()'],['../classvive_1_1ViveNodelet.html#a101d8c9d5e1a76a6675358a6b434011e',1,'vive::ViveNodelet::ACC_SCALE()']]],
+  ['acc_5fscale_10554',['ACC_SCALE',['../classvive_1_1ViveNodelet.html#a101d8c9d5e1a76a6675358a6b434011e',1,'vive::ViveNodelet::ACC_SCALE()'],['../structCalibration.html#a2f4daf35848fbd76a0c5f3fec6f0ff1a',1,'Calibration::acc_scale()']]],
   ['accel_10555',['accel',['../structLighthouse.html#a911e8653f2361b18759d7873a94bef75',1,'Lighthouse']]],
   ['accel_5fbias_5fsigma_10556',['accel_bias_sigma',['../structimu__integration_1_1ImuIntegratorParams.html#a8143ea49075d021e2d1e37663279767d',1,'imu_integration::ImuIntegratorParams']]],
   ['accel_5fsigma_10557',['accel_sigma',['../structimu__integration_1_1ImuIntegratorParams.html#abf506cd7af8aa19cb7af8e31ebe67d00',1,'imu_integration::ImuIntegratorParams']]],
