@@ -130,9 +130,8 @@ Copy the bag from the robot:</h3>
 </pre><p>Here, the IP address of P4D was used, which may differ from your robot's IP address.</p>
 <h3><a class="anchor" id="autotoc_md318"></a>
 Merging bags</h3>
-<p>The bags created on the ISS are likely split into many smaller bags, for easy and reliability of transfer. Those can be merged into one bag as follows: </p><pre class="fragment">source $BUILD_PATH/devel/setup.bash
-python $SOURCE_PATH/localization/sparse_mapping/tools/merge_bags.py \
-  &lt;output bag&gt; &lt;input bags&gt; --verbose
+<p>The bags created on the ISS are likely split into many smaller bags, for easy and reliability of transfer. Those can be merged into one bag as follows: </p><pre class="fragment">astrobee_build/devel/lib/localization_node/merge_bags \
+  -output_bag &lt;output bag&gt; &lt;input bags&gt;
 </pre><h3><a class="anchor" id="autotoc_md319"></a>
 Extracting images</h3>
 <p>To extract images from a bag file: </p><pre class="fragment"> extract_image_bag &lt;bagfile.bag&gt; -use_timestamp_as_image_name \
