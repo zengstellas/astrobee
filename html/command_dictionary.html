@@ -215,6 +215,7 @@ td.inner_table {
     <li><a href="#command_Settings.setCheckZones">Settings.setCheckZones</a></li>
     <li><a href="#command_Settings.setEnableAutoReturn">Settings.setEnableAutoReturn</a></li>
     <li><a href="#command_Settings.setEnableImmediate">Settings.setEnableImmediate</a></li>
+    <li><a href="#command_Settings.setEnableReplan">Settings.setEnableReplan</a></li>
     <li><a href="#command_Settings.setFlashlightBrightness">Settings.setFlashlightBrightness</a></li>
     <li><a href="#command_Settings.setHolonomicMode">Settings.setHolonomicMode</a></li>
     <li><a href="#command_Settings.setInertia">Settings.setInertia</a></li>
@@ -1616,6 +1617,29 @@ td.inner_table {
     <td class="params_type">boolean</td>
     <td class="params_default">required</td>
     <td class="params_notes">Set to true/false to enable/disable immediate mode motion control.</td>
+  </tr>
+</table>
+
+  </div>
+</div>
+
+
+<div class="commandSpec">
+  <div class="commandSpecId"><a name="command_Settings.setEnableReplan">Settings.setEnableReplan</a></div>
+  <div class="commandSpecNotes">Allows Astrobee to re-plan if it detects an obstacle too close to its forward trajectory. Enabling replanning only makes sense when you are using a planner that is able to plan around obstacles. (See Setting.setPlanner. As of 5/2021, only the QP planner can plan around obstacles).</div>
+  <div class="commandSpecParams">
+    <table class="params">
+  <tr>
+    <th class="params_parameter">Parameter</th>
+    <th class="params_type">Type</th>
+    <th class="params_default">Default</th>
+    <th class="params_notes">Notes</th>
+  </tr>
+  <tr>
+    <td class="params_parameter">Enable Replan</td>
+    <td class="params_type">boolean</td>
+    <td class="params_default">required</td>
+    <td class="params_notes">If true, when Astrobee detects an obstacle too close to its forward trajectory, after the robot comes to a stop, the choreographer will automatically request a new trajectory from the current configured planner. If false, the robot will stop and wait for operator assistance.</td>
   </tr>
 </table>
 
