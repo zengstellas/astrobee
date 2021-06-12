@@ -230,7 +230,7 @@ var searchData=
   ['dts_1269',['dts',['../classtraj__opt_1_1MsgTrajectory.html#a484b6358892c5498790c237b8227bbc0',1,'traj_opt::MsgTrajectory']]],
   ['dump_1270',['Dump',['../classff__util_1_1ConfigServer.html#a65715577e53e2703a9a522bcbd0428de',1,'ff_util::ConfigServer']]],
   ['dumpregisters_1271',['DumpRegisters',['../classepson__imu_1_1G362P.html#ae4fd9d0cc2f972cbc30edb3a56396dd5',1,'epson_imu::G362P']]],
-  ['duration_1272',['duration',['../classjsonloader_1_1StationKeepCommand.html#ad5ec6741fbefd43bd6419e9a272ed70e',1,'jsonloader::StationKeepCommand::duration()'],['../classgraph__localizer_1_1CombinedNavStateGraphValues.html#a870b45d84c5d05366b520cd49f3bde9f',1,'graph_localizer::CombinedNavStateGraphValues::Duration()']]],
+  ['duration_1272',['Duration',['../classgraph__localizer_1_1CombinedNavStateGraphValues.html#a870b45d84c5d05366b520cd49f3bde9f',1,'graph_localizer::CombinedNavStateGraphValues::Duration()'],['../classjsonloader_1_1StationKeepCommand.html#ad5ec6741fbefd43bd6419e9a272ed70e',1,'jsonloader::StationKeepCommand::duration()']]],
   ['duration_5faverager_5f_1273',['duration_averager_',['../classgraph__localizer_1_1GraphLocalizerStats.html#a0a43be595b64da001833960ef80c78f3',1,'graph_localizer::GraphLocalizerStats']]],
   ['dynamic_5fimu_5ffilter_2ecc_1274',['dynamic_imu_filter.cc',['../dynamic__imu__filter_8cc.html',1,'']]],
   ['dynamic_5fimu_5ffilter_2eh_1275',['dynamic_imu_filter.h',['../dynamic__imu__filter_8h.html',1,'']]],
