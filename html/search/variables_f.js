@@ -40,7 +40,7 @@ var searchData=
   ['plan_5fstatus_5fpub_5f_11965',['plan_status_pub_',['../classexecutive_1_1Executive.html#af82d61b9b9bf97cc8676c121872cc446',1,'executive::Executive']]],
   ['plan_5fsub_5f_11966',['plan_sub_',['../classexecutive_1_1Executive.html#a544885fa26e00412aaa4316dbc2b7a94',1,'executive::Executive']]],
   ['planner_5fdt_5f_11967',['planner_dt_',['../classplanner__qp_1_1Planner.html#a84545b521c47b27523f3820a35a2949f',1,'planner_qp::Planner']]],
-  ['platform_5fname_5f_11968',['platform_name_',['../classekf_1_1EkfWrapper.html#ad622be63d73bf5dd3c04ba47c812ff23',1,'ekf::EkfWrapper']]],
+  ['platform_5fname_5f_11968',['platform_name_',['../classekf_1_1EkfWrapper.html#ad622be63d73bf5dd3c04ba47c812ff23',1,'ekf::EkfWrapper::platform_name_()'],['../classperch_1_1PerchNodelet.html#a2d02a7c1e8344a5b55b573f8221379db',1,'perch::PerchNodelet::platform_name_()']]],
   ['plugin_5fframe_5f_11969',['plugin_frame_',['../classgazebo_1_1FreeFlyerPlugin.html#a62953a248df9a1ba3d4dee09da522fcd',1,'gazebo::FreeFlyerPlugin']]],
   ['plugin_5fname_5f_11970',['plugin_name_',['../classgazebo_1_1FreeFlyerPlugin.html#ab1e691356be91b0e243ed51ebd3035b3',1,'gazebo::FreeFlyerPlugin']]],
   ['pmc_5fcommand_5fid_5f_11971',['pmc_command_id_',['../classsim__wrapper_1_1Sim.html#a79fb513d3e6ed8418b6b4c1bf0bdfe1f',1,'sim_wrapper::Sim']]],
