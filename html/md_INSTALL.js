@@ -3,8 +3,8 @@ var md_INSTALL =
     [ "Quick Start using the Astrobee docker image", "md_INSTALL.html#autotoc_md8", null ],
     [ "Building the code natively", "md_INSTALL.html#autotoc_md9", [
       [ "About", "index.html#autotoc_md1", null ],
-      [ "Usage instructions", "index.html#autotoc_md2", null ],
-      [ "Contributors", "index.html#autotoc_md3", null ],
+      [ "Usage", "index.html#autotoc_md2", null ],
+      [ "Contributing", "index.html#autotoc_md3", null ],
       [ "Documentation", "index.html#autotoc_md4", null ],
       [ "Guest Science", "index.html#autotoc_md5", null ],
       [ "License", "index.html#autotoc_md6", null ],
