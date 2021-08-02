@@ -195,6 +195,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ac6390cef4bc897164e0d59b025ca462e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a70fd43251fb3ca0f879b8546d877e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a5a70fd43251fb3ca0f879b8546d877e1">StartupTimerCallback</a> (ros::TimerEvent const &amp;te)</td></tr>
 <tr class="separator:a5a70fd43251fb3ca0f879b8546d877e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c6d3bb3265947dda7aaae603fd43ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#af7c6d3bb3265947dda7aaae603fd43ce">ReloadNodeletTimerCallback</a> (ros::TimerEvent const &amp;te)</td></tr>
+<tr class="separator:af7c6d3bb3265947dda7aaae603fd43ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf88ad5eb97a3908f9b58fd492aaa9f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#adf88ad5eb97a3908f9b58fd492aaa9f0">ReadParams</a> ()</td></tr>
 <tr class="separator:adf88ad5eb97a3908f9b58fd492aaa9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ce5b665013febc08fa0178c6fe2f3b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a6ce5b665013febc08fa0178c6fe2f3b9">ReadCommand</a> (<a class="el" href="classconfig__reader_1_1ConfigReader_1_1Table.html">config_reader::ConfigReader::Table</a> *entry, ff_msgs::CommandStampedPtr cmd)</td></tr>
@@ -247,6 +249,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ae83b6acb4e1ffdd850bf61bfc0268b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a495c8ed405b2d146c15c0a8dd4db58d0"><td class="memItemLeft" align="right" valign="top">ros::Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a495c8ed405b2d146c15c0a8dd4db58d0">startup_timer_</a></td></tr>
 <tr class="separator:a495c8ed405b2d146c15c0a8dd4db58d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d3a013b62e25c4bb7197aec0ae6f4e"><td class="memItemLeft" align="right" valign="top">ros::Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#aa2d3a013b62e25c4bb7197aec0ae6f4e">reload_nodelet_timer_</a></td></tr>
+<tr class="separator:aa2d3a013b62e25c4bb7197aec0ae6f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecea0e8ff853ea2da28d4318f35bb0c5"><td class="memItemLeft" align="right" valign="top">ros::Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#aecea0e8ff853ea2da28d4318f35bb0c5">heartbeat_timer_</a></td></tr>
 <tr class="separator:aecea0e8ff853ea2da28d4318f35bb0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b2edfabba11971819e89267195672de"><td class="memItemLeft" align="right" valign="top">ros::ServiceServer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a2b2edfabba11971819e89267195672de">unload_load_nodelet_service_</a></td></tr>
@@ -259,6 +263,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a15972f6f9a228b1c213bcc86a84c37e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefa49b5b8a45eb5989c670318edeb432"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#aefa49b5b8a45eb5989c670318edeb432">unwatched_heartbeats_</a></td></tr>
 <tr class="separator:aefa49b5b8a45eb5989c670318edeb432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c8c6e3290ae04aef7ae188025dec4b2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a2c8c6e3290ae04aef7ae188025dec4b2">reloaded_nodelets_</a></td></tr>
+<tr class="separator:a2c8c6e3290ae04aef7ae188025dec4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a068e7127eb1969ba7bf083d9e2452bd1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a068e7127eb1969ba7bf083d9e2452bd1">time_diff_node_</a></td></tr>
 <tr class="separator:a068e7127eb1969ba7bf083d9e2452bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8b835c79c32d8ab4a3b8a7540fcbac6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#af8b835c79c32d8ab4a3b8a7540fcbac6">config_params_</a></td></tr>
@@ -273,6 +279,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a1435e3b2333111b277d8d3e317b92fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ad533c314e32bceb4e1e9f43c0a2f18"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a5ad533c314e32bceb4e1e9f43c0a2f18">startup_time_</a></td></tr>
 <tr class="separator:a5ad533c314e32bceb4e1e9f43c0a2f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c8e9e26b93796e9a2069d8e5ae4397"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#ae2c8e9e26b93796e9a2069d8e5ae4397">reload_nodelet_timeout_</a></td></tr>
+<tr class="separator:ae2c8e9e26b93796e9a2069d8e5ae4397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8162951845b6f55720f95a49cc65f4e8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a8162951845b6f55720f95a49cc65f4e8">heartbeat_pub_rate_</a></td></tr>
 <tr class="separator:a8162951845b6f55720f95a49cc65f4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f620242df84b1aa59d996811138771a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a5f620242df84b1aa59d996811138771a">time_drift_thres_sec_</a></td></tr>
@@ -964,6 +972,32 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="af7c6d3bb3265947dda7aaae603fd43ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c6d3bb3265947dda7aaae603fd43ce">&#9670;&nbsp;</a></span>ReloadNodeletTimerCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sys_monitor::SysMonitor::ReloadNodeletTimerCallback </td>
+          <td>(</td>
+          <td class="paramtype">ros::TimerEvent const &amp;&#160;</td>
+          <td class="paramname"><em>te</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac90871aa18efe31e3a1a9dc6fe724f4b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac90871aa18efe31e3a1a9dc6fe724f4b">&#9670;&nbsp;</a></span>RemoveFault()</h2>
 
@@ -1433,6 +1467,50 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ae2c8e9e26b93796e9a2069d8e5ae4397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c8e9e26b93796e9a2069d8e5ae4397">&#9670;&nbsp;</a></span>reload_nodelet_timeout_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int sys_monitor::SysMonitor::reload_nodelet_timeout_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2d3a013b62e25c4bb7197aec0ae6f4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d3a013b62e25c4bb7197aec0ae6f4e">&#9670;&nbsp;</a></span>reload_nodelet_timer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Timer sys_monitor::SysMonitor::reload_nodelet_timer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae83b6acb4e1ffdd850bf61bfc0268b3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae83b6acb4e1ffdd850bf61bfc0268b3e">&#9670;&nbsp;</a></span>reload_params_timer_</h2>
 
@@ -1444,6 +1522,28 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">ros::Timer sys_monitor::SysMonitor::reload_params_timer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c8c6e3290ae04aef7ae188025dec4b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c8c6e3290ae04aef7ae188025dec4b2">&#9670;&nbsp;</a></span>reloaded_nodelets_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; sys_monitor::SysMonitor::reloaded_nodelets_</td>
         </tr>
       </table>
   </td>
