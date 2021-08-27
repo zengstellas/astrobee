@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nodeupdatertype_12750',['NodeUpdaterType',['../namespacegraph__optimizer.html#abefe0bb52dc98665faf57e63550fb4f6',1,'graph_optimizer']]]
+  ['nodeupdatertype_12752',['NodeUpdaterType',['../namespacegraph__optimizer.html#abefe0bb52dc98665faf57e63550fb4f6',1,'graph_optimizer']]]
 ];
