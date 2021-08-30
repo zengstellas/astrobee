@@ -243,8 +243,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a98d7723605c017f6b39f1ba2c7b1804a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b4c859796f333c174a5c5d260daead4"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a6b4c859796f333c174a5c5d260daead4">pub_fault_state_</a></td></tr>
 <tr class="separator:a6b4c859796f333c174a5c5d260daead4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a498d9c2f914b30f3c1fe8dea45302b91"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a498d9c2f914b30f3c1fe8dea45302b91">pub_time_diff_</a></td></tr>
-<tr class="separator:a498d9c2f914b30f3c1fe8dea45302b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2074632a8e39fa403d2d41b849a449d8"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a2074632a8e39fa403d2d41b849a449d8">pub_time_sync_</a></td></tr>
+<tr class="separator:a2074632a8e39fa403d2d41b849a449d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae83b6acb4e1ffdd850bf61bfc0268b3e"><td class="memItemLeft" align="right" valign="top">ros::Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#ae83b6acb4e1ffdd850bf61bfc0268b3e">reload_params_timer_</a></td></tr>
 <tr class="separator:ae83b6acb4e1ffdd850bf61bfc0268b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a495c8ed405b2d146c15c0a8dd4db58d0"><td class="memItemLeft" align="right" valign="top">ros::Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a495c8ed405b2d146c15c0a8dd4db58d0">startup_timer_</a></td></tr>
@@ -271,6 +271,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:af8b835c79c32d8ab4a3b8a7540fcbac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9080218ee90f4fac73e7d1cf5167f09"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#aa9080218ee90f4fac73e7d1cf5167f09">time_diff_fault_triggered_</a></td></tr>
 <tr class="separator:aa9080218ee90f4fac73e7d1cf5167f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5acdd8f49c0fc9e1ee36272c606430f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a5acdd8f49c0fc9e1ee36272c606430f1">log_time_llp_</a></td></tr>
+<tr class="separator:a5acdd8f49c0fc9e1ee36272c606430f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b8776825b82d0603f33e66bbbe9a0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a39b8776825b82d0603f33e66bbbe9a0d">log_time_hlp_</a></td></tr>
+<tr class="separator:a39b8776825b82d0603f33e66bbbe9a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab74a4247d41b952262b0a6599e63893b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#ab74a4247d41b952262b0a6599e63893b">pub_queue_size_</a></td></tr>
 <tr class="separator:ab74a4247d41b952262b0a6599e63893b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69fbd0cf6fa70155eb1179f91a04341a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsys__monitor_1_1SysMonitor.html#a69fbd0cf6fa70155eb1179f91a04341a">sub_queue_size_</a></td></tr>
@@ -1291,6 +1295,50 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a39b8776825b82d0603f33e66bbbe9a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b8776825b82d0603f33e66bbbe9a0d">&#9670;&nbsp;</a></span>log_time_hlp_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sys_monitor::SysMonitor::log_time_hlp_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5acdd8f49c0fc9e1ee36272c606430f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5acdd8f49c0fc9e1ee36272c606430f1">&#9670;&nbsp;</a></span>log_time_llp_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sys_monitor::SysMonitor::log_time_llp_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a24835aef84847de71939341a2ab4c843"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24835aef84847de71939341a2ab4c843">&#9670;&nbsp;</a></span>nh_</h2>
 
@@ -1445,8 +1493,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a498d9c2f914b30f3c1fe8dea45302b91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a498d9c2f914b30f3c1fe8dea45302b91">&#9670;&nbsp;</a></span>pub_time_diff_</h2>
+<a id="a2074632a8e39fa403d2d41b849a449d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2074632a8e39fa403d2d41b849a449d8">&#9670;&nbsp;</a></span>pub_time_sync_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1455,7 +1503,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ros::Publisher sys_monitor::SysMonitor::pub_time_diff_</td>
+          <td class="memname">ros::Publisher sys_monitor::SysMonitor::pub_time_sync_</td>
         </tr>
       </table>
   </td>
