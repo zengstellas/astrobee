@@ -96,21 +96,26 @@ Usage instructions for Docker</h1>
 <p>Here there are instructions on how to build and run the FSW using Docker. First, clone the flight software repository and media: </p><pre class="fragment">git clone https://github.com/nasa/astrobee.git $SOURCE_PATH
 git submodule update --init --depth 1 description/media
 </pre><p>The docker image for the astrobee FSW is divided throughout 2 docker files.</p>
-<p>Available docker files: </p><pre class="fragment">astrobee_base_xenial - Contains installation of all astrobee dependencies the Ubuntu 16.04 + ROS kinetic setup.
-astrobee_base_bionic - Contains installation of all astrobee dependencies the Ubuntu 18.04 + ROS melodic setup.
-astrobee_base_focal - Contains installation of all astrobee dependencies the Ubuntu 20.04 + ROS noetic setup.
-
-astrobee_xenial - Builds the astrobee FSW code on top of astrobee_base_xenial.
-astrobee_bionic - Builds the astrobee FSW code on top of astrobee_base_bionic.
-astrobee_focal - Builds the astrobee FSW code on top of astrobee_base_focal.
-</pre><h2><a class="anchor" id="autotoc_md166"></a>
+<p>Available docker files:</p>
+<ul>
+<li><code>astrobee_base.Dockerfile</code> - Contains installation of all astrobee dependencies the Ubuntu + ROS setup.</li>
+<li><code>astrobee.Dockerfile</code> - Builds the astrobee FSW code on top of astrobee_base.</li>
+</ul>
+<p>The Docker files accept the following version args (note that they must match up):</p>
+<ul>
+<li><code>UBUNTU_VERSION</code> - The version of Ubuntu to use. Valid values are "16.04", "18.04", and "20.04".</li>
+<li><code>ROS_VERSION</code> - The version of ROS to use. Valid values are "kinetic", "melodic", and "noetic".</li>
+<li><code>PYTHON</code> - The version of Python to use. Valid values are "" (an empty string representing Python 2) and "3".</li>
+</ul>
+<p>If <code>UBUNTU_VERSION</code> is <code>"16.04"</code>, <code>ROS_VERSION</code> and <code>PYTHON</code> must be <code>"kinetic"</code> and <code>""</code> respectively. If <code>UBUNTU_VERSION</code> is <code>"18.04"</code>, <code>ROS_VERSION</code> and <code>PYTHON</code> must be <code>"melodic"</code> and <code>""</code> respectively. If <code>UBUNTU_VERSION</code> is <code>"20.04"</code>, <code>ROS_VERSION</code> and <code>PYTHON</code> must be <code>"neotic"</code> and <code>"3"</code> respectively.</p>
+<h2><a class="anchor" id="autotoc_md166"></a>
 Building the docker images</h2>
 <p>To build the docker images, run: </p><pre class="fragment">./build.sh
-</pre><p> The option &ndash;bionic is used for ubuntu 18 docker images, and &ndash;focal is used for ubuntu 20 docker images.</p>
+</pre><p> The build script will automatically detect the current Ubuntu OS version and define the docker files variables <code>UBUNTU_VERSION</code>, <code>ROS_VERSION</code>, and <code>PYTHON</code>. If a specific version is desired, the option &ndash;xenial, &ndash;bionic, and &ndash;focal is used for ubuntu 16.04, 18.04, and 20.04 docker images, respectively.</p>
 <h2><a class="anchor" id="autotoc_md167"></a>
 Run the container</h2>
 <p>To run the docker container: </p><pre class="fragment">./run.sh
-</pre><p> The option &ndash;bionic is used for ubuntu 18 docker images, and &ndash;focal is used for ubuntu 20 docker images.</p>
+</pre><p> It will automatically detect the current Ubuntu OS version. If a specific version is desired, the option &ndash;xenial, &ndash;bionic, and &ndash;focal is used for ubuntu 16.04, 18.04, and 20.04 docker images, respectively.</p>
 <p>To open another terminal inside the docker container: </p><pre class="fragment">docker exec -it astrobee bash
 </pre><p>Once inside the container, don't forget to source astrobee to have access to all the commands:</p>
 <p>source /build/astrobee/devel/setup.bash</p>
