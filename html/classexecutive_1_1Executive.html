@@ -213,8 +213,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a47574adf869e222d9d132000ad925786"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ba7ab2440db308a5c5bf5a73e9f5ce6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#a0ba7ab2440db308a5c5bf5a73e9f5ce6">ConfigureLed</a> (ff_hw_msgs::ConfigureSystemLeds &amp;led_srv)</td></tr>
 <tr class="separator:a0ba7ab2440db308a5c5bf5a73e9f5ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af665804a5f0c9f448a1077c0870cd427"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#af665804a5f0c9f448a1077c0870cd427">ConfigureMobility</a> (std::string const &amp;cmd_id)</td></tr>
-<tr class="separator:af665804a5f0c9f448a1077c0870cd427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b6ef809e9f8aeffb7af572462794c9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#a7b6ef809e9f8aeffb7af572462794c9f">ConfigureMobility</a> (bool move_to_start, std::string &amp;err_msg)</td></tr>
 <tr class="separator:a7b6ef809e9f8aeffb7af572462794c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03e6628974c6d3be2943c955ba04629f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#a03e6628974c6d3be2943c955ba04629f">FailCommandIfMoving</a> (ff_msgs::CommandStampedPtr const &amp;cmd)</td></tr>
@@ -505,6 +503,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:affe75dfd76b71b1b708267c5d73982f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2abdd945bb16caa1b6792acb442abbcf"><td class="memItemLeft" align="right" valign="top">ros::ServiceClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#a2abdd945bb16caa1b6792acb442abbcf">unload_load_nodelet_client_</a></td></tr>
 <tr class="separator:a2abdd945bb16caa1b6792acb442abbcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b39b50a36c3978fdeac26bff5fa8349"><td class="memItemLeft" align="right" valign="top">ros::ServiceClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#a0b39b50a36c3978fdeac26bff5fa8349">set_collision_distance_client_</a></td></tr>
+<tr class="separator:a0b39b50a36c3978fdeac26bff5fa8349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2a20bbb6d4609974e8f6ef51518772d"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#ae2a20bbb6d4609974e8f6ef51518772d">cmd_sub_</a></td></tr>
 <tr class="separator:ae2a20bbb6d4609974e8f6ef51518772d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeefc0c01b729cdcb029a146cd68bab0a"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#aeefc0c01b729cdcb029a146cd68bab0a">dock_state_sub_</a></td></tr>
@@ -945,7 +945,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a7b6ef809e9f8aeffb7af572462794c9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b6ef809e9f8aeffb7af572462794c9f">&#9670;&nbsp;</a></span>ConfigureMobility() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b6ef809e9f8aeffb7af572462794c9f">&#9670;&nbsp;</a></span>ConfigureMobility()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -966,24 +966,6 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af665804a5f0c9f448a1077c0870cd427"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af665804a5f0c9f448a1077c0870cd427">&#9670;&nbsp;</a></span>ConfigureMobility() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool executive::Executive::ConfigureMobility </td>
-          <td>(</td>
-          <td class="paramtype">std::string const &amp;&#160;</td>
-          <td class="paramname"><em>cmd_id</em></td><td>)</td>
-          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -4769,6 +4751,28 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classsequencer_1_1Sequencer.html">sequencer::Sequencer</a> executive::Executive::sequencer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b39b50a36c3978fdeac26bff5fa8349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b39b50a36c3978fdeac26bff5fa8349">&#9670;&nbsp;</a></span>set_collision_distance_client_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::ServiceClient executive::Executive::set_collision_distance_client_</td>
         </tr>
       </table>
   </td>

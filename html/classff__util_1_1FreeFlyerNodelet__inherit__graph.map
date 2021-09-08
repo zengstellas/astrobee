@@ -30,21 +30,21 @@
 <area shape="rect" id="node55" href="$classlk__optical__flow_1_1LKOpticalFlowNodelet.html" title=" " alt="" coords="6189,857,6379,964"/>
 <area shape="rect" id="node56" href="$classlocalization__manager_1_1LocalizationManagerNodelet.html" title=" " alt="" coords="6403,762,6645,1059"/>
 <area shape="rect" id="node57" href="$classlocalization__node_1_1LocalizationNodelet.html" title=" " alt="" coords="6669,850,6856,971"/>
-<area shape="rect" id="node58" href="$classmapper_1_1MapperNodelet.html" title=" " alt="" coords="6881,769,7061,1052"/>
-<area shape="rect" id="node59" href="$classmarker__tracking__node_1_1MarkerTrackingNodelet.html" title=" " alt="" coords="7085,857,7283,964"/>
-<area shape="rect" id="node60" href="$classmobility_1_1FrameStore.html" title=" " alt="" coords="7307,828,7464,993"/>
-<area shape="rect" id="node61" href="$classperch_1_1PerchNodelet.html" title=" " alt="" coords="7489,645,7711,1177"/>
-<area shape="rect" id="node62" href="$classperching__arm_1_1PerchingArmNode.html" title=" " alt="" coords="7736,777,7979,1045"/>
-<area shape="rect" id="node63" href="$classpico__driver_1_1PicoDriverNodelet.html" title=" " alt="" coords="8003,850,8223,971"/>
-<area shape="rect" id="node64" href="$classplanner_1_1PlannerImplementation.html" title=" " alt="" coords="8248,813,8480,1008"/>
-<area shape="rect" id="node67" href="$classpmc__actuator_1_1PmcActuatorNodelet.html" title=" " alt="" coords="8504,769,8707,1052"/>
-<area shape="rect" id="node68" href="$classsignal__lights_1_1SignalLightsNodelet.html" title=" " alt="" coords="8731,835,8922,986"/>
-<area shape="rect" id="node69" href="$classsim__wrapper_1_1SimWrapperNodelet.html" title=" " alt="" coords="8946,843,9190,979"/>
-<area shape="rect" id="node70" href="$classspeed__cam_1_1SpeedCamNode.html" title=" " alt="" coords="9215,799,9423,1023"/>
-<area shape="rect" id="node71" href="$classstates_1_1StatesNodelet.html" title=" " alt="" coords="9447,799,9681,1023"/>
-<area shape="rect" id="node72" href="$classsys__monitor_1_1SysMonitor.html" title=" " alt="" coords="9705,652,9919,1169"/>
-<area shape="rect" id="node73" href="$classtemp__monitor_1_1TempMonitorNode.html" title=" " alt="" coords="9944,850,10184,971"/>
-<area shape="rect" id="node74" href="$classvive_1_1ViveNodelet.html" title=" " alt="" coords="10209,733,10383,1089"/>
+<area shape="rect" id="node58" href="$classmapper_1_1MapperNodelet.html" title=" " alt="" coords="6880,769,7059,1052"/>
+<area shape="rect" id="node59" href="$classmarker__tracking__node_1_1MarkerTrackingNodelet.html" title=" " alt="" coords="7083,857,7280,964"/>
+<area shape="rect" id="node60" href="$classmobility_1_1FrameStore.html" title=" " alt="" coords="7304,828,7461,993"/>
+<area shape="rect" id="node61" href="$classperch_1_1PerchNodelet.html" title=" " alt="" coords="7486,645,7709,1177"/>
+<area shape="rect" id="node62" href="$classperching__arm_1_1PerchingArmNode.html" title=" " alt="" coords="7733,777,7976,1045"/>
+<area shape="rect" id="node63" href="$classpico__driver_1_1PicoDriverNodelet.html" title=" " alt="" coords="8001,850,8221,971"/>
+<area shape="rect" id="node64" href="$classplanner_1_1PlannerImplementation.html" title=" " alt="" coords="8245,806,8477,1015"/>
+<area shape="rect" id="node67" href="$classpmc__actuator_1_1PmcActuatorNodelet.html" title=" " alt="" coords="8501,769,8704,1052"/>
+<area shape="rect" id="node68" href="$classsignal__lights_1_1SignalLightsNodelet.html" title=" " alt="" coords="8729,835,8919,986"/>
+<area shape="rect" id="node69" href="$classsim__wrapper_1_1SimWrapperNodelet.html" title=" " alt="" coords="8943,843,9187,979"/>
+<area shape="rect" id="node70" href="$classspeed__cam_1_1SpeedCamNode.html" title=" " alt="" coords="9212,799,9420,1023"/>
+<area shape="rect" id="node71" href="$classstates_1_1StatesNodelet.html" title=" " alt="" coords="9445,799,9678,1023"/>
+<area shape="rect" id="node72" href="$classsys__monitor_1_1SysMonitor.html" title=" " alt="" coords="9702,652,9917,1169"/>
+<area shape="rect" id="node73" href="$classtemp__monitor_1_1TempMonitorNode.html" title=" " alt="" coords="9941,850,10181,971"/>
+<area shape="rect" id="node74" href="$classvive_1_1ViveNodelet.html" title=" " alt="" coords="10206,733,10381,1089"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5106,5,5179,83"/>
 <area shape="rect" id="node21" href="$classgazebo_1_1FreeFlyerModelPlugin.html" title=" " alt="" coords="2394,1430,2609,1610"/>
 <area shape="rect" id="node35" href="$classgazebo_1_1FreeFlyerSensorPlugin.html" title=" " alt="" coords="5202,1430,5422,1610"/>
@@ -71,6 +71,6 @@
 <area shape="rect" id="node43" href="$classgazebo_1_1GazeboSensorPluginPerchCam.html" title=" " alt="" coords="6015,1900,6273,2065"/>
 <area shape="rect" id="node44" href="$classgazebo_1_1GazeboSensorPluginSciCam.html" title=" " alt="" coords="6297,1885,6537,2080"/>
 <area shape="rect" id="node45" href="$classgazebo_1_1GazeboSensorPluginSparseMap.html" title=" " alt="" coords="6562,1893,6825,2073"/>
-<area shape="rect" id="node65" href="$classplanner__qp_1_1Planner.html" title=" " alt="" coords="8160,1349,8339,1691"/>
-<area shape="rect" id="node66" href="$classplanner__trapezoidal_1_1PlannerTrapezoidalNodelet.html" title=" " alt="" coords="8363,1379,8595,1661"/>
+<area shape="rect" id="node65" href="$classplanner__qp_1_1Planner.html" title=" " alt="" coords="8157,1349,8336,1691"/>
+<area shape="rect" id="node66" href="$classplanner__trapezoidal_1_1PlannerTrapezoidalNodelet.html" title=" " alt="" coords="8360,1379,8592,1661"/>
 </map>
