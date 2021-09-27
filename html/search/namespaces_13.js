@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['w_5fdock_7465',['w_dock',['../namespacew__dock.html',1,'']]]
+  ['w_5fdock_7467',['w_dock',['../namespacew__dock.html',1,'']]]
 ];
