@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.15.1</span>
+   &#160;<span id="projectnumber">0.15.2</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('install-docker.html',''); initResizabl
 <div class="title">Docker build </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md165"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md166"></a>
 Usage instructions for Docker</h1>
 <p>Here there are instructions on how to build and run the FSW using Docker. First, clone the flight software repository and media: </p><pre class="fragment">git clone https://github.com/nasa/astrobee.git $SOURCE_PATH
 git submodule update --init --depth 1 description/media
@@ -108,11 +108,11 @@ git submodule update --init --depth 1 description/media
 <li><code>PYTHON</code> - The version of Python to use. Valid values are "" (an empty string representing Python 2) and "3".</li>
 </ul>
 <p>If <code>UBUNTU_VERSION</code> is <code>"16.04"</code>, <code>ROS_VERSION</code> and <code>PYTHON</code> must be <code>"kinetic"</code> and <code>""</code> respectively. If <code>UBUNTU_VERSION</code> is <code>"18.04"</code>, <code>ROS_VERSION</code> and <code>PYTHON</code> must be <code>"melodic"</code> and <code>""</code> respectively. If <code>UBUNTU_VERSION</code> is <code>"20.04"</code>, <code>ROS_VERSION</code> and <code>PYTHON</code> must be <code>"neotic"</code> and <code>"3"</code> respectively.</p>
-<h2><a class="anchor" id="autotoc_md166"></a>
+<h2><a class="anchor" id="autotoc_md167"></a>
 Building the docker images</h2>
 <p>To build the docker images, run: </p><pre class="fragment">./build.sh
 </pre><p> The build script will automatically detect the current Ubuntu OS version and define the docker files variables <code>UBUNTU_VERSION</code>, <code>ROS_VERSION</code>, and <code>PYTHON</code>. If a specific version is desired, the option &ndash;xenial, &ndash;bionic, and &ndash;focal is used for ubuntu 16.04, 18.04, and 20.04 docker images, respectively.</p>
-<h2><a class="anchor" id="autotoc_md167"></a>
+<h2><a class="anchor" id="autotoc_md168"></a>
 Run the container</h2>
 <p>To run the docker container: </p><pre class="fragment">./run.sh
 </pre><p> It will automatically detect the current Ubuntu OS version. If a specific version is desired, the option &ndash;xenial, &ndash;bionic, and &ndash;focal is used for ubuntu 16.04, 18.04, and 20.04 docker images, respectively.</p>
@@ -120,7 +120,7 @@ Run the container</h2>
 </pre><p>Once inside the container, don't forget to source astrobee to have access to all the commands:</p>
 <p>source /build/astrobee/devel/setup.bash</p>
 <p>To shutdown the docker container, run: </p><pre class="fragment">./shutdown.sh
-</pre><h2><a class="anchor" id="autotoc_md168"></a>
+</pre><h2><a class="anchor" id="autotoc_md169"></a>
 Cross-compile Astrobee (NASA users only)</h2>
 <p>To cross-compile Astrobee, you will need to install a cross-compile chroot and toolchain. Select two directories for these: </p><pre class="fragment">export ARMHF_CHROOT_DIR=$HOME/arm_cross/rootfs
 export ARMHF_TOOLCHAIN=$HOME/arm_cross/toolchain/gcc
@@ -132,7 +132,7 @@ $SOURCE_PATH/submodules/platform/rootfs/make_xenial.sh dev $ARMHF_CHROOT_DIR
 </pre><p>From the root of the repository, run: </p><pre class="fragment">./scripts/docker/cross_compile/cross_compile.sh
 </pre><p>The code will be cross-compiles inside the docker container in /opt/astrobee, and can be copied to the robot.</p>
 <p>After the debian files are generated inside the docker image, they are copied to in order of priority: 1) To the INSTALL_PATH, if defined 2) To ${DIR}/../../../../astrobee_install/armhf/, if the directoy already exists, where $DIR is the directory where the cross_compile.sh script is located. 3) To $HOME/astrobee_build/armhf otherwise</p>
-<h2><a class="anchor" id="autotoc_md169"></a>
+<h2><a class="anchor" id="autotoc_md170"></a>
 Building an Astrobee Debian (NASA users only)</h2>
 <p>This step assumes that the cross compile setup was successful and that ARMHF_CHROOT_DIR and ARMHF_TOOLCHAIN are defined. If not, please follow the cross-compile instructions.</p>
 <p>To generate the debians, from the root of the repository, run: </p><pre class="fragment">./scripts/docker/cross_compile/debian_compile.sh
