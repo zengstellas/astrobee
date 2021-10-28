@@ -123,8 +123,8 @@ If not on the ARC TI private network</h4>
 </ul>
 <h3><a class="anchor" id="autotoc_md137"></a>
 Checkout the project source code</h3>
-<p>At this point you need to decide where you'd like to put the source code (<code>SOURCE_PATH</code>) on your machine: </p><pre class="fragment">export SOURCE_PATH=$HOME/astrobee
-</pre><p>First, clone the flight software repository: </p><pre class="fragment">git clone https://github.com/nasa/astrobee.git --branch develop $SOURCE_PATH
+<p>At this point you need to decide where you'd like to put the source code (<code>ASTROBEE_WS</code>) on your machine: </p><pre class="fragment">export ASTROBEE_WS=$HOME/astrobee
+</pre><p>First, clone the flight software repository: </p><pre class="fragment">git clone https://github.com/nasa/astrobee.git --branch develop $ASTROBEE_WS/src
 git submodule update --init --depth 1 description/media
 git submodule update --init --depth 1 submodules/platform
 </pre><p>You can either choose which optional submodules to clone and log depth with: </p><pre class="fragment">git submodule update --init --depth 1 submodules/android
@@ -133,8 +133,8 @@ git submodule update --init --depth 1 submodules/avionics
 </pre><p>(Note: re-enter your username and password for every submodule that is cloned) The android module is necessary for guest science code; the avionics and platform module is used when cross-compiling to test on the robot hardware.</p>
 <h3><a class="anchor" id="autotoc_md138"></a>
 Dependencies</h3>
-<p>Install dependencies: </p><pre class="fragment">pushd $SOURCE_PATH
-cd scripts/setup
+<p>Install dependencies: </p><pre class="fragment">pushd $ASTROBEE_WS
+cd src/scripts/setup
 ./add_local_repository.sh
 ./add_ros_repository.sh
 ./install_desktop_packages.sh
@@ -155,8 +155,8 @@ export ARMHF_TOOLCHAIN=$HOME/arm_cross/toolchain/gcc
 </pre><p>Append these lines to your .bashrc file, as you will need these two variables every time you cross compile.</p>
 <p>Next, download the cross toolchain and install the chroot: </p><pre class="fragment">mkdir -p $ARMHF_TOOLCHAIN
 cd $HOME/arm_cross
-$SOURCE_PATH/submodules/platform/fetch_toolchain.sh
-$SOURCE_PATH/submodules/platform/rootfs/make_xenial.sh dev $ARMHF_CHROOT_DIR
+$ASTROBEE_WS/src/submodules/platform/fetch_toolchain.sh
+$ASTROBEE_WS/src/submodules/platform/rootfs/make_xenial.sh dev $ARMHF_CHROOT_DIR
 </pre><h2><a class="anchor" id="autotoc_md141"></a>
 Configuring the build</h2>
 <p>At this point you need to decide whether you'd like to compile natively [<code>native</code>] (run code against a simulator) or for an ARM target [<code>armhf</code>] (run the code on the robot itself). Please skip to the relevant subsection.</p>
@@ -164,35 +164,36 @@ Configuring the build</h2>
 Note for both builds setup</h3>
 <p>By default, the configure script uses the following paths:</p>
 <ul>
-<li>native build path (BUILD_PATH): <code>$HOME/astrobee_build/native</code></li>
-<li>native install path (INSTALL_PATH): <code>$HOME/astrobee_install/native</code></li>
-<li>armhf build path (BUILD_PATH): <code>$HOME/astrobee_build/armhf</code></li>
-<li>armhf install path (INSTALL_PATH): <code>$HOME/astrobee_install/armhf</code></li>
+<li>native build path (BUILD_PATH): <code>$ASTROBEE_WS/build</code></li>
+<li>native install path (INSTALL_PATH): <code>$ASTROBEE_WS/install</code></li>
+<li>armhf build path (BUILD_PATH): <code>$ARMHF_CHROOT_DIR/home/astrobee/astrobee/build</code></li>
+<li>armhf install path (INSTALL_PATH): <code>$ARMHF_CHROOT_DIR/home/astrobee/astrobee/install</code></li>
 </ul>
 <p>You should set these values in your shell.</p>
 <p>If you are satisfied with these paths, you can invoke the <code>configure.sh</code> without the <code>-p</code> and <code>-b</code> options. For the simplicity of the instructions below, we assume that <code>$BUILD_PATH</code> and <code>$INSTALL_PATH</code> contain the location of the build and install path for either <code>native</code> or <code>armhf</code> platforms.</p>
 <h3><a class="anchor" id="autotoc_md143"></a>
 Native build</h3>
-<p>The configure script prepares your build directory for compiling the code. Note that <code>configure.sh</code> is simply a wrapper around CMake that provides an easy way of turning on and off options. To see which options are supported, simply run <code>configure.sh -h</code>. </p><pre class="fragment">pushd $SOURCE_PATH
-./scripts/configure.sh -l
+<p>The configure script prepares your build directory for compiling the code. Note that <code>configure.sh</code> is simply a wrapper around CMake that provides an easy way of turning on and off options. To see which options are supported, simply run <code>configure.sh -h</code>. </p><pre class="fragment">pushd $ASTROBEE_WS
+./src/scripts/configure.sh -l
+source ~/.bashrc
 popd
 </pre><p>If you want to explicitly specify the build and install directories, use instead: </p><pre class="fragment">./scripts/configure.sh -l -p $INSTALL_PATH -b $BUILD_PATH
 </pre><h3><a class="anchor" id="autotoc_md144"></a>
 Cross-compile build</h3>
-<p>Cross compiling for the robot follows the same process, except the configure script takes a <code>-a</code> flag instead of <code>-l</code>. </p><pre class="fragment">pushd $SOURCE_PATH
-./scripts/configure.sh -a
+<p>Cross compiling for the robot follows the same process, except the configure script takes a <code>-a</code> flag instead of <code>-l</code>. </p><pre class="fragment">pushd $ASTROBEE_WS
+./src/scripts/configure.sh -a
 popd
 </pre><p>Or with explicit build and install paths: </p><pre class="fragment">./scripts/configure.sh -a -p $INSTALL_PATH -b $BUILD_PATH
 </pre><p><em>Warning: <code>$INSTALL_PATH</code> and <code>$BUILD_PATH</code> used for cross compiling HAVE to be different than the paths for native build! See above for the default values for these.</em></p>
 <h2><a class="anchor" id="autotoc_md145"></a>
 Building the code</h2>
-<p>To build, run <code>make</code> in the <code>$BUILD_PATH</code>. Note that depending on your host machine, this might take in the order of tens of minutes to complete the first time round. Future builds will be faster, as only changes to the code are rebuilt, and not the entire code base. </p><pre class="fragment">pushd $BUILD_PATH
-make -j6
+<p>To build, run <code>make</code> in the <code>$BUILD_PATH</code>. Note that depending on your host machine, this might take in the order of tens of minutes to complete the first time round. Future builds will be faster, as only changes to the code are rebuilt, and not the entire code base. </p><pre class="fragment">pushd $ASTROBEE_WS
+catkin build
 popd
 </pre><p><em>Note: <code>$BUILD_PATH</code> above is either the path for native build or armhf build, whatever you currently are doing.</em></p>
 <h2><a class="anchor" id="autotoc_md146"></a>
 Running a simulation</h2>
-<p>In order to run a simulation you must have build natively. You will need to first setup your environment, so that ROS knows about the new packages provided by Astrobee flight software: </p><pre class="fragment">pushd $BUILD_PATH
+<p>In order to run a simulation you must have build natively. You will need to first setup your environment, so that ROS knows about the new packages provided by Astrobee flight software: </p><pre class="fragment">pushd $ASTROBEE_WS
 source devel/setup.bash
 popd
 </pre><p>After this command has completed, you should be able to run a simulator from any directory in your Linux filesystem. So, for example, to start a simulation of a single Astrobee in the Granite Lab, run the following: </p><pre class="fragment">roslaunch astrobee sim.launch
@@ -200,15 +201,13 @@ popd
 </pre><p>For more information on running the simulator and moving the robot, please see the <a class="el" href="sim-readme.html">Simulation</a>.</p>
 <h2><a class="anchor" id="autotoc_md147"></a>
 Running the code on a real robot</h2>
-<p>In order to do this, you will need to have followed the cross-compile build instructions. Once the code has been built, you also need to install the code to a singular location. CMake remembers what <code>$INSTALL_PATH</code> you specified, and will copy all products into this directory. </p><pre class="fragment">pushd $BUILD_PATH
-make install
-popd
-</pre><p>Once the installation has completed, copy the install directory to the robot. This script assumes that you are connected to the Astrobee network, as it uses rsync to copy the install directory to <code>~/armhf</code> on the two processors. It takes the robot name as an argument. Here we use &lsquo;p4d&rsquo;. </p><pre class="fragment">pushd $SOURCE_PATH
-./scripts/install_to_astrobee.sh $INSTALL_PATH p4d
+<p>In order to do this, you will need to have followed the cross-compile build instructions. Once the code has been built, it also installs the code to a singular location. CMake remembers what <code>$INSTALL_PATH</code> you specified, and will copy all products into this directory.</p>
+<p>Once the installation has completed, copy the install directory to the robot. This script assumes that you are connected to the Astrobee network, as it uses rsync to copy the install directory to <code>~/armhf</code> on the two processors. It takes the robot name as an argument. Here we use &lsquo;p4d&rsquo;. </p><pre class="fragment">pushd $ASTROBEE_WS
+./src/scripts/install_to_astrobee.sh $INSTALL_PATH p4d
 popd
 </pre><p>Here, p4d is the name of the robot, which may be different in your case.</p>
-<p>You are now ready to run the code. This code launches a visualization tool, which starts the flight software as a background process. </p><pre class="fragment">pushd $SOURCE_PATH
-python ./tools/gnc_visualizer/scripts/visualizer --proto4
+<p>You are now ready to run the code. This code launches a visualization tool, which starts the flight software as a background process. </p><pre class="fragment">pushd $ASTROBEE_WS
+python ./src/tools/gnc_visualizer/scripts/visualizer --proto4
 popd
 </pre><h1><a class="anchor" id="autotoc_md148"></a>
 Further information</h1>

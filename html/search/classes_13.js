@@ -17,7 +17,7 @@ var searchData=
   ['timestampedpose_7321',['TimestampedPose',['../structlocalization__measurements_1_1TimestampedPose.html',1,'localization_measurements']]],
   ['trackedoffeatures_7322',['TrackedOFFeatures',['../classekf__bag_1_1TrackedOFFeatures.html',1,'ekf_bag']]],
   ['trackedsmfeatures_7323',['TrackedSMFeatures',['../classekf__bag_1_1TrackedSMFeatures.html',1,'ekf_bag']]],
-  ['tracker_7324',['Tracker',['../structvive__localization_1_1Tracker.html',1,'vive_localization::Tracker'],['../structTracker.html',1,'Tracker']]],
+  ['tracker_7324',['Tracker',['../structTracker.html',1,'Tracker'],['../structvive__localization_1_1Tracker.html',1,'vive_localization::Tracker']]],
   ['traits_3c_20localization_5fmeasurements_3a_3aplane_20_3e_7325',['traits&lt; localization_measurements::Plane &gt;',['../structgtsam_1_1traits_3_01localization__measurements_1_1Plane_01_4.html',1,'gtsam']]],
   ['traits_3c_20locprojectionfactor_3c_20pose_2c_20landmark_2c_20calibration_20_3e_20_3e_7326',['traits&lt; LocProjectionFactor&lt; POSE, LANDMARK, CALIBRATION &gt; &gt;',['../structgtsam_1_1traits_3_01LocProjectionFactor_3_01POSE_00_01LANDMARK_00_01CALIBRATION_01_4_01_4.html',1,'gtsam']]],
   ['trajdata_7327',['TrajData',['../structtraj__opt_1_1TrajData.html',1,'traj_opt']]],
