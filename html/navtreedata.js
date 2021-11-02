@@ -125,8 +125,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"install-docker.html#autotoc_md161",
-"release.html"
+"install-NASA.html#autotoc_md147",
+"pmc_actuator.html#autotoc_md195"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

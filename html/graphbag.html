@@ -119,7 +119,19 @@ imu_analyzer_main</h2>
 <p>The imu analyzer tool plots imu data and also filtered imu data. It can use python filtering tools to lowpass filter imu data at a certain cutoff frequency, or it can use a provided bag file with filtered imu data and compare this against a bag file with unfiltered data. Data is plotted in its raw form and also after being passed through an FFT to show its frequency response.</p>
 <h2><a class="anchor" id="autotoc_md538"></a>
 merge_bags</h2>
-<p>Merge bags looks for bag files in the current directory with a provided name prefix and merges these into a single bag file. Bags are assumed to be numbered and are merged in numerical order. </p>
+<p>Merge bags looks for bag files in the current directory with a provided name prefix and merges these into a single bag file. Bags are assumed to be numbered and are merged in numerical order.</p>
+<h2><a class="anchor" id="autotoc_md539"></a>
+run_graph_bag_and_plot_results</h2>
+<p>Generates localization results for a provided bagfile. See 'rosrun <a class="el" href="namespacegraph__bag.html">graph_bag</a> run_graph_bag_and_plot_results.py -h' for further details and usage instructions.</p>
+<h2><a class="anchor" id="autotoc_md540"></a>
+make_groundtruth.py</h2>
+<p>Generates groundtruth map and bagfile for a given bagfile. See 'rosrun <a class="el" href="namespacegraph__bag.html">graph_bag</a> make_groundtruth.py -h' for further details and usage instructions.</p>
+<h2><a class="anchor" id="autotoc_md541"></a>
+make_groundtruth_map.py</h2>
+<p>Generates groundtruth map for a given bagfile. See 'rosrun <a class="el" href="namespacegraph__bag.html">graph_bag</a> make_groundtruth.py -h' for further details and usage instructions.</p>
+<h2><a class="anchor" id="autotoc_md542"></a>
+groundtruth_sweep.py</h2>
+<p>Creates groundtruth in parallel for a set of bagfiles. See 'rosrun <a class="el" href="namespacegraph__bag.html">graph_bag</a> groundtruth_sweep.py -h' for further details and usage instructions. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

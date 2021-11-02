@@ -61,21 +61,25 @@ var tools =
         [ "bag_sweep", "graphbag.html#autotoc_md535", null ],
         [ "check_bags_for_gaps", "graphbag.html#autotoc_md536", null ],
         [ "imu_analyzer_main", "graphbag.html#autotoc_md537", null ],
-        [ "merge_bags", "graphbag.html#autotoc_md538", null ]
+        [ "merge_bags", "graphbag.html#autotoc_md538", null ],
+        [ "run_graph_bag_and_plot_results", "graphbag.html#autotoc_md539", null ],
+        [ "make_groundtruth.py", "graphbag.html#autotoc_md540", null ],
+        [ "make_groundtruth_map.py", "graphbag.html#autotoc_md541", null ],
+        [ "groundtruth_sweep.py", "graphbag.html#autotoc_md542", null ]
       ] ]
     ] ],
     [ "Imu Bias Tester", "imubiastester.html", [
-      [ "Inputs", "imubiastester.html#autotoc_md540", null ],
-      [ "Outputs", "imubiastester.html#autotoc_md541", null ]
+      [ "Inputs", "imubiastester.html#autotoc_md544", null ],
+      [ "Outputs", "imubiastester.html#autotoc_md545", null ]
     ] ],
     [ "Localization Rviz Plugins", "localizationrvizplugins.html", [
-      [ "Package Overview", "localizationrvizplugins.html#autotoc_md542", [
-        [ "ImuBiasTester", "imubiastester.html#autotoc_md539", null ],
-        [ "Plugins", "localizationrvizplugins.html#autotoc_md543", null ],
-        [ "Localization Graph Display", "localizationrvizplugins.html#autotoc_md544", null ],
-        [ "Localization Graph Panel", "localizationrvizplugins.html#autotoc_md545", null ],
-        [ "Imu Augmentor Display", "localizationrvizplugins.html#autotoc_md546", null ],
-        [ "Pose Display", "localizationrvizplugins.html#autotoc_md547", null ]
+      [ "Package Overview", "localizationrvizplugins.html#autotoc_md546", [
+        [ "ImuBiasTester", "imubiastester.html#autotoc_md543", null ],
+        [ "Plugins", "localizationrvizplugins.html#autotoc_md547", null ],
+        [ "Localization Graph Display", "localizationrvizplugins.html#autotoc_md548", null ],
+        [ "Localization Graph Panel", "localizationrvizplugins.html#autotoc_md549", null ],
+        [ "Imu Augmentor Display", "localizationrvizplugins.html#autotoc_md550", null ],
+        [ "Pose Display", "localizationrvizplugins.html#autotoc_md551", null ]
       ] ]
     ] ],
     [ "RViz Visualizer", "rvizvisualizer.html", null ],
