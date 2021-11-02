@@ -134,11 +134,12 @@ E: Unable to locate package libmiro-dev
 Configuring the build</h2>
 <h3><a class="anchor" id="autotoc_md114"></a>
 Note for the build setup</h3>
-<p>By default, the configure script uses the following paths:</p><ul>
+<p>When compiling, the <code>$WORKSPACE_PATH</code> defines where the <code>devel</code>, <code>build</code>, <code>logs</code> and <code>install</code> directories are created. If you want to customize the <code>install</code> path then the <code>$INSTALL_PATH</code> can be defined. By default, the configure script uses the following paths:</p>
+<ul>
 <li>native build path: <code>$ASTROBEE_WS/build</code></li>
 <li>native install path: <code>$ASTROBEE_WS/install</code></li>
 </ul>
-<p>If you are satisfied with these paths, you can invoke the <code>configure.sh</code> without the <code>-p</code> and <code>-b</code> options. For the simplicity of the instructions below, we assume that <code>$BUILD_PATH</code> and <code>$INSTALL_PATH</code> contain the location of the build and install path. For example: </p><pre class="fragment">export BUILD_PATH=$ASTROBEE_WS/build
+<p>If you are satisfied with these paths, you can invoke the <code>configure.sh</code> without the <code>-p</code> and <code>-w</code> options. For the simplicity of the instructions below, we assume that <code>$WORKSPACE_PATH</code> and <code>$INSTALL_PATH</code> contain the location of the build and install path. For example: </p><pre class="fragment">export WORKSPACE_PATH=$ASTROBEE_WS
 export INSTALL_PATH=$ASTROBEE_WS/install
 </pre><h3><a class="anchor" id="autotoc_md115"></a>
 Native build</h3>
@@ -146,11 +147,12 @@ Native build</h3>
 ./src/scripts/configure.sh -l -F -D
 source ~/.bashrc
 popd
-</pre><p>If you want to explicitly specify the build and install directories, use instead: </p><pre class="fragment">./src/scripts/configure.sh -l -F -D -p $INSTALL_PATH -b $BUILD_PATH
-</pre><p><em>Note: Make sure you use the -F and -D flags. If these flags are not used, the code will not compile. The -F flag is used to turn off building the Picoflex. This is only needed for running on the robot and is not needed for the simulator. The -D is used to turn off building the dds bridge. The bridge is used to communicate with our ground data system and is also not needed for the simulator.</em></p>
+</pre><p>If you want to explicitly specify the workspace and install directories, use instead: </p><pre class="fragment">./src/scripts/configure.sh -l -F -D -p $INSTALL_PATH -w $WORKSPACE_PATH
+</pre><p><em>Note: If a workspace is specified but not an explicit install distectory, install location will be $WORKSPACE_PATH/install.</em></p>
+<p><em>Note: Make sure you use the -F and -D flags. If these flags are not used, the code will not compile. The -F flag is used to turn off building the Picoflex. This is only needed for running on the robot and is not needed for the simulator. The -D is used to turn off building the dds bridge. The bridge is used to communicate with our ground data system and is also not needed for the simulator.</em></p>
 <h2><a class="anchor" id="autotoc_md116"></a>
 Building the code</h2>
-<p>To build, run <code>make</code> in the <code>$BUILD_PATH</code>. Note that depending on your host machine, this might take in the order of tens of minutes to complete the first time round. Future builds will be faster, as only changes to the code are rebuilt, and not the entire code base. </p><pre class="fragment">pushd $ASTROBEE_WS
+<p>To build, run <code>catkin build</code> in the <code>$WORKSPACE_PATH</code>. Note that depending on your host machine, this might take in the order of tens of minutes to complete the first time round. Future builds will be faster, as only changes to the code are rebuilt, and not the entire code base. </p><pre class="fragment">pushd $ASTROBEE_WS
 catkin build
 popd
 </pre><p>If you configured your virtual machine with more than the baseline resources, you can adjust the number of threads (eg. -j4) to speed up the build.</p>

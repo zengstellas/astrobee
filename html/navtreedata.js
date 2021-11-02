@@ -126,7 +126,7 @@ var NAVTREEINDEX =
 [
 "access_control.html",
 "install-docker.html#autotoc_md161",
-"release.html#autotoc_md101"
+"release.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
