@@ -111,11 +111,12 @@ git submodule update --init --depth 1 description/media
 <h2><a class="anchor" id="autotoc_md162"></a>
 Building the docker images</h2>
 <p>To build the docker images, run: </p><pre class="fragment">./build.sh
-</pre><p> The build script will automatically detect the current Ubuntu OS version and define the docker files variables <code>UBUNTU_VERSION</code>, <code>ROS_VERSION</code>, and <code>PYTHON</code>. If a specific version is desired, the option &ndash;xenial, &ndash;bionic, and &ndash;focal is used for ubuntu 16.04, 18.04, and 20.04 docker images, respectively.</p>
+</pre><p>The build script will automatically detect the current Ubuntu OS version and define the docker files variables <code>UBUNTU_VERSION</code>, <code>ROS_VERSION</code>, and <code>PYTHON</code>. If a specific version is desired, the option &ndash;xenial, &ndash;bionic, and &ndash;focal is used for ubuntu 16.04, 18.04, and 20.04 docker images, respectively.</p>
 <h2><a class="anchor" id="autotoc_md163"></a>
 Run the container</h2>
 <p>To run the docker container: </p><pre class="fragment">./run.sh
-</pre><p> It will automatically detect the current Ubuntu OS version. If a specific version is desired, the option &ndash;xenial, &ndash;bionic, and &ndash;focal is used for ubuntu 16.04, 18.04, and 20.04 docker images, respectively.</p>
+</pre><p>It will automatically detect the current Ubuntu OS version. If a specific version is desired, the option &ndash;xenial, &ndash;bionic, and &ndash;focal is used for ubuntu 16.04, 18.04, and 20.04 docker images, respectively. To add arguments to the launch file in addition to <code>dds:=false robot:=sim_pub</code> you can do instead: </p><pre class="fragment">./run.sh --args "rviz:=true sviz:=true"
+</pre><p><em>Note: You have to install the nvidia-container-toolkit for the gazebo simulation to run properly</em></p>
 <p>To open another terminal inside the docker container: </p><pre class="fragment">docker exec -it astrobee bash
 </pre><p>Once inside the container, don't forget to source astrobee to have access to all the commands:</p>
 <p>source /build/astrobee/devel/setup.bash</p>
