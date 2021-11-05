@@ -157,7 +157,8 @@ export ARMHF_TOOLCHAIN=$HOME/arm_cross/toolchain/gcc
 cd $HOME/arm_cross
 $ASTROBEE_WS/src/submodules/platform/fetch_toolchain.sh
 $ASTROBEE_WS/src/submodules/platform/rootfs/make_xenial.sh dev $ARMHF_CHROOT_DIR
-</pre><h2><a class="anchor" id="autotoc_md141"></a>
+</pre><p><em>Note: The last script shown above needs the packages <code>qemu-user-static</code> (not <code>qemu-arm-static</code>) and <code>multistrap</code> to be installed (can be installed through apt).</em></p>
+<h2><a class="anchor" id="autotoc_md141"></a>
 Configuring the build</h2>
 <p>At this point you need to decide whether you'd like to compile natively [<code>native</code>] (run code against a simulator) or for an ARM target [<code>armhf</code>] (run the code on the robot itself). Please skip to the relevant subsection.</p>
 <h3><a class="anchor" id="autotoc_md142"></a>
