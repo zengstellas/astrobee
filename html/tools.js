@@ -83,7 +83,6 @@ var tools =
       ] ]
     ] ],
     [ "RViz Visualizer", "rvizvisualizer.html", null ],
-    [ "Simulator", "simulator.html", "simulator" ],
     [ "Visualeyez marker tracking system", "visualeyez.html", null ],
     [ "DDS Profile and Types", "dds_profile.html", null ]
 ];
