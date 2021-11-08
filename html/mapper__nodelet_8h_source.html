@@ -250,79 +250,71 @@ $(document).ready(function(){initNavTree('mapper__nodelet_8h_source.html',''); i
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="comment">// Thread for fading memory of the octomap</span></div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classmapper_1_1MapperNodelet.html#a118530153f33685eacd5f4b5de86c2e4">FadeTask</a>(ros::TimerEvent <span class="keyword">const</span>&amp; event);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="comment">// Timers for constantly updating the tfTree values</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classmapper_1_1MapperNodelet.html#a6dc8e8ef8ea75aa9f1ba0a66766eb482">HazTfTask</a>(ros::TimerEvent <span class="keyword">const</span>&amp; event);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classmapper_1_1MapperNodelet.html#acc1d7a0ed2207db50c7966a6168c836c">PerchTfTask</a>(ros::TimerEvent <span class="keyword">const</span>&amp; event);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classmapper_1_1MapperNodelet.html#af40b84789a9c5abf9e66809dd8e50773">BodyTfTask</a>(ros::TimerEvent <span class="keyword">const</span>&amp; event);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="comment">// Collision checking</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classmapper_1_1MapperNodelet.html#a5be54e590242ccbda549c4dd2f06a1d6">CollisionCheckTask</a>();</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="comment">// Timer for getting pcl data and populating the octomap</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classmapper_1_1MapperNodelet.html#ac8c4dc13a51dc17e9967f2e4b1588b00">OctomappingTask</a>(ros::TimerEvent <span class="keyword">const</span>&amp; event);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="comment">// Initialize fault management</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classmapper_1_1MapperNodelet.html#a232c479ab85b154122c0f54ebc880164">  172</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classmapper_1_1MapperNodelet.html#a232c479ab85b154122c0f54ebc880164">InitFault</a>(std::string <span class="keyword">const</span>&amp; msg);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="comment">// Declare global variables (structures defined in structs.h)</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <a class="code" href="structmapper_1_1GlobalVariables.html">GlobalVariables</a> globals_;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="comment">// Collision checking</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classmapper_1_1MapperNodelet.html#a5be54e590242ccbda549c4dd2f06a1d6">CollisionCheckTask</a>();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="comment">// Timer for getting pcl data and populating the octomap</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classmapper_1_1MapperNodelet.html#ac8c4dc13a51dc17e9967f2e4b1588b00">OctomappingTask</a>(ros::TimerEvent <span class="keyword">const</span>&amp; event);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="comment">// Initialize fault management</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classmapper_1_1MapperNodelet.html#a232c479ab85b154122c0f54ebc880164">  167</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classmapper_1_1MapperNodelet.html#a232c479ab85b154122c0f54ebc880164">InitFault</a>(std::string <span class="keyword">const</span>&amp; msg);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="comment">// Declare global variables (structures defined in structs.h)</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <a class="code" href="structmapper_1_1GlobalVariables.html">GlobalVariables</a> globals_;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="comment">// Timer variables</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  ros::Timer timer_o_;  <span class="comment">// Octomapping Task</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  ros::Timer timer_d_;  <span class="comment">// Diagnostics</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  ros::Timer timer_f_;  <span class="comment">// Fade Task</span></div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="comment">// Timer variables</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  ros::Timer timer_o_;  <span class="comment">// Octomapping Task</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  ros::Timer timer_d_;  <span class="comment">// Diagnostics</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  ros::Timer timer_f_;  <span class="comment">// Fade Task</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  ros::Timer timer_h_;  <span class="comment">// Haz TF Task</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  ros::Timer timer_p_;  <span class="comment">// Perch TF Task</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  ros::Timer timer_b_;  <span class="comment">// Body TF task</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="comment">// Subscriber variables</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  ros::Subscriber haz_sub_, perch_sub_, segment_sub_, reset_sub_;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="comment">// Octomap services</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  ros::ServiceServer set_resolution_srv_, set_memory_time_srv_, set_collision_distance_srv_;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  ros::ServiceServer get_resolution_srv_, get_memory_time_srv_, get_collision_distance_srv_;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  ros::ServiceServer reset_map_srv_;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="comment">// Subscriber variables</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  ros::Subscriber haz_sub_, perch_sub_, segment_sub_, reset_sub_;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="comment">// Timer rates (hz)</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordtype">double</span> octomap_update_rate_, tf_update_rate_, fading_memory_update_rate_;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="comment">// Octomap services</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  ros::ServiceServer set_resolution_srv_, set_memory_time_srv_, set_collision_distance_srv_;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  ros::ServiceServer get_resolution_srv_, get_memory_time_srv_, get_collision_distance_srv_;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  ros::ServiceServer reset_map_srv_;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="comment">// Timer rates (hz)</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordtype">double</span> octomap_update_rate_, tf_update_rate_, fading_memory_update_rate_;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="comment">// Trajectory validation variables -----------------------------</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <a class="code" href="namespacemapper.html#a0a454f4a2a1c740c64d317512df3c237">State</a> state_;                                       <span class="comment">// State of the mapper (structure defined in struct.h)</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <a class="code" href="namespaceff__util.html#a4e8ec1092a102aa441412e2859a2bdbd">ff_util::Segment</a> segment_;                          <span class="comment">// Segment</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="comment">// Services</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  ros::ServiceServer get_free_map_srv_;               <span class="comment">// Get free map service</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  ros::ServiceServer get_obstacle_map_srv_;           <span class="comment">// Set obstacle map service</span></div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="comment">// Trajectory validation variables -----------------------------</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <a class="code" href="namespacemapper.html#a0a454f4a2a1c740c64d317512df3c237">State</a> state_;                                       <span class="comment">// State of the mapper (structure defined in struct.h)</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <a class="code" href="namespaceff__util.html#a4e8ec1092a102aa441412e2859a2bdbd">ff_util::Segment</a> segment_;                          <span class="comment">// Segment</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="comment">// Services</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  ros::ServiceServer get_free_map_srv_;               <span class="comment">// Get free map service</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  ros::ServiceServer get_obstacle_map_srv_;           <span class="comment">// Set obstacle map service</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <a class="code" href="classff__util_1_1ConfigServer.html">ff_util::ConfigServer</a> cfg_;                         <span class="comment">// Config server</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="comment">// TF2</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  std::shared_ptr&lt;tf2_ros::TransformListener&gt; listener_;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  tf2_ros::Buffer buffer_;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="comment">// Marker publishers</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  ros::Publisher hazard_pub_;                      <span class="comment">// Collision warnign</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  ros::Publisher obstacle_marker_pub_;             <span class="comment">// Obstacle map</span></div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  ros::Publisher free_space_marker_pub_;           <span class="comment">// Obstacle map</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  ros::Publisher obstacle_cloud_pub_;              <span class="comment">// Obstacle map</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  ros::Publisher free_space_cloud_pub_;            <span class="comment">// Obstacle map</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  ros::Publisher inflated_obstacle_marker_pub_;    <span class="comment">// Inflated obstacle map</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  ros::Publisher inflated_free_space_marker_pub_;  <span class="comment">// Inflated free map</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  ros::Publisher inflated_obstacle_cloud_pub_;     <span class="comment">// Inflated obstacle map</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  ros::Publisher inflated_free_space_cloud_pub_;   <span class="comment">// Inflated free map</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  ros::Publisher path_marker_pub_;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  ros::Publisher cam_frustum_pub_;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  ros::Publisher map_keep_in_out_pub_;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;};</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}  <span class="comment">// namespace mapper</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor">#endif  // MAPPER_MAPPER_NODELET_H_</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <a class="code" href="classff__util_1_1ConfigServer.html">ff_util::ConfigServer</a> cfg_;                         <span class="comment">// Config server</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="comment">// TF2</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  std::shared_ptr&lt;tf2_ros::TransformListener&gt; listener_;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  tf2_ros::Buffer buffer_;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="comment">// Marker publishers</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  ros::Publisher hazard_pub_;                      <span class="comment">// Collision warnign</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  ros::Publisher obstacle_marker_pub_;             <span class="comment">// Obstacle map</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  ros::Publisher free_space_marker_pub_;           <span class="comment">// Obstacle map</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  ros::Publisher obstacle_cloud_pub_;              <span class="comment">// Obstacle map</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  ros::Publisher free_space_cloud_pub_;            <span class="comment">// Obstacle map</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  ros::Publisher inflated_obstacle_marker_pub_;    <span class="comment">// Inflated obstacle map</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  ros::Publisher inflated_free_space_marker_pub_;  <span class="comment">// Inflated free map</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  ros::Publisher inflated_obstacle_cloud_pub_;     <span class="comment">// Inflated obstacle map</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  ros::Publisher inflated_free_space_cloud_pub_;   <span class="comment">// Inflated free map</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  ros::Publisher path_marker_pub_;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  ros::Publisher cam_frustum_pub_;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  ros::Publisher map_keep_in_out_pub_;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;};</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}  <span class="comment">// namespace mapper</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#endif  // MAPPER_MAPPER_NODELET_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="avisualization__functions_8h_html"><div class="ttname"><a href="visualization__functions_8h.html">visualization_functions.h</a></div></div>
-<div class="ttc" id="aclassmapper_1_1MapperNodelet_html_ac8c4dc13a51dc17e9967f2e4b1588b00"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#ac8c4dc13a51dc17e9967f2e4b1588b00">mapper::MapperNodelet::OctomappingTask</a></div><div class="ttdeci">void OctomappingTask(ros::TimerEvent const &amp;event)</div><div class="ttdef"><b>Definition:</b> threads.cc:138</div></div>
+<div class="ttc" id="aclassmapper_1_1MapperNodelet_html_ac8c4dc13a51dc17e9967f2e4b1588b00"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#ac8c4dc13a51dc17e9967f2e4b1588b00">mapper::MapperNodelet::OctomappingTask</a></div><div class="ttdeci">void OctomappingTask(ros::TimerEvent const &amp;event)</div><div class="ttdef"><b>Definition:</b> threads.cc:114</div></div>
 <div class="ttc" id="anamespacemapper_html_a0a454f4a2a1c740c64d317512df3c237"><div class="ttname"><a href="namespacemapper.html#a0a454f4a2a1c740c64d317512df3c237">mapper::State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition:</b> structs.h:48</div></div>
 <div class="ttc" id="aclassmapper_1_1MapperNodelet_html_ad96b3c003e0829a9a58fe3c456fbcba6"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#ad96b3c003e0829a9a58fe3c456fbcba6">mapper::MapperNodelet::PreemptCallback</a></div><div class="ttdeci">void PreemptCallback(void)</div></div>
 <div class="ttc" id="apolynomials_8h_html"><div class="ttname"><a href="polynomials_8h.html">polynomials.h</a></div></div>
@@ -345,8 +337,7 @@ $(document).ready(function(){initNavTree('mapper__nodelet_8h_source.html',''); i
 <div class="ttc" id="aclassmapper_1_1MapperNodelet_html_ac2f6bafc51baee6d9bbaa61d59aafca0"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#ac2f6bafc51baee6d9bbaa61d59aafca0">mapper::MapperNodelet::GetObstacleMapCallback</a></div><div class="ttdeci">bool GetObstacleMapCallback(ff_msgs::GetMap::Request &amp;req, ff_msgs::GetMap::Response &amp;res)</div><div class="ttdef"><b>Definition:</b> services.cc:89</div></div>
 <div class="ttc" id="astructs_8h_html"><div class="ttname"><a href="structs_8h.html">structs.h</a></div></div>
 <div class="ttc" id="aclassmapper_1_1MapperNodelet_html_a3da1bfe087e3ecf12762498bdf13e922"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#a3da1bfe087e3ecf12762498bdf13e922">mapper::MapperNodelet::SegmentCallback</a></div><div class="ttdeci">void SegmentCallback(const ff_msgs::Segment::ConstPtr &amp;msg)</div><div class="ttdef"><b>Definition:</b> callbacks.cc:50</div></div>
-<div class="ttc" id="aclassmapper_1_1MapperNodelet_html_af40b84789a9c5abf9e66809dd8e50773"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#af40b84789a9c5abf9e66809dd8e50773">mapper::MapperNodelet::BodyTfTask</a></div><div class="ttdeci">void BodyTfTask(ros::TimerEvent const &amp;event)</div><div class="ttdef"><b>Definition:</b> threads.cc:49</div></div>
-<div class="ttc" id="aclassmapper_1_1MapperNodelet_html_a5be54e590242ccbda549c4dd2f06a1d6"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#a5be54e590242ccbda549c4dd2f06a1d6">mapper::MapperNodelet::CollisionCheckTask</a></div><div class="ttdeci">void CollisionCheckTask()</div><div class="ttdef"><b>Definition:</b> threads.cc:57</div></div>
+<div class="ttc" id="aclassmapper_1_1MapperNodelet_html_a5be54e590242ccbda549c4dd2f06a1d6"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#a5be54e590242ccbda549c4dd2f06a1d6">mapper::MapperNodelet::CollisionCheckTask</a></div><div class="ttdeci">void CollisionCheckTask()</div><div class="ttdef"><b>Definition:</b> threads.cc:33</div></div>
 <div class="ttc" id="aclassff__util_1_1FreeFlyerNodelet_html"><div class="ttname"><a href="classff__util_1_1FreeFlyerNodelet.html">ff_util::FreeFlyerNodelet</a></div><div class="ttdef"><b>Definition:</b> ff_nodelet.h:57</div></div>
 <div class="ttc" id="aclassmapper_1_1MapperNodelet_html_af6fea1e6c5d5b73f9f6a707d06ae2620"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#af6fea1e6c5d5b73f9f6a707d06ae2620">mapper::MapperNodelet::MapperNodelet</a></div><div class="ttdeci">MapperNodelet()</div><div class="ttdef"><b>Definition:</b> mapper_nodelet.cc:27</div></div>
 <div class="ttc" id="aclassmapper_1_1MapperNodelet_html_a39d4463ae2975390708476e89b61a8ac"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#a39d4463ae2975390708476e89b61a8ac">mapper::MapperNodelet::GetResolution</a></div><div class="ttdeci">bool GetResolution(ff_msgs::GetFloat::Request &amp;req, ff_msgs::GetFloat::Response &amp;res)</div><div class="ttdef"><b>Definition:</b> services.cc:33</div></div>
@@ -354,9 +345,7 @@ $(document).ready(function(){initNavTree('mapper__nodelet_8h_source.html',''); i
 <div class="ttc" id="aclassmapper_1_1MapperNodelet_html_a118530153f33685eacd5f4b5de86c2e4"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#a118530153f33685eacd5f4b5de86c2e4">mapper::MapperNodelet::FadeTask</a></div><div class="ttdeci">void FadeTask(ros::TimerEvent const &amp;event)</div><div class="ttdef"><b>Definition:</b> threads.cc:27</div></div>
 <div class="ttc" id="aclassmapper_1_1MapperNodelet_html"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html">mapper::MapperNodelet</a></div><div class="ttdef"><b>Definition:</b> mapper_nodelet.h:91</div></div>
 <div class="ttc" id="aff__action_8h_html"><div class="ttname"><a href="ff__action_8h.html">ff_action.h</a></div></div>
-<div class="ttc" id="aclassmapper_1_1MapperNodelet_html_a6dc8e8ef8ea75aa9f1ba0a66766eb482"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#a6dc8e8ef8ea75aa9f1ba0a66766eb482">mapper::MapperNodelet::HazTfTask</a></div><div class="ttdeci">void HazTfTask(ros::TimerEvent const &amp;event)</div><div class="ttdef"><b>Definition:</b> threads.cc:33</div></div>
 <div class="ttc" id="aclassmapper_1_1MapperNodelet_html_a1a4398b26fdbb34cad88e6f5db67c5c7"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#a1a4398b26fdbb34cad88e6f5db67c5c7">mapper::MapperNodelet::Complete</a></div><div class="ttdeci">void Complete(int32_t response)</div></div>
-<div class="ttc" id="aclassmapper_1_1MapperNodelet_html_acc1d7a0ed2207db50c7966a6168c836c"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#acc1d7a0ed2207db50c7966a6168c836c">mapper::MapperNodelet::PerchTfTask</a></div><div class="ttdeci">void PerchTfTask(ros::TimerEvent const &amp;event)</div><div class="ttdef"><b>Definition:</b> threads.cc:41</div></div>
 <div class="ttc" id="aclassmapper_1_1MapperNodelet_html_af39584c14148392d8002f50489dff54d"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#af39584c14148392d8002f50489dff54d">mapper::MapperNodelet::SetMemoryTime</a></div><div class="ttdeci">bool SetMemoryTime(ff_msgs::SetFloat::Request &amp;req, ff_msgs::SetFloat::Response &amp;res)</div><div class="ttdef"><b>Definition:</b> services.cc:41</div></div>
 <div class="ttc" id="aclassmapper_1_1MapperNodelet_html_a232c479ab85b154122c0f54ebc880164"><div class="ttname"><a href="classmapper_1_1MapperNodelet.html#a232c479ab85b154122c0f54ebc880164">mapper::MapperNodelet::InitFault</a></div><div class="ttdeci">void InitFault(std::string const &amp;msg)</div></div>
 <div class="ttc" id="aoctoclass_8h_html"><div class="ttname"><a href="octoclass_8h.html">octoclass.h</a></div></div>
