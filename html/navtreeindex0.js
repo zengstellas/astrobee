@@ -55,7 +55,7 @@ var NAVTREEINDEX0 =
 "ctl.html#autotoc_md208":[4,4,1,3],
 "ctl.html#autotoc_md209":[4,4,1,4],
 "data_bagger.html":[4,1,2],
-"dds_profile.html":[6,8],
+"dds_profile.html":[6,6],
 "dds_ros_bridge.html":[4,6,0],
 "disk_monitor.html":[4,1,3],
 "doc.html":[3,5],

@@ -82,7 +82,5 @@ var tools =
         [ "Pose Display", "localizationrvizplugins.html#autotoc_md551", null ]
       ] ]
     ] ],
-    [ "RViz Visualizer", "rvizvisualizer.html", null ],
-    [ "Visualeyez marker tracking system", "visualeyez.html", null ],
     [ "DDS Profile and Types", "dds_profile.html", null ]
 ];
