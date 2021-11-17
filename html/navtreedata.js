@@ -113,6 +113,7 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Astrobee Usage", "md_doc_general_documentation_astrobee_usage.html", "md_doc_general_documentation_astrobee_usage" ],
+    [ "Astrobee code style", "astrobee-code-style.html", null ],
     [ "Subsystems", "subsystems.html", "subsystems" ],
     [ "Simulation", "sim-readme.html", "sim-readme" ],
     [ "Tools", "tools.html", "tools" ],
@@ -125,8 +126,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"install-docker.html",
-"pmc_actuator.html#autotoc_md199"
+"install-NASA.html#autotoc_md149",
+"pmc_actuator.html#autotoc_md198"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
