@@ -111,9 +111,15 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlocalization__common_1_1FeaturePoint3dNoise.html">FeaturePoint3dNoise</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlocalization__common_1_1ImageCorrespondences.html">ImageCorrespondences</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlocalization__common_1_1PoseWithCovariance.html">PoseWithCovariance</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlocalization__common_1_1RateTimer.html">RateTimer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlocalization__common_1_1RosTimer.html">RosTimer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlocalization__common_1_1Sampler.html">Sampler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlocalization__common_1_1Timer.html">Timer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,6 +130,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:ad552ba3e372e8529b80ed8a27ee44242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a359f4feb8a8ad126b7d079fc975286ba"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a359f4feb8a8ad126b7d079fc975286ba">FeaturePoint3ds</a> = std::vector&lt; <a class="el" href="structlocalization__common_1_1FeaturePoint3d.html">FeaturePoint3d</a> &gt;</td></tr>
 <tr class="separator:a359f4feb8a8ad126b7d079fc975286ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca6e1bdef878f0425016ada9ffebed84"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#aca6e1bdef878f0425016ada9ffebed84">PoseCovariance</a> = Eigen::Matrix&lt; double, 6, 6 &gt;</td></tr>
+<tr class="separator:aca6e1bdef878f0425016ada9ffebed84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae558927c458010e767b03b93e4516e0c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">Time</a> = double</td></tr>
 <tr class="separator:ae558927c458010e767b03b93e4516e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -137,6 +145,36 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aee4c51c15cc7497f1741dc370527f706"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#aee4c51c15cc7497f1741dc370527f706">RandomDouble</a> ()</td></tr>
+<tr class="separator:aee4c51c15cc7497f1741dc370527f706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b032750c856e28c313563933b0e16c9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a9b032750c856e28c313563933b0e16c9">RandomPositiveDouble</a> ()</td></tr>
+<tr class="separator:a9b032750c856e28c313563933b0e16c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c5dafeb4e16ea86688498a8a9bdc26"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#ae9c5dafeb4e16ea86688498a8a9bdc26">RandomDouble</a> (const double min, const double max)</td></tr>
+<tr class="separator:ae9c5dafeb4e16ea86688498a8a9bdc26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddd2555fe5d958ba31318059a5b9ea1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#acddd2555fe5d958ba31318059a5b9ea1">RandomGaussianDouble</a> (const double mean, const double stddev)</td></tr>
+<tr class="separator:acddd2555fe5d958ba31318059a5b9ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b4dfc6814ac82c7bf5edee9b52fd746"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a3b4dfc6814ac82c7bf5edee9b52fd746">RandomBool</a> ()</td></tr>
+<tr class="separator:a3b4dfc6814ac82c7bf5edee9b52fd746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b99db27d6653a2395503ec6bad2ad6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a76b99db27d6653a2395503ec6bad2ad6">Noise</a> (const double stddev)</td></tr>
+<tr class="separator:a76b99db27d6653a2395503ec6bad2ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2cae404a82fcca576a231708e8843ef"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#af2cae404a82fcca576a231708e8843ef">RandomVector</a> ()</td></tr>
+<tr class="separator:af2cae404a82fcca576a231708e8843ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b416d2517af8e75bea71eed9ba225c"><td class="memItemLeft" align="right" valign="top">gtsam::Pose3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a65b416d2517af8e75bea71eed9ba225c">RandomPose</a> ()</td></tr>
+<tr class="separator:a65b416d2517af8e75bea71eed9ba225c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce3b31cf8342949870ad3378ca9b43f"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a5ce3b31cf8342949870ad3378ca9b43f">RandomIsometry3d</a> ()</td></tr>
+<tr class="separator:a5ce3b31cf8342949870ad3378ca9b43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0696e0792ecdc33094b96689104cc4a9"><td class="memItemLeft" align="right" valign="top">Eigen::Affine3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a0696e0792ecdc33094b96689104cc4a9">RandomAffine3d</a> ()</td></tr>
+<tr class="separator:a0696e0792ecdc33094b96689104cc4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac516fbde6898bb82328a81773ffbcbb5"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#ac516fbde6898bb82328a81773ffbcbb5">RandomIntrinsics</a> ()</td></tr>
+<tr class="separator:ac516fbde6898bb82328a81773ffbcbb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79bde479ff1423b51943a4ea3c1cdb5"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#af79bde479ff1423b51943a4ea3c1cdb5">AddNoiseToIsometry3d</a> (const Eigen::Isometry3d &amp;pose, const double translation_stddev, const double rotation_stddev)</td></tr>
+<tr class="separator:af79bde479ff1423b51943a4ea3c1cdb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ae36ea363f35378b00e479d6f0ce1f"><td class="memTemplParams" colspan="2">template&lt;int N&gt; </td></tr>
+<tr class="memitem:a72ae36ea363f35378b00e479d6f0ce1f"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; double, N, 1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a72ae36ea363f35378b00e479d6f0ce1f">AddNoiseToVector</a> (const Eigen::Matrix&lt; double, N, 1 &gt; &amp;vector, const double noise_stddev)</td></tr>
+<tr class="separator:a72ae36ea363f35378b00e479d6f0ce1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d5c26b34feee6c0bc7f47c0c7d4139"><td class="memTemplParams" colspan="2">template&lt;int TolerancePower = 6&gt; </td></tr>
+<tr class="memitem:a07d5c26b34feee6c0bc7f47c0c7d4139"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a07d5c26b34feee6c0bc7f47c0c7d4139">MatrixEquality</a> (const Eigen::MatrixXd &amp;lhs, const Eigen::MatrixXd &amp;rhs)</td></tr>
+<tr class="separator:a07d5c26b34feee6c0bc7f47c0c7d4139"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a694f6f856c617077be8abc748d6e9015"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelocalization__common.html#ae558927c458010e767b03b93e4516e0c">Time</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a694f6f856c617077be8abc748d6e9015">GetTime</a> (const int seconds, const int nanoseconds)</td></tr>
 <tr class="separator:a694f6f856c617077be8abc748d6e9015"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9d7351cb86285d17f76faad13e61d6a"><td class="memItemLeft" align="right" valign="top">gtsam::Pose3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#ab9d7351cb86285d17f76faad13e61d6a">LoadTransform</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, const std::string &amp;transform_config_name)</td></tr>
@@ -187,6 +225,20 @@ Functions</h2></td></tr>
 <tr class="memitem:aae35cf5184b0b8a6fd3c885f2f4fe254"><td class="memTemplParams" colspan="2">template&lt;class LocMsgType &gt; </td></tr>
 <tr class="memitem:aae35cf5184b0b8a6fd3c885f2f4fe254"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#aae35cf5184b0b8a6fd3c885f2f4fe254">CombinedNavStateCovariancesToMsg</a> (const <a class="el" href="classlocalization__common_1_1CombinedNavStateCovariances.html">CombinedNavStateCovariances</a> &amp;covariances, LocMsgType &amp;loc_msg)</td></tr>
 <tr class="separator:aae35cf5184b0b8a6fd3c885f2f4fe254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f6863326e9ade0c55f1403b51214ca"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#af1f6863326e9ade0c55f1403b51214ca">Isometry3d</a> (const Eigen::Vector3d &amp;translation, const Eigen::Matrix3d &amp;rotation)</td></tr>
+<tr class="separator:af1f6863326e9ade0c55f1403b51214ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec60b3b2106bac5e258364e18a83417"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#adec60b3b2106bac5e258364e18a83417">Deg2Rad</a> (const double degrees)</td></tr>
+<tr class="separator:adec60b3b2106bac5e258364e18a83417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1531b4ddab37368084cde3b436c8af"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#afb1531b4ddab37368084cde3b436c8af">Rad2Deg</a> (const double radians)</td></tr>
+<tr class="separator:afb1531b4ddab37368084cde3b436c8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addaaec14000475aea13c954decb1c072"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#addaaec14000475aea13c954decb1c072">CylindricalToCartesian</a> (const Eigen::Vector3d &amp;cylindrical_coordinates)</td></tr>
+<tr class="separator:addaaec14000475aea13c954decb1c072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2c58efc7c6a9e52169e9c3c7b1faa91"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#ad2c58efc7c6a9e52169e9c3c7b1faa91">RotationFromEulerAngles</a> (const double yaw, const double pitch, const double roll)</td></tr>
+<tr class="separator:ad2c58efc7c6a9e52169e9c3c7b1faa91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6628c83b9a353f50e01bcad28d8a9dc3"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a6628c83b9a353f50e01bcad28d8a9dc3">FocalLengths</a> (const Eigen::Matrix3d &amp;intrinsics)</td></tr>
+<tr class="separator:a6628c83b9a353f50e01bcad28d8a9dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211303428b3882b1388a644650d3c370"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a211303428b3882b1388a644650d3c370">PrincipalPoints</a> (const Eigen::Matrix3d &amp;intrinsics)</td></tr>
+<tr class="separator:a211303428b3882b1388a644650d3c370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="ad552ba3e372e8529b80ed8a27ee44242"></a>
@@ -211,6 +263,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="namespacelocalization__common.html#a359f4feb8a8ad126b7d079fc975286ba">localization_common::FeaturePoint3ds</a> = typedef std::vector&lt;<a class="el" href="structlocalization__common_1_1FeaturePoint3d.html">FeaturePoint3d</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca6e1bdef878f0425016ada9ffebed84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca6e1bdef878f0425016ada9ffebed84">&#9670;&nbsp;</a></span>PoseCovariance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacelocalization__common.html#aca6e1bdef878f0425016ada9ffebed84">localization_common::PoseCovariance</a> = typedef Eigen::Matrix&lt;double, 6, 6&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -252,6 +318,70 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="af79bde479ff1423b51943a4ea3c1cdb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af79bde479ff1423b51943a4ea3c1cdb5">&#9670;&nbsp;</a></span>AddNoiseToIsometry3d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Isometry3d localization_common::AddNoiseToIsometry3d </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>translation_stddev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>rotation_stddev</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72ae36ea363f35378b00e479d6f0ce1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72ae36ea363f35378b00e479d6f0ce1f">&#9670;&nbsp;</a></span>AddNoiseToVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix&lt; double, N, 1 &gt; localization_common::AddNoiseToVector </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Matrix&lt; double, N, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>noise_stddev</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a19c5f3da0900a17038365d41f1911e6a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a19c5f3da0900a17038365d41f1911e6a">&#9670;&nbsp;</a></span>CombinedNavStateCovariancesFromMsg()</h2>
 
@@ -348,6 +478,42 @@ template&lt;class LocMsgType &gt; </div>
 
 </div>
 </div>
+<a id="addaaec14000475aea13c954decb1c072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addaaec14000475aea13c954decb1c072">&#9670;&nbsp;</a></span>CylindricalToCartesian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3d localization_common::CylindricalToCartesian </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
+          <td class="paramname"><em>cylindrical_coordinates</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adec60b3b2106bac5e258364e18a83417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec60b3b2106bac5e258364e18a83417">&#9670;&nbsp;</a></span>Deg2Rad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double localization_common::Deg2Rad </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>degrees</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4b9121479cf8b8973d751b866b0e4709"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b9121479cf8b8973d751b866b0e4709">&#9670;&nbsp;</a></span>EigenPose() <span class="overload">[1/2]</span></h2>
 
@@ -377,6 +543,24 @@ template&lt;class LocMsgType &gt; </div>
           <td>(</td>
           <td class="paramtype">const gtsam::Pose3 &amp;&#160;</td>
           <td class="paramname"><em>pose</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6628c83b9a353f50e01bcad28d8a9dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6628c83b9a353f50e01bcad28d8a9dc3">&#9670;&nbsp;</a></span>FocalLengths()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector2d localization_common::FocalLengths </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Matrix3d &amp;&#160;</td>
+          <td class="paramname"><em>intrinsics</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -424,6 +608,34 @@ template&lt;class LocMsgType &gt; </div>
           <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
           <td class="paramname"><em>eigen_pose</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1f6863326e9ade0c55f1403b51214ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1f6863326e9ade0c55f1403b51214ca">&#9670;&nbsp;</a></span>Isometry3d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Isometry3d localization_common::Isometry3d </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
+          <td class="paramname"><em>translation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Matrix3d &amp;&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -536,6 +748,54 @@ template&lt;class LocMsgType &gt; </div>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07d5c26b34feee6c0bc7f47c0c7d4139"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d5c26b34feee6c0bc7f47c0c7d4139">&#9670;&nbsp;</a></span>MatrixEquality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int TolerancePower = 6&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool localization_common::MatrixEquality </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76b99db27d6653a2395503ec6bad2ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76b99db27d6653a2395503ec6bad2ad6">&#9670;&nbsp;</a></span>Noise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double localization_common::Noise </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>stddev</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -726,6 +986,234 @@ template&lt;class LocMsgType &gt; </div>
 
 </div>
 </div>
+<a id="a211303428b3882b1388a644650d3c370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211303428b3882b1388a644650d3c370">&#9670;&nbsp;</a></span>PrincipalPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector2d localization_common::PrincipalPoints </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Matrix3d &amp;&#160;</td>
+          <td class="paramname"><em>intrinsics</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb1531b4ddab37368084cde3b436c8af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb1531b4ddab37368084cde3b436c8af">&#9670;&nbsp;</a></span>Rad2Deg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double localization_common::Rad2Deg </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>radians</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0696e0792ecdc33094b96689104cc4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0696e0792ecdc33094b96689104cc4a9">&#9670;&nbsp;</a></span>RandomAffine3d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Affine3d localization_common::RandomAffine3d </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b4dfc6814ac82c7bf5edee9b52fd746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b4dfc6814ac82c7bf5edee9b52fd746">&#9670;&nbsp;</a></span>RandomBool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool localization_common::RandomBool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee4c51c15cc7497f1741dc370527f706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4c51c15cc7497f1741dc370527f706">&#9670;&nbsp;</a></span>RandomDouble() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double localization_common::RandomDouble </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9c5dafeb4e16ea86688498a8a9bdc26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c5dafeb4e16ea86688498a8a9bdc26">&#9670;&nbsp;</a></span>RandomDouble() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double localization_common::RandomDouble </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acddd2555fe5d958ba31318059a5b9ea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acddd2555fe5d958ba31318059a5b9ea1">&#9670;&nbsp;</a></span>RandomGaussianDouble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double localization_common::RandomGaussianDouble </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>mean</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>stddev</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac516fbde6898bb82328a81773ffbcbb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac516fbde6898bb82328a81773ffbcbb5">&#9670;&nbsp;</a></span>RandomIntrinsics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix3d localization_common::RandomIntrinsics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ce3b31cf8342949870ad3378ca9b43f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce3b31cf8342949870ad3378ca9b43f">&#9670;&nbsp;</a></span>RandomIsometry3d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Isometry3d localization_common::RandomIsometry3d </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65b416d2517af8e75bea71eed9ba225c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b416d2517af8e75bea71eed9ba225c">&#9670;&nbsp;</a></span>RandomPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gtsam::Pose3 localization_common::RandomPose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b032750c856e28c313563933b0e16c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b032750c856e28c313563933b0e16c9">&#9670;&nbsp;</a></span>RandomPositiveDouble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double localization_common::RandomPositiveDouble </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2cae404a82fcca576a231708e8843ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2cae404a82fcca576a231708e8843ef">&#9670;&nbsp;</a></span>RandomVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3d localization_common::RandomVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab4fbfc1cf6183a634283e425c97c7ec0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab4fbfc1cf6183a634283e425c97c7ec0">&#9670;&nbsp;</a></span>RemoveGravityFromAccelerometerMeasurement()</h2>
 
@@ -778,6 +1266,40 @@ template&lt;class LocMsgType &gt; </div>
           <td class="paramtype">const std_msgs::Header &amp;&#160;</td>
           <td class="paramname"><em>header</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2c58efc7c6a9e52169e9c3c7b1faa91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2c58efc7c6a9e52169e9c3c7b1faa91">&#9670;&nbsp;</a></span>RotationFromEulerAngles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix3d localization_common::RotationFromEulerAngles </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>yaw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>pitch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>roll</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

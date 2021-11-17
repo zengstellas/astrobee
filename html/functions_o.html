@@ -246,6 +246,9 @@ $(document).ready(function(){initNavTree('functions_o.html',''); initResizable()
 , <a class="el" href="classlocalization__rviz__plugins_1_1SparseMappingDisplay.html#a3162bdea6d6a8171bdf7cd3ebfff2d92">localization_rviz_plugins::SparseMappingDisplay</a>
 , <a class="el" href="classtraj__opt_1_1TrajectoryDisplay.html#a7562942f3f043c7f925fce18daf8ce0d">traj_opt::TrajectoryDisplay</a>
 </li>
+<li>only_use_inliers
+: <a class="el" href="structcalibration_1_1CameraTargetBasedIntrinsicsCalibratorParams.html#abbc15dcc57a530ccd32a5d89452ab4c7">calibration::CameraTargetBasedIntrinsicsCalibratorParams</a>
+</li>
 <li>onNewData()
 : <a class="el" href="classpico__driver_1_1PicoDriverL1.html#aecbaa9c243eec2720ca45f592dba7fbd">pico_driver::PicoDriverL1</a>
 , <a class="el" href="classpico__driver_1_1PicoDriverL2.html#a96d834b513bc8b3ec416750574e902e0">pico_driver::PicoDriverL2</a>
@@ -291,6 +294,12 @@ $(document).ready(function(){initNavTree('functions_o.html',''); initResizable()
 , <a class="el" href="structjsonloader_1_1CaseInsensitiveHash.html#a2a3c205b17677b7c9c3eeedb4abeea1d">jsonloader::CaseInsensitiveHash</a>
 , <a class="el" href="structnull__deleter.html#a91906cb465e6905603e140f0cf80f5fd">null_deleter</a>
 , <a class="el" href="structoctoclass_1_1IndexedOcTreeKey_1_1KeyHash.html#af1e2986cdf49dfc410d993ec482262f1">octoclass::IndexedOcTreeKey::KeyHash</a>
+, <a class="el" href="classoptimization__common_1_1AffineReprojectionError.html#ae0d0a392db15c2bed773301f17d253df">optimization_common::AffineReprojectionError&lt; DISTORTER &gt;</a>
+, <a class="el" href="classoptimization__common_1_1PointToPlaneError.html#a991dc63b82d7d71681d5d2d7c241a2e7">optimization_common::PointToPlaneError</a>
+, <a class="el" href="classoptimization__common_1_1PointToPointError.html#acb83cc2c7af52d4ac81931459b117903">optimization_common::PointToPointError</a>
+, <a class="el" href="classoptimization__common_1_1ReprojectionError.html#a2c7060ac98d3540c8ab9da225b64ea5a">optimization_common::ReprojectionError&lt; DISTORTER &gt;</a>
+, <a class="el" href="structoptimization__common_1_1SE3Plus.html#ab770022c57cf0dcafd010f107746732d">optimization_common::SE3Plus</a>
+, <a class="el" href="classoptimization__common_1_1SymmetricPointToPlaneError.html#a013c50a89009b611abc857da202128a1">optimization_common::SymmetricPointToPlaneError</a>
 , <a class="el" href="structpcl_1_1detail_1_1FieldsLength.html#a58d6e33bf6ed7ae3ea09d2506f370080">pcl::detail::FieldsLength&lt; PointT &gt;</a>
 , <a class="el" href="structpcl_1_1detail_1_1FieldStreamer.html#a3473e522220dcd2e869cceaf1d7d8a6c">pcl::detail::FieldStreamer&lt; Stream, PointT &gt;</a>
 , <a class="el" href="structros_1_1DefaultMessageCreator_3_01pcl_1_1PCLPointCloud2_01_4.html#a4e14e81a6e261ea3a5064226f673b604">ros::DefaultMessageCreator&lt; pcl::PCLPointCloud2 &gt;</a>
@@ -324,7 +333,7 @@ $(document).ready(function(){initNavTree('functions_o.html',''); initResizable()
 <li>operator=()
 : <a class="el" href="classff__common_1_1ThreadPool.html#ac9e6c4df27e6bd2f47336698699afa73">ff_common::ThreadPool</a>
 , <a class="el" href="classff__util_1_1State.html#a203b518107634d8e911f76256b98fb31">ff_util::State</a>
-, <a class="el" href="classi2c_1_1Bus.html#a70d6cf899a6ff7a09e6a213c89bab536">i2c::Bus</a>
+, <a class="el" href="classi2c_1_1Bus.html#af62139ca16d57f3ab5a5b240a38208e6">i2c::Bus</a>
 , <a class="el" href="classjsonloader_1_1Plan.html#aafbe84a14c92722cacd8e73772536f8c">jsonloader::Plan</a>
 , <a class="el" href="classoctoclass_1_1IndexedOcTreeKey.html#a8e499b84a710eb920f11abbf976c2c8f">octoclass::IndexedOcTreeKey</a>
 , <a class="el" href="classpolynomials_1_1Polynomial.html#a17256c828fd2da15c9505c51b9bdaf79">polynomials::Polynomial</a>
@@ -335,7 +344,7 @@ $(document).ready(function(){initNavTree('functions_o.html',''); initResizable()
 , <a class="el" href="classoctoclass_1_1IndexedOcTreeKey.html#a3d645328529ec4bdf667c53e7f867f3c">octoclass::IndexedOcTreeKey</a>
 </li>
 <li>operator[]()
-: <a class="el" href="classoctoclass_1_1IndexedOcTreeKey.html#a25e99af5c7b3a9c291ddbfecb89cd432">octoclass::IndexedOcTreeKey</a>
+: <a class="el" href="classoctoclass_1_1IndexedOcTreeKey.html#a30ac9e5155b5c3f4af8a5699053b5b16">octoclass::IndexedOcTreeKey</a>
 </li>
 <li>OpState()
 : <a class="el" href="classexecutive_1_1OpState.html#ad516137e143f6a7928ac490d57dacab8">executive::OpState</a>
@@ -399,11 +408,24 @@ $(document).ready(function(){initNavTree('functions_o.html',''); initResizable()
 <li>OpticalFlowUpdate()
 : <a class="el" href="classekf_1_1Ekf.html#a208a33ea5d95adc64c81b6582a8892cc">ekf::Ekf</a>
 </li>
+<li>optimization
+: <a class="el" href="structcalibration_1_1CameraTargetBasedIntrinsicsCalibratorParams.html#a178c3ea63b3866d1b70e08b2f6107a16">calibration::CameraTargetBasedIntrinsicsCalibratorParams</a>
+, <a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html#adb8ecfc5c61be9587cd0bea11980a33d">calibration::ReprojectionPoseEstimateParams</a>
+</li>
 <li>optimization_time
 : <a class="el" href="structgraph__bag_1_1GraphLocalizerSimulatorParams.html#a1725c24acb5f25aab271d39743e6fb63">graph_bag::GraphLocalizerSimulatorParams</a>
 </li>
 <li>optimization_timer_
 : <a class="el" href="classgraph__optimizer_1_1GraphStats.html#aabd0fa85d833201030c4350d78d23bb4">graph_optimizer::GraphStats</a>
+</li>
+<li>optimize_estimate
+: <a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html#afee03e93fe8ff8cf798056b443d8d48f">calibration::ReprojectionPoseEstimateParams</a>
+</li>
+<li>OptimizedCameraTTargets()
+: <a class="el" href="structcalibration_1_1OptimizationStateParameters.html#a39fb14807c626f2f9722b464d0b73cbc">calibration::OptimizationStateParameters</a>
+</li>
+<li>OptimizedStateParameters()
+: <a class="el" href="structcalibration_1_1OptimizationStateParameters.html#a3ec02a6039c9e3f5db91ae1ff50f4a3a">calibration::OptimizationStateParameters</a>
 </li>
 <li>Optional
 : <a class="el" href="classconfig__reader_1_1ConfigReader.html#aef4b900db65292de76ecc8d6daa98afea2ad310b9a62c14d577c1f6ea67252b7e">config_reader::ConfigReader</a>

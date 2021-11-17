@@ -116,6 +116,55 @@ var NAVTREE =
     [ "Astrobee code style", "astrobee-code-style.html", null ],
     [ "Subsystems", "subsystems.html", "subsystems" ],
     [ "Simulation", "sim-readme.html", "sim-readme" ],
+    [ "Calibration", "calibration.html", [
+      [ "Package Overview", "calibration.html#autotoc_md503", null ],
+      [ "Camera Target Based Intrinsics Calibration", "calibration.html#autotoc_md504", [
+        [ "Example Usage", "calibration.html#autotoc_md505", [
+          [ "The program 'roslaunch/rosrun' is currently not installed", "sim-issues.html#autotoc_md483", null ],
+          [ "[Sim.launch] is neither a launch file in package [astrobee] ...", "sim-issues.html#autotoc_md484", null ],
+          [ "Rospack Error Finding Package", "sim-issues.html#autotoc_md485", null ],
+          [ "Issues Starting up the Simulator", "sim-issues.html#autotoc_md486", null ],
+          [ "Robot Body Does Not Show up in RVIZ", "sim-issues.html#autotoc_md487", null ],
+          [ "No Image message in RVIZ", "sim-issues.html#autotoc_md488", null ],
+          [ "Heartbeat Fault Detected", "sim-issues.html#autotoc_md489", [
+            [ "DDS ROS Bridge", "sim-issues.html#autotoc_md490", null ],
+            [ "Multiple Heartbeat Failures", "sim-issues.html#autotoc_md491", null ]
+          ] ],
+          [ "Command Fails due to Robot State", "sim-issues.html#autotoc_md492", null ],
+          [ "Tolerance Violated Errors", "sim-issues.html#autotoc_md493", null ],
+          [ "Keep in Zone Violation", "sim-issues.html#autotoc_md494", null ],
+          [ "Unable to Plan a Segment", "sim-issues.html#autotoc_md495", null ],
+          [ "Couldn't Configure the Mobility Node", "sim-issues.html#autotoc_md496", null ],
+          [ "Could Not Query the Pose of Robot", "sim-issues.html#autotoc_md497", null ],
+          [ "Dock Action Server Not Connected", "sim-issues.html#autotoc_md498", null ],
+          [ "GDS Node - Process has Died", "sim-issues.html#autotoc_md499", null ],
+          [ "The Robot is Spinning, Flying Higher Than the World, or Jumping Around Erratically", "sim-issues.html#autotoc_md500", [
+            [ "Teleop Tool Reports No Publisher for Acks Topic", "sim-issues.html#autotoc_md501", null ],
+            [ "Bumble not in repository", "sim-issues.html#autotoc_md502", null ]
+          ] ],
+          [ "Generate target detections from bagfiles", "calibration.html#autotoc_md506", null ],
+          [ "View target detection coverage in image space", "calibration.html#autotoc_md507", null ],
+          [ "Calibrate", "calibration.html#autotoc_md508", [
+            [ "Calibration Parameters", "calibration.html#autotoc_md509", null ],
+            [ "Run Calibration", "calibration.html#autotoc_md510", null ],
+            [ "Calibration Output", "calibration.html#autotoc_md511", null ],
+            [ "Judging Calibration Results", "calibration.html#autotoc_md512", null ]
+          ] ]
+        ] ]
+      ] ],
+      [ "Tools", "calibration.html#autotoc_md516", [
+        [ "create_undistorted_images", "calibration.html#autotoc_md517", null ],
+        [ "run_camera_target_based_intrinsics_calibrator", "calibration.html#autotoc_md518", null ]
+      ] ],
+      [ "Scripts", "calibration.html#autotoc_md519", [
+        [ "calibrate_intrinsics_and_save_results.py", "calibration.html#autotoc_md520", null ],
+        [ "copy_calibration_params_to_config.py", "calibration.html#autotoc_md521", null ],
+        [ "get_bags_with_topic.py", "calibration.html#autotoc_md522", null ],
+        [ "make_error_histograms.py", "calibration.html#autotoc_md523", null ],
+        [ "save_images_with_target_detections.py", "calibration.html#autotoc_md524", null ],
+        [ "view_all_detections.py", "calibration.html#autotoc_md525", null ]
+      ] ]
+    ] ],
     [ "Tools", "tools.html", "tools" ],
     [ "Description", "urdf.html", null ],
     [ "Todo List", "todo.html", null ],
@@ -126,8 +175,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"install-NASA.html#autotoc_md149",
-"pmc_actuator.html#autotoc_md198"
+"index.html#autotoc_md5",
+"picoflexx.html#autotoc_md187"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
