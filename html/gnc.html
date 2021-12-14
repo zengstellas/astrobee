@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.15.2</span>
+   &#160;<span id="projectnumber">0.16.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('gnc.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The Guidance, Navigation &amp; Control subsystem is responsible for tracking the robot's pose and controlling the robot's motion.</p>
-<h2><a class="anchor" id="autotoc_md226"></a>
+<h2><a class="anchor" id="autotoc_md227"></a>
 GNC Subsystems</h2>
 <p>GNC consists of four main subsystems, that run in a chain:</p>
 <ol type="1">
@@ -101,7 +101,7 @@ GNC Subsystems</h2>
 <li><a class="el" href="fam.html">Force Allocation Module (FAM)</a> : The force allocation module takes the force and torque commands from the control subsystem, and determines the PMC speeds and nozzle positions to best execute these forces and torques.</li>
 <li><a class="el" href="simwrapper.html">GNC Simulation Wrapper</a> : The simulator simulates the inputs to the EKF, and simulates the robot's motion based on the outputs of the FAM.</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md227"></a>
+<h2><a class="anchor" id="autotoc_md228"></a>
 GNC Code Organization</h2>
 <p>Unlike the rest of flight software, the GNC systems are written mainly in Simulink. Simulink drag and drop box diagrams are then converted to automatically generated C code. The structure of the GNC code is:</p>
 <ol type="1">

@@ -217,5 +217,6 @@ var searchData=
   ['buttoncallback_511',['ButtonCallback',['../classvive_1_1ViveNodelet.html#a9165780f02b1d80a17af2c8b36a8a633',1,'vive::ViveNodelet']]],
   ['buttonmask_512',['buttonmask',['../structTracker.html#add67fbf1475dd8cf26f5248ac5e413be',1,'Tracker']]],
   ['bw_5f_513',['bw_',['../classmarker__tracking_1_1Labeling.html#ab74774f5c7207f6519ef2ba520b0c111',1,'marker_tracking::Labeling']]],
-  ['byte2hex_514',['byte2hex',['../namespaceaccess__control.html#a2cbee3294bf242c774ecf14bca7c7433',1,'access_control']]]
+  ['byte2hex_514',['byte2hex',['../namespaceaccess__control.html#a2cbee3294bf242c774ecf14bca7c7433',1,'access_control']]],
+  ['building_20a_20map_20with_20theia_515',['Building a map with Theia',['../theia_map.html',1,'sparsemapping']]]
 ];

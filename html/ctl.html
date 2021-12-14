@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.15.2</span>
+   &#160;<span id="projectnumber">0.16.0</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -92,13 +92,13 @@ $(document).ready(function(){initNavTree('ctl.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The control subsystem takes the pose from the EKF, as well as control commands, to determine the forces and torques that should be applied to the robot for smooth control. If executes the given segment based on a trajectory given by the choreographer, the faul checking on the execution is done in the choreographer based on the feedback.</p>
-<h1><a class="anchor" id="autotoc_md205"></a>
+<h1><a class="anchor" id="autotoc_md206"></a>
 Inputs</h1>
 <ul>
 <li><code>gnc/ekf</code>: EKF State from EKF</li>
 <li><code>gnc/ctl/control</code> Action. See the Control action specification for details.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md206"></a>
+<h1><a class="anchor" id="autotoc_md207"></a>
 Outputs</h1>
 <ul>
 <li><code>gnc/ctl/command</code>: The force and torque commanded by control.</li>
@@ -107,7 +107,7 @@ Outputs</h1>
 <li><code>gnc/ctl/segment</code>: The current segment the control subsystem is traversing.</li>
 <li><code>gnc/ctl/progress</code>: The progress in executing the current segment.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md207"></a>
+<h1><a class="anchor" id="autotoc_md208"></a>
 GNC Control Wrapper behavior</h1>
 <p><div class="dotgraph">
 <img src="dot_ctl_fsm.png" alt="dot_ctl_fsm.png" border="0" usemap="#dot_ctl_fsm.map"/>
@@ -120,7 +120,7 @@ GNC Control Wrapper finite state machine</div>
 <li>NOMINAL: Waits until the start time for deferred executions, commands the setpoints to the internal Matlab in nominal mode until the desired trajectory is finished.</li>
 <li>STOPPING: Commands internal Matlab into stopping mode. When the velocity and angular velocity fall under a certain stop threshould, it succeeds.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md208"></a>
+<h1><a class="anchor" id="autotoc_md209"></a>
 Autocode Matlab Internal behavior</h1>
 <p>The internal Matlab behavior has 4 modes:</p><ul>
 <li>Idle: No control is present.</li>
@@ -128,7 +128,7 @@ Autocode Matlab Internal behavior</h1>
 <li>Nominal: It follows the trajectory given for position, velocity and acceleraion.</li>
 <li>Stopped: Position/Attitude error is zero. Control Velocity and acceleration goals are zero.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md209"></a>
+<h1><a class="anchor" id="autotoc_md210"></a>
 Enable/Disable Control</h1>
 <p>In the case a new controller is to be tested, it is possible to enable/disble the current controller using the service <code>gnc/ctl/enable</code>. <code>true</code> will enable the control and <code>false</code> will disable it. If the requested state is the one already active, then the service does not return success. </p>
 </div></div><!-- contents -->

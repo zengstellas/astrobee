@@ -256,7 +256,7 @@ var searchData=
   ['assertfault_257',['AssertFault',['../classff__util_1_1FreeFlyerNodelet.html#ad5ac041c1bae01e612f4ff0f5512541c',1,'ff_util::FreeFlyerNodelet::AssertFault()'],['../classsys__monitor_1_1SysMonitor.html#a031fed173fa24a4ef139a2f8be010ae2',1,'sys_monitor::SysMonitor::AssertFault()']]],
   ['asserting_258',['ASSERTING',['../namespacecpu__mem__monitor.html#a16fc08b6f8e7d15dfd51acbedc6b327da8c156e62ede74ed6a8be2ece4f54d7a4',1,'cpu_mem_monitor']]],
   ['astrobee_259',['Astrobee',['../astrobee.html',1,'md_doc_general_documentation_astrobee_usage']]],
-  ['astrobee_20code_20style_260',['Astrobee code style',['../astrobee-code-style.html',1,'']]],
+  ['astrobee_20code_20style_260',['Astrobee code style',['../astrobee-code-style.html',1,'md_doc_general_documentation_astrobee_usage']]],
   ['astrobee_5fastrobee_5fbridge_2ecc_261',['astrobee_astrobee_bridge.cc',['../astrobee__astrobee__bridge_8cc.html',1,'']]],
   ['astrobee_5fastrobee_5fbridge_2eh_262',['astrobee_astrobee_bridge.h',['../astrobee__astrobee__bridge_8h.html',1,'']]],
   ['astrobee_5fgazebo_2ecc_263',['astrobee_gazebo.cc',['../astrobee__gazebo_8cc.html',1,'']]],
