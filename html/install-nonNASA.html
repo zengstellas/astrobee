@@ -147,7 +147,11 @@ Native build</h3>
 ./src/scripts/configure.sh -l -F -D
 source ~/.bashrc
 popd
-</pre><p>The configure script modifies your <code>.bashrc</code> to source <code>setup.bash</code> for the current ROS distribution and to set CMAKE_PREFIX_PATH. It is suggested to examine it and see if all changes were made correctly.</p>
+</pre><p>In you run a Zsh session, then </p><pre class="fragment">pushd $ASTROBEE_WS
+./src/scripts/configure.sh -l -F -D
+source ~/.zshrc
+popd
+</pre><p>The configure script modifies your <code>.bashrc</code>/<code>.zshrc</code> to source <code>setup.bash</code>/<code>setup.zsh</code> for the current ROS distribution and to set CMAKE_PREFIX_PATH. It is suggested to examine it and see if all changes were made correctly.</p>
 <p>If you want to explicitly specify the workspace and install directories, use instead: </p><pre class="fragment">./src/scripts/configure.sh -l -F -D -p $INSTALL_PATH -w $WORKSPACE_PATH
 </pre><p><em>Note: If a workspace is specified but not an explicit install distectory, install location will be $WORKSPACE_PATH/install.</em></p>
 <p><em>Note: Make sure you use the -F and -D flags. If these flags are not used, the code will not compile. The -F flag is used to turn off building the Picoflex. This is only needed for running on the robot and is not needed for the simulator. The -D is used to turn off building the dds bridge. The bridge is used to communicate with our ground data system and is also not needed for the simulator.</em></p>
