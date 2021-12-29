@@ -1,82 +1,82 @@
 <map id="tools/localization_rviz_plugins/src/localization_graph_display.h" name="tools/localization_rviz_plugins/src/localization_graph_display.h">
-<area shape="rect" id="node1" title=" " alt="" coords="6912,5,7121,61"/>
-<area shape="rect" id="node2" href="$camera__params_8h.html" title=" " alt="" coords="1251,117,1443,143"/>
-<area shape="rect" id="node15" title=" " alt="" coords="1297,414,1355,441"/>
-<area shape="rect" id="node16" title=" " alt="" coords="2757,414,2820,441"/>
-<area shape="rect" id="node20" title=" " alt="" coords="4161,117,4368,143"/>
-<area shape="rect" id="node21" href="$graph__localizer_8h.html" title=" " alt="" coords="4393,109,4555,151"/>
-<area shape="rect" id="node26" title=" " alt="" coords="6399,503,6584,530"/>
-<area shape="rect" id="node27" title=" " alt="" coords="6608,496,6815,537"/>
-<area shape="rect" id="node34" title=" " alt="" coords="5287,414,5338,441"/>
-<area shape="rect" id="node64" href="$loc__projection__factor_8h.html" title=" " alt="" coords="6793,310,6944,351"/>
-<area shape="rect" id="node68" title=" " alt="" coords="6844,109,7019,151"/>
-<area shape="rect" id="node69" title=" " alt="" coords="7043,117,7161,143"/>
-<area shape="rect" id="node70" title=" " alt="" coords="7184,117,7308,143"/>
-<area shape="rect" id="node71" title=" " alt="" coords="7333,109,7479,151"/>
-<area shape="rect" id="node72" title=" " alt="" coords="7503,117,7690,143"/>
-<area shape="rect" id="node73" title=" " alt="" coords="7714,117,7895,143"/>
-<area shape="rect" id="node74" title=" " alt="" coords="7920,117,8095,143"/>
-<area shape="rect" id="node75" title=" " alt="" coords="8119,117,8309,143"/>
-<area shape="rect" id="node76" title=" " alt="" coords="8333,109,8482,151"/>
-<area shape="rect" id="node77" title=" " alt="" coords="8507,117,8684,143"/>
-<area shape="rect" id="node78" href="$slider__property_8h.html" title=" " alt="" coords="8709,117,8839,143"/>
-<area shape="rect" id="node3" href="$config__reader_8h.html" title=" " alt="" coords="713,206,867,247"/>
-<area shape="rect" id="node18" title=" " alt="" coords="1520,317,1612,344"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1239,213,1325,240"/>
-<area shape="rect" id="node4" title=" " alt="" coords="31,317,85,344"/>
-<area shape="rect" id="node5" title=" " alt="" coords="109,317,180,344"/>
-<area shape="rect" id="node6" title=" " alt="" coords="204,317,283,344"/>
-<area shape="rect" id="node7" title=" " alt="" coords="307,317,422,344"/>
-<area shape="rect" id="node8" title=" " alt="" coords="446,317,513,344"/>
-<area shape="rect" id="node9" title=" " alt="" coords="537,317,608,344"/>
-<area shape="rect" id="node10" title=" " alt="" coords="633,317,718,344"/>
-<area shape="rect" id="node11" title=" " alt="" coords="742,317,838,344"/>
-<area shape="rect" id="node12" title=" " alt="" coords="862,317,937,344"/>
-<area shape="rect" id="node13" title=" " alt="" coords="961,317,1024,344"/>
-<area shape="rect" id="node14" title=" " alt="" coords="1048,317,1135,344"/>
-<area shape="rect" id="node17" href="$init_8h.html" title=" " alt="" coords="1312,317,1444,344"/>
-<area shape="rect" id="node22" href="$combined__nav__state__node__updater_8h.html" title=" " alt="" coords="6131,206,6331,247"/>
-<area shape="rect" id="node23" href="$combined__nav__state__node__updater__params_8h.html" title=" " alt="" coords="6033,303,6222,359"/>
-<area shape="rect" id="node24" href="$combined__nav__state_8h.html" title=" " alt="" coords="6182,407,6355,448"/>
-<area shape="rect" id="node25" href="$time_8h.html" title=" " alt="" coords="4368,496,4529,537"/>
-<area shape="rect" id="node28" title=" " alt="" coords="5839,503,6045,530"/>
-<area shape="rect" id="node29" title=" " alt="" coords="6163,503,6375,530"/>
-<area shape="rect" id="node30" title=" " alt="" coords="5668,407,5811,448"/>
-<area shape="rect" id="node31" href="$latest__imu__integrator_8h.html" title=" " alt="" coords="6297,310,6464,351"/>
-<area shape="rect" id="node32" href="$feature__tracker_8h.html" title=" " alt="" coords="4699,310,4871,351"/>
-<area shape="rect" id="node35" href="$feature__point__node__updater_8h.html" title=" " alt="" coords="1840,206,2012,247"/>
-<area shape="rect" id="node36" href="$handrail__factor__adder_8h.html" title=" " alt="" coords="2037,206,2215,247"/>
-<area shape="rect" id="node37" href="$handrail__points__measurement_8h.html" title=" " alt="" coords="1805,310,2041,351"/>
-<area shape="rect" id="node38" title=" " alt="" coords="2399,414,2459,441"/>
-<area shape="rect" id="node39" href="$graph__localizer__params_8h.html" title=" " alt="" coords="2290,206,2453,247"/>
-<area shape="rect" id="node40" href="$fan__speed__mode_8h.html" title=" " alt="" coords="2253,310,2455,351"/>
-<area shape="rect" id="node41" href="$graph__localizer__stats_8h.html" title=" " alt="" coords="2477,206,2639,247"/>
-<area shape="rect" id="node42" href="$robust__smart__projection__pose__factor_8h.html" title=" " alt="" coords="2715,199,2892,255"/>
-<area shape="rect" id="node43" title=" " alt="" coords="2827,310,3033,351"/>
-<area shape="rect" id="node44" href="$loc__factor__adder_8h.html" title=" " alt="" coords="4895,310,5039,351"/>
-<area shape="rect" id="node45" href="$matched__projections__measurement_8h.html" title=" " alt="" coords="5886,407,6158,448"/>
-<area shape="rect" id="node46" href="$loc__graph__action__completer_8h.html" title=" " alt="" coords="2967,206,3165,247"/>
-<area shape="rect" id="node47" href="$projection__graph__action__completer_8h.html" title=" " alt="" coords="3189,206,3386,247"/>
-<area shape="rect" id="node48" href="$projection__factor__adder_8h.html" title=" " alt="" coords="3661,206,3852,247"/>
-<area shape="rect" id="node49" href="$feature__points__measurement_8h.html" title=" " alt="" coords="3537,310,3768,351"/>
-<area shape="rect" id="node50" href="$rotation__factor__adder_8h.html" title=" " alt="" coords="3461,206,3637,247"/>
-<area shape="rect" id="node51" href="$smart__projection__cumulative__factor__adder_8h.html" title=" " alt="" coords="4449,199,4624,255"/>
-<area shape="rect" id="node52" title=" " alt="" coords="4188,317,4429,344"/>
-<area shape="rect" id="node53" href="$smart__projection__graph__action__completer_8h.html" title=" " alt="" coords="4188,199,4373,255"/>
-<area shape="rect" id="node54" href="$standstill__factor__adder_8h.html" title=" " alt="" coords="3876,206,4061,247"/>
-<area shape="rect" id="node55" href="$graph__optimizer_8h.html" title=" " alt="" coords="4505,310,4675,351"/>
-<area shape="rect" id="node56" title=" " alt="" coords="4174,407,4374,448"/>
-<area shape="rect" id="node57" title=" " alt="" coords="4487,414,4693,441"/>
-<area shape="rect" id="node58" title=" " alt="" coords="4718,407,4913,448"/>
-<area shape="rect" id="node59" href="$combined__nav__state__covariances_8h.html" title=" " alt="" coords="1451,199,1612,255"/>
-<area shape="rect" id="node60" title=" " alt="" coords="4749,213,4948,240"/>
-<area shape="rect" id="node61" title=" " alt="" coords="4972,213,5197,240"/>
-<area shape="rect" id="node62" title=" " alt="" coords="5221,213,5415,240"/>
-<area shape="rect" id="node63" title=" " alt="" coords="5439,213,5658,240"/>
-<area shape="rect" id="node33" title=" " alt="" coords="6379,414,6566,441"/>
-<area shape="rect" id="node65" title=" " alt="" coords="6843,414,7086,441"/>
-<area shape="rect" id="node66" title=" " alt="" coords="7110,407,7305,448"/>
-<area shape="rect" id="node67" title=" " alt="" coords="7329,414,7472,441"/>
-<area shape="rect" id="node79" title=" " alt="" coords="8757,213,8943,240"/>
-<area shape="rect" id="node80" title=" " alt="" coords="8663,213,8733,240"/>
+<area shape="rect" id="node1" title=" " alt="" coords="4679,5,4889,61"/>
+<area shape="rect" id="node2" href="$camera__params_8h.html" title=" " alt="" coords="1389,213,1581,240"/>
+<area shape="rect" id="node14" title=" " alt="" coords="1725,414,1784,441"/>
+<area shape="rect" id="node15" title=" " alt="" coords="2705,414,2767,441"/>
+<area shape="rect" id="node18" title=" " alt="" coords="4381,117,4587,143"/>
+<area shape="rect" id="node19" href="$graph__localizer_8h.html" title=" " alt="" coords="4143,109,4305,151"/>
+<area shape="rect" id="node24" title=" " alt="" coords="1850,503,2035,530"/>
+<area shape="rect" id="node25" title=" " alt="" coords="6949,496,7155,537"/>
+<area shape="rect" id="node32" title=" " alt="" coords="3084,414,3135,441"/>
+<area shape="rect" id="node64" href="$loc__projection__factor_8h.html" title=" " alt="" coords="1175,310,1326,351"/>
+<area shape="rect" id="node68" title=" " alt="" coords="4611,109,4786,151"/>
+<area shape="rect" id="node69" title=" " alt="" coords="4811,117,4928,143"/>
+<area shape="rect" id="node70" title=" " alt="" coords="4951,117,5075,143"/>
+<area shape="rect" id="node71" title=" " alt="" coords="5100,109,5247,151"/>
+<area shape="rect" id="node72" title=" " alt="" coords="5271,117,5457,143"/>
+<area shape="rect" id="node73" title=" " alt="" coords="5481,117,5663,143"/>
+<area shape="rect" id="node74" title=" " alt="" coords="5687,117,5862,143"/>
+<area shape="rect" id="node75" title=" " alt="" coords="5887,117,6076,143"/>
+<area shape="rect" id="node76" title=" " alt="" coords="6100,109,6249,151"/>
+<area shape="rect" id="node77" title=" " alt="" coords="6274,117,6451,143"/>
+<area shape="rect" id="node78" href="$slider__property_8h.html" title=" " alt="" coords="7059,117,7189,143"/>
+<area shape="rect" id="node3" href="$config__reader_8h.html" title=" " alt="" coords="557,310,710,351"/>
+<area shape="rect" id="node16" title=" " alt="" coords="1574,317,1666,344"/>
+<area shape="rect" id="node17" title=" " alt="" coords="1413,317,1499,344"/>
+<area shape="rect" id="node4" title=" " alt="" coords="421,414,475,441"/>
+<area shape="rect" id="node5" title=" " alt="" coords="499,414,570,441"/>
+<area shape="rect" id="node6" title=" " alt="" coords="594,414,673,441"/>
+<area shape="rect" id="node7" title=" " alt="" coords="697,414,812,441"/>
+<area shape="rect" id="node8" title=" " alt="" coords="836,414,903,441"/>
+<area shape="rect" id="node9" title=" " alt="" coords="927,414,998,441"/>
+<area shape="rect" id="node10" title=" " alt="" coords="5,414,91,441"/>
+<area shape="rect" id="node11" title=" " alt="" coords="115,414,211,441"/>
+<area shape="rect" id="node12" title=" " alt="" coords="235,414,309,441"/>
+<area shape="rect" id="node13" title=" " alt="" coords="334,414,397,441"/>
+<area shape="rect" id="node20" href="$combined__nav__state__node__updater_8h.html" title=" " alt="" coords="4464,206,4664,247"/>
+<area shape="rect" id="node21" href="$combined__nav__state__node__updater__params_8h.html" title=" " alt="" coords="5433,303,5623,359"/>
+<area shape="rect" id="node22" href="$combined__nav__state_8h.html" title=" " alt="" coords="6689,407,6863,448"/>
+<area shape="rect" id="node23" href="$time_8h.html" title=" " alt="" coords="3554,496,3715,537"/>
+<area shape="rect" id="node26" title=" " alt="" coords="6483,503,6688,530"/>
+<area shape="rect" id="node27" title=" " alt="" coords="6713,503,6925,530"/>
+<area shape="rect" id="node28" title=" " alt="" coords="4254,407,4397,448"/>
+<area shape="rect" id="node29" href="$latest__imu__integrator_8h.html" title=" " alt="" coords="4630,310,4797,351"/>
+<area shape="rect" id="node30" href="$feature__tracker_8h.html" title=" " alt="" coords="2475,310,2647,351"/>
+<area shape="rect" id="node33" href="$feature__point__node__updater_8h.html" title=" " alt="" coords="4689,206,4861,247"/>
+<area shape="rect" id="node34" href="$depth__odometry__factor__adder_8h.html" title=" " alt="" coords="3944,206,4136,247"/>
+<area shape="rect" id="node35" href="$depth__odometry__measurement_8h.html" title=" " alt="" coords="4363,310,4605,351"/>
+<area shape="rect" id="node36" href="$handrail__factor__adder_8h.html" title=" " alt="" coords="3328,206,3507,247"/>
+<area shape="rect" id="node37" href="$handrail__points__measurement_8h.html" title=" " alt="" coords="3338,310,3574,351"/>
+<area shape="rect" id="node38" title=" " alt="" coords="3606,414,3666,441"/>
+<area shape="rect" id="node39" href="$graph__localizer__params_8h.html" title=" " alt="" coords="6497,206,6660,247"/>
+<area shape="rect" id="node40" href="$fan__speed__mode_8h.html" title=" " alt="" coords="6493,310,6696,351"/>
+<area shape="rect" id="node41" href="$graph__localizer__stats_8h.html" title=" " alt="" coords="4885,206,5048,247"/>
+<area shape="rect" id="node42" href="$robust__smart__projection__pose__factor_8h.html" title=" " alt="" coords="3126,199,3303,255"/>
+<area shape="rect" id="node43" title=" " alt="" coords="2955,310,3162,351"/>
+<area shape="rect" id="node44" href="$loc__factor__adder_8h.html" title=" " alt="" coords="1949,310,2093,351"/>
+<area shape="rect" id="node45" href="$matched__projections__measurement_8h.html" title=" " alt="" coords="1893,407,2165,448"/>
+<area shape="rect" id="node46" href="$loc__graph__action__completer_8h.html" title=" " alt="" coords="5072,206,5269,247"/>
+<area shape="rect" id="node47" href="$projection__graph__action__completer_8h.html" title=" " alt="" coords="5293,206,5491,247"/>
+<area shape="rect" id="node48" href="$projection__factor__adder_8h.html" title=" " alt="" coords="2507,206,2698,247"/>
+<area shape="rect" id="node49" href="$feature__points__measurement_8h.html" title=" " alt="" coords="2118,310,2349,351"/>
+<area shape="rect" id="node50" href="$rotation__factor__adder_8h.html" title=" " alt="" coords="2045,206,2221,247"/>
+<area shape="rect" id="node51" href="$smart__projection__cumulative__factor__adder_8h.html" title=" " alt="" coords="2774,199,2949,255"/>
+<area shape="rect" id="node52" title=" " alt="" coords="3699,317,3941,344"/>
+<area shape="rect" id="node53" href="$smart__projection__graph__action__completer_8h.html" title=" " alt="" coords="3683,199,3869,255"/>
+<area shape="rect" id="node54" href="$standstill__factor__adder_8h.html" title=" " alt="" coords="2246,206,2431,247"/>
+<area shape="rect" id="node55" href="$graph__optimizer_8h.html" title=" " alt="" coords="4017,310,4186,351"/>
+<area shape="rect" id="node56" title=" " alt="" coords="3799,407,3999,448"/>
+<area shape="rect" id="node57" title=" " alt="" coords="4023,414,4230,441"/>
+<area shape="rect" id="node58" title=" " alt="" coords="4421,407,4616,448"/>
+<area shape="rect" id="node59" href="$combined__nav__state__covariances_8h.html" title=" " alt="" coords="1657,199,1818,255"/>
+<area shape="rect" id="node60" title=" " alt="" coords="5565,213,5763,240"/>
+<area shape="rect" id="node61" title=" " alt="" coords="5787,213,6013,240"/>
+<area shape="rect" id="node62" title=" " alt="" coords="6037,213,6230,240"/>
+<area shape="rect" id="node63" title=" " alt="" coords="6255,213,6473,240"/>
+<area shape="rect" id="node31" title=" " alt="" coords="2379,414,2565,441"/>
+<area shape="rect" id="node65" title=" " alt="" coords="1240,414,1483,441"/>
+<area shape="rect" id="node66" title=" " alt="" coords="1507,407,1701,448"/>
+<area shape="rect" id="node67" title=" " alt="" coords="1022,414,1165,441"/>
+<area shape="rect" id="node79" title=" " alt="" coords="7183,213,7369,240"/>
+<area shape="rect" id="node80" title=" " alt="" coords="7089,213,7159,240"/>
 </map>

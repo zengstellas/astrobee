@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NASA Astrobee Robot Software: tools/calibration/include/calibration/ransac_pnp_params.h Source File</title>
+<title>NASA Astrobee Robot Software: localization/vision_common/include/vision_common/ransac_pnp_params.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
@@ -108,30 +108,30 @@ $(document).ready(function(){initNavTree('ransac__pnp__params_8h_source.html',''
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * License for the specific language governing permissions and limitations</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * under the License.</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef CALIBRATION_RANSAC_PNP_PARAMS_H_</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define CALIBRATION_RANSAC_PNP_PARAMS_H_</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef VISION_COMMON_RANSAC_PNP_PARAMS_H_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define VISION_COMMON_RANSAC_PNP_PARAMS_H_</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecalibration.html">calibration</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structcalibration_1_1RansacPnPParams.html">   24</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcalibration_1_1RansacPnPParams.html">RansacPnPParams</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structcalibration_1_1RansacPnPParams.html#ae14858f7e34ed5dbf4692035edac24c8">   25</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="structcalibration_1_1RansacPnPParams.html#ae14858f7e34ed5dbf4692035edac24c8">max_inlier_threshold</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structcalibration_1_1RansacPnPParams.html#a1b20c3529c494c089c649d2b0f038e18">   26</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structcalibration_1_1RansacPnPParams.html#a1b20c3529c494c089c649d2b0f038e18">num_iterations</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structcalibration_1_1RansacPnPParams.html#af7106b622f578774d9d88bcd3078a688">   27</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structcalibration_1_1RansacPnPParams.html#af7106b622f578774d9d88bcd3078a688">min_num_inliers</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacevision__common.html">vision_common</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structvision__common_1_1RansacPnPParams.html">   24</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structvision__common_1_1RansacPnPParams.html">RansacPnPParams</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structvision__common_1_1RansacPnPParams.html#afe2808ffe9279e738d587c2bd1dd1ed7">   25</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="structvision__common_1_1RansacPnPParams.html#afe2808ffe9279e738d587c2bd1dd1ed7">max_inlier_threshold</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structvision__common_1_1RansacPnPParams.html#a91f6ff9c97b8f23c0f8fde8662514f75">   26</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structvision__common_1_1RansacPnPParams.html#a91f6ff9c97b8f23c0f8fde8662514f75">num_iterations</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structvision__common_1_1RansacPnPParams.html#ae36cdc2ee8f8ac016eb03c0a83e69392">   27</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structvision__common_1_1RansacPnPParams.html#ae36cdc2ee8f8ac016eb03c0a83e69392">min_num_inliers</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="comment">// TODO(rsoussan): Change this to cv::SolvePnPMethod when opencv version updated</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structcalibration_1_1RansacPnPParams.html#a34985c7b59339ad8fdad9abc443dcfe5">   29</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structcalibration_1_1RansacPnPParams.html#a34985c7b59339ad8fdad9abc443dcfe5">pnp_method</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structvision__common_1_1RansacPnPParams.html#a6796b2fe97102fc112acb407bdd355c3">   29</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structvision__common_1_1RansacPnPParams.html#a6796b2fe97102fc112acb407bdd355c3">pnp_method</a>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}  <span class="comment">// namespace calibration</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}  <span class="comment">// namespace vision_common</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif  // CALIBRATION_RANSAC_PNP_PARAMS_H_</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif  // VISION_COMMON_RANSAC_PNP_PARAMS_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astructcalibration_1_1RansacPnPParams_html_a1b20c3529c494c089c649d2b0f038e18"><div class="ttname"><a href="structcalibration_1_1RansacPnPParams.html#a1b20c3529c494c089c649d2b0f038e18">calibration::RansacPnPParams::num_iterations</a></div><div class="ttdeci">int num_iterations</div><div class="ttdef"><b>Definition:</b> ransac_pnp_params.h:26</div></div>
-<div class="ttc" id="astructcalibration_1_1RansacPnPParams_html_af7106b622f578774d9d88bcd3078a688"><div class="ttname"><a href="structcalibration_1_1RansacPnPParams.html#af7106b622f578774d9d88bcd3078a688">calibration::RansacPnPParams::min_num_inliers</a></div><div class="ttdeci">int min_num_inliers</div><div class="ttdef"><b>Definition:</b> ransac_pnp_params.h:27</div></div>
-<div class="ttc" id="astructcalibration_1_1RansacPnPParams_html"><div class="ttname"><a href="structcalibration_1_1RansacPnPParams.html">calibration::RansacPnPParams</a></div><div class="ttdef"><b>Definition:</b> ransac_pnp_params.h:24</div></div>
-<div class="ttc" id="anamespacecalibration_html"><div class="ttname"><a href="namespacecalibration.html">calibration</a></div><div class="ttdef"><b>Definition:</b> camera_target_based_intrinsics_calibrator.h:41</div></div>
-<div class="ttc" id="astructcalibration_1_1RansacPnPParams_html_a34985c7b59339ad8fdad9abc443dcfe5"><div class="ttname"><a href="structcalibration_1_1RansacPnPParams.html#a34985c7b59339ad8fdad9abc443dcfe5">calibration::RansacPnPParams::pnp_method</a></div><div class="ttdeci">int pnp_method</div><div class="ttdef"><b>Definition:</b> ransac_pnp_params.h:29</div></div>
-<div class="ttc" id="astructcalibration_1_1RansacPnPParams_html_ae14858f7e34ed5dbf4692035edac24c8"><div class="ttname"><a href="structcalibration_1_1RansacPnPParams.html#ae14858f7e34ed5dbf4692035edac24c8">calibration::RansacPnPParams::max_inlier_threshold</a></div><div class="ttdeci">double max_inlier_threshold</div><div class="ttdef"><b>Definition:</b> ransac_pnp_params.h:25</div></div>
+<div class="ttc" id="anamespacevision__common_html"><div class="ttname"><a href="namespacevision__common.html">vision_common</a></div><div class="ttdef"><b>Definition:</b> brisk_feature_detector_and_matcher.h:25</div></div>
+<div class="ttc" id="astructvision__common_1_1RansacPnPParams_html_a6796b2fe97102fc112acb407bdd355c3"><div class="ttname"><a href="structvision__common_1_1RansacPnPParams.html#a6796b2fe97102fc112acb407bdd355c3">vision_common::RansacPnPParams::pnp_method</a></div><div class="ttdeci">int pnp_method</div><div class="ttdef"><b>Definition:</b> ransac_pnp_params.h:29</div></div>
+<div class="ttc" id="astructvision__common_1_1RansacPnPParams_html_a91f6ff9c97b8f23c0f8fde8662514f75"><div class="ttname"><a href="structvision__common_1_1RansacPnPParams.html#a91f6ff9c97b8f23c0f8fde8662514f75">vision_common::RansacPnPParams::num_iterations</a></div><div class="ttdeci">int num_iterations</div><div class="ttdef"><b>Definition:</b> ransac_pnp_params.h:26</div></div>
+<div class="ttc" id="astructvision__common_1_1RansacPnPParams_html_ae36cdc2ee8f8ac016eb03c0a83e69392"><div class="ttname"><a href="structvision__common_1_1RansacPnPParams.html#ae36cdc2ee8f8ac016eb03c0a83e69392">vision_common::RansacPnPParams::min_num_inliers</a></div><div class="ttdeci">int min_num_inliers</div><div class="ttdef"><b>Definition:</b> ransac_pnp_params.h:27</div></div>
+<div class="ttc" id="astructvision__common_1_1RansacPnPParams_html_afe2808ffe9279e738d587c2bd1dd1ed7"><div class="ttname"><a href="structvision__common_1_1RansacPnPParams.html#afe2808ffe9279e738d587c2bd1dd1ed7">vision_common::RansacPnPParams::max_inlier_threshold</a></div><div class="ttdeci">double max_inlier_threshold</div><div class="ttdef"><b>Definition:</b> ransac_pnp_params.h:25</div></div>
+<div class="ttc" id="astructvision__common_1_1RansacPnPParams_html"><div class="ttname"><a href="structvision__common_1_1RansacPnPParams.html">vision_common::RansacPnPParams</a></div><div class="ttdef"><b>Definition:</b> ransac_pnp_params.h:24</div></div>
 <!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 </body>

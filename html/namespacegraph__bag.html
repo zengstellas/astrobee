@@ -100,6 +100,8 @@ $(document).ready(function(){initNavTree('namespacegraph__bag.html',''); initRes
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__bag_1_1BagImuFilterer.html">BagImuFilterer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__bag_1_1DepthOdometryAdder.html">DepthOdometryAdder</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__bag_1_1GraphBag.html">GraphBag</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgraph__bag_1_1GraphBagParams.html">GraphBagParams</a></td></tr>
@@ -146,8 +148,8 @@ Functions</h2></td></tr>
 <tr class="separator:a7586e1cb282065f78f7999c1dfb6fdda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac487fcdfdd766709358062ca702e7941"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; sensor_msgs::ImagePtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__bag.html#ac487fcdfdd766709358062ca702e7941">CreateFeatureTrackImage</a> (const sensor_msgs::ImageConstPtr &amp;image_msg, const <a class="el" href="namespacegraph__localizer.html#a408e390b6c93fb9e1dfaf5aa740ae55a">graph_localizer::FeatureTrackIdMap</a> &amp;feature_tracks, const <a class="el" href="classcamera_1_1CameraParameters.html">camera::CameraParameters</a> &amp;camera_params, const std::vector&lt; const <a class="el" href="namespacegraph__bag.html#aab24313f4fc1411682b6e18fc68da0c5">SmartFactor</a> * &gt; &amp;smart_factors={})</td></tr>
 <tr class="separator:ac487fcdfdd766709358062ca702e7941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a104c3651973d237475f1f488377569a3"><td class="memItemLeft" align="right" valign="top">cv::Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__bag.html#a104c3651973d237475f1f488377569a3">Distort</a> (const Eigen::Vector2d &amp;undistorted_point, const <a class="el" href="classcamera_1_1CameraParameters.html">camera::CameraParameters</a> &amp;params)</td></tr>
-<tr class="separator:a104c3651973d237475f1f488377569a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c06219e662a04649c811c68a934058"><td class="memItemLeft" align="right" valign="top">cv::Point2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__bag.html#a72c06219e662a04649c811c68a934058">Distort</a> (const Eigen::Vector2d &amp;undistorted_point, const <a class="el" href="classcamera_1_1CameraParameters.html">camera::CameraParameters</a> &amp;params)</td></tr>
+<tr class="separator:a72c06219e662a04649c811c68a934058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcb1e886cc8da0b2dd426fe2ff666cca"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="namespacegraph__bag.html#aab24313f4fc1411682b6e18fc68da0c5">SmartFactor</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__bag.html#abcb1e886cc8da0b2dd426fe2ff666cca">SmartFactors</a> (const <a class="el" href="classgraph__localizer_1_1GraphLocalizer.html">graph_localizer::GraphLocalizer</a> &amp;graph)</td></tr>
 <tr class="separator:abcb1e886cc8da0b2dd426fe2ff666cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18554002d2c35b8ef4c44277269185d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegraph__bag.html#a18554002d2c35b8ef4c44277269185d1">string_ends_with</a> (const std::string &amp;str, const std::string &amp;ending)</td></tr>
@@ -248,14 +250,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a104c3651973d237475f1f488377569a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a104c3651973d237475f1f488377569a3">&#9670;&nbsp;</a></span>Distort()</h2>
+<a id="a72c06219e662a04649c811c68a934058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c06219e662a04649c811c68a934058">&#9670;&nbsp;</a></span>Distort()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">cv::Point graph_bag::Distort </td>
+          <td class="memname">cv::Point2f graph_bag::Distort </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
           <td class="paramname"><em>undistorted_point</em>, </td>

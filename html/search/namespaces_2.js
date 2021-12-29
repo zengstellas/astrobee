@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['data_5fbagger_7433',['data_bagger',['../namespacedata__bagger.html',1,'']]],
-  ['dds_5fros_5fbridge_7434',['dds_ros_bridge',['../namespacedds__ros__bridge.html',1,'']]],
-  ['disk_5fmonitor_7435',['disk_monitor',['../namespacedisk__monitor.html',1,'']]],
-  ['dock_7436',['dock',['../namespacedock.html',1,'']]]
+  ['data_5fbagger_7843',['data_bagger',['../namespacedata__bagger.html',1,'']]],
+  ['dds_5fros_5fbridge_7844',['dds_ros_bridge',['../namespacedds__ros__bridge.html',1,'']]],
+  ['depth_5fodometry_7845',['depth_odometry',['../namespacedepth__odometry.html',1,'']]],
+  ['disk_5fmonitor_7846',['disk_monitor',['../namespacedisk__monitor.html',1,'']]],
+  ['dock_7847',['dock',['../namespacedock.html',1,'']]]
 ];

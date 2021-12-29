@@ -1,0 +1,12 @@
+<map id="localization/vision_common/include/vision_common/feature_detector_and_matcher.h" name="localization/vision_common/include/vision_common/feature_detector_and_matcher.h">
+<area shape="rect" id="node1" title=" " alt="" coords="396,5,595,76"/>
+<area shape="rect" id="node2" href="$image__features__with__known__correspondences__aligner__depth__odometry_8h.html" title=" " alt="" coords="35,124,259,209"/>
+<area shape="rect" id="node5" href="$brisk__feature__detector__and__matcher_8h.html" title=" " alt="" coords="283,131,470,202"/>
+<area shape="rect" id="node7" href="$lk__optical__flow__feature__detector__and__matcher_8h.html" title=" " alt="" coords="494,131,734,202"/>
+<area shape="rect" id="node9" href="$surf__feature__detector__and__matcher_8h.html" title=" " alt="" coords="759,131,989,202"/>
+<area shape="rect" id="node3" href="$depth__odometry__wrapper_8cc.html" title=" " alt="" coords="5,272,175,328"/>
+<area shape="rect" id="node4" href="$image__features__with__known__correspondences__aligner__depth__odometry_8cc.html" title=" " alt="" coords="421,257,612,343"/>
+<area shape="rect" id="node6" href="$brisk__feature__detector__and__matcher_8cc.html" title=" " alt="" coords="199,272,397,328"/>
+<area shape="rect" id="node8" href="$lk__optical__flow__feature__detector__and__matcher_8cc.html" title=" " alt="" coords="637,265,813,335"/>
+<area shape="rect" id="node10" href="$surf__feature__detector__and__matcher_8cc.html" title=" " alt="" coords="837,272,1029,328"/>
+</map>

@@ -1,11 +1,10 @@
-<map id="localization/optimization_common/include/optimization_common/radtan_distorter.h" name="localization/optimization_common/include/optimization_common/radtan_distorter.h">
-<area shape="rect" id="node1" title=" " alt="" coords="338,5,561,61"/>
-<area shape="rect" id="node2" href="$distorter_8h.html" title=" " alt="" coords="123,109,291,151"/>
-<area shape="rect" id="node3" title=" " alt="" coords="185,199,277,225"/>
-<area shape="rect" id="node6" href="$localization_2optimization__common_2include_2optimization__common_2utilities_8h.html" title=" " alt="" coords="365,109,533,151"/>
-<area shape="rect" id="node7" title=" " alt="" coords="535,199,643,225"/>
-<area shape="rect" id="node9" title=" " alt="" coords="609,117,786,143"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,199,160,225"/>
-<area shape="rect" id="node5" title=" " alt="" coords="301,199,363,225"/>
-<area shape="rect" id="node8" title=" " alt="" coords="387,199,511,225"/>
+<map id="localization/vision_common/include/vision_common/radtan_distorter.h" name="localization/vision_common/include/vision_common/radtan_distorter.h">
+<area shape="rect" id="node1" title=" " alt="" coords="235,5,440,61"/>
+<area shape="rect" id="node2" href="$distorter_8h.html" title=" " alt="" coords="240,109,435,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="74,184,166,211"/>
+<area shape="rect" id="node6" href="$localization_2vision__common_2include_2vision__common_2utilities_8h.html" title=" " alt="" coords="25,109,215,136"/>
+<area shape="rect" id="node7" title=" " alt="" coords="459,109,637,136"/>
+<area shape="rect" id="node8" title=" " alt="" coords="661,109,769,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="225,184,380,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="405,184,467,211"/>
 </map>

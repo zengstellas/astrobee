@@ -103,15 +103,7 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcalibration_1_1MatchSet.html">MatchSet</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcalibration_1_1OptimizationParams.html">OptimizationParams</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcalibration_1_1OptimizationStateParameters.html">OptimizationStateParameters</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcalibration_1_1PoseWithCovarianceAndInliers.html">PoseWithCovarianceAndInliers</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcalibration_1_1RansacPnPParams.html">RansacPnPParams</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html">ReprojectionPoseEstimateParams</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcalibration_1_1RunCalibratorParams.html">RunCalibratorParams</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,50 +114,18 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad5fefe7ba8fe8c43dfda0bf696c5ab84"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#ad5fefe7ba8fe8c43dfda0bf696c5ab84">Project3dPointToImageSpace</a> (const Eigen::Vector3d &amp;cam_t_point, const Eigen::Matrix3d &amp;intrinsics)</td></tr>
-<tr class="separator:ad5fefe7ba8fe8c43dfda0bf696c5ab84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2c8e2d0f305ee1549c7f8c3a5d59658"><td class="memTemplParams" colspan="2">template&lt;typename DISTORTER &gt; </td></tr>
-<tr class="memitem:ae2c8e2d0f305ee1549c7f8c3a5d59658"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#ae2c8e2d0f305ee1549c7f8c3a5d59658">Project3dPointToImageSpaceWithDistortion</a> (const Eigen::Vector3d &amp;cam_t_point, const Eigen::Matrix3d &amp;intrinsics, const Eigen::VectorXd &amp;distortion_params)</td></tr>
-<tr class="separator:ae2c8e2d0f305ee1549c7f8c3a5d59658"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a81f651aeb0ac6bbbc52c36487c6e45"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a0a81f651aeb0ac6bbbc52c36487c6e45">Isometry3d</a> (const cv::Mat &amp;rodrigues_rotation_cv, const cv::Mat &amp;translation_cv)</td></tr>
-<tr class="separator:a0a81f651aeb0ac6bbbc52c36487c6e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a399dc4eba18fe7b84db1a2737662b3dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a399dc4eba18fe7b84db1a2737662b3dc">UndistortedPnP</a> (const std::vector&lt; <a class="el" href="namespacecv.html#a32986d8c6fd05949688352abd112509f">cv::Point2d</a> &gt; &amp;undistorted_image_points, const std::vector&lt; <a class="el" href="namespacecv.html#a17f8af95b76535bd387f4909850c8810">cv::Point3d</a> &gt; &amp;points_3d, const cv::Mat &amp;intrinsics, const int pnp_method, cv::Mat &amp;rotation, cv::Mat &amp;translation)</td></tr>
-<tr class="separator:a399dc4eba18fe7b84db1a2737662b3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31f9caa15a5e5e48c8b52b34fe760e8d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a31f9caa15a5e5e48c8b52b34fe760e8d">RandomNIndices</a> (const int num_possible_indices, const int num_sampled_indices)</td></tr>
-<tr class="separator:a31f9caa15a5e5e48c8b52b34fe760e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66c4ceb8071e59540ca69830c8956433"><td class="memTemplParams" colspan="2">template&lt;typename DISTORTER &gt; </td></tr>
-<tr class="memitem:a66c4ceb8071e59540ca69830c8956433"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a66c4ceb8071e59540ca69830c8956433">Inliers</a> (const std::vector&lt; Eigen::Vector2d &gt; &amp;image_points, const std::vector&lt; Eigen::Vector3d &gt; &amp;points_3d, const Eigen::Matrix3d &amp;intrinsics, const Eigen::VectorXd &amp;distortion, const Eigen::Isometry3d &amp;pose_estimate, const double max_inlier_threshold, boost::optional&lt; std::vector&lt; int &gt; &amp; &gt; inliers=boost::none)</td></tr>
-<tr class="separator:a66c4ceb8071e59540ca69830c8956433"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a092b604a4852eabce168e6d566c248a3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a092b604a4852eabce168e6d566c248a3"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a092b604a4852eabce168e6d566c248a3">SampledValues</a> (const std::vector&lt; T &gt; &amp;values, const std::vector&lt; int &gt; &amp;indices)</td></tr>
-<tr class="separator:a092b604a4852eabce168e6d566c248a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab58a4091fbcee7bf2be22586629f29f8"><td class="memTemplParams" colspan="2">template&lt;typename DISTORTER &gt; </td></tr>
-<tr class="memitem:ab58a4091fbcee7bf2be22586629f29f8"><td class="memTemplItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="structcalibration_1_1PoseWithCovarianceAndInliers.html">PoseWithCovarianceAndInliers</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#ab58a4091fbcee7bf2be22586629f29f8">RansacPnP</a> (const std::vector&lt; Eigen::Vector2d &gt; &amp;image_points, const std::vector&lt; Eigen::Vector3d &gt; &amp;points_3d, const Eigen::Matrix3d &amp;intrinsics, const Eigen::VectorXd &amp;distortion, const <a class="el" href="structcalibration_1_1RansacPnPParams.html">RansacPnPParams</a> &amp;params)</td></tr>
-<tr class="separator:ab58a4091fbcee7bf2be22586629f29f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f36bd26ce21bdd7b3937f5f4cd0329b"><td class="memTemplParams" colspan="2">template&lt;typename DISTORTER &gt; </td></tr>
-<tr class="memitem:a0f36bd26ce21bdd7b3937f5f4cd0329b"><td class="memTemplItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="structcalibration_1_1PoseWithCovarianceAndInliers.html">PoseWithCovarianceAndInliers</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a0f36bd26ce21bdd7b3937f5f4cd0329b">ReprojectionPoseEstimate</a> (const std::vector&lt; Eigen::Vector2d &gt; &amp;image_points, const std::vector&lt; Eigen::Vector3d &gt; &amp;points_3d, const Eigen::Vector2d &amp;focal_lengths, const Eigen::Vector2d &amp;principal_points, const Eigen::VectorXd &amp;distortion, const <a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html">ReprojectionPoseEstimateParams</a> &amp;params)</td></tr>
-<tr class="separator:a0f36bd26ce21bdd7b3937f5f4cd0329b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2602b48cfc05c19981825c70d677adb"><td class="memTemplParams" colspan="2">template&lt;typename DISTORTER &gt; </td></tr>
-<tr class="memitem:ab2602b48cfc05c19981825c70d677adb"><td class="memTemplItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="structcalibration_1_1PoseWithCovarianceAndInliers.html">PoseWithCovarianceAndInliers</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#ab2602b48cfc05c19981825c70d677adb">ReprojectionPoseEstimate</a> (const std::vector&lt; Eigen::Vector2d &gt; &amp;image_points, const std::vector&lt; Eigen::Vector3d &gt; &amp;points_3d, const Eigen::Matrix3d &amp;intrinsics, const Eigen::VectorXd &amp;distortion, const <a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html">ReprojectionPoseEstimateParams</a> &amp;params)</td></tr>
-<tr class="separator:ab2602b48cfc05c19981825c70d677adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a0c9b790bac2ed4255cab7bdad0a07e"><td class="memTemplParams" colspan="2">template&lt;typename DISTORTER &gt; </td></tr>
-<tr class="memitem:a9a0c9b790bac2ed4255cab7bdad0a07e"><td class="memTemplItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="structcalibration_1_1PoseWithCovarianceAndInliers.html">PoseWithCovarianceAndInliers</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a9a0c9b790bac2ed4255cab7bdad0a07e">ReprojectionPoseEstimateWithInitialEstimate</a> (const std::vector&lt; Eigen::Vector2d &gt; &amp;image_points, const std::vector&lt; Eigen::Vector3d &gt; &amp;points_3d, const Eigen::Vector2d &amp;focal_lengths, const Eigen::Vector2d &amp;principal_points, const Eigen::VectorXd &amp;distortion, const <a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html">ReprojectionPoseEstimateParams</a> &amp;params, const Eigen::Isometry3d &amp;initial_estimate, const std::vector&lt; int &gt; &amp;initial_inliers)</td></tr>
-<tr class="separator:a9a0c9b790bac2ed4255cab7bdad0a07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cb0eec9d269930261773451e7df6770"><td class="memTemplParams" colspan="2">template&lt;typename DISTORTER &gt; </td></tr>
-<tr class="memitem:a9cb0eec9d269930261773451e7df6770"><td class="memTemplItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="structcalibration_1_1PoseWithCovarianceAndInliers.html">PoseWithCovarianceAndInliers</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a9cb0eec9d269930261773451e7df6770">ReprojectionPoseEstimateWithInitialEstimate</a> (const std::vector&lt; Eigen::Vector2d &gt; &amp;image_points, const std::vector&lt; Eigen::Vector3d &gt; &amp;points_3d, const Eigen::Matrix3d &amp;intrinsics, const Eigen::VectorXd &amp;distortion, const <a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html">ReprojectionPoseEstimateParams</a> &amp;params, const Eigen::Isometry3d &amp;initial_estimate, const std::vector&lt; int &gt; &amp;initial_inliers)</td></tr>
-<tr class="separator:a9cb0eec9d269930261773451e7df6770"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2472f5d8b36111220a923ca39b26dcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#ad2472f5d8b36111220a923ca39b26dcd">LoadRunCalibratorParams</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structcalibration_1_1RunCalibratorParams.html">RunCalibratorParams</a> &amp;params)</td></tr>
 <tr class="separator:ad2472f5d8b36111220a923ca39b26dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab77249e20200e804e9610266ccf08679"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#ab77249e20200e804e9610266ccf08679">LoadCameraTargetBasedIntrinsicsCalibratorParams</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structcalibration_1_1CameraTargetBasedIntrinsicsCalibratorParams.html">CameraTargetBasedIntrinsicsCalibratorParams</a> &amp;params)</td></tr>
 <tr class="separator:ab77249e20200e804e9610266ccf08679"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b8fa59ea44194e9ec828f5558133b67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a0b8fa59ea44194e9ec828f5558133b67">LoadReprojectionPoseEstimateParams</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html">ReprojectionPoseEstimateParams</a> &amp;params)</td></tr>
-<tr class="separator:a0b8fa59ea44194e9ec828f5558133b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab59e107fc8d6bcbe7cc9726bfacfd14c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#ab59e107fc8d6bcbe7cc9726bfacfd14c">LoadOptimizationParams</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structcalibration_1_1OptimizationParams.html">OptimizationParams</a> &amp;params, const std::string &amp;prefix=&quot;&quot;)</td></tr>
-<tr class="separator:ab59e107fc8d6bcbe7cc9726bfacfd14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82db03d8c36af31e2f0eb3fbe75d6101"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a82db03d8c36af31e2f0eb3fbe75d6101">LoadReprojectionPoseEstimateParams</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structvision__common_1_1ReprojectionPoseEstimateParams.html">vision_common::ReprojectionPoseEstimateParams</a> &amp;params)</td></tr>
+<tr class="separator:a82db03d8c36af31e2f0eb3fbe75d6101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84ac9a1b3775cb07a058c975ac625906"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a84ac9a1b3775cb07a058c975ac625906">LoadOptimizationParams</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structoptimization__common_1_1OptimizationParams.html">optimization_common::OptimizationParams</a> &amp;params, const std::string &amp;prefix=&quot;&quot;)</td></tr>
+<tr class="separator:a84ac9a1b3775cb07a058c975ac625906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b3a82315cfed29c98d620a022c173bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a4b3a82315cfed29c98d620a022c173bb">LoadSolverOptions</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, ceres::Solver::Options &amp;solver_options, const std::string &amp;prefix=&quot;&quot;)</td></tr>
 <tr class="separator:a4b3a82315cfed29c98d620a022c173bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8e335295c4d9fb24b4e9f6c701924df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#ae8e335295c4d9fb24b4e9f6c701924df">LoadRansacPnPParams</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structcalibration_1_1RansacPnPParams.html">RansacPnPParams</a> &amp;params)</td></tr>
-<tr class="separator:ae8e335295c4d9fb24b4e9f6c701924df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae42affdecfeff046a5b77969ca4cdf34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#ae42affdecfeff046a5b77969ca4cdf34">LoadRansacPnPParams</a> (<a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> &amp;config, <a class="el" href="structvision__common_1_1RansacPnPParams.html">vision_common::RansacPnPParams</a> &amp;params)</td></tr>
+<tr class="separator:ae42affdecfeff046a5b77969ca4cdf34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d0ae2494539804ed3611e028009f640"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecalibration.html#a1d0ae2494539804ed3611e028009f640">PrintCameraTTargetsStats</a> (const std::vector&lt; <a class="el" href="structcalibration_1_1MatchSet.html">MatchSet</a> &gt; &amp;match_sets, const std::vector&lt; Eigen::Isometry3d &gt; &amp;optimized_camera_T_targets)</td></tr>
 <tr class="separator:a1d0ae2494539804ed3611e028009f640"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a73748d2440fed6f5bc4d3fa321755c"><td class="memTemplParams" colspan="2">template&lt;typename DISTORTER &gt; </td></tr>
@@ -214,94 +174,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a66c4ceb8071e59540ca69830c8956433"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66c4ceb8071e59540ca69830c8956433">&#9670;&nbsp;</a></span>Inliers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DISTORTER &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int calibration::Inliers </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; Eigen::Vector2d &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image_points</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; Eigen::Vector3d &gt; &amp;&#160;</td>
-          <td class="paramname"><em>points_3d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Matrix3d &amp;&#160;</td>
-          <td class="paramname"><em>intrinsics</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>distortion</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
-          <td class="paramname"><em>pose_estimate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>max_inlier_threshold</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">boost::optional&lt; std::vector&lt; int &gt; &amp; &gt;&#160;</td>
-          <td class="paramname"><em>inliers</em> = <code>boost::none</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0a81f651aeb0ac6bbbc52c36487c6e45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a81f651aeb0ac6bbbc52c36487c6e45">&#9670;&nbsp;</a></span>Isometry3d()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::Isometry3d calibration::Isometry3d </td>
-          <td>(</td>
-          <td class="paramtype">const cv::Mat &amp;&#160;</td>
-          <td class="paramname"><em>rodrigues_rotation_cv</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Mat &amp;&#160;</td>
-          <td class="paramname"><em>translation_cv</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ab77249e20200e804e9610266ccf08679"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab77249e20200e804e9610266ccf08679">&#9670;&nbsp;</a></span>LoadCameraTargetBasedIntrinsicsCalibratorParams()</h2>
 
@@ -330,8 +202,8 @@ template&lt;typename DISTORTER &gt; </div>
 
 </div>
 </div>
-<a id="ab59e107fc8d6bcbe7cc9726bfacfd14c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab59e107fc8d6bcbe7cc9726bfacfd14c">&#9670;&nbsp;</a></span>LoadOptimizationParams()</h2>
+<a id="a84ac9a1b3775cb07a058c975ac625906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84ac9a1b3775cb07a058c975ac625906">&#9670;&nbsp;</a></span>LoadOptimizationParams()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -345,7 +217,7 @@ template&lt;typename DISTORTER &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structcalibration_1_1OptimizationParams.html">OptimizationParams</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structoptimization__common_1_1OptimizationParams.html">optimization_common::OptimizationParams</a> &amp;&#160;</td>
           <td class="paramname"><em>params</em>, </td>
         </tr>
         <tr>
@@ -364,8 +236,8 @@ template&lt;typename DISTORTER &gt; </div>
 
 </div>
 </div>
-<a id="ae8e335295c4d9fb24b4e9f6c701924df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8e335295c4d9fb24b4e9f6c701924df">&#9670;&nbsp;</a></span>LoadRansacPnPParams()</h2>
+<a id="ae42affdecfeff046a5b77969ca4cdf34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae42affdecfeff046a5b77969ca4cdf34">&#9670;&nbsp;</a></span>LoadRansacPnPParams()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,7 +251,7 @@ template&lt;typename DISTORTER &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structcalibration_1_1RansacPnPParams.html">RansacPnPParams</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structvision__common_1_1RansacPnPParams.html">vision_common::RansacPnPParams</a> &amp;&#160;</td>
           <td class="paramname"><em>params</em>&#160;</td>
         </tr>
         <tr>
@@ -392,8 +264,8 @@ template&lt;typename DISTORTER &gt; </div>
 
 </div>
 </div>
-<a id="a0b8fa59ea44194e9ec828f5558133b67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b8fa59ea44194e9ec828f5558133b67">&#9670;&nbsp;</a></span>LoadReprojectionPoseEstimateParams()</h2>
+<a id="a82db03d8c36af31e2f0eb3fbe75d6101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82db03d8c36af31e2f0eb3fbe75d6101">&#9670;&nbsp;</a></span>LoadReprojectionPoseEstimateParams()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,7 +279,7 @@ template&lt;typename DISTORTER &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html">ReprojectionPoseEstimateParams</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structvision__common_1_1ReprojectionPoseEstimateParams.html">vision_common::ReprojectionPoseEstimateParams</a> &amp;&#160;</td>
           <td class="paramname"><em>params</em>&#160;</td>
         </tr>
         <tr>
@@ -528,404 +400,6 @@ template&lt;typename DISTORTER &gt; </div>
 
 </div>
 </div>
-<a id="ad5fefe7ba8fe8c43dfda0bf696c5ab84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5fefe7ba8fe8c43dfda0bf696c5ab84">&#9670;&nbsp;</a></span>Project3dPointToImageSpace()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::Vector2d calibration::Project3dPointToImageSpace </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
-          <td class="paramname"><em>cam_t_point</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Matrix3d &amp;&#160;</td>
-          <td class="paramname"><em>intrinsics</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae2c8e2d0f305ee1549c7f8c3a5d59658"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2c8e2d0f305ee1549c7f8c3a5d59658">&#9670;&nbsp;</a></span>Project3dPointToImageSpaceWithDistortion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DISTORTER &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::Vector2d calibration::Project3dPointToImageSpaceWithDistortion </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
-          <td class="paramname"><em>cam_t_point</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Matrix3d &amp;&#160;</td>
-          <td class="paramname"><em>intrinsics</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>distortion_params</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a31f9caa15a5e5e48c8b52b34fe760e8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31f9caa15a5e5e48c8b52b34fe760e8d">&#9670;&nbsp;</a></span>RandomNIndices()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; int &gt; calibration::RandomNIndices </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>num_possible_indices</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>num_sampled_indices</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab58a4091fbcee7bf2be22586629f29f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab58a4091fbcee7bf2be22586629f29f8">&#9670;&nbsp;</a></span>RansacPnP()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DISTORTER &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">boost::optional&lt; <a class="el" href="structcalibration_1_1PoseWithCovarianceAndInliers.html">PoseWithCovarianceAndInliers</a> &gt; calibration::RansacPnP </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; Eigen::Vector2d &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image_points</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; Eigen::Vector3d &gt; &amp;&#160;</td>
-          <td class="paramname"><em>points_3d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Matrix3d &amp;&#160;</td>
-          <td class="paramname"><em>intrinsics</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>distortion</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcalibration_1_1RansacPnPParams.html">RansacPnPParams</a> &amp;&#160;</td>
-          <td class="paramname"><em>params</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab2602b48cfc05c19981825c70d677adb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2602b48cfc05c19981825c70d677adb">&#9670;&nbsp;</a></span>ReprojectionPoseEstimate() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DISTORTER &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">boost::optional&lt; <a class="el" href="structcalibration_1_1PoseWithCovarianceAndInliers.html">PoseWithCovarianceAndInliers</a> &gt; calibration::ReprojectionPoseEstimate </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; Eigen::Vector2d &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image_points</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; Eigen::Vector3d &gt; &amp;&#160;</td>
-          <td class="paramname"><em>points_3d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Matrix3d &amp;&#160;</td>
-          <td class="paramname"><em>intrinsics</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>distortion</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html">ReprojectionPoseEstimateParams</a> &amp;&#160;</td>
-          <td class="paramname"><em>params</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0f36bd26ce21bdd7b3937f5f4cd0329b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f36bd26ce21bdd7b3937f5f4cd0329b">&#9670;&nbsp;</a></span>ReprojectionPoseEstimate() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DISTORTER &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">boost::optional&lt; <a class="el" href="structcalibration_1_1PoseWithCovarianceAndInliers.html">PoseWithCovarianceAndInliers</a> &gt; calibration::ReprojectionPoseEstimate </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; Eigen::Vector2d &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image_points</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; Eigen::Vector3d &gt; &amp;&#160;</td>
-          <td class="paramname"><em>points_3d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
-          <td class="paramname"><em>focal_lengths</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
-          <td class="paramname"><em>principal_points</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>distortion</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html">ReprojectionPoseEstimateParams</a> &amp;&#160;</td>
-          <td class="paramname"><em>params</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9cb0eec9d269930261773451e7df6770"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cb0eec9d269930261773451e7df6770">&#9670;&nbsp;</a></span>ReprojectionPoseEstimateWithInitialEstimate() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DISTORTER &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">boost::optional&lt; <a class="el" href="structcalibration_1_1PoseWithCovarianceAndInliers.html">PoseWithCovarianceAndInliers</a> &gt; calibration::ReprojectionPoseEstimateWithInitialEstimate </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; Eigen::Vector2d &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image_points</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; Eigen::Vector3d &gt; &amp;&#160;</td>
-          <td class="paramname"><em>points_3d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Matrix3d &amp;&#160;</td>
-          <td class="paramname"><em>intrinsics</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>distortion</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html">ReprojectionPoseEstimateParams</a> &amp;&#160;</td>
-          <td class="paramname"><em>params</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
-          <td class="paramname"><em>initial_estimate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>initial_inliers</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9a0c9b790bac2ed4255cab7bdad0a07e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a0c9b790bac2ed4255cab7bdad0a07e">&#9670;&nbsp;</a></span>ReprojectionPoseEstimateWithInitialEstimate() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DISTORTER &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">boost::optional&lt; <a class="el" href="structcalibration_1_1PoseWithCovarianceAndInliers.html">PoseWithCovarianceAndInliers</a> &gt; calibration::ReprojectionPoseEstimateWithInitialEstimate </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; Eigen::Vector2d &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image_points</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; Eigen::Vector3d &gt; &amp;&#160;</td>
-          <td class="paramname"><em>points_3d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
-          <td class="paramname"><em>focal_lengths</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
-          <td class="paramname"><em>principal_points</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>distortion</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcalibration_1_1ReprojectionPoseEstimateParams.html">ReprojectionPoseEstimateParams</a> &amp;&#160;</td>
-          <td class="paramname"><em>params</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
-          <td class="paramname"><em>initial_estimate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>initial_inliers</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a092b604a4852eabce168e6d566c248a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a092b604a4852eabce168e6d566c248a3">&#9670;&nbsp;</a></span>SampledValues()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; T &gt; calibration::SampledValues </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>values</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>indices</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a4fec2b77ab7ec67eba1b05f8609bbc67"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4fec2b77ab7ec67eba1b05f8609bbc67">&#9670;&nbsp;</a></span>SaveReprojectionFromAllTargetsImage()</h2>
 
@@ -1035,58 +509,6 @@ template&lt;typename DISTORTER &gt; </div>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a399dc4eba18fe7b84db1a2737662b3dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a399dc4eba18fe7b84db1a2737662b3dc">&#9670;&nbsp;</a></span>UndistortedPnP()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void calibration::UndistortedPnP </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacecv.html#a32986d8c6fd05949688352abd112509f">cv::Point2d</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>undistorted_image_points</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacecv.html#a17f8af95b76535bd387f4909850c8810">cv::Point3d</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>points_3d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Mat &amp;&#160;</td>
-          <td class="paramname"><em>intrinsics</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>pnp_method</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cv::Mat &amp;&#160;</td>
-          <td class="paramname"><em>rotation</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cv::Mat &amp;&#160;</td>
-          <td class="paramname"><em>translation</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

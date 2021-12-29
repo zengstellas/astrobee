@@ -126,8 +126,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"index.html#autotoc_md4",
-"picoflexx.html#autotoc_md186"
+"imuintegration.html#autotoc_md291",
+"perch.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

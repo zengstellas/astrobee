@@ -1,10 +1,9 @@
-<map id="localization/optimization_common/include/optimization_common/fov_distorter.h" name="localization/optimization_common/include/optimization_common/fov_distorter.h">
-<area shape="rect" id="node1" title=" " alt="" coords="215,5,438,61"/>
-<area shape="rect" id="node2" href="$distorter_8h.html" title=" " alt="" coords="121,109,289,151"/>
-<area shape="rect" id="node3" title=" " alt="" coords="271,199,363,225"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,199,160,225"/>
-<area shape="rect" id="node6" href="$localization_2optimization__common_2include_2optimization__common_2utilities_8h.html" title=" " alt="" coords="364,109,532,151"/>
-<area shape="rect" id="node7" title=" " alt="" coords="535,199,643,225"/>
-<area shape="rect" id="node5" title=" " alt="" coords="185,199,247,225"/>
-<area shape="rect" id="node8" title=" " alt="" coords="387,199,511,225"/>
+<map id="localization/vision_common/include/vision_common/fov_distorter.h" name="localization/vision_common/include/vision_common/fov_distorter.h">
+<area shape="rect" id="node1" title=" " alt="" coords="245,5,429,61"/>
+<area shape="rect" id="node2" href="$distorter_8h.html" title=" " alt="" coords="240,109,435,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="74,184,166,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="393,184,548,211"/>
+<area shape="rect" id="node6" href="$localization_2vision__common_2include_2vision__common_2utilities_8h.html" title=" " alt="" coords="25,109,215,136"/>
+<area shape="rect" id="node7" title=" " alt="" coords="510,109,618,136"/>
+<area shape="rect" id="node5" title=" " alt="" coords="306,184,369,211"/>
 </map>

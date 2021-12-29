@@ -196,6 +196,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>scores()
 : <a class="el" href="classinterest__point_1_1BriskLayer.html#a7795b9e85f89c431cb7dc77d61bf46ee">interest_point::BriskLayer</a>
 </li>
+<li>search_radius
+: <a class="el" href="structpoint__cloud__common_1_1PointToPlaneICPParams.html#adf5f209510760e7575cb9be1b908dffd">point_cloud_common::PointToPlaneICPParams</a>
+</li>
 <li>sec()
 : <a class="el" href="classjsonloader_1_1Time.html#a3afe1725e56758ec40b7ab52b0c96758">jsonloader::Time</a>
 , <a class="el" href="structsequencer_1_1sv_1_1pose__vel__accel_1_1StateVector.html#ab057c8a2ab22f9c0cfb72f37ca886c08">sequencer::sv::pose_vel_accel::StateVector</a>
@@ -284,6 +287,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>SENSE_NEAR
 : <a class="el" href="classgazebo_1_1GazeboModelPluginEps.html#ab1c3838f50b77cd86fcf89354f33c536ac961e946e23b74cc8bfcb8666b0300f4">gazebo::GazeboModelPluginEps</a>
 </li>
+<li>sensor_F_source_T_target
+: <a class="el" href="structlocalization__measurements_1_1Odometry.html#ae3e20915d5649cf96e87053a5c190b4d">localization_measurements::Odometry</a>
+</li>
 <li>sensor_id
 : <a class="el" href="structLight.html#a337edd84a0ed467469e304a639f38f2d">Light</a>
 </li>
@@ -300,6 +306,12 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classgtsam_1_1PointToHandrailEndpointFactor.html#ad1ce33e53ca8c0c91e003d656dad1a24">gtsam::PointToHandrailEndpointFactor</a>
 , <a class="el" href="classgtsam_1_1PointToLineFactorBase.html#aec8dadebe02742f5f2a1d6cf7687cc1a">gtsam::PointToLineFactorBase</a>
 , <a class="el" href="classgtsam_1_1PointToPlaneFactor.html#a42ad5d93828b2834b31feb5bf005248a">gtsam::PointToPlaneFactor</a>
+</li>
+<li>sensor_t_point_source()
+: <a class="el" href="classgtsam_1_1PointToPointBetweenFactor.html#a8a266fb51fe6797ef32ecc2ed92f046a">gtsam::PointToPointBetweenFactor</a>
+</li>
+<li>sensor_t_point_target()
+: <a class="el" href="classgtsam_1_1PointToPointBetweenFactor.html#a2a9d880f6a644aa360b85595af298546">gtsam::PointToPointBetweenFactor</a>
 </li>
 <li>sensors
 : <a class="el" href="structvive__localization_1_1Tracker.html#a27f77f6bf2a208fc9541034566d2f1d4">vive_localization::Tracker</a>
@@ -371,8 +383,8 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classperch_1_1PerchNodelet.html#ac66d2e7100cebd51326bc5b4eb410571">perch::PerchNodelet</a>
 </li>
 <li>Set()
-: <a class="el" href="classff__util_1_1ConfigClient.html#a982744cc074e9050adcf72d8ccd5a066">ff_util::ConfigClient</a>
-, <a class="el" href="classff__util_1_1ConfigServer.html#a99b8b45ca4ea7b5f56d7799ed21dd12e">ff_util::ConfigServer</a>
+: <a class="el" href="classff__util_1_1ConfigClient.html#a81cd9849140bb795fcbfad5ae15d4daa">ff_util::ConfigClient</a>
+, <a class="el" href="classff__util_1_1ConfigServer.html#af938266b415d8a2a28accc2bbf158ef7">ff_util::ConfigServer</a>
 , <a class="el" href="classjsonloader_1_1Time.html#a333d308a02b6ee26114558cded372169">jsonloader::Time</a>
 </li>
 <li>set
@@ -599,6 +611,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>SetEnableReplan()
 : <a class="el" href="classexecutive_1_1Executive.html#a662743a6ed2dcfa8cc50d16cd6c071e8">executive::Executive</a>
 </li>
+<li>setEnforceSameDirectionNormals()
+: <a class="el" href="classpcl_1_1registration_1_1TransformationEstimationSymmetricPointToPlaneLLS2.html#a26538e13a3ead429f848df21ddcec4b6">pcl::registration::TransformationEstimationSymmetricPointToPlaneLLS2&lt; PointSource, PointTarget, Scalar &gt;</a>
+</li>
 <li>SetExec()
 : <a class="el" href="classexecutive_1_1OpState.html#acdc0e7f69054fb0cf663a8b88b348aef">executive::OpState</a>
 , <a class="el" href="classexecutive_1_1OpStateRepo.html#a6177ceec17a658b35c4fbf70f0db239d">executive::OpStateRepo</a>
@@ -681,8 +696,20 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>SetInitialStateParameters()
 : <a class="el" href="structcalibration_1_1OptimizationStateParameters.html#a84c9885411f2db9836abcd442e069800">calibration::OptimizationStateParameters</a>
 </li>
+<li>setInputCloud()
+: <a class="el" href="classpcl_1_1registration_1_1CorrespondenceRejectorSurfaceNormal2.html#a5d6be0b262b45bb2482fb6c98597b4e4">pcl::registration::CorrespondenceRejectorSurfaceNormal2&lt; PointWithNormalT &gt;</a>
+</li>
+<li>setInputNormals()
+: <a class="el" href="classpcl_1_1registration_1_1CorrespondenceRejectorSurfaceNormal2.html#a844399dfb71f9aa92fc56f9597abc81c">pcl::registration::CorrespondenceRejectorSurfaceNormal2&lt; PointWithNormalT &gt;</a>
+</li>
 <li>SetInputService()
 : <a class="el" href="classekf_1_1EkfWrapper.html#a16ad60e79948775374a1b94a55b8da09">ekf::EkfWrapper</a>
+</li>
+<li>setInputSource()
+: <a class="el" href="classpcl_1_1registration_1_1CorrespondenceRejectorSurfaceNormal2.html#a6715db691935e176e488215a12d5f895">pcl::registration::CorrespondenceRejectorSurfaceNormal2&lt; PointWithNormalT &gt;</a>
+</li>
+<li>setInputTarget()
+: <a class="el" href="classpcl_1_1registration_1_1CorrespondenceRejectorSurfaceNormal2.html#a47920bb3d274486c9f78381d5007e1ee">pcl::registration::CorrespondenceRejectorSurfaceNormal2&lt; PointWithNormalT &gt;</a>
 </li>
 <li>SetLeds()
 : <a class="el" href="classeps__driver_1_1EPS.html#a34dffe28ab1ae4becc617c485e3d0e2e">eps_driver::EPS</a>
@@ -865,11 +892,20 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>setScale()
 : <a class="el" href="classtraj__opt_1_1TrajectoryVisual.html#afc7443ac79dbfc0288715be4dc72aa48">traj_opt::TrajectoryVisual</a>
 </li>
+<li>setSearchMethodTarget()
+: <a class="el" href="classpcl_1_1registration_1_1CorrespondenceRejectorSurfaceNormal2.html#aa70893b0e78daae0b19df731a20003da">pcl::registration::CorrespondenceRejectorSurfaceNormal2&lt; PointWithNormalT &gt;</a>
+</li>
 <li>SetShutdownCallback()
 : <a class="el" href="classff__serial_1_1Serial.html#a1f1be49a69027dc7cf360ae894c8be91">ff_serial::Serial</a>
 </li>
 <li>setSlackCost()
 : <a class="el" href="classtraj__opt_1_1LegendreTrajectory.html#a81f53af5361eb0ca49ff22c97de2e230">traj_opt::LegendreTrajectory</a>
+</li>
+<li>setSourceNormals()
+: <a class="el" href="classpcl_1_1registration_1_1CorrespondenceRejectorSurfaceNormal2.html#a838f0df0de36f5bd9c651a7fb586d794">pcl::registration::CorrespondenceRejectorSurfaceNormal2&lt; PointWithNormalT &gt;</a>
+</li>
+<li>setSourcePoints()
+: <a class="el" href="classpcl_1_1registration_1_1CorrespondenceRejectorSurfaceNormal2.html#a3f70623e99f757baf85b5777d11b2480">pcl::registration::CorrespondenceRejectorSurfaceNormal2&lt; PointWithNormalT &gt;</a>
 </li>
 <li>SetSparseMappingPoseRate()
 : <a class="el" href="classdds__ros__bridge_1_1DdsRosBridge.html#a2602057e4d2034ba6b608739fae6a334">dds_ros_bridge::DdsRosBridge</a>
@@ -895,6 +931,12 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>setStyle()
 : <a class="el" href="classtraj__opt_1_1TrajectoryVisual.html#a6b85e6070320f88c2a01d46cc474863d">traj_opt::TrajectoryVisual</a>
 </li>
+<li>setTargetNormals()
+: <a class="el" href="classpcl_1_1registration_1_1CorrespondenceRejectorSurfaceNormal2.html#abe09c8e3a3e4362921dca78549bd445f">pcl::registration::CorrespondenceRejectorSurfaceNormal2&lt; PointWithNormalT &gt;</a>
+</li>
+<li>setTargetPoints()
+: <a class="el" href="classpcl_1_1registration_1_1CorrespondenceRejectorSurfaceNormal2.html#aa9bd3acdaeb35d45aed589428908af18">pcl::registration::CorrespondenceRejectorSurfaceNormal2&lt; PointWithNormalT &gt;</a>
+</li>
 <li>SetTelem()
 : <a class="el" href="classdds__ros__bridge_1_1DdsRosBridge.html#a06c8038df8e80a2daae158a46c2e9398">dds_ros_bridge::DdsRosBridge</a>
 </li>
@@ -910,6 +952,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>setThreshold()
 : <a class="el" href="classinterest__point_1_1BRISK.html#acc237a18be1b82af0153ad9e2a65a83e">interest_point::BRISK</a>
 , <a class="el" href="classinterest__point_1_1BRISK__Impl.html#a30cd074f61d45decfbe761d720be5922">interest_point::BRISK_Impl</a>
+, <a class="el" href="classpcl_1_1registration_1_1CorrespondenceRejectorSurfaceNormal2.html#a8087dc2db83f4a521fa408b7d6664f00">pcl::registration::CorrespondenceRejectorSurfaceNormal2&lt; PointWithNormalT &gt;</a>
 </li>
 <li>SetThreshParams()
 : <a class="el" href="classmarker__tracking_1_1Labeling.html#a784d49dad7cdd93ea59aa50af51e15c4">marker_tracking::Labeling</a>
@@ -1022,12 +1065,14 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 </li>
 <li>size()
 : <a class="el" href="structlocalization__common_1_1ImageCorrespondences.html#a5b7635a0094d330a9120592563467471">localization_common::ImageCorrespondences</a>
+, <a class="el" href="classlocalization__common_1_1MeasurementBuffer.html#aaeef45404fe73f469f599e702b8af18d">localization_common::MeasurementBuffer&lt; MeasurementType &gt;</a>
 </li>
 <li>Size()
 : <a class="el" href="classoctoclass_1_1IndexedKeySet.html#a9356eeee565c9303a1b40581ff1f2f5e">octoclass::IndexedKeySet</a>
 </li>
-<li>size
-: <a class="el" href="structTag.html#a1c6ba0d7ea2132d0b2700b0fc129c337">Tag</a>
+<li>size()
+: <a class="el" href="structpoint__cloud__common_1_1ICPCorrespondences.html#a97fcb17b47037e5de0d9dadbbdb004bf">point_cloud_common::ICPCorrespondences</a>
+, <a class="el" href="structTag.html#a1c6ba0d7ea2132d0b2700b0fc129c337">Tag</a>
 </li>
 <li>sizeList_
 : <a class="el" href="classinterest__point_1_1BRISK__Impl.html#abb0e45ad8465ab1699875395bd00dfb0">interest_point::BRISK_Impl</a>
@@ -1138,7 +1183,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classtraj__opt_1_1NonlinearSolver.html#acf1a5548de69b6c2062ef11de86f1839">traj_opt::NonlinearSolver</a>
 </li>
 <li>solver_options
-: <a class="el" href="structcalibration_1_1OptimizationParams.html#acd5644135bdafa331e16d414e1d96df0">calibration::OptimizationParams</a>
+: <a class="el" href="structoptimization__common_1_1OptimizationParams.html#a322aab20f1325d54f4701caae1a802a3">optimization_common::OptimizationParams</a>
 </li>
 <li>solveTrajectory()
 : <a class="el" href="classtraj__opt_1_1GurobiSolver.html#a3e449d4e86b99d52f2feb2aaaed7c959">traj_opt::GurobiSolver</a>
@@ -1152,6 +1197,22 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 </li>
 <li>sorter()
 : <a class="el" href="structff__common_1_1sorter.html#ab53ceb2bdf96dddeb5c2bdce11094453">ff_common::sorter&lt; T &gt;</a>
+</li>
+<li>source_3d_points
+: <a class="el" href="structlocalization__measurements_1_1DepthCorrespondences.html#a189149b372730042b261b000b6948aa8">localization_measurements::DepthCorrespondences</a>
+</li>
+<li>source_image_points
+: <a class="el" href="structlocalization__measurements_1_1DepthCorrespondences.html#ae93398d1db0d9af2b3bb095851893c65">localization_measurements::DepthCorrespondences</a>
+</li>
+<li>source_point
+: <a class="el" href="structvision__common_1_1FeatureMatch.html#a28d12ffa25a5e83085b5ce6589097e15">vision_common::FeatureMatch</a>
+</li>
+<li>source_points
+: <a class="el" href="structpoint__cloud__common_1_1ICPCorrespondences.html#aad3639e02a8148ea424ce21bc1b84ee6">point_cloud_common::ICPCorrespondences</a>
+</li>
+<li>source_time
+: <a class="el" href="structdepth__odometry_1_1PoseWithCovarianceAndCorrespondences.html#a328ffca1cc8a95ec29c396d7add45745">depth_odometry::PoseWithCovarianceAndCorrespondences</a>
+, <a class="el" href="structlocalization__measurements_1_1Odometry.html#a05abd9f801d7fdeb3310f88d0ff29e0b">localization_measurements::Odometry</a>
 </li>
 <li>SpacingFits()
 : <a class="el" href="classgraph__localizer_1_1FeatureTrack.html#ad685cc44b0ffc55963839b98167a10eb">graph_localizer::FeatureTrack</a>
@@ -1193,7 +1254,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="unionpmc__actuator_1_1Status2.html#a965425e705d7693ef1deb3065d716e37">pmc_actuator::Status2</a>
 </li>
 <li>SplineData()
-: <a class="el" href="structtraj__opt_1_1SplineData.html#a4d5e4b17d6149b09389e47a717877fa0">traj_opt::SplineData</a>
+: <a class="el" href="structtraj__opt_1_1SplineData.html#a362400eb94aa6f84b71fad65c893d414">traj_opt::SplineData</a>
 </li>
 <li>splitting
 : <a class="el" href="structgraph__localizer_1_1SmartProjectionFactorAdderParams.html#af081f6bef91fcf8d9cfebd3f5ba0a904">graph_localizer::SmartProjectionFactorAdderParams</a>
@@ -1326,7 +1387,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classeps__driver_1_1EPS.html#a980258f0eb1f69a269050a97438f12e5">eps_driver::EPS</a>
 , <a class="el" href="classff__util_1_1FreeFlyerServiceClient.html#ac1f2380b7cf23472f74fa5f89495c520">ff_util::FreeFlyerServiceClient&lt; ServiceSpec &gt;</a>
 , <a class="el" href="classff__util_1_1FSM.html#a2bb9191d18ff8dd84264afbaae418a6c">ff_util::FSM</a>
-, <a class="el" href="classff__util_1_1State.html#a0bfc37680f940905a95a12f601bbbc1d">ff_util::State</a>
+, <a class="el" href="classff__util_1_1State.html#a033a9f87878058a5967bf869eb622bff">ff_util::State</a>
 </li>
 <li>state
 : <a class="el" href="structOOTX.html#a7cc9d3d918d63a3c1076f77b1b59f4ce">OOTX</a>
@@ -1590,8 +1651,17 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classchoreographer_1_1Validator.html#a99a2c9914345934146af670fd8fec1daaf2bdc6f1a3f490c774479dd5d338ebe5">choreographer::Validator</a>
 , <a class="el" href="classff__util_1_1FreeFlyerActionState.html#a801b8b9bda4451b3b3403fe0233db2a7afb428887c2123e0310e16dcd01e33727">ff_util::FreeFlyerActionState</a>
 </li>
+<li>surf_feature_detector_and_matcher
+: <a class="el" href="structdepth__odometry_1_1ImageFeaturesWithKnownCorrespondencesAlignerDepthOdometryParams.html#af83cc6691cc0321105a3d2e7e547d749">depth_odometry::ImageFeaturesWithKnownCorrespondencesAlignerDepthOdometryParams</a>
+</li>
+<li>surf_threshold
+: <a class="el" href="structvision__common_1_1SurfFeatureDetectorAndMatcherParams.html#a070605d48f249e8982b56893d328d7a1">vision_common::SurfFeatureDetectorAndMatcherParams</a>
+</li>
 <li>SurfDynamicDetector()
 : <a class="el" href="classinterest__point_1_1SurfDynamicDetector.html#a8540104aacc27970f459beb5b8aa0ef3">interest_point::SurfDynamicDetector</a>
+</li>
+<li>SurfFeatureDetectorAndMatcher()
+: <a class="el" href="classvision__common_1_1SurfFeatureDetectorAndMatcher.html#acd62b8047ce64e15587c69e7adabaf73">vision_common::SurfFeatureDetectorAndMatcher</a>
 </li>
 <li>SvgGroup()
 : <a class="el" href="classSvgGroup.html#a01b5b8773ecdd627bd1087bccf309b4b">SvgGroup</a>
@@ -1636,11 +1706,14 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classjsonloader_1_1SwitchLocalizationCommand.html#a2c8760a1e3abc3f235afc67281c3b526">jsonloader::SwitchLocalizationCommand</a>
 </li>
 <li>SymbolicPoly()
-: <a class="el" href="classtraj__opt_1_1SymbolicPoly.html#ad38f2baf4509920fc096e97e5444d60b">traj_opt::SymbolicPoly</a>
+: <a class="el" href="classtraj__opt_1_1SymbolicPoly.html#a5d8f571b8ff04747df5de5b97a2c365f">traj_opt::SymbolicPoly</a>
 , <a class="el" href="classtraj__opt_1_1Variable.html#a3db0758eff1dcd2011e9695bc39c820e">traj_opt::Variable</a>
 </li>
+<li>symmetric_objective
+: <a class="el" href="structpoint__cloud__common_1_1PointToPlaneICPParams.html#a94d8cef8ddd6145f9d1bce6e35be5c50">point_cloud_common::PointToPlaneICPParams</a>
+</li>
 <li>SymmetricPointToPlaneError()
-: <a class="el" href="classoptimization__common_1_1SymmetricPointToPlaneError.html#ac18a214c2a11630b979ceab326ac9111">optimization_common::SymmetricPointToPlaneError</a>
+: <a class="el" href="classoptimization__common_1_1SymmetricPointToPlaneError.html#ab022afb0be14e432fbba902a27be7c64">optimization_common::SymmetricPointToPlaneError</a>
 </li>
 <li>syn
 : <a class="el" href="structOOTX.html#a2dfb5ad9e8c8ea1a765a517d13f2c78e">OOTX</a>

@@ -100,20 +100,20 @@ $(document).ready(function(){initNavTree('classoptimization__common_1_1PointToPo
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abf303bd097c6d0b16e8319eaf0d519f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoptimization__common_1_1PointToPointError.html#abf303bd097c6d0b16e8319eaf0d519f3">PointToPointError</a> (const Eigen::Vector3d &amp;source_point, const Eigen::Vector3d &amp;target_point)</td></tr>
-<tr class="separator:abf303bd097c6d0b16e8319eaf0d519f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb83cc2c7af52d4ac81931459b117903"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:acb83cc2c7af52d4ac81931459b117903"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classoptimization__common_1_1PointToPointError.html#acb83cc2c7af52d4ac81931459b117903">operator()</a> (const T *relative_transform_data, T *point_to_point_error) const</td></tr>
-<tr class="separator:acb83cc2c7af52d4ac81931459b117903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e3b790ee33bf0052b1fd48c43966220"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoptimization__common_1_1PointToPointError.html#a0e3b790ee33bf0052b1fd48c43966220">PointToPointError</a> (const Eigen::Vector3d &amp;source_t_point, const Eigen::Vector3d &amp;target_t_point)</td></tr>
+<tr class="separator:a0e3b790ee33bf0052b1fd48c43966220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78508cd02aecc8f45e4fc2a1587c6877"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a78508cd02aecc8f45e4fc2a1587c6877"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classoptimization__common_1_1PointToPointError.html#a78508cd02aecc8f45e4fc2a1587c6877">operator()</a> (const T *target_T_source_data, T *point_to_point_error) const</td></tr>
+<tr class="separator:a78508cd02aecc8f45e4fc2a1587c6877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:afd486e0b711b3ea7c52ba10e51c0a0b5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoptimization__common_1_1PointToPointError.html#afd486e0b711b3ea7c52ba10e51c0a0b5">AddCostFunction</a> (const Eigen::Vector3d &amp;source_point, const Eigen::Vector3d &amp;target_point, Eigen::Matrix&lt; double, 6, 1 &gt; &amp;relative_transform, ceres::Problem &amp;problem)</td></tr>
-<tr class="separator:afd486e0b711b3ea7c52ba10e51c0a0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada8916876d0cb52798a719e905fff29c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoptimization__common_1_1PointToPointError.html#ada8916876d0cb52798a719e905fff29c">AddCostFunction</a> (const Eigen::Vector3d &amp;source_t_point, const Eigen::Vector3d &amp;target_t_point, Eigen::Matrix&lt; double, 6, 1 &gt; &amp;target_T_source, ceres::Problem &amp;problem)</td></tr>
+<tr class="separator:ada8916876d0cb52798a719e905fff29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="abf303bd097c6d0b16e8319eaf0d519f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf303bd097c6d0b16e8319eaf0d519f3">&#9670;&nbsp;</a></span>PointToPointError()</h2>
+<a id="a0e3b790ee33bf0052b1fd48c43966220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3b790ee33bf0052b1fd48c43966220">&#9670;&nbsp;</a></span>PointToPointError()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,13 +125,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">optimization_common::PointToPointError::PointToPointError </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
-          <td class="paramname"><em>source_point</em>, </td>
+          <td class="paramname"><em>source_t_point</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
-          <td class="paramname"><em>target_point</em>&#160;</td>
+          <td class="paramname"><em>target_t_point</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -149,8 +149,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="afd486e0b711b3ea7c52ba10e51c0a0b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd486e0b711b3ea7c52ba10e51c0a0b5">&#9670;&nbsp;</a></span>AddCostFunction()</h2>
+<a id="ada8916876d0cb52798a719e905fff29c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada8916876d0cb52798a719e905fff29c">&#9670;&nbsp;</a></span>AddCostFunction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,19 +162,19 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">static void optimization_common::PointToPointError::AddCostFunction </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
-          <td class="paramname"><em>source_point</em>, </td>
+          <td class="paramname"><em>source_t_point</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
-          <td class="paramname"><em>target_point</em>, </td>
+          <td class="paramname"><em>target_t_point</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Eigen::Matrix&lt; double, 6, 1 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>relative_transform</em>, </td>
+          <td class="paramname"><em>target_T_source</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -197,8 +197,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acb83cc2c7af52d4ac81931459b117903"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb83cc2c7af52d4ac81931459b117903">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="a78508cd02aecc8f45e4fc2a1587c6877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78508cd02aecc8f45e4fc2a1587c6877">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +212,7 @@ template&lt;typename T &gt; </div>
           <td class="memname">bool optimization_common::PointToPointError::operator() </td>
           <td>(</td>
           <td class="paramtype">const T *&#160;</td>
-          <td class="paramname"><em>relative_transform_data</em>, </td>
+          <td class="paramname"><em>target_T_source_data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NASA Astrobee Robot Software: tools/calibration/include/calibration/optimization_params.h Source File</title>
+<title>NASA Astrobee Robot Software: localization/optimization_common/include/optimization_common/optimization_params.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
@@ -108,27 +108,27 @@ $(document).ready(function(){initNavTree('optimization__params_8h_source.html','
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * License for the specific language governing permissions and limitations</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * under the License.</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef CALIBRATION_OPTIMIZATION_PARAMS_H_</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define CALIBRATION_OPTIMIZATION_PARAMS_H_</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef OPTIMIZATION_COMMON_OPTIMIZATION_PARAMS_H_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define OPTIMIZATION_COMMON_OPTIMIZATION_PARAMS_H_</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ceres/solver.h&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecalibration.html">calibration</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structcalibration_1_1OptimizationParams.html">   24</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcalibration_1_1OptimizationParams.html">OptimizationParams</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structcalibration_1_1OptimizationParams.html#acd5644135bdafa331e16d414e1d96df0">   25</a></span>&#160;  ceres::Solver::Options <a class="code" href="structcalibration_1_1OptimizationParams.html#acd5644135bdafa331e16d414e1d96df0">solver_options</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structcalibration_1_1OptimizationParams.html#aa4f61b54ae340d1c11787ff891ea59be">   26</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structcalibration_1_1OptimizationParams.html#aa4f61b54ae340d1c11787ff891ea59be">verbose</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structcalibration_1_1OptimizationParams.html#a3445e8cf62489eefba82fe0d18a3d68a">   27</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="structcalibration_1_1OptimizationParams.html#a3445e8cf62489eefba82fe0d18a3d68a">huber_loss</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="namespaceoptimization__common.html">   23</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceoptimization__common.html">optimization_common</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structoptimization__common_1_1OptimizationParams.html">   24</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structoptimization__common_1_1OptimizationParams.html">OptimizationParams</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structoptimization__common_1_1OptimizationParams.html#a322aab20f1325d54f4701caae1a802a3">   25</a></span>&#160;  ceres::Solver::Options <a class="code" href="structoptimization__common_1_1OptimizationParams.html#a322aab20f1325d54f4701caae1a802a3">solver_options</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structoptimization__common_1_1OptimizationParams.html#acb06b39b1a501183ccada3f4d6758dcb">   26</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structoptimization__common_1_1OptimizationParams.html#acb06b39b1a501183ccada3f4d6758dcb">verbose</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structoptimization__common_1_1OptimizationParams.html#a50aebff3b9949e7f3d4bfca539bb7828">   27</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="structoptimization__common_1_1OptimizationParams.html#a50aebff3b9949e7f3d4bfca539bb7828">huber_loss</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}  <span class="comment">// namespace calibration</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}  <span class="comment">// namespace optimization_common</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif  // CALIBRATION_OPTIMIZATION_PARAMS_H_</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif  // OPTIMIZATION_COMMON_OPTIMIZATION_PARAMS_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astructcalibration_1_1OptimizationParams_html_a3445e8cf62489eefba82fe0d18a3d68a"><div class="ttname"><a href="structcalibration_1_1OptimizationParams.html#a3445e8cf62489eefba82fe0d18a3d68a">calibration::OptimizationParams::huber_loss</a></div><div class="ttdeci">double huber_loss</div><div class="ttdef"><b>Definition:</b> optimization_params.h:27</div></div>
-<div class="ttc" id="astructcalibration_1_1OptimizationParams_html_acd5644135bdafa331e16d414e1d96df0"><div class="ttname"><a href="structcalibration_1_1OptimizationParams.html#acd5644135bdafa331e16d414e1d96df0">calibration::OptimizationParams::solver_options</a></div><div class="ttdeci">ceres::Solver::Options solver_options</div><div class="ttdef"><b>Definition:</b> optimization_params.h:25</div></div>
-<div class="ttc" id="anamespacecalibration_html"><div class="ttname"><a href="namespacecalibration.html">calibration</a></div><div class="ttdef"><b>Definition:</b> camera_target_based_intrinsics_calibrator.h:41</div></div>
-<div class="ttc" id="astructcalibration_1_1OptimizationParams_html_aa4f61b54ae340d1c11787ff891ea59be"><div class="ttname"><a href="structcalibration_1_1OptimizationParams.html#aa4f61b54ae340d1c11787ff891ea59be">calibration::OptimizationParams::verbose</a></div><div class="ttdeci">bool verbose</div><div class="ttdef"><b>Definition:</b> optimization_params.h:26</div></div>
-<div class="ttc" id="astructcalibration_1_1OptimizationParams_html"><div class="ttname"><a href="structcalibration_1_1OptimizationParams.html">calibration::OptimizationParams</a></div><div class="ttdef"><b>Definition:</b> optimization_params.h:24</div></div>
+<div class="ttc" id="astructoptimization__common_1_1OptimizationParams_html"><div class="ttname"><a href="structoptimization__common_1_1OptimizationParams.html">optimization_common::OptimizationParams</a></div><div class="ttdef"><b>Definition:</b> optimization_params.h:24</div></div>
+<div class="ttc" id="astructoptimization__common_1_1OptimizationParams_html_acb06b39b1a501183ccada3f4d6758dcb"><div class="ttname"><a href="structoptimization__common_1_1OptimizationParams.html#acb06b39b1a501183ccada3f4d6758dcb">optimization_common::OptimizationParams::verbose</a></div><div class="ttdeci">bool verbose</div><div class="ttdef"><b>Definition:</b> optimization_params.h:26</div></div>
+<div class="ttc" id="astructoptimization__common_1_1OptimizationParams_html_a50aebff3b9949e7f3d4bfca539bb7828"><div class="ttname"><a href="structoptimization__common_1_1OptimizationParams.html#a50aebff3b9949e7f3d4bfca539bb7828">optimization_common::OptimizationParams::huber_loss</a></div><div class="ttdeci">double huber_loss</div><div class="ttdef"><b>Definition:</b> optimization_params.h:27</div></div>
+<div class="ttc" id="anamespaceoptimization__common_html"><div class="ttname"><a href="namespaceoptimization__common.html">optimization_common</a></div><div class="ttdef"><b>Definition:</b> optimization_params.h:23</div></div>
+<div class="ttc" id="astructoptimization__common_1_1OptimizationParams_html_a322aab20f1325d54f4701caae1a802a3"><div class="ttname"><a href="structoptimization__common_1_1OptimizationParams.html#a322aab20f1325d54f4701caae1a802a3">optimization_common::OptimizationParams::solver_options</a></div><div class="ttdeci">ceres::Solver::Options solver_options</div><div class="ttdef"><b>Definition:</b> optimization_params.h:25</div></div>
 <!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 </body>

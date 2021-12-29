@@ -1,8 +1,10 @@
-<map id="tools/calibration/include/calibration/camera_utilities.h" name="tools/calibration/include/calibration/camera_utilities.h">
-<area shape="rect" id="node1" title=" " alt="" coords="202,5,418,47"/>
-<area shape="rect" id="node2" href="$tools_2calibration_2include_2calibration_2utilities_8h.html" title=" " alt="" coords="126,95,305,136"/>
-<area shape="rect" id="node6" href="$camera__utilities_8cc.html" title=" " alt="" coords="329,95,480,136"/>
-<area shape="rect" id="node3" href="$camera__target__based__intrinsics__calibrator_8h.html" title=" " alt="" coords="5,184,220,240"/>
-<area shape="rect" id="node5" href="$tools_2calibration_2src_2utilities_8cc.html" title=" " alt="" coords="244,191,395,233"/>
-<area shape="rect" id="node4" href="$run__camera__target__based__intrinsics__calibrator_8cc.html" title=" " alt="" coords="15,288,210,344"/>
+<map id="localization/vision_common/include/vision_common/camera_utilities.h" name="localization/vision_common/include/vision_common/camera_utilities.h">
+<area shape="rect" id="node1" title=" " alt="" coords="277,5,484,61"/>
+<area shape="rect" id="node2" href="$vision__common_2include_2vision__common_2test__utilities_8h.html" title=" " alt="" coords="5,109,188,165"/>
+<area shape="rect" id="node3" href="$vision__common_2src_2test__utilities_8cc.html" title=" " alt="" coords="56,221,268,262"/>
+<area shape="rect" id="node4" href="$camera__utilities_8cc.html" title=" " alt="" coords="263,117,499,158"/>
+<area shape="rect" id="node5" href="$camera__target__based__intrinsics__calibrator_8h.html" title=" " alt="" coords="428,213,643,269"/>
+<area shape="rect" id="node7" href="$tools_2calibration_2include_2calibration_2utilities_8h.html" title=" " alt="" coords="573,117,751,158"/>
+<area shape="rect" id="node6" href="$run__camera__target__based__intrinsics__calibrator_8cc.html" title=" " alt="" coords="438,317,633,373"/>
+<area shape="rect" id="node8" href="$tools_2calibration_2src_2utilities_8cc.html" title=" " alt="" coords="667,221,817,262"/>
 </map>
