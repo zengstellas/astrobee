@@ -109,5 +109,6 @@ var tools =
         [ "Pose Display", "localizationrvizplugins.html#autotoc_md600", null ]
       ] ]
     ] ],
-    [ "DDS Profile and Types", "dds_profile.html", null ]
+    [ "DDS Profile and Types", "dds_profile.html", null ],
+    [ "Interactive Marker Teleop", "interactive_marker_teleop.html", null ]
 ];

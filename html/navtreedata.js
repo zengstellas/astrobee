@@ -127,7 +127,7 @@ var NAVTREEINDEX =
 [
 "access_control.html",
 "imuintegration.html#autotoc_md291",
-"perch.html"
+"pages.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

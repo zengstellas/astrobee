@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"pages.html":[],
 "perch.html":[4,5,3],
 "perch.html#autotoc_md463":[4,5,3,0],
 "perch.html#autotoc_md464":[4,5,3,1],
