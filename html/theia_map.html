@@ -91,10 +91,11 @@ $(document).ready(function(){initNavTree('theia_map.html',''); initResizable(); 
 <div class="title">Building a map with Theia </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Theia (<a href="https://github.com/sweeneychris/TheiaSfM">https://github.com/sweeneychris/TheiaSfM</a>) is a package for global structure-from-motion (SfM). It may be faster and require less user effort than the method used in Astrobee which consists of creating submaps using incremental SfM on sequences of images that overlap with their immediate neighbors, followed by merging the submaps. Theia uses "cascade matching" to handle non-sequential image acquisitions.</p>
+<div class="textblock"><p>Theia (<a href="https://github.com/sweeneychris/TheiaSfM">https://github.com/sweeneychris/TheiaSfM</a>) is a package for global structure-from-motion (SfM). It may be faster and require less user effort than the method used in Astrobee (see <a class="el" href="map_building.html">Map building</a>) which consists of creating submaps using incremental SfM on sequences of images that overlap with their immediate neighbors, followed by merging the submaps. Theia uses "cascade matching" to handle non-sequential image acquisitions.</p>
 <p>The Theia approach was tested on about 700 images acquired at different times and it did well. It is currently studied as an alternative to Astrobee's approach.</p>
 <h1><a class="anchor" id="autotoc_md387"></a>
 Install Theia's prerequisites</h1>
+<p>It is suggested to use <code>conda</code> to install Theia's dependencies. The conda toolset does not require root access and creates a set of consistent libraries at a custom location in your home directory, which are largely independent of your particular Linux system.</p>
 <p>Fetch and install <code>conda</code> from: </p><pre class="fragment">https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
 </pre><p>Restart your shell if it is suggested to do so.</p>
 <p>Create and activate the environment: </p><pre class="fragment">conda create -n theia   
@@ -104,7 +105,7 @@ conda activate theia
   lapack blas eigen==3.3.7 suitesparse rapidjson  \
   glog gflags rocksdb OpenImageIO                 \
   ceres-solver=1.14.0=h0948850_10
-</pre><p>The Ceres package can be quite particular about the version of Eigen it uses, and some versions of Ceres are not built with suitesparse which is a sparse solver that is needed for best performance, so some care is needed with choosing the versions of the packages.</p>
+</pre><p>The Ceres package can be quite particular about the version of Eigen it uses, and some versions of Ceres are not built with <code>suitesparse</code>, which is a sparse solver that is needed for best performance, so some care is needed with choosing the versions of the packages.</p>
 <h1><a class="anchor" id="autotoc_md388"></a>
 Fetch and build Theia</h1>
 <pre class="fragment">git clone git@github.com:sweeneychris/TheiaSfM.git
@@ -112,24 +113,52 @@ cd TheiaSfM
 git checkout d2112f1 # this version was tested
 </pre><p>Edit the file: </p><pre class="fragment">applications/CMakeLists.txt
 </pre><p>and comment out all the lines regarding OpenGL, GLEW, GLUT, and view_reconstruction. That visualizer logic is not easy to compile and is not needed.</p>
-<p>Run <code>which cmake</code> to ensure its version in the <code>theia</code> environemnt installed earlier is used. Otherwise run again <code>conda activate theia</code>. Do: </p><pre class="fragment">mkdir build
+<p>Run <code>which cmake</code> to ensure its version in the <code>theia</code> environemnt installed earlier is used. Otherwise run again: </p><pre class="fragment">conda activate theia
+</pre><p>Do: </p><pre class="fragment">mkdir build
 cd build
 cmake ..
 make -j 20
-</pre><p>This will create the executables <code>build_reconstruction</code> and <code>export_to_nvm_file</code> in the <code>bin</code> subdirectory of <code>build</code>. That directory needs to be added to the PATH.</p>
+</pre><p>This will create the executables <code>build_reconstruction</code> and <code>export_to_nvm_file</code> in the <code>bin</code> subdirectory of <code>build</code>.</p>
 <h1><a class="anchor" id="autotoc_md389"></a>
-Run the Astrobee wrapper around the Theia tools</h1>
-<p>The conda environment set up earlier will confuse the lookup the dependencies for the Astrobee libraries. Hence the lines <code>conda</code> added to one's <code>.bashrc</code> should be removed, the bash shell restarted, and one should ensure that the <code>env</code> command has no mentions of conda.</p>
-<p>Set the environment. The following lines should be adjusted as needed, especially the robot name: </p><pre class="fragment">export ASTROBEE_SOURCE_PATH=$HOME/projects/astrobee/src
-source $ASTROBEE_SOURCE_PATH/../devel/setup.bash
+Hide the conda environment</h1>
+<p>The conda environment set up earlier will confuse the lookup the dependencies for the Astrobee libraries. Hence remove the block of lines starting and ending with <code>conda initialize</code> which conda added to your ~/.bashrc, then close and reopen your terminal. Ensure that the <code>env</code> command shows no mention of conda.</p>
+<h1><a class="anchor" id="autotoc_md390"></a>
+Set up the environment for Theia and Astrobee</h1>
+<p>Add the Theia tools to your path as: </p><pre class="fragment">export PATH=/path/to/TheiaSfM/build/bin:$PATH
+</pre><p>Set up the environment for Astrobee, including the robot name. These should be adjusted as needed: </p><pre class="fragment">export ASTROBEE_BUILD_PATH=$HOME/astrobee
+export ASTROBEE_SOURCE_PATH=$ASTROBEE_BUILD_PATH/src
+source $ASTROBEE_BUILD_PATH/devel/setup.bash
 export ASTROBEE_RESOURCE_DIR=$ASTROBEE_SOURCE_PATH/astrobee/resources
 export ASTROBEE_CONFIG_DIR=$ASTROBEE_SOURCE_PATH/astrobee/config
 export ASTROBEE_WORLD=iss
 export ASTROBEE_ROBOT=bumble
-
-python $ASTROBEE_SOURCE_PATH/localization/sparse_mapping/tools/build_theia_map.py \
+</pre><p>Add some Astrobee tools to the path as well: </p><pre class="fragment">export PATH=$ASTROBEE_BUILD_PATH/devel/lib/sparse_mapping:$PATH
+</pre><p>Please note that if the robot name, as specified in <code>ASTROBEE_ROBOT</code>, is incorrect, you will get poor results.</p>
+<h1><a class="anchor" id="autotoc_md391"></a>
+Prepare the data</h1>
+<p>The data preparation is the same as used with the usual Astrobee map-building software documented in <a class="el" href="map_building.html">Map building</a>. To summarize, the steps are as follows.</p>
+<p>Extract the data from the bag: </p><pre class="fragment">$ASTROBEE_BUILD_PATH/devel/lib/localization_node/extract_image_bag \
+  bagfile.bag -use_timestamp_as_image_name                         \
+  -image_topic /hw/cam_nav -output_directory image_dir
+</pre><p>If the images were recorded with the image sampler, the nav_cam image topic needs to be changed to: </p><pre class="fragment">/mgt/img_sampler/nav_cam/image_record
+</pre><p>The <code>-use_timestamp_as_image_name</code> option is not strictly necessary, but it is helpful if a lot of datasets needs to be processed jointly. With it, the image filename is the timestamp (in double-precision seconds since epoch), which provides for a rather unique name, as compared to using the image index in the bag without that option.</p>
+<p>Select a subset of the images: </p><pre class="fragment">select_images -density_factor 1.4 image_dir/*.jpg
+</pre><p>This will delete a lot of similar images from that directory. This is not a foolproof process, and sometimes too many images are deleted but most of the time too many are left. It is suggested to open the remaining images with <code>eog</code> as: </p><pre class="fragment">eog image_dir/*.jpg
+</pre><p>and use the <code>Delete</code> key to remove redundant ones. The <code>nvm_visualize</code> tool (see <a class="el" href="sparsemapping.html">Sparse mapping</a>) can be used exactly as <code>eog</code>, and it has the advantage that it echoes the current image name in the terminal, which can be useful in some occasions.</p>
+<p>A good rule of thumb is for each image to have a 4/5 overlap with the next one. Too much or too little overlap will cause Theia to fail.</p>
+<p>It is suggested to avoid images with pure camera rotation, or at least to have in the mix additional images of the same environemnt without such rotations.</p>
+<p>Put the selected images in a list:</p>
+<p>ls image_dir/*jpg &gt; image_list.txt</p>
+<h1><a class="anchor" id="autotoc_md392"></a>
+Run the Astrobee wrapper around the Theia tools</h1>
+<pre class="fragment">python $ASTROBEE_SOURCE_PATH/localization/sparse_mapping/tools/build_theia_map.py \
    --output_map theia.map --work_dir theia_work --image_list image_list.txt
-</pre><p>This will take care of preparing everything Theia needs, will run it, and will export the resulting map to Astrobee's expected format. This map will need to be registered and visualized as described in other documentation. The work directory can be deleted later.</p>
+</pre><p>This will take care of preparing everything Theia needs, will run it, and will export the resulting map to Astrobee's expected format.</p>
+<p>It is suggested to first run this tool on a small subset of the data, perhaps made up of 10 images. A 700-image dataset may take perhaps 6 hours on a machine with a couple of dozen cores and use up perhaps 20 GB of RAM.</p>
+<p>The obtained map can be examined with <code>nvm_visualize</code>, as described in <a class="el" href="sparsemapping.html">Sparse mapping</a>.</p>
+<p>The work directory can be deleted later.</p>
+<h1><a class="anchor" id="autotoc_md393"></a>
+Command line options</h1>
 <p>This tool has the following command-line options: </p><pre class="fragment">--theia_flags: The flags to pass to Theia. If not specified, use
   localization/sparse_mapping/theia_flags.txt in the Astrobee repo.
 --image_list: The list of distorted (original) nav cam images to
@@ -143,7 +172,11 @@ python $ASTROBEE_SOURCE_PATH/localization/sparse_mapping/tools/build_theia_map.p
   Theia used with the original distorted ones in the sparse map
   imported from Theia. This is for testing purposes.
 --help: Show this help message and exit.
-</pre><h1><a class="anchor" id="autotoc_md390"></a>
+</pre><h1><a class="anchor" id="autotoc_md394"></a>
+Next steps</h1>
+<p>This map will need to be registered and visualized as described in <a class="el" href="map_building.html">Map building</a>.</p>
+<p>That page also has information for how the map can be rebuilt to use BRISK features, and how it can be validated for localization by playing a bag against it.</p>
+<h1><a class="anchor" id="autotoc_md395"></a>
 Auxiliary import_map tool</h1>
 <p>This tool is used to import a map from the NVM format, which Theia exports to. These operations are done automatically by the <code>build_theia_map.py</code> tool. This documentation is provided for reference only.</p>
 <p>An NVM map exported by Theia (or some other SfM tool) can be saved as an Astrobee sparse map with the command: </p><pre class="fragment">astrobee/devel/lib/sparse_mapping/import_map                             \

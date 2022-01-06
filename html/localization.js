@@ -131,11 +131,11 @@ var localization =
     ] ],
     [ "Sparse mapping", "sparsemapping.html", "sparsemapping" ],
     [ "Vision Common", "visioncommon.html", [
-      [ "Package Overview", "visioncommon.html#autotoc_md392", null ]
+      [ "Package Overview", "visioncommon.html#autotoc_md397", null ]
     ] ],
     [ "Vive Localization", "vive_localization.html", [
-      [ "Calibration", "vive_localization.html#autotoc_md396", null ],
-      [ "Tracking (offline)", "vive_localization.html#autotoc_md397", null ],
-      [ "Notes", "vive_localization.html#autotoc_md398", null ]
+      [ "Calibration", "vive_localization.html#autotoc_md401", null ],
+      [ "Tracking (offline)", "vive_localization.html#autotoc_md402", null ],
+      [ "Notes", "vive_localization.html#autotoc_md403", null ]
     ] ]
 ];

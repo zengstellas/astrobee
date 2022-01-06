@@ -78,7 +78,7 @@ var sparsemapping =
       ] ]
     ] ],
     [ "Total Station", "total_station.html", [
-      [ "Doing a Survey with the Total Station", "total_station.html#autotoc_md391", null ]
+      [ "Doing a Survey with the Total Station", "total_station.html#autotoc_md396", null ]
     ] ],
     [ "Granite Lab Registration", "granite_lab_registration.html", [
       [ "Locations of the control points in the granite lab used for registration", "granite_lab_registration.html#autotoc_md358", [
@@ -92,7 +92,12 @@ var sparsemapping =
     [ "Building a map with Theia", "theia_map.html", [
       [ "Install Theia's prerequisites", "theia_map.html#autotoc_md387", null ],
       [ "Fetch and build Theia", "theia_map.html#autotoc_md388", null ],
-      [ "Run the Astrobee wrapper around the Theia tools", "theia_map.html#autotoc_md389", null ],
-      [ "Auxiliary import_map tool", "theia_map.html#autotoc_md390", null ]
+      [ "Hide the conda environment", "theia_map.html#autotoc_md389", null ],
+      [ "Set up the environment for Theia and Astrobee", "theia_map.html#autotoc_md390", null ],
+      [ "Prepare the data", "theia_map.html#autotoc_md391", null ],
+      [ "Run the Astrobee wrapper around the Theia tools", "theia_map.html#autotoc_md392", null ],
+      [ "Command line options", "theia_map.html#autotoc_md393", null ],
+      [ "Next steps", "theia_map.html#autotoc_md394", null ],
+      [ "Auxiliary import_map tool", "theia_map.html#autotoc_md395", null ]
     ] ]
 ];

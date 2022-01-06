@@ -1,15 +1,15 @@
 var md_doc_general_documentation_astrobee_usage =
 [
     [ "Astrobee", "astrobee.html", [
-      [ "Folder description", "astrobee.html#autotoc_md465", null ],
-      [ "Environment variables", "astrobee.html#autotoc_md466", null ],
-      [ "Context determination", "astrobee.html#autotoc_md467", null ],
-      [ "Default contexts", "astrobee.html#autotoc_md468", null ],
-      [ "Remotely launching nodes", "astrobee.html#autotoc_md469", null ],
-      [ "Launching only specific nodes", "astrobee.html#autotoc_md470", null ],
-      [ "Launch file examples", "astrobee.html#autotoc_md471", null ],
-      [ "Roslaunch, [machine] tags, env scripts and environment variables", "astrobee.html#autotoc_md472", [
-        [ "Takeaway points:", "astrobee.html#autotoc_md473", null ]
+      [ "Folder description", "astrobee.html#autotoc_md470", null ],
+      [ "Environment variables", "astrobee.html#autotoc_md471", null ],
+      [ "Context determination", "astrobee.html#autotoc_md472", null ],
+      [ "Default contexts", "astrobee.html#autotoc_md473", null ],
+      [ "Remotely launching nodes", "astrobee.html#autotoc_md474", null ],
+      [ "Launching only specific nodes", "astrobee.html#autotoc_md475", null ],
+      [ "Launch file examples", "astrobee.html#autotoc_md476", null ],
+      [ "Roslaunch, [machine] tags, env scripts and environment variables", "astrobee.html#autotoc_md477", [
+        [ "Takeaway points:", "astrobee.html#autotoc_md478", null ]
       ] ]
     ] ],
     [ "Astrobee code style", "astrobee-code-style.html", null ],
@@ -19,25 +19,25 @@ var md_doc_general_documentation_astrobee_usage =
     [ "Setting up a new robot", "new_robot.html", null ],
     [ "Documentation", "doc.html", [
       [ "Tools used for FSW documentation", "doc.html#autotoc_md97", [
-        [ "Basic Usage", "teleop.html#autotoc_md426", [
-          [ "Dock", "teleop.html#autotoc_md427", null ],
-          [ "Move", "teleop.html#autotoc_md428", null ],
-          [ "Stop", "teleop.html#autotoc_md429", null ],
-          [ "Undock", "teleop.html#autotoc_md430", null ],
-          [ "Get Position", "teleop.html#autotoc_md431", null ],
-          [ "Get State", "teleop.html#autotoc_md432", null ],
-          [ "Reset Ekf", "teleop.html#autotoc_md433", null ]
+        [ "Basic Usage", "teleop.html#autotoc_md431", [
+          [ "Dock", "teleop.html#autotoc_md432", null ],
+          [ "Move", "teleop.html#autotoc_md433", null ],
+          [ "Stop", "teleop.html#autotoc_md434", null ],
+          [ "Undock", "teleop.html#autotoc_md435", null ],
+          [ "Get Position", "teleop.html#autotoc_md436", null ],
+          [ "Get State", "teleop.html#autotoc_md437", null ],
+          [ "Reset Ekf", "teleop.html#autotoc_md438", null ]
         ] ],
-        [ "Advanced Usage", "teleop.html#autotoc_md434", [
-          [ "Namespace", "teleop.html#autotoc_md435", null ],
-          [ "Reset Bias", "teleop.html#autotoc_md436", null ],
-          [ "Get Faults", "teleop.html#autotoc_md437", null ],
-          [ "Set Planner", "teleop.html#autotoc_md438", null ],
-          [ "Get Planner", "teleop.html#autotoc_md439", null ],
-          [ "Set Face Forward", "teleop.html#autotoc_md440", null ],
-          [ "Get Face Forward", "teleop.html#autotoc_md441", null ],
-          [ "Set Operating Limits", "teleop.html#autotoc_md442", null ],
-          [ "Get Operating Limits", "teleop.html#autotoc_md443", null ]
+        [ "Advanced Usage", "teleop.html#autotoc_md439", [
+          [ "Namespace", "teleop.html#autotoc_md440", null ],
+          [ "Reset Bias", "teleop.html#autotoc_md441", null ],
+          [ "Get Faults", "teleop.html#autotoc_md442", null ],
+          [ "Set Planner", "teleop.html#autotoc_md443", null ],
+          [ "Get Planner", "teleop.html#autotoc_md444", null ],
+          [ "Set Face Forward", "teleop.html#autotoc_md445", null ],
+          [ "Get Face Forward", "teleop.html#autotoc_md446", null ],
+          [ "Set Operating Limits", "teleop.html#autotoc_md447", null ],
+          [ "Get Operating Limits", "teleop.html#autotoc_md448", null ]
         ] ],
         [ "Create a Release Branch", "release.html#autotoc_md102", null ],
         [ "Update the Release Version", "release.html#autotoc_md103", null ],
