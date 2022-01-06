@@ -96,7 +96,6 @@ $(document).ready(function(){initNavTree('theia_map.html',''); initResizable(); 
 <h1><a class="anchor" id="autotoc_md387"></a>
 Install Theia's prerequisites</h1>
 <p>It is suggested to use <code>conda</code> to install Theia's dependencies. The conda toolset does not require root access and creates a set of consistent libraries at a custom location in your home directory, which are largely independent of your particular Linux system.</p>
-<p>For the record, the instructions below were tested on Ubuntu 18.04.</p>
 <p>Fetch and install <code>conda</code> from: </p><pre class="fragment">https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
 </pre><p>Restart your shell if it is suggested to do so.</p>
 <p>Create and activate the environment: </p><pre class="fragment">conda create -n theia   
@@ -148,8 +147,9 @@ Prepare the data</h1>
 </pre><p>and use the <code>Delete</code> key to remove redundant ones. The <code>nvm_visualize</code> tool (see <a class="el" href="sparsemapping.html">Sparse mapping</a>) can be used exactly as <code>eog</code>, and it has the advantage that it echoes the current image name in the terminal, which can be useful in some occasions.</p>
 <p>A good rule of thumb is for each image to have a 4/5 overlap with the next one. Too much or too little overlap will cause Theia to fail.</p>
 <p>It is suggested to avoid images with pure camera rotation, or at least to have in the mix additional images of the same environemnt without such rotations.</p>
-<p>Put the selected images in a list: </p><pre class="fragment">ls image_dir/*jpg &gt; image_list.txt
-</pre><h1><a class="anchor" id="autotoc_md392"></a>
+<p>Put the selected images in a list:</p>
+<p>ls image_dir/*jpg &gt; image_list.txt</p>
+<h1><a class="anchor" id="autotoc_md392"></a>
 Run the Astrobee wrapper around the Theia tools</h1>
 <pre class="fragment">python $ASTROBEE_SOURCE_PATH/localization/sparse_mapping/tools/build_theia_map.py \
    --output_map theia.map --work_dir theia_work --image_list image_list.txt
@@ -188,7 +188,7 @@ Auxiliary import_map tool</h1>
   -undistorted_images_list undist_list.txt   \
   -distorted_images_list dist_list.txt       \
   -input_map map.nvm -output_map map.map
-</pre><p>Here, the files <code>undist_list.txt</code> and <code>dist_list.txt</code> must have one image per line and be in one-to-one correspondence. It is important that both undistorted and distorted images be specified, as the former are needed to look up camera poses and other data in the .nvm file before being replaced with the distorted ones. </p>
+</pre><p>Here, the files undist_list.txt and dist_list.txt must have one image per line and be in one-to-one correspondence. It is important that both undistorted and distorted images be specified, as the former are needed to look up camera poses and other data in the .nvm file before being replaced with the distorted ones. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
