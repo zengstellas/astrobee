@@ -104,57 +104,59 @@ $(document).ready(function(){initNavTree('depth__odometry__wrapper_8h.html','');
 <code>#include &lt;pcl/point_types.h&gt;</code><br />
 <code>#include &lt;image_transport/image_transport.h&gt;</code><br />
 <code>#include &lt;sensor_msgs/PointCloud2.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for depth_odometry_wrapper.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="depth__odometry__wrapper_8h__incl.png" border="0" usemap="#alocalization_2depth__odometry_2include_2depth__odometry_2depth__odometry__wrapper_8h" alt=""/></div>
 <map name="localization_2depth__odometry_2include_2depth__odometry_2depth__odometry__wrapper_8h" id="alocalization_2depth__odometry_2include_2depth__odometry_2depth__odometry__wrapper_8h">
-<area shape="rect" title=" " alt="" coords="1466,5,1668,76"/>
-<area shape="rect" href="depth__odometry_8h.html" title=" " alt="" coords="1143,124,1314,165"/>
-<area shape="rect" title=" " alt="" coords="86,465,149,492"/>
-<area shape="rect" href="time_8h.html" title=" " alt="" coords="625,458,786,499"/>
-<area shape="rect" title=" " alt="" coords="1280,465,1412,492"/>
-<area shape="rect" title=" " alt="" coords="960,465,1094,492"/>
-<area shape="rect" href="depth__odometry__wrapper__params_8h.html" title=" " alt="" coords="2381,124,2601,165"/>
-<area shape="rect" title=" " alt="" coords="1605,131,1796,158"/>
-<area shape="rect" href="measurement__buffer_8h.html" title=" " alt="" coords="1518,347,1691,388"/>
-<area shape="rect" href="timer_8h.html" title=" " alt="" coords="2790,124,2952,165"/>
-<area shape="rect" title=" " alt="" coords="2976,124,3150,165"/>
-<area shape="rect" title=" " alt="" coords="3174,131,3376,158"/>
-<area shape="rect" href="depth__odometry__params_8h.html" title=" " alt="" coords="1902,347,2072,388"/>
-<area shape="rect" href="pose__with__covariance__and__correspondences_8h.html" title=" " alt="" coords="366,221,533,277"/>
-<area shape="rect" href="depth__image__measurement_8h.html" title=" " alt="" coords="1038,228,1259,269"/>
-<area shape="rect" title=" " alt="" coords="1436,465,1578,492"/>
-<area shape="rect" href="icp__correspondences_8h.html" title=" " alt="" coords="30,347,205,388"/>
-<area shape="rect" href="pose__with__covariance_8h.html" title=" " alt="" coords="410,458,593,499"/>
-<area shape="rect" href="depth__correspondences_8h.html" title=" " alt="" coords="230,347,432,388"/>
-<area shape="rect" href="eigen__vectors_8h.html" title=" " alt="" coords="183,465,386,492"/>
-<area shape="rect" title=" " alt="" coords="438,555,565,581"/>
-<area shape="rect" title=" " alt="" coords="222,555,346,581"/>
-<area shape="rect" href="depth__image_8h.html" title=" " alt="" coords="1139,347,1342,388"/>
-<area shape="rect" title=" " alt="" coords="1118,465,1256,492"/>
-<area shape="rect" href="measurement_8h.html" title=" " alt="" coords="760,347,963,388"/>
-<area shape="rect" href="point__to__plane__icp__depth__odometry__params_8h.html" title=" " alt="" coords="1725,221,1950,277"/>
-<area shape="rect" href="image__features__with__known__correspondences__aligner__depth__odometry__params_8h.html" title=" " alt="" coords="2389,213,2593,284"/>
-<area shape="rect" title=" " alt="" coords="2963,354,3022,381"/>
-<area shape="rect" href="point__to__plane__icp__params_8h.html" title=" " alt="" coords="1716,339,1877,395"/>
-<area shape="rect" href="point__cloud__with__known__correspondences__aligner__params_8h.html" title=" " alt="" coords="2097,332,2288,403"/>
-<area shape="rect" href="brisk__feature__detector__and__matcher__params_8h.html" title=" " alt="" coords="2312,339,2480,395"/>
-<area shape="rect" href="lk__optical__flow__feature__detector__and__matcher__params_8h.html" title=" " alt="" coords="2696,339,2888,395"/>
-<area shape="rect" href="surf__feature__detector__and__matcher__params_8h.html" title=" " alt="" coords="2504,339,2672,395"/>
-<area shape="rect" href="good__features__to__track__detector__params_8h.html" title=" " alt="" coords="2684,451,2888,507"/>
-<area shape="rect" title=" " alt="" coords="1603,465,1654,492"/>
-<area shape="rect" href="averager_8h.html" title=" " alt="" coords="3418,228,3580,269"/>
-<area shape="rect" title=" " alt="" coords="3046,354,3120,381"/>
-<area shape="rect" title=" " alt="" coords="3004,235,3071,262"/>
-<area shape="rect" title=" " alt="" coords="3517,347,3668,388"/>
-<area shape="rect" title=" " alt="" coords="3692,347,3845,388"/>
-<area shape="rect" title=" " alt="" coords="3869,347,4020,388"/>
-<area shape="rect" title=" " alt="" coords="4044,347,4199,388"/>
-<area shape="rect" title=" " alt="" coords="4224,347,4374,388"/>
-<area shape="rect" title=" " alt="" coords="3144,347,3294,388"/>
-<area shape="rect" title=" " alt="" coords="3319,347,3492,388"/>
+<area shape="rect" title=" " alt="" coords="2081,5,2283,76"/>
+<area shape="rect" href="depth__odometry_8h.html" title=" " alt="" coords="815,124,986,165"/>
+<area shape="rect" title=" " alt="" coords="1549,465,1612,492"/>
+<area shape="rect" href="time_8h.html" title=" " alt="" coords="820,458,981,499"/>
+<area shape="rect" title=" " alt="" coords="5,465,137,492"/>
+<area shape="rect" title=" " alt="" coords="490,465,623,492"/>
+<area shape="rect" href="depth__odometry__wrapper__params_8h.html" title=" " alt="" coords="2497,124,2717,165"/>
+<area shape="rect" title=" " alt="" coords="3011,354,3070,381"/>
+<area shape="rect" title=" " alt="" coords="3204,131,3395,158"/>
+<area shape="rect" href="measurement__buffer_8h.html" title=" " alt="" coords="967,347,1141,388"/>
+<area shape="rect" href="timer_8h.html" title=" " alt="" coords="3019,124,3180,165"/>
+<area shape="rect" title=" " alt="" coords="3419,124,3593,165"/>
+<area shape="rect" title=" " alt="" coords="3617,131,3819,158"/>
+<area shape="rect" href="depth__odometry__params_8h.html" title=" " alt="" coords="2174,458,2345,499"/>
+<area shape="rect" href="pose__with__covariance__and__correspondences_8h.html" title=" " alt="" coords="1284,221,1451,277"/>
+<area shape="rect" href="depth__image__measurement_8h.html" title=" " alt="" coords="390,228,611,269"/>
+<area shape="rect" title=" " alt="" coords="323,465,465,492"/>
+<area shape="rect" href="icp__correspondences_8h.html" title=" " alt="" coords="1493,347,1668,388"/>
+<area shape="rect" href="pose__with__covariance_8h.html" title=" " alt="" coords="1636,458,1819,499"/>
+<area shape="rect" href="depth__correspondences_8h.html" title=" " alt="" coords="1266,347,1469,388"/>
+<area shape="rect" href="eigen__vectors_8h.html" title=" " alt="" coords="1322,465,1525,492"/>
+<area shape="rect" title=" " alt="" coords="1664,555,1791,581"/>
+<area shape="rect" title=" " alt="" coords="1361,555,1485,581"/>
+<area shape="rect" href="depth__image_8h.html" title=" " alt="" coords="261,347,463,388"/>
+<area shape="rect" title=" " alt="" coords="161,465,299,492"/>
+<area shape="rect" href="measurement_8h.html" title=" " alt="" coords="538,347,741,388"/>
+<area shape="rect" href="point__to__plane__icp__depth__odometry__params_8h.html" title=" " alt="" coords="2495,339,2720,395"/>
+<area shape="rect" href="image__features__with__known__correspondences__aligner__depth__odometry__params_8h.html" title=" " alt="" coords="2361,213,2565,284"/>
+<area shape="rect" href="point__to__plane__icp__params_8h.html" title=" " alt="" coords="2547,451,2708,507"/>
+<area shape="rect" title=" " alt="" coords="2369,458,2523,499"/>
+<area shape="rect" href="point__cloud__with__known__correspondences__aligner__params_8h.html" title=" " alt="" coords="2037,332,2228,403"/>
+<area shape="rect" href="brisk__feature__detector__and__matcher__params_8h.html" title=" " alt="" coords="2253,339,2421,395"/>
+<area shape="rect" href="lk__optical__flow__feature__detector__and__matcher__params_8h.html" title=" " alt="" coords="2745,339,2937,395"/>
+<area shape="rect" href="surf__feature__detector__and__matcher__params_8h.html" title=" " alt="" coords="1845,339,2013,395"/>
+<area shape="rect" href="good__features__to__track__detector__params_8h.html" title=" " alt="" coords="2732,451,2936,507"/>
+<area shape="rect" title=" " alt="" coords="1029,465,1079,492"/>
+<area shape="rect" href="averager_8h.html" title=" " alt="" coords="3441,228,3603,269"/>
+<area shape="rect" title=" " alt="" coords="4349,354,4423,381"/>
+<area shape="rect" title=" " alt="" coords="3678,235,3745,262"/>
+<area shape="rect" title=" " alt="" coords="3095,347,3245,388"/>
+<area shape="rect" title=" " alt="" coords="3269,347,3423,388"/>
+<area shape="rect" title=" " alt="" coords="3447,347,3597,388"/>
+<area shape="rect" title=" " alt="" coords="3622,347,3777,388"/>
+<area shape="rect" title=" " alt="" coords="3801,347,3952,388"/>
+<area shape="rect" title=" " alt="" coords="3976,347,4127,388"/>
+<area shape="rect" title=" " alt="" coords="4151,347,4325,388"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">

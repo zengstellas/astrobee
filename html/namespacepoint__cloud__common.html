@@ -138,6 +138,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ab12f59d4462f60dce40a709911bfaf5f"><td class="memTemplParams" colspan="2">template&lt;typename PointType , typename PointWithNormalType &gt; </td></tr>
 <tr class="memitem:ab12f59d4462f60dce40a709911bfaf5f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#ab12f59d4462f60dce40a709911bfaf5f">EstimateNormals</a> (const typename pcl::PointCloud&lt; PointType &gt;::Ptr cloud, const double search_radius, pcl::PointCloud&lt; PointWithNormalType &gt; &amp;cloud_with_normals)</td></tr>
 <tr class="separator:ab12f59d4462f60dce40a709911bfaf5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f0de17d6aaa97ab1d7afa4ba6d30c9"><td class="memTemplParams" colspan="2">template&lt;typename PointType , typename PointWithNormalType &gt; </td></tr>
+<tr class="memitem:a59f0de17d6aaa97ab1d7afa4ba6d30c9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a59f0de17d6aaa97ab1d7afa4ba6d30c9">EstimateOrganizedNormals</a> (const typename pcl::PointCloud&lt; PointType &gt;::Ptr cloud, const typename pcl::IntegralImageNormalEstimation&lt; PointType, pcl::Normal &gt;::NormalEstimationMethod method, const bool depth_dependent_smoothing, const double max_depth_change_factor, const double normal_smoothing_size, pcl::PointCloud&lt; PointWithNormalType &gt; &amp;cloud_with_normals)</td></tr>
+<tr class="separator:a59f0de17d6aaa97ab1d7afa4ba6d30c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe50d0a15aba0c71a8200b07acdbb52d"><td class="memTemplParams" colspan="2">template&lt;typename PointType &gt; </td></tr>
+<tr class="memitem:afe50d0a15aba0c71a8200b07acdbb52d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#afe50d0a15aba0c71a8200b07acdbb52d">NormalSpaceSubsampling</a> (typename pcl::PointCloud&lt; PointType &gt;::Ptr cloud, const int bins_per_axis, const int num_samples)</td></tr>
+<tr class="separator:afe50d0a15aba0c71a8200b07acdbb52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb993473f02bb1ad23d1c16ed87efd09"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix4f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#abb993473f02bb1ad23d1c16ed87efd09">RansacIA</a> (const pcl::PointCloud&lt; pcl::PointXYZINormal &gt;::Ptr source_cloud, const pcl::PointCloud&lt; pcl::PointXYZINormal &gt;::Ptr target_cloud)</td></tr>
 <tr class="separator:abb993473f02bb1ad23d1c16ed87efd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e08990b6bb333c6c992b19c03221dc1"><td class="memItemLeft" align="right" valign="top">pcl::PointCloud&lt; pcl::FPFHSignature33 &gt;::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a3e08990b6bb333c6c992b19c03221dc1">EstimateHistogramFeatures</a> (const pcl::PointCloud&lt; pcl::PointXYZINormal &gt;::Ptr cloud_with_normals)</td></tr>
@@ -184,6 +190,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab40f400d1caf784606729265dfba729f"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
 <tr class="memitem:ab40f400d1caf784606729265dfba729f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#ab40f400d1caf784606729265dfba729f">ApproxZero</a> (const Type &amp;point, const double epsilon=1e-5)</td></tr>
 <tr class="separator:ab40f400d1caf784606729265dfba729f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527376a68cf98869f69f35b9827501ee"><td class="memTemplParams" colspan="2">template&lt;typename PointXYZType &gt; </td></tr>
+<tr class="memitem:a527376a68cf98869f69f35b9827501ee"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a527376a68cf98869f69f35b9827501ee">NonzeroPointXYZ</a> (const PointXYZType &amp;point)</td></tr>
+<tr class="separator:a527376a68cf98869f69f35b9827501ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8218e377f4322eb0f9ecac1773c3c0ad"><td class="memTemplParams" colspan="2">template&lt;typename PointXYZType &gt; </td></tr>
 <tr class="memitem:a8218e377f4322eb0f9ecac1773c3c0ad"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a8218e377f4322eb0f9ecac1773c3c0ad">ValidPointXYZ</a> (const PointXYZType &amp;point)</td></tr>
 <tr class="separator:a8218e377f4322eb0f9ecac1773c3c0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,9 +205,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ab2832648f69ed8a4a6331cd85f529cff"><td class="memTemplParams" colspan="2">template&lt;typename PointType &gt; </td></tr>
 <tr class="memitem:ab2832648f69ed8a4a6331cd85f529cff"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#ab2832648f69ed8a4a6331cd85f529cff">RemoveInvalidAndZeroPoints</a> (pcl::PointCloud&lt; PointType &gt; &amp;cloud)</td></tr>
 <tr class="separator:ab2832648f69ed8a4a6331cd85f529cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f40a3bc2bea53ed00856c8e7cb1f24c"><td class="memTemplParams" colspan="2">template&lt;typename PointType &gt; </td></tr>
+<tr class="memitem:a8f40a3bc2bea53ed00856c8e7cb1f24c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a8f40a3bc2bea53ed00856c8e7cb1f24c">ReplaceZerosWithNans</a> (typename pcl::PointCloud&lt; PointType &gt; &amp;cloud)</td></tr>
+<tr class="separator:a8f40a3bc2bea53ed00856c8e7cb1f24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d8c5aefb2ea1b84cd7dbce537622ea8"><td class="memTemplParams" colspan="2">template&lt;typename PointType &gt; </td></tr>
 <tr class="memitem:a3d8c5aefb2ea1b84cd7dbce537622ea8"><td class="memTemplItemLeft" align="right" valign="top">pcl::PointCloud&lt; PointType &gt;::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a3d8c5aefb2ea1b84cd7dbce537622ea8">DownsamplePointCloud</a> (const typename pcl::PointCloud&lt; PointType &gt;::Ptr cloud, const double leaf_size)</td></tr>
 <tr class="separator:a3d8c5aefb2ea1b84cd7dbce537622ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3557c29b23da02c2dd25cdbb7994a25"><td class="memTemplParams" colspan="2">template&lt;typename PointType &gt; </td></tr>
+<tr class="memitem:ac3557c29b23da02c2dd25cdbb7994a25"><td class="memTemplItemLeft" align="right" valign="top">pcl::PointCloud&lt; PointType &gt;::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#ac3557c29b23da02c2dd25cdbb7994a25">BilateralFilterOrganizedCloud</a> (const typename pcl::PointCloud&lt; PointType &gt;::Ptr cloud, const double sigma_s, const double sigma_r)</td></tr>
+<tr class="separator:ac3557c29b23da02c2dd25cdbb7994a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a382e7d11833338314504fb9103aac2f5"><td class="memTemplParams" colspan="2">template&lt;typename PointType &gt; </td></tr>
 <tr class="memitem:a382e7d11833338314504fb9103aac2f5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a382e7d11833338314504fb9103aac2f5">FilterCorrespondences</a> (const typename pcl::PointCloud&lt; PointType &gt; &amp;input_cloud, const typename pcl::PointCloud&lt; PointType &gt; &amp;target_cloud, pcl::Correspondences &amp;correspondences)</td></tr>
 <tr class="separator:a382e7d11833338314504fb9103aac2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,6 +244,42 @@ template&lt;typename Type &gt; </div>
           <td></td>
           <td class="paramtype">const double&#160;</td>
           <td class="paramname"><em>epsilon</em> = <code>1e-5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3557c29b23da02c2dd25cdbb7994a25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3557c29b23da02c2dd25cdbb7994a25">&#9670;&nbsp;</a></span>BilateralFilterOrganizedCloud()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">pcl::PointCloud&lt; PointType &gt;::Ptr point_cloud_common::BilateralFilterOrganizedCloud </td>
+          <td>(</td>
+          <td class="paramtype">const typename pcl::PointCloud&lt; PointType &gt;::Ptr&#160;</td>
+          <td class="paramname"><em>cloud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>sigma_s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>sigma_r</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -416,6 +467,60 @@ template&lt;typename PointType , typename PointWithNormalType &gt; </div>
           <td></td>
           <td class="paramtype">const double&#160;</td>
           <td class="paramname"><em>search_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pcl::PointCloud&lt; PointWithNormalType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cloud_with_normals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59f0de17d6aaa97ab1d7afa4ba6d30c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59f0de17d6aaa97ab1d7afa4ba6d30c9">&#9670;&nbsp;</a></span>EstimateOrganizedNormals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename PointWithNormalType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void point_cloud_common::EstimateOrganizedNormals </td>
+          <td>(</td>
+          <td class="paramtype">const typename pcl::PointCloud&lt; PointType &gt;::Ptr&#160;</td>
+          <td class="paramname"><em>cloud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename pcl::IntegralImageNormalEstimation&lt; PointType, pcl::Normal &gt;::NormalEstimationMethod&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>depth_dependent_smoothing</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>max_depth_change_factor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>normal_smoothing_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -640,6 +745,62 @@ template&lt;typename PointType &gt; </div>
           <td></td>
           <td class="paramtype"><a class="el" href="structpoint__cloud__common_1_1PointToPlaneICPParams.html">PointToPlaneICPParams</a> &amp;&#160;</td>
           <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a527376a68cf98869f69f35b9827501ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a527376a68cf98869f69f35b9827501ee">&#9670;&nbsp;</a></span>NonzeroPointXYZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointXYZType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool point_cloud_common::NonzeroPointXYZ </td>
+          <td>(</td>
+          <td class="paramtype">const PointXYZType &amp;&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe50d0a15aba0c71a8200b07acdbb52d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe50d0a15aba0c71a8200b07acdbb52d">&#9670;&nbsp;</a></span>NormalSpaceSubsampling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void point_cloud_common::NormalSpaceSubsampling </td>
+          <td>(</td>
+          <td class="paramtype">typename pcl::PointCloud&lt; PointType &gt;::Ptr&#160;</td>
+          <td class="paramname"><em>cloud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>bins_per_axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>num_samples</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1051,6 +1212,26 @@ template&lt;typename PointType &gt; </div>
           <td class="memname">void point_cloud_common::RemoveInvalidAndZeroPoints </td>
           <td>(</td>
           <td class="paramtype">pcl::PointCloud&lt; PointType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cloud</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f40a3bc2bea53ed00856c8e7cb1f24c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f40a3bc2bea53ed00856c8e7cb1f24c">&#9670;&nbsp;</a></span>ReplaceZerosWithNans()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void point_cloud_common::ReplaceZerosWithNans </td>
+          <td>(</td>
+          <td class="paramtype">typename pcl::PointCloud&lt; PointType &gt; &amp;&#160;</td>
           <td class="paramname"><em>cloud</em></td><td>)</td>
           <td></td>
         </tr>

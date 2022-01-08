@@ -183,6 +183,7 @@ var NAVTREEINDEX0 =
 "graphbag.html#autotoc_md594":[6,4,2,5],
 "graphbag.html#autotoc_md595":[6,4,2,6],
 "graphbag.html#autotoc_md596":[6,4,2,7],
+"graphbag.html#autotoc_md597":[6,4,2,8],
 "graphlocalizer.html":[4,2,2],
 "graphlocalizer.html#autotoc_md239":[4,2,2,0],
 "graphlocalizer.html#autotoc_md240":[4,2,2,0,0],
@@ -245,9 +246,8 @@ var NAVTREEINDEX0 =
 "imuaugmentor.html#autotoc_md288":[4,2,6,1],
 "imuaugmentor.html#autotoc_md289":[4,2,6,2],
 "imubiastester.html":[6,5],
-"imubiastester.html#autotoc_md597":[0],
-"imubiastester.html#autotoc_md598":[6,5,0],
-"imubiastester.html#autotoc_md599":[6,5,1],
-"imuintegration.html":[4,2,7],
-"imuintegration.html#autotoc_md290":[4,2,7,0]
+"imubiastester.html#autotoc_md598":[0],
+"imubiastester.html#autotoc_md599":[6,5,0],
+"imubiastester.html#autotoc_md600":[6,5,1],
+"imuintegration.html":[4,2,7]
 };

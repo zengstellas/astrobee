@@ -95,41 +95,62 @@ $(document).ready(function(){initNavTree('localization_2point__cloud__common_2in
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="logger_8h_source.html">localization_common/logger.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="organized__neighbor2_8h_source.html">point_cloud_common/organized_neighbor2.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="organized__neighbor2__impl_8h_source.html">point_cloud_common/organized_neighbor2_impl.h</a>&gt;</code><br />
 <code>#include &lt;gtsam/geometry/Pose3.h&gt;</code><br />
 <code>#include &lt;gtsam/geometry/Point3.h&gt;</code><br />
 <code>#include &lt;pcl/features/fpfh.h&gt;</code><br />
+<code>#include &lt;pcl/features/integral_image_normal.h&gt;</code><br />
 <code>#include &lt;pcl/features/normal_3d.h&gt;</code><br />
 <code>#include &lt;pcl/features/impl/normal_3d.hpp&gt;</code><br />
+<code>#include &lt;pcl/filters/fast_bilateral.h&gt;</code><br />
+<code>#include &lt;pcl/filters/impl/fast_bilateral.hpp&gt;</code><br />
+<code>#include &lt;pcl/filters/normal_space.h&gt;</code><br />
 <code>#include &lt;pcl/filters/voxel_grid.h&gt;</code><br />
 <code>#include &lt;pcl/kdtree/impl/kdtree_flann.hpp&gt;</code><br />
 <code>#include &lt;pcl/point_cloud.h&gt;</code><br />
 <code>#include &lt;pcl/point_types.h&gt;</code><br />
 <code>#include &lt;pcl/search/impl/kdtree.hpp&gt;</code><br />
 <code>#include &lt;pcl/search/impl/search.hpp&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for utilities.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="localization_2point__cloud__common_2include_2point__cloud__common_2utilities_8h__incl.png" border="0" usemap="#alocalization_2point__cloud__common_2include_2point__cloud__common_2utilities_8h" alt=""/></div>
 <map name="localization_2point__cloud__common_2include_2point__cloud__common_2utilities_8h" id="alocalization_2point__cloud__common_2include_2point__cloud__common_2utilities_8h">
-<area shape="rect" title=" " alt="" coords="1328,5,1559,61"/>
-<area shape="rect" href="logger_8h.html" title=" " alt="" coords="173,109,335,151"/>
-<area shape="rect" title=" " alt="" coords="359,117,544,143"/>
-<area shape="rect" title=" " alt="" coords="569,117,755,143"/>
-<area shape="rect" title=" " alt="" coords="779,117,921,143"/>
-<area shape="rect" title=" " alt="" coords="945,117,1129,143"/>
-<area shape="rect" title=" " alt="" coords="1153,109,1336,151"/>
-<area shape="rect" title=" " alt="" coords="1360,117,1527,143"/>
-<area shape="rect" title=" " alt="" coords="1551,109,1717,151"/>
-<area shape="rect" title=" " alt="" coords="1741,117,1873,143"/>
-<area shape="rect" title=" " alt="" coords="1898,117,2031,143"/>
-<area shape="rect" title=" " alt="" coords="2055,117,2250,143"/>
-<area shape="rect" title=" " alt="" coords="2275,117,2471,143"/>
-<area shape="rect" title=" " alt="" coords="2495,117,2557,143"/>
-<area shape="rect" title=" " alt="" coords="5,199,113,225"/>
-<area shape="rect" title=" " alt="" coords="138,199,253,225"/>
-<area shape="rect" title=" " alt="" coords="277,199,351,225"/>
-<area shape="rect" title=" " alt="" coords="375,199,434,225"/>
+<area shape="rect" title=" " alt="" coords="1842,5,2073,61"/>
+<area shape="rect" href="logger_8h.html" title=" " alt="" coords="191,117,353,158"/>
+<area shape="rect" href="organized__neighbor2_8h.html" title=" " alt="" coords="943,117,1118,158"/>
+<area shape="rect" title=" " alt="" coords="458,213,590,240"/>
+<area shape="rect" title=" " alt="" coords="615,213,748,240"/>
+<area shape="rect" title=" " alt="" coords="943,213,1006,240"/>
+<area shape="rect" href="organized__neighbor2__impl_8h.html" title=" " alt="" coords="1143,109,1305,165"/>
+<area shape="rect" title=" " alt="" coords="1936,213,1995,240"/>
+<area shape="rect" title=" " alt="" coords="1381,124,1566,151"/>
+<area shape="rect" title=" " alt="" coords="1591,124,1777,151"/>
+<area shape="rect" title=" " alt="" coords="1801,124,1943,151"/>
+<area shape="rect" title=" " alt="" coords="1967,117,2121,158"/>
+<area shape="rect" title=" " alt="" coords="2145,124,2329,151"/>
+<area shape="rect" title=" " alt="" coords="2354,117,2537,158"/>
+<area shape="rect" title=" " alt="" coords="2561,124,2745,151"/>
+<area shape="rect" title=" " alt="" coords="2769,117,2913,158"/>
+<area shape="rect" title=" " alt="" coords="2938,117,3070,158"/>
+<area shape="rect" title=" " alt="" coords="3094,124,3261,151"/>
+<area shape="rect" title=" " alt="" coords="3285,117,3451,158"/>
+<area shape="rect" title=" " alt="" coords="3476,124,3671,151"/>
+<area shape="rect" title=" " alt="" coords="3695,124,3891,151"/>
+<area shape="rect" title=" " alt="" coords="326,213,434,240"/>
+<area shape="rect" title=" " alt="" coords="5,213,120,240"/>
+<area shape="rect" title=" " alt="" coords="144,213,219,240"/>
+<area shape="rect" title=" " alt="" coords="243,213,301,240"/>
+<area shape="rect" title=" " alt="" coords="772,213,919,240"/>
+<area shape="rect" title=" " alt="" coords="1117,213,1272,240"/>
+<area shape="rect" title=" " alt="" coords="1296,213,1381,240"/>
+<area shape="rect" title=" " alt="" coords="1030,213,1093,240"/>
+<area shape="rect" title=" " alt="" coords="1405,213,1573,240"/>
+<area shape="rect" title=" " alt="" coords="1598,213,1746,240"/>
+<area shape="rect" title=" " alt="" coords="1771,213,1912,240"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -137,17 +158,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="localization_2point__cloud__common_2include_2point__cloud__common_2utilities_8h__dep__incl.png" border="0" usemap="#alocalization_2point__cloud__common_2include_2point__cloud__common_2utilities_8hdep" alt=""/></div>
 <map name="localization_2point__cloud__common_2include_2point__cloud__common_2utilities_8hdep" id="alocalization_2point__cloud__common_2include_2point__cloud__common_2utilities_8hdep">
-<area shape="rect" title=" " alt="" coords="533,5,764,61"/>
-<area shape="rect" href="depth__image__features__and__points_8h.html" title=" " alt="" coords="59,109,302,180"/>
-<area shape="rect" href="image__features__with__known__correspondences__aligner__depth__odometry_8cc.html" title=" " alt="" coords="5,361,196,447"/>
-<area shape="rect" href="point__to__plane__icp__depth__odometry_8cc.html" title=" " alt="" coords="568,376,809,432"/>
-<area shape="rect" href="depth__image_8cc.html" title=" " alt="" coords="553,117,744,173"/>
-<area shape="rect" href="point__to__plane__icp_8h.html" title=" " alt="" coords="326,109,529,180"/>
-<area shape="rect" href="point__cloud__with__known__correspondences__aligner_8cc.html" title=" " alt="" coords="819,109,1086,180"/>
-<area shape="rect" href="localization_2point__cloud__common_2src_2utilities_8cc.html" title=" " alt="" coords="1111,124,1333,165"/>
-<area shape="rect" href="image__features__with__known__correspondences__aligner__depth__odometry_8h.html" title=" " alt="" coords="69,228,293,313"/>
-<area shape="rect" href="depth__odometry__wrapper_8cc.html" title=" " alt="" coords="281,376,451,432"/>
-<area shape="rect" href="point__to__plane__icp__depth__odometry_8h.html" title=" " alt="" coords="331,235,523,306"/>
+<area shape="rect" title=" " alt="" coords="475,5,706,61"/>
+<area shape="rect" href="depth__image__features__and__points_8h.html" title=" " alt="" coords="5,228,248,299"/>
+<area shape="rect" href="image__features__with__known__correspondences__aligner__depth__odometry_8cc.html" title=" " alt="" coords="401,480,591,565"/>
+<area shape="rect" href="point__to__plane__icp__depth__odometry_8cc.html" title=" " alt="" coords="311,361,553,417"/>
+<area shape="rect" href="depth__image_8cc.html" title=" " alt="" coords="629,117,819,173"/>
+<area shape="rect" href="point__to__plane__icp_8h.html" title=" " alt="" coords="279,109,481,180"/>
+<area shape="rect" href="point__cloud__with__known__correspondences__aligner_8cc.html" title=" " alt="" coords="844,109,1111,180"/>
+<area shape="rect" href="localization_2point__cloud__common_2src_2utilities_8cc.html" title=" " alt="" coords="1135,124,1358,165"/>
+<area shape="rect" href="image__features__with__known__correspondences__aligner__depth__odometry_8h.html" title=" " alt="" coords="12,347,236,432"/>
+<area shape="rect" href="depth__odometry__wrapper_8cc.html" title=" " alt="" coords="114,495,283,551"/>
+<area shape="rect" href="point__to__plane__icp__depth__odometry_8h.html" title=" " alt="" coords="281,228,473,299"/>
 </map>
 </div>
 </div>
@@ -163,6 +184,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ab12f59d4462f60dce40a709911bfaf5f"><td class="memTemplParams" colspan="2">template&lt;typename PointType , typename PointWithNormalType &gt; </td></tr>
 <tr class="memitem:ab12f59d4462f60dce40a709911bfaf5f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#ab12f59d4462f60dce40a709911bfaf5f">point_cloud_common::EstimateNormals</a> (const typename pcl::PointCloud&lt; PointType &gt;::Ptr cloud, const double search_radius, pcl::PointCloud&lt; PointWithNormalType &gt; &amp;cloud_with_normals)</td></tr>
 <tr class="separator:ab12f59d4462f60dce40a709911bfaf5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f0de17d6aaa97ab1d7afa4ba6d30c9"><td class="memTemplParams" colspan="2">template&lt;typename PointType , typename PointWithNormalType &gt; </td></tr>
+<tr class="memitem:a59f0de17d6aaa97ab1d7afa4ba6d30c9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a59f0de17d6aaa97ab1d7afa4ba6d30c9">point_cloud_common::EstimateOrganizedNormals</a> (const typename pcl::PointCloud&lt; PointType &gt;::Ptr cloud, const typename pcl::IntegralImageNormalEstimation&lt; PointType, pcl::Normal &gt;::NormalEstimationMethod method, const bool depth_dependent_smoothing, const double max_depth_change_factor, const double normal_smoothing_size, pcl::PointCloud&lt; PointWithNormalType &gt; &amp;cloud_with_normals)</td></tr>
+<tr class="separator:a59f0de17d6aaa97ab1d7afa4ba6d30c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe50d0a15aba0c71a8200b07acdbb52d"><td class="memTemplParams" colspan="2">template&lt;typename PointType &gt; </td></tr>
+<tr class="memitem:afe50d0a15aba0c71a8200b07acdbb52d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#afe50d0a15aba0c71a8200b07acdbb52d">point_cloud_common::NormalSpaceSubsampling</a> (typename pcl::PointCloud&lt; PointType &gt;::Ptr cloud, const int bins_per_axis, const int num_samples)</td></tr>
+<tr class="separator:afe50d0a15aba0c71a8200b07acdbb52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb993473f02bb1ad23d1c16ed87efd09"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix4f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#abb993473f02bb1ad23d1c16ed87efd09">point_cloud_common::RansacIA</a> (const pcl::PointCloud&lt; pcl::PointXYZINormal &gt;::Ptr source_cloud, const pcl::PointCloud&lt; pcl::PointXYZINormal &gt;::Ptr target_cloud)</td></tr>
 <tr class="separator:abb993473f02bb1ad23d1c16ed87efd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e08990b6bb333c6c992b19c03221dc1"><td class="memItemLeft" align="right" valign="top">pcl::PointCloud&lt; pcl::FPFHSignature33 &gt;::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a3e08990b6bb333c6c992b19c03221dc1">point_cloud_common::EstimateHistogramFeatures</a> (const pcl::PointCloud&lt; pcl::PointXYZINormal &gt;::Ptr cloud_with_normals)</td></tr>
@@ -209,6 +236,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab40f400d1caf784606729265dfba729f"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
 <tr class="memitem:ab40f400d1caf784606729265dfba729f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#ab40f400d1caf784606729265dfba729f">point_cloud_common::ApproxZero</a> (const Type &amp;point, const double epsilon=1e-5)</td></tr>
 <tr class="separator:ab40f400d1caf784606729265dfba729f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527376a68cf98869f69f35b9827501ee"><td class="memTemplParams" colspan="2">template&lt;typename PointXYZType &gt; </td></tr>
+<tr class="memitem:a527376a68cf98869f69f35b9827501ee"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a527376a68cf98869f69f35b9827501ee">point_cloud_common::NonzeroPointXYZ</a> (const PointXYZType &amp;point)</td></tr>
+<tr class="separator:a527376a68cf98869f69f35b9827501ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8218e377f4322eb0f9ecac1773c3c0ad"><td class="memTemplParams" colspan="2">template&lt;typename PointXYZType &gt; </td></tr>
 <tr class="memitem:a8218e377f4322eb0f9ecac1773c3c0ad"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a8218e377f4322eb0f9ecac1773c3c0ad">point_cloud_common::ValidPointXYZ</a> (const PointXYZType &amp;point)</td></tr>
 <tr class="separator:a8218e377f4322eb0f9ecac1773c3c0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,9 +251,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ab2832648f69ed8a4a6331cd85f529cff"><td class="memTemplParams" colspan="2">template&lt;typename PointType &gt; </td></tr>
 <tr class="memitem:ab2832648f69ed8a4a6331cd85f529cff"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#ab2832648f69ed8a4a6331cd85f529cff">point_cloud_common::RemoveInvalidAndZeroPoints</a> (pcl::PointCloud&lt; PointType &gt; &amp;cloud)</td></tr>
 <tr class="separator:ab2832648f69ed8a4a6331cd85f529cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f40a3bc2bea53ed00856c8e7cb1f24c"><td class="memTemplParams" colspan="2">template&lt;typename PointType &gt; </td></tr>
+<tr class="memitem:a8f40a3bc2bea53ed00856c8e7cb1f24c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a8f40a3bc2bea53ed00856c8e7cb1f24c">point_cloud_common::ReplaceZerosWithNans</a> (typename pcl::PointCloud&lt; PointType &gt; &amp;cloud)</td></tr>
+<tr class="separator:a8f40a3bc2bea53ed00856c8e7cb1f24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d8c5aefb2ea1b84cd7dbce537622ea8"><td class="memTemplParams" colspan="2">template&lt;typename PointType &gt; </td></tr>
 <tr class="memitem:a3d8c5aefb2ea1b84cd7dbce537622ea8"><td class="memTemplItemLeft" align="right" valign="top">pcl::PointCloud&lt; PointType &gt;::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a3d8c5aefb2ea1b84cd7dbce537622ea8">point_cloud_common::DownsamplePointCloud</a> (const typename pcl::PointCloud&lt; PointType &gt;::Ptr cloud, const double leaf_size)</td></tr>
 <tr class="separator:a3d8c5aefb2ea1b84cd7dbce537622ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3557c29b23da02c2dd25cdbb7994a25"><td class="memTemplParams" colspan="2">template&lt;typename PointType &gt; </td></tr>
+<tr class="memitem:ac3557c29b23da02c2dd25cdbb7994a25"><td class="memTemplItemLeft" align="right" valign="top">pcl::PointCloud&lt; PointType &gt;::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#ac3557c29b23da02c2dd25cdbb7994a25">point_cloud_common::BilateralFilterOrganizedCloud</a> (const typename pcl::PointCloud&lt; PointType &gt;::Ptr cloud, const double sigma_s, const double sigma_r)</td></tr>
+<tr class="separator:ac3557c29b23da02c2dd25cdbb7994a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a382e7d11833338314504fb9103aac2f5"><td class="memTemplParams" colspan="2">template&lt;typename PointType &gt; </td></tr>
 <tr class="memitem:a382e7d11833338314504fb9103aac2f5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepoint__cloud__common.html#a382e7d11833338314504fb9103aac2f5">point_cloud_common::FilterCorrespondences</a> (const typename pcl::PointCloud&lt; PointType &gt; &amp;input_cloud, const typename pcl::PointCloud&lt; PointType &gt; &amp;target_cloud, pcl::Correspondences &amp;correspondences)</td></tr>
 <tr class="separator:a382e7d11833338314504fb9103aac2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>

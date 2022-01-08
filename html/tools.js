@@ -92,21 +92,22 @@ var tools =
         [ "run_graph_bag_and_plot_results", "graphbag.html#autotoc_md593", null ],
         [ "make_groundtruth.py", "graphbag.html#autotoc_md594", null ],
         [ "make_groundtruth_map.py", "graphbag.html#autotoc_md595", null ],
-        [ "groundtruth_sweep.py", "graphbag.html#autotoc_md596", null ]
+        [ "groundtruth_sweep.py", "graphbag.html#autotoc_md596", null ],
+        [ "depth_odometry_parameter_sweep.py", "graphbag.html#autotoc_md597", null ]
       ] ]
     ] ],
     [ "Imu Bias Tester", "imubiastester.html", [
-      [ "Inputs", "imubiastester.html#autotoc_md598", null ],
-      [ "Outputs", "imubiastester.html#autotoc_md599", null ]
+      [ "Inputs", "imubiastester.html#autotoc_md599", null ],
+      [ "Outputs", "imubiastester.html#autotoc_md600", null ]
     ] ],
     [ "Localization Rviz Plugins", "localizationrvizplugins.html", [
-      [ "Package Overview", "localizationrvizplugins.html#autotoc_md600", [
-        [ "ImuBiasTester", "imubiastester.html#autotoc_md597", null ],
-        [ "Plugins", "localizationrvizplugins.html#autotoc_md601", null ],
-        [ "Localization Graph Display", "localizationrvizplugins.html#autotoc_md602", null ],
-        [ "Localization Graph Panel", "localizationrvizplugins.html#autotoc_md603", null ],
-        [ "Imu Augmentor Display", "localizationrvizplugins.html#autotoc_md604", null ],
-        [ "Pose Display", "localizationrvizplugins.html#autotoc_md605", null ]
+      [ "Package Overview", "localizationrvizplugins.html#autotoc_md601", [
+        [ "ImuBiasTester", "imubiastester.html#autotoc_md598", null ],
+        [ "Plugins", "localizationrvizplugins.html#autotoc_md602", null ],
+        [ "Localization Graph Display", "localizationrvizplugins.html#autotoc_md603", null ],
+        [ "Localization Graph Panel", "localizationrvizplugins.html#autotoc_md604", null ],
+        [ "Imu Augmentor Display", "localizationrvizplugins.html#autotoc_md605", null ],
+        [ "Pose Display", "localizationrvizplugins.html#autotoc_md606", null ]
       ] ]
     ] ],
     [ "DDS Profile and Types", "dds_profile.html", null ],

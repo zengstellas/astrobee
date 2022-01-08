@@ -114,32 +114,66 @@ $(document).ready(function(){initNavTree('depth__odometry__adder_8h_source.html'
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="depth__odometry__wrapper_8h.html">depth_odometry/depth_odometry_wrapper.h</a>&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;rosbag/view.h&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegraph__bag.html">graph_bag</a> {</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classgraph__bag_1_1DepthOdometryAdder.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgraph__bag_1_1DepthOdometryAdder.html">DepthOdometryAdder</a> {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classgraph__bag_1_1DepthOdometryAdder.html#a463e47bd7576b9c595fa041b2c5e4a8d">DepthOdometryAdder</a>(<span class="keyword">const</span> std::string&amp; input_bag_name, <span class="keyword">const</span> std::string&amp; output_bag_name, <span class="keyword">const</span> <span class="keywordtype">bool</span> save_all_topics);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgraph__bag_1_1DepthOdometryAdder.html#ae06098c2542a083ea1127392a4e95881">AddDepthOdometry</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classdepth__odometry_1_1DepthOdometryWrapper.html">depth_odometry::DepthOdometryWrapper</a> depth_odometry_wrapper_;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  rosbag::Bag input_bag_;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  rosbag::Bag output_bag_;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">bool</span> save_all_topics_;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}  <span class="comment">// namespace graph_bag</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif  // GRAPH_BAG_DEPTH_ODOMETRY_ADDER_H_</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// TODO(rsoussan): There is a linking error on melodic for conflicting declarations of lz4</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// for flann serialization and ros serialization that occurs when this header is included.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// Once this is fixed (ros version &gt; melodic) these defines and undefines can be removed.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#a5882927b253c016b184125e14491505c">   27</a></span>&#160;<span class="preprocessor">#define LZ4_stream_t LZ4_stream_t_deprecated</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#a4d4206aadfa86e708f02e05f8dd60e18">   28</a></span>&#160;<span class="preprocessor">#define LZ4_resetStream LZ4_resetStream_deprecated</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#a56ebef48173b51ecd3ff85a1d51a8e43">   29</a></span>&#160;<span class="preprocessor">#define LZ4_createStream LZ4_createStream_deprecated</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#a9b067e6c4b9eb55fdaeea0d5af5a97cc">   30</a></span>&#160;<span class="preprocessor">#define LZ4_freeStream LZ4_freeStream_deprecated</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#a9ff36d8402ee29696cefbb4d4a1de57e">   31</a></span>&#160;<span class="preprocessor">#define LZ4_loadDict LZ4_loadDict_deprecated</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#ac8dca5ce457e246b0b21bbb9c06a3ec7">   32</a></span>&#160;<span class="preprocessor">#define LZ4_compress_fast_continue LZ4_compress_fast_continue_deprecated</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#a8acc35ae4ceed9107d9acc38d52daaf6">   33</a></span>&#160;<span class="preprocessor">#define LZ4_saveDict LZ4_saveDict_deprecated</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#aed38982611bee9e1c3c29e374793607f">   34</a></span>&#160;<span class="preprocessor">#define LZ4_streamDecode_t LZ4_streamDecode_t_deprecated</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#a7e4cafce8c5c0bbcf31c5220dc8bb0ba">   35</a></span>&#160;<span class="preprocessor">#define LZ4_compress_continue LZ4_compress_continue_deprecated</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#ab8cc4aa6fc45aef2f0b159f79031ca45">   36</a></span>&#160;<span class="preprocessor">#define LZ4_compress_limitedOutput_continue LZ4_compress_limitedOutput_continue_deprecated</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#a655ffa22f31fe83d2c460366151c22f0">   37</a></span>&#160;<span class="preprocessor">#define LZ4_createStreamDecode LZ4_createStreamDecode_deprecated</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#adf1a93c5500ca62b443a2ceaa24836b6">   38</a></span>&#160;<span class="preprocessor">#define LZ4_freeStreamDecode LZ4_freeStreamDecode_deprecated</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#ae091a88d29e73c1807e05cc3e603d007">   39</a></span>&#160;<span class="preprocessor">#define LZ4_setStreamDecode LZ4_setStreamDecode_deprecated</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#a48ad24b0a4115a58f1c5d1eac37b59bd">   40</a></span>&#160;<span class="preprocessor">#define LZ4_decompress_safe_continue LZ4_decompress_safe_continue_deprecated</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="depth__odometry__adder_8h.html#a63746b119312083b2f57ed2e24141aab">   41</a></span>&#160;<span class="preprocessor">#define LZ4_decompress_fast_continue LZ4_decompress_fast_continue_deprecated</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;rosbag/view.h&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#undef LZ4_stream_t</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#undef LZ4_resetStream</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#undef LZ4_createStream</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#undef LZ4_freeStream</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#undef LZ4_loadDict</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#undef LZ4_compress_fast_continue</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#undef LZ4_saveDict</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#undef LZ4_streamDecode_t</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#undef LZ4_compress_continue</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#undef LZ4_compress_limitedOutput_continue</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#undef LZ4_createStreamDecode</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#undef LZ4_freeStreamDecode</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#undef LZ4_setStreamDecode</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#undef LZ4_decompress_safe_continue</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#undef LZ4_decompress_fast_continue</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegraph__bag.html">graph_bag</a> {</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classgraph__bag_1_1DepthOdometryAdder.html">   62</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgraph__bag_1_1DepthOdometryAdder.html">DepthOdometryAdder</a> {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="classgraph__bag_1_1DepthOdometryAdder.html#a967ed43cd63555b652ec14b6da75dc01">DepthOdometryAdder</a>(<span class="keyword">const</span> std::string&amp; input_bag_name, <span class="keyword">const</span> std::string&amp; output_bag_name, <span class="keyword">const</span> <span class="keywordtype">bool</span> save_all_topics,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                     <span class="keyword">const</span> std::string&amp; config_prefix = <span class="stringliteral">&quot;localization/&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgraph__bag_1_1DepthOdometryAdder.html#ae06098c2542a083ea1127392a4e95881">AddDepthOdometry</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classdepth__odometry_1_1DepthOdometryWrapper.html">depth_odometry::DepthOdometryWrapper</a> depth_odometry_wrapper_;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  rosbag::Bag input_bag_;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  rosbag::Bag output_bag_;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">bool</span> save_all_topics_;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}  <span class="comment">// namespace graph_bag</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif  // GRAPH_BAG_DEPTH_ODOMETRY_ADDER_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassgraph__bag_1_1DepthOdometryAdder_html"><div class="ttname"><a href="classgraph__bag_1_1DepthOdometryAdder.html">graph_bag::DepthOdometryAdder</a></div><div class="ttdef"><b>Definition:</b> depth_odometry_adder.h:29</div></div>
+<div class="ttc" id="aclassgraph__bag_1_1DepthOdometryAdder_html"><div class="ttname"><a href="classgraph__bag_1_1DepthOdometryAdder.html">graph_bag::DepthOdometryAdder</a></div><div class="ttdef"><b>Definition:</b> depth_odometry_adder.h:62</div></div>
 <div class="ttc" id="adepth__odometry__wrapper_8h_html"><div class="ttname"><a href="depth__odometry__wrapper_8h.html">depth_odometry_wrapper.h</a></div></div>
-<div class="ttc" id="aclassdepth__odometry_1_1DepthOdometryWrapper_html"><div class="ttname"><a href="classdepth__odometry_1_1DepthOdometryWrapper.html">depth_odometry::DepthOdometryWrapper</a></div><div class="ttdef"><b>Definition:</b> depth_odometry_wrapper.h:38</div></div>
-<div class="ttc" id="aclassgraph__bag_1_1DepthOdometryAdder_html_ae06098c2542a083ea1127392a4e95881"><div class="ttname"><a href="classgraph__bag_1_1DepthOdometryAdder.html#ae06098c2542a083ea1127392a4e95881">graph_bag::DepthOdometryAdder::AddDepthOdometry</a></div><div class="ttdeci">void AddDepthOdometry()</div><div class="ttdef"><b>Definition:</b> depth_odometry_adder.cc:34</div></div>
-<div class="ttc" id="aclassgraph__bag_1_1DepthOdometryAdder_html_a463e47bd7576b9c595fa041b2c5e4a8d"><div class="ttname"><a href="classgraph__bag_1_1DepthOdometryAdder.html#a463e47bd7576b9c595fa041b2c5e4a8d">graph_bag::DepthOdometryAdder::DepthOdometryAdder</a></div><div class="ttdeci">DepthOdometryAdder(const std::string &amp;input_bag_name, const std::string &amp;output_bag_name, const bool save_all_topics)</div><div class="ttdef"><b>Definition:</b> depth_odometry_adder.cc:28</div></div>
+<div class="ttc" id="aclassdepth__odometry_1_1DepthOdometryWrapper_html"><div class="ttname"><a href="classdepth__odometry_1_1DepthOdometryWrapper.html">depth_odometry::DepthOdometryWrapper</a></div><div class="ttdef"><b>Definition:</b> depth_odometry_wrapper.h:39</div></div>
+<div class="ttc" id="aclassgraph__bag_1_1DepthOdometryAdder_html_ae06098c2542a083ea1127392a4e95881"><div class="ttname"><a href="classgraph__bag_1_1DepthOdometryAdder.html#ae06098c2542a083ea1127392a4e95881">graph_bag::DepthOdometryAdder::AddDepthOdometry</a></div><div class="ttdeci">void AddDepthOdometry()</div><div class="ttdef"><b>Definition:</b> depth_odometry_adder.cc:35</div></div>
+<div class="ttc" id="aclassgraph__bag_1_1DepthOdometryAdder_html_a967ed43cd63555b652ec14b6da75dc01"><div class="ttname"><a href="classgraph__bag_1_1DepthOdometryAdder.html#a967ed43cd63555b652ec14b6da75dc01">graph_bag::DepthOdometryAdder::DepthOdometryAdder</a></div><div class="ttdeci">DepthOdometryAdder(const std::string &amp;input_bag_name, const std::string &amp;output_bag_name, const bool save_all_topics, const std::string &amp;config_prefix=&quot;localization/&quot;)</div><div class="ttdef"><b>Definition:</b> depth_odometry_adder.cc:28</div></div>
 <div class="ttc" id="anamespacegraph__bag_html"><div class="ttname"><a href="namespacegraph__bag.html">graph_bag</a></div><div class="ttdef"><b>Definition:</b> bag_imu_filterer.h:29</div></div>
 <!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->

@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"imuintegration.html#autotoc_md290":[4,2,7,0],
 "imuintegration.html#autotoc_md291":[4,2,7,0,0],
 "imuintegration.html#autotoc_md292":[4,2,7,1],
 "imuintegration.html#autotoc_md293":[4,2,7,2],
@@ -63,12 +64,12 @@ var NAVTREEINDEX1 =
 "localizationmeasurements.html":[4,2,11],
 "localizationmeasurements.html#autotoc_md301":[4,2,11,0],
 "localizationrvizplugins.html":[6,6],
-"localizationrvizplugins.html#autotoc_md600":[6,6,0],
-"localizationrvizplugins.html#autotoc_md601":[6,6,0,1],
-"localizationrvizplugins.html#autotoc_md602":[6,6,0,2],
-"localizationrvizplugins.html#autotoc_md603":[6,6,0,3],
-"localizationrvizplugins.html#autotoc_md604":[6,6,0,4],
-"localizationrvizplugins.html#autotoc_md605":[6,6,0,5],
+"localizationrvizplugins.html#autotoc_md601":[6,6,0],
+"localizationrvizplugins.html#autotoc_md602":[6,6,0,1],
+"localizationrvizplugins.html#autotoc_md603":[6,6,0,2],
+"localizationrvizplugins.html#autotoc_md604":[6,6,0,3],
+"localizationrvizplugins.html#autotoc_md605":[6,6,0,4],
+"localizationrvizplugins.html#autotoc_md606":[6,6,0,5],
 "log_monitor.html":[4,1,7],
 "log_monitor.html#autotoc_md452":[4,1,7,0],
 "management.html":[4,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "optimizationcommon.html":[4,2,14],
 "optimizationcommon.html#autotoc_md314":[4,2,14,0],
 "optimizationcommon.html#autotoc_md315":[0],
-"optimizationcommon.html#autotoc_md316":[1],
-"optimizationcommon.html#autotoc_md317":[2]
+"optimizationcommon.html#autotoc_md316":[1]
 };
