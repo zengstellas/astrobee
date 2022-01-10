@@ -279,19 +279,19 @@ Launch the localization node on LLP</h3>
 roslaunch astrobee astrobee.launch llp:=disabled mlp:=mlp \
   nodes:=framestore,dds_ros_bridge,localization_node
 </pre><h3><a class="anchor" id="autotoc_md350"></a>
-Enable localization and the mapped landmark production (on MLP)</h3>
-<pre class="fragment">export ROS_MASTER_URI=http://llp:11311
-rosservice call /loc/ml/enable true
-</pre><p>If this command returns an error saying that the service is not available, wait a little and try again.</p>
-<h3><a class="anchor" id="autotoc_md351"></a>
 Play the bags (on MLP)</h3>
 <pre class="fragment">cd /data/bags/directory_of_bags
 export ROS_MASTER_URI=http://llp:11311
-rosbag play --loop *.bag                               \
+rosbag play --clock --loop *.bag                       \
   /mgt/img_sampler/nav_cam/image_record:=/hw/cam_nav   \
   /loc/ml/features:=/loc/ml/old_features               \
   /loc/ml/registration:=/loc/ml/old_registration
-</pre><p>It is important to check the topics that were recorded to the bag. If the nav camera was recorded on /mgt/img_sampler/nav_cam/image_record instead of /hw/cam_nav, as it happens when recording data on the ISS, it must be redirected to the proper topic, as we do above. If localization was running when the bag was recorded and hence the topics /loc/ml/features and /loc/ml/registration were recorded, they must be redirected to something else (above /tmp1 and /tmp2 was used) to not conflict with actual localization results that would be now created based on the images in the bag.</p>
+</pre><h3><a class="anchor" id="autotoc_md351"></a>
+Enable localization and the mapped landmark production (on MLP)</h3>
+<p>This must happen after the bags start playing: </p><pre class="fragment">export ROS_MASTER_URI=http://llp:11311
+rosservice call /loc/ml/enable true
+</pre><p>If this command returns an error saying that the service is not available, wait a little and try again.</p>
+<p>It is important to check the topics that were recorded to the bag. If the nav camera was recorded on /mgt/img_sampler/nav_cam/image_record instead of /hw/cam_nav, as it happens when recording data on the ISS, it must be redirected to the proper topic, as we do above. If localization was running when the bag was recorded and hence the topics /loc/ml/features and /loc/ml/registration were recorded, they must be redirected to something else (above /tmp1 and /tmp2 was used) to not conflict with actual localization results that would be now created based on the images in the bag.</p>
 <h3><a class="anchor" id="autotoc_md352"></a>
 Examine the performance and features on MLP</h3>
 <h4><a class="anchor" id="autotoc_md353"></a>
@@ -306,6 +306,8 @@ Watch the number of features being produced:</h4>
 <h2><a class="anchor" id="autotoc_md356"></a>
 Verify localization against a sparse map on a local machine</h2>
 <p>To test localization of data from a bag against a map, one need not run things on the robot, but use instead a local machine. This should result on similar results as on the robot, but the speed of computations may differ.</p>
+<h3><a class="anchor" id="autotoc_md357"></a>
+Preparation</h3>
 <p>Set up the environment in every terminal that is used. Ensure that you use the correct robot name below. </p><pre class="fragment">source $ASTROBEE_BUILD_PATH/devel/setup.bash
 export ASTROBEE_RESOURCE_DIR=$ASTROBEE_SOURCE_PATH/astrobee/resources
 export ASTROBEE_CONFIG_DIR=$ASTROBEE_SOURCE_PATH/astrobee/config
@@ -316,14 +318,34 @@ export ROS_MASTER_URI=http://127.0.0.1:11311/
 </pre><p>Sym link the map to test: </p><pre class="fragment">mkdir -p $ASTROBEE_SOURCE_PATH/astrobee/resources/maps
 rm -fv $ASTROBEE_SOURCE_PATH/astrobee/resources/maps/iss.map
 ln -s $(pwd)/mymap.map $ASTROBEE_SOURCE_PATH/astrobee/resources/maps/iss.map
-</pre><p>Start the localization node: </p><pre class="fragment">roslaunch astrobee astrobee.launch mlp:=local llp:=disabled \
-  nodes:=framestore,localization_node robot:=$ASTROBEE_ROBOT
+</pre><h3><a class="anchor" id="autotoc_md358"></a>
+Start localization</h3>
+<pre class="fragment">roslaunch astrobee astrobee.launch mlp:=local llp:=disabled  \
+  nodes:=framestore,localization_node robot:=$ASTROBEE_ROBOT \
+  output:=screen
 </pre><p>Note how we specify the robot name at the end.</p>
-<p>Enable localization: </p><pre class="fragment">rosservice call /loc/ml/enable true
-</pre><p>Then, as above, one must play a bag while redirecting the existing /loc topics, and ensure that the images are published on /hw/cam_nav.</p>
+<h3><a class="anchor" id="autotoc_md359"></a>
+Play the bag</h3>
+<p>As above, one must play a bag with the <code>--clock</code> option, while redirecting the existing /loc topics, and ensure that the images are published on /hw/cam_nav: </p><pre class="fragment">rosbag play --clock mybag.bag                          \
+  /mgt/img_sampler/nav_cam/image_record:=/hw/cam_nav   \
+  /loc/ml/features:=/loc/ml/old_features               \
+  /loc/ml/registration:=/loc/ml/old_registration
+</pre><h3><a class="anchor" id="autotoc_md360"></a>
+Enable localization</h3>
+<p>Run: </p><pre class="fragment">rosservice call /loc/ml/enable true
+</pre><p>If this fails, try again in a little while.</p>
+<h3><a class="anchor" id="autotoc_md361"></a>
+Alternative approach</h3>
+<p>The steps of launching localization, playing the bag, and enabling localization can also be run from a launch file, as follows: </p><pre class="fragment">roslaunch $ASTROBEE_SOURCE_PATH/astrobee/launch/offline_localization/sparse_mapping_matching_from_bag.launch \
+   bagfile:=$(pwd)/mybag.bag \
+   robot:=$ASTROBEE_ROBOT    \
+   output:=screen
+</pre><p>It is very important that an absolute path to the bag be used, otherwise this command will fail. Errors about failing to start the rosservice to enable localization can be ignored, as that service will be started until it succeeds.</p>
+<h3><a class="anchor" id="autotoc_md362"></a>
+Examining the results</h3>
 <p>The poses of the newly localized camera images can be displayed as: </p><pre class="fragment">rostopic echo /loc/ml/features | grep -A 17 header:
 </pre><p>and compared to the old ones via: </p><pre class="fragment">rostopic echo /loc/ml/old_features | grep -A 17 header:
-</pre><h2><a class="anchor" id="autotoc_md357"></a>
+</pre><h2><a class="anchor" id="autotoc_md363"></a>
 Evaluating the map without running the localization node</h2>
 <p>See the <a class="el" href="ekfbag.html">EKF Bag</a> page for how to run the <code>sparse_map_eval</code> tool that takes as inputs a bag and a BRISK map and prints the number of detected features.</p>
 <p>Note that this approach may give slightly different results than using the localization node, and even with using this node, things can differ somewhat if running on a local machine vs running on the robot. Hence, the most faithful test is the one in which such experiments are performed on a robot, and ensuring that the software version on that robot is the same as for the real robot on the space station, if the goal is to prepare a map for an actual flight. The software version on the robot can be found using: </p><pre class="fragment">cat /opt/astrobee/version.txt 

@@ -9,9 +9,9 @@ var hw =
         [ "Re-initialize service", "perching_arm.html#autotoc_md177", null ],
         [ "Hardware", "picoflexx.html#autotoc_md179", null ],
         [ "Software", "picoflexx.html#autotoc_md180", [
-          [ "Distortion Models", "visioncommon.html#autotoc_md398", null ],
-          [ "Feature Detection And Matching", "visioncommon.html#autotoc_md399", null ],
-          [ "Utilities", "visioncommon.html#autotoc_md400", null ],
+          [ "Distortion Models", "visioncommon.html#autotoc_md404", null ],
+          [ "Feature Detection And Matching", "visioncommon.html#autotoc_md405", null ],
+          [ "Utilities", "visioncommon.html#autotoc_md406", null ],
           [ "USB patch for Inforce 3.10 kernel", "picoflexx.html#autotoc_md181", null ],
           [ "Custom PicoFlexx SDK compilation", "picoflexx.html#autotoc_md182", null ]
         ] ]

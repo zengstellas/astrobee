@@ -127,7 +127,7 @@ var NAVTREEINDEX =
 [
 "access_control.html",
 "imuintegration.html#autotoc_md290",
-"optimizationcommon.html#autotoc_md317"
+"opticalflow.html#autotoc_md295"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
