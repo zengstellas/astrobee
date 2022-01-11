@@ -158,7 +158,7 @@ Visualization</h3>
 <p>Only the camera positions can be displayed, without the 3D points, if the viewer is invoked with <code>-skip_3d_points</code>. The cameras can be made to rotate around the center of mass of the cameras, rather than the origin, using the <code>d</code> key. When in 3D view, rendering of thumbnails of the images can be skipped, as that makes the viewer slow, with '-skip_3d_images'.</p>
 <p>Clicking on an interest point with the middle mouse will display all images in which that interest point was detected, with the interest point in each of them shown as a red dot. Clicking back on the original window with the middle mouse will make these images go away.</p>
 <p>Clicking with the left mouse button on an image will print its name and the pixel coordinates where the mouse hit. This can be useful in collecting a subset of the images. (After clicking, a bug in OpenCV disables the arrow keys, then one can navigate with the "Ins" and "Del" keys on the numpad.)</p>
-<p>This tool can be invoked to look at just images, without any map being built. It can also delete images in this mode, with the 'Delete' and 'x' keys, if invoked as: </p><pre class="fragment">nvm_visualize -enable_image_deletion &lt;image dir&gt;/*jpg
+<p>This tool can be invoked to look at just images, without any map being built. It can also delete images in this mode, with the 'x' key, if invoked as: </p><pre class="fragment">nvm_visualize -enable_image_deletion &lt;image dir&gt;/*jpg
 </pre><h3><a class="anchor" id="autotoc_md384"></a>
 Localize a single frame</h3>
 <p>All the commands below assume that the environment was set up, as specified in the <a class="el" href="map_building.html">Map building</a> section.</p>
