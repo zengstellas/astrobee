@@ -111,5 +111,6 @@ var tools =
       ] ]
     ] ],
     [ "DDS Profile and Types", "dds_profile.html", null ],
-    [ "Interactive Marker Teleop", "interactive_marker_teleop.html", null ]
+    [ "Interactive Marker Teleop", "interactive_marker_teleop.html", null ],
+    [ "Performance Tester", "performance_tester.html", null ]
 ];
