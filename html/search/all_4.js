@@ -134,7 +134,7 @@ var searchData=
   ['depthimagemeasurement_1242',['DepthImageMeasurement',['../structlocalization__measurements_1_1DepthImageMeasurement.html',1,'localization_measurements::DepthImageMeasurement'],['../structlocalization__measurements_1_1DepthImageMeasurement.html#a6ac91496eb72ee6e683357334fabf751',1,'localization_measurements::DepthImageMeasurement::DepthImageMeasurement()']]],
   ['depthlandmark_2emsg_1243',['DepthLandmark.msg',['../DepthLandmark_8msg.html',1,'']]],
   ['depthlandmarks_2emsg_1244',['DepthLandmarks.msg',['../DepthLandmarks_8msg.html',1,'']]],
-  ['depthlandmarkscallback_1245',['DepthLandmarksCallBack',['../classekf_1_1EkfWrapper.html#a373d48c101ceaaf1471b1ac1534c40d4',1,'ekf::EkfWrapper::DepthLandmarksCallBack()'],['../classgraph__localizer_1_1GraphLocalizerWrapper.html#af29c6c71cdcc46b8a5478ea3816b0fa7',1,'graph_localizer::GraphLocalizerWrapper::DepthLandmarksCallback()']]],
+  ['depthlandmarkscallback_1245',['DepthLandmarksCallback',['../classgraph__localizer_1_1GraphLocalizerWrapper.html#af29c6c71cdcc46b8a5478ea3816b0fa7',1,'graph_localizer::GraphLocalizerWrapper::DepthLandmarksCallback()'],['../classekf_1_1EkfWrapper.html#a373d48c101ceaaf1471b1ac1534c40d4',1,'ekf::EkfWrapper::DepthLandmarksCallBack()']]],
   ['depthlandmarksupdate_1246',['DepthLandmarksUpdate',['../classekf_1_1Ekf.html#ade4944fb1fa4e9b0da8748e2f90a966b',1,'ekf::Ekf']]],
   ['depthodometry_1247',['DepthOdometry',['../classdepth__odometry_1_1DepthOdometry.html',1,'depth_odometry::DepthOdometry'],['../depthodometry.html',1,'localization']]],
   ['depthodometry_2emsg_1248',['DepthOdometry.msg',['../DepthOdometry_8msg.html',1,'']]],
