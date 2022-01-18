@@ -1,9 +1,10 @@
 <map id="localization/localization_measurements/include/localization_measurements/depth_odometry_measurement.h" name="localization/localization_measurements/include/localization_measurements/depth_odometry_measurement.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5874,5,6222,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5921,5,6269,61"/>
 <area shape="rect" id="node2" href="$depth__odometry__factor__adder_8h.html" title=" " alt="" coords="5152,109,5347,180"/>
 <area shape="rect" id="node3" href="$graph__localizer_8h.html" title=" " alt="" coords="5150,228,5349,284"/>
-<area shape="rect" id="node50" href="$measurement__conversions_8h.html" title=" " alt="" coords="6315,228,6634,284"/>
-<area shape="rect" id="node54" href="$depth__odometry__display_8h.html" title=" " alt="" coords="7045,339,7216,395"/>
+<area shape="rect" id="node50" href="$graph__localizer_2include_2graph__localizer_2test__utilities_8h.html" title=" " alt="" coords="6004,117,6185,173"/>
+<area shape="rect" id="node52" href="$measurement__conversions_8h.html" title=" " alt="" coords="6315,228,6634,284"/>
+<area shape="rect" id="node56" href="$depth__odometry__display_8h.html" title=" " alt="" coords="7045,339,7216,395"/>
 <area shape="rect" id="node18" href="$depth__odometry__factor__adder_8cc.html" title=" " alt="" coords="445,458,643,514"/>
 <area shape="rect" id="node4" href="$graph__localizer__wrapper_8h.html" title=" " alt="" coords="636,332,823,403"/>
 <area shape="rect" id="node13" href="$graph__localizer_2include_2graph__localizer_2serialization_8h.html" title=" " alt="" coords="3970,339,4150,395"/>
@@ -50,7 +51,8 @@
 <area shape="rect" id="node47" href="$imu__augmentor__display_8cc.html" title=" " alt="" coords="6079,458,6249,514"/>
 <area shape="rect" id="node48" href="$pose__display_8cc.html" title=" " alt="" coords="6273,458,6439,514"/>
 <area shape="rect" id="node49" href="$tools_2localization__rviz__plugins_2src_2utilities_8cc.html" title=" " alt="" coords="6463,465,6665,507"/>
-<area shape="rect" id="node51" href="$depth__odometry__wrapper_8cc.html" title=" " alt="" coords="6278,339,6447,395"/>
-<area shape="rect" id="node52" href="$imu__augmentor__wrapper_8cc.html" title=" " alt="" coords="6472,347,6701,388"/>
-<area shape="rect" id="node53" href="$measurement__conversions_8cc.html" title=" " alt="" coords="6725,339,6971,395"/>
+<area shape="rect" id="node51" href="$graph__localizer_2src_2test__utilities_8cc.html" title=" " alt="" coords="6025,228,6164,284"/>
+<area shape="rect" id="node53" href="$depth__odometry__wrapper_8cc.html" title=" " alt="" coords="6278,339,6447,395"/>
+<area shape="rect" id="node54" href="$imu__augmentor__wrapper_8cc.html" title=" " alt="" coords="6472,347,6701,388"/>
+<area shape="rect" id="node55" href="$measurement__conversions_8cc.html" title=" " alt="" coords="6725,339,6971,395"/>
 </map>

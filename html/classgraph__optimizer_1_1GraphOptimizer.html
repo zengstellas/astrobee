@@ -102,8 +102,8 @@ Inheritance diagram for graph_optimizer::GraphOptimizer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgraph__optimizer_1_1GraphOptimizer__inherit__graph.png" border="0" usemap="#agraph__optimizer_1_1GraphOptimizer_inherit__map" alt="Inheritance graph"/></div>
 <map name="graph__optimizer_1_1GraphOptimizer_inherit__map" id="agraph__optimizer_1_1GraphOptimizer_inherit__map">
-<area shape="rect" title=" " alt="" coords="16,5,255,332"/>
-<area shape="rect" href="classgraph__localizer_1_1GraphLocalizer.html" title=" " alt="" coords="5,380,265,648"/>
+<area shape="rect" title=" " alt="" coords="16,5,255,259"/>
+<area shape="rect" href="classgraph__localizer_1_1GraphLocalizer.html" title=" " alt="" coords="5,307,265,575"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -129,6 +129,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af59fdecc1a16cf501a64f11efdb97be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7793eb104fba47a7c30f9792cc81d1ac"><td class="memItemLeft" align="right" valign="top">gtsam::NonlinearFactorGraph &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a7793eb104fba47a7c30f9792cc81d1ac">graph_factors</a> ()</td></tr>
 <tr class="separator:a7793eb104fba47a7c30f9792cc81d1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89885197d23d31579ecb3ef28065807d"><td class="memTemplParams" colspan="2">template&lt;typename FactorType &gt; </td></tr>
+<tr class="memitem:a89885197d23d31579ecb3ef28065807d"><td class="memTemplItemLeft" align="right" valign="top">const std::vector&lt; boost::shared_ptr&lt; const FactorType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a89885197d23d31579ecb3ef28065807d">Factors</a> () const</td></tr>
+<tr class="separator:a89885197d23d31579ecb3ef28065807d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c37cc32c8657fa895aeab3be169c4a8"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a3c37cc32c8657fa895aeab3be169c4a8">num_factors</a> () const</td></tr>
+<tr class="separator:a3c37cc32c8657fa895aeab3be169c4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a246400388c2575b5220558c89caad706"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a246400388c2575b5220558c89caad706">SaveGraphDotFile</a> (const std::string &amp;output_path=&quot;graph.dot&quot;) const</td></tr>
 <tr class="separator:a246400388c2575b5220558c89caad706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5029bbab66aa5123da10a945f2696711"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structgraph__optimizer_1_1GraphOptimizerParams.html">GraphOptimizerParams</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__optimizer_1_1GraphOptimizer.html#a5029bbab66aa5123da10a945f2696711">params</a> () const</td></tr>
@@ -277,6 +282,22 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a89885197d23d31579ecb3ef28065807d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89885197d23d31579ecb3ef28065807d">&#9670;&nbsp;</a></span>Factors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename FactorType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; boost::shared_ptr&lt; const FactorType &gt; &gt; graph_optimizer::GraphOptimizer::Factors</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7793eb104fba47a7c30f9792cc81d1ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7793eb104fba47a7c30f9792cc81d1ac">&#9670;&nbsp;</a></span>graph_factors() <span class="overload">[1/2]</span></h2>
 
@@ -402,6 +423,23 @@ Friends</h2></td></tr>
 <span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c37cc32c8657fa895aeab3be169c4a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c37cc32c8657fa895aeab3be169c4a8">&#9670;&nbsp;</a></span>num_factors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int graph_optimizer::GraphOptimizer::num_factors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
