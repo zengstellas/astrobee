@@ -128,7 +128,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"imuintegration.html#autotoc_md292",
+"imuintegration.html#autotoc_md296",
 "new_robot.html#autotoc_md155"
 ];
 
