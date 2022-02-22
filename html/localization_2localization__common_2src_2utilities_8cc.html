@@ -220,8 +220,6 @@ Functions</h2></td></tr>
 <tr class="separator:a19c5f3da0900a17038365d41f1911e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4fbfc1cf6183a634283e425c97c7ec0"><td class="memItemLeft" align="right" valign="top">gtsam::Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#ab4fbfc1cf6183a634283e425c97c7ec0">localization_common::RemoveGravityFromAccelerometerMeasurement</a> (const gtsam::Vector3 &amp;global_F_gravity, const gtsam::Pose3 &amp;body_T_imu, const gtsam::Pose3 &amp;global_T_body, const gtsam::Vector3 &amp;uncorrected_accelerometer_measurement)</td></tr>
 <tr class="separator:ab4fbfc1cf6183a634283e425c97c7ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1f6863326e9ade0c55f1403b51214ca"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#af1f6863326e9ade0c55f1403b51214ca">localization_common::Isometry3d</a> (const Eigen::Vector3d &amp;translation, const Eigen::Matrix3d &amp;rotation)</td></tr>
-<tr class="separator:af1f6863326e9ade0c55f1403b51214ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adec60b3b2106bac5e258364e18a83417"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#adec60b3b2106bac5e258364e18a83417">localization_common::Deg2Rad</a> (const double degrees)</td></tr>
 <tr class="separator:adec60b3b2106bac5e258364e18a83417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb1531b4ddab37368084cde3b436c8af"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#afb1531b4ddab37368084cde3b436c8af">localization_common::Rad2Deg</a> (const double radians)</td></tr>
@@ -242,6 +240,8 @@ Functions</h2></td></tr>
 <tr class="separator:a5ef18ecef4e0e98380d150bab7edc9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abae3d14d9465850ae7376bab4831fd5d"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::vector&lt; Eigen::Vector3d &gt;, std::vector&lt; Eigen::Vector3d &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#abae3d14d9465850ae7376bab4831fd5d">localization_common::TransformPointsWithNormals</a> (const std::vector&lt; Eigen::Vector3d &gt; &amp;points, const std::vector&lt; Eigen::Vector3d &gt; &amp;normals, const Eigen::Isometry3d &amp;b_T_a)</td></tr>
 <tr class="separator:abae3d14d9465850ae7376bab4831fd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5745ed6117a2eb42fd1eb5ed3e126be2"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a5745ed6117a2eb42fd1eb5ed3e126be2">localization_common::Interpolate</a> (const Eigen::Isometry3d &amp;lower_bound_pose, const Eigen::Isometry3d &amp;upper_bound_pose, const double alpha)</td></tr>
+<tr class="separator:a5745ed6117a2eb42fd1eb5ed3e126be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

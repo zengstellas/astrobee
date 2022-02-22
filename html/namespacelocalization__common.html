@@ -115,6 +115,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlocalization__common_1_1MeasurementBuffer.html">MeasurementBuffer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlocalization__common_1_1PoseInterpolater.html">PoseInterpolater</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlocalization__common_1_1PoseWithCovariance.html">PoseWithCovariance</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlocalization__common_1_1RateTimer.html">RateTimer</a></td></tr>
@@ -124,6 +126,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlocalization__common_1_1Sampler.html">Sampler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlocalization__common_1_1Timer.html">Timer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlocalization__common_1_1TimestampedSet.html">TimestampedSet</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlocalization__common_1_1TimestampedValue.html">TimestampedValue</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -256,8 +262,9 @@ Functions</h2></td></tr>
 <tr class="separator:ac47c17afab124ca79f9e7ed65253bed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ef18ecef4e0e98380d150bab7edc9c0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a5ef18ecef4e0e98380d150bab7edc9c0">PoseCovarianceSane</a> (const Eigen::Matrix&lt; double, 6, 6 &gt; &amp;pose_covariance, const double position_covariance_threshold=0, const double orientation_covariance_threshold=0, const bool check_position_covariance=true, const bool check_orientation_covariance=true)</td></tr>
 <tr class="separator:a5ef18ecef4e0e98380d150bab7edc9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1f6863326e9ade0c55f1403b51214ca"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#af1f6863326e9ade0c55f1403b51214ca">Isometry3d</a> (const Eigen::Vector3d &amp;translation, const Eigen::Matrix3d &amp;rotation)</td></tr>
-<tr class="separator:af1f6863326e9ade0c55f1403b51214ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61d72b758fdc1a720fc6156f1bbc42f"><td class="memTemplParams" colspan="2">template&lt;typename RotationType &gt; </td></tr>
+<tr class="memitem:ab61d72b758fdc1a720fc6156f1bbc42f"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#ab61d72b758fdc1a720fc6156f1bbc42f">Isometry3d</a> (const Eigen::Vector3d &amp;translation, const RotationType &amp;rotation)</td></tr>
+<tr class="separator:ab61d72b758fdc1a720fc6156f1bbc42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adec60b3b2106bac5e258364e18a83417"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#adec60b3b2106bac5e258364e18a83417">Deg2Rad</a> (const double degrees)</td></tr>
 <tr class="separator:adec60b3b2106bac5e258364e18a83417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb1531b4ddab37368084cde3b436c8af"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#afb1531b4ddab37368084cde3b436c8af">Rad2Deg</a> (const double radians)</td></tr>
@@ -285,6 +292,8 @@ Functions</h2></td></tr>
 <tr class="separator:a1a93ba573bc94f6ee6a8886b6c10b2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abae3d14d9465850ae7376bab4831fd5d"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::vector&lt; Eigen::Vector3d &gt;, std::vector&lt; Eigen::Vector3d &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#abae3d14d9465850ae7376bab4831fd5d">TransformPointsWithNormals</a> (const std::vector&lt; Eigen::Vector3d &gt; &amp;points, const std::vector&lt; Eigen::Vector3d &gt; &amp;normals, const Eigen::Isometry3d &amp;b_T_a)</td></tr>
 <tr class="separator:abae3d14d9465850ae7376bab4831fd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5745ed6117a2eb42fd1eb5ed3e126be2"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelocalization__common.html#a5745ed6117a2eb42fd1eb5ed3e126be2">Interpolate</a> (const Eigen::Isometry3d &amp;lower_bound_pose, const Eigen::Isometry3d &amp;upper_bound_pose, const double alpha)</td></tr>
+<tr class="separator:a5745ed6117a2eb42fd1eb5ed3e126be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="ad552ba3e372e8529b80ed8a27ee44242"></a>
@@ -760,6 +769,40 @@ template&lt;class LocMsgType &gt; </div>
 
 </div>
 </div>
+<a id="a5745ed6117a2eb42fd1eb5ed3e126be2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5745ed6117a2eb42fd1eb5ed3e126be2">&#9670;&nbsp;</a></span>Interpolate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Isometry3d localization_common::Interpolate </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
+          <td class="paramname"><em>lower_bound_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
+          <td class="paramname"><em>upper_bound_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3a7e73673514c3e806936e3adb50b840"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3a7e73673514c3e806936e3adb50b840">&#9670;&nbsp;</a></span>InvertPoseWithCovariance()</h2>
 
@@ -778,11 +821,13 @@ template&lt;class LocMsgType &gt; </div>
 
 </div>
 </div>
-<a id="af1f6863326e9ade0c55f1403b51214ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1f6863326e9ade0c55f1403b51214ca">&#9670;&nbsp;</a></span>Isometry3d()</h2>
+<a id="ab61d72b758fdc1a720fc6156f1bbc42f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61d72b758fdc1a720fc6156f1bbc42f">&#9670;&nbsp;</a></span>Isometry3d()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename RotationType &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">Eigen::Isometry3d localization_common::Isometry3d </td>
@@ -793,7 +838,7 @@ template&lt;class LocMsgType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Matrix3d &amp;&#160;</td>
+          <td class="paramtype">const RotationType &amp;&#160;</td>
           <td class="paramname"><em>rotation</em>&#160;</td>
         </tr>
         <tr>
