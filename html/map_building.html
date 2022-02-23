@@ -118,7 +118,7 @@ export ASTROBEE_WORLD=granite
 <p>Under the hood, the following configuration files will be read: </p><pre class="fragment">$ASTROBEE_CONFIG_DIR/cameras.config
 </pre><p>which contains the image width and height (the camera we use is the nav cam) and </p><pre class="fragment">$ASTROBEE_CONFIG_DIR/robots/$ASTROBEE_ROBOT.config
 </pre><p>having nav cam's intrinsics. If your camera is not the nav cam on p4d, and none of the other available config files apply, you can just temporarily modify the above files to reflect your camera's parameters (without checking in your changes).</p>
-<p>More details on these and other environmental variables can be found in the <a class="el" href="astrobee.html">Astrobee</a> configuration documentation.</p>
+<p>More details on these and other environmental variables can be found in the <a class="el" href="astrobee.html">General Considerations</a> configuration documentation.</p>
 <h2><a class="anchor" id="autotoc_md331"></a>
 Reduce the number of images</h2>
 <p>Here, we delete the images that overlap highly. (This tool is, like all others, in astrobee_build/native.) </p><pre class="fragment">select_images -density_factor 1.4 &lt;image dir&gt;/*.jpg

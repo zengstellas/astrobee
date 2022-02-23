@@ -115,7 +115,8 @@ var NAVTREE =
         ] ]
       ] ]
     ] ],
-    [ "Astrobee Usage", "md_doc_general_documentation_astrobee_usage.html", "md_doc_general_documentation_astrobee_usage" ],
+    [ "Tutorials", "md_doc_general_documentation_astrobee_usage.html", "md_doc_general_documentation_astrobee_usage" ],
+    [ "Publicly Available Data", "md_doc_general_documentation_public_data.html", null ],
     [ "Subsystems", "subsystems.html", "subsystems" ],
     [ "Simulation", "sim-readme.html", "sim-readme" ],
     [ "Tools", "tools.html", "tools" ],
@@ -128,8 +129,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"imuintegration.html#autotoc_md296",
-"new_robot.html#autotoc_md155"
+"imuintegration.html#autotoc_md297",
+"new_robot.html#autotoc_md154"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

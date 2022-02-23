@@ -13,44 +13,44 @@ var md_INSTALL =
     ] ],
     [ "Using Docker", "md_INSTALL.html#autotoc_md12", null ],
     [ "Install for general users", "install-nonNASA.html", [
-      [ "Usage instructions for non-NASA users", "install-nonNASA.html#autotoc_md112", [
-        [ "Machine setup", "install-nonNASA.html#autotoc_md113", [
-          [ "Checkout the project source code", "install-nonNASA.html#autotoc_md114", null ],
-          [ "Dependencies", "install-nonNASA.html#autotoc_md115", null ]
+      [ "Usage instructions for non-NASA users", "install-nonNASA.html#autotoc_md111", [
+        [ "Machine setup", "install-nonNASA.html#autotoc_md112", [
+          [ "Checkout the project source code", "install-nonNASA.html#autotoc_md113", null ],
+          [ "Dependencies", "install-nonNASA.html#autotoc_md114", null ]
         ] ],
-        [ "Configuring the build", "install-nonNASA.html#autotoc_md116", [
-          [ "Note for the build setup", "install-nonNASA.html#autotoc_md117", null ],
-          [ "Native build", "install-nonNASA.html#autotoc_md118", null ]
+        [ "Configuring the build", "install-nonNASA.html#autotoc_md115", [
+          [ "Note for the build setup", "install-nonNASA.html#autotoc_md116", null ],
+          [ "Native build", "install-nonNASA.html#autotoc_md117", null ]
         ] ],
-        [ "Building the code", "install-nonNASA.html#autotoc_md119", null ],
-        [ "Cross Compiling", "install-nonNASA.html#autotoc_md120", null ]
+        [ "Building the code", "install-nonNASA.html#autotoc_md118", null ],
+        [ "Cross Compiling", "install-nonNASA.html#autotoc_md119", null ]
       ] ]
     ] ],
     [ "Install for NASA users", "install-NASA.html", [
-      [ "Usage instructions for NASA users", "install-NASA.html#autotoc_md134", [
-        [ "Computer setup", "install-NASA.html#autotoc_md135", [
-          [ "Username", "install-NASA.html#autotoc_md136", null ],
-          [ "Access to the Astrobee Debian server", "install-NASA.html#autotoc_md137", [
-            [ "If on the ARC TI private network", "install-NASA.html#autotoc_md138", null ],
-            [ "If not on the ARC TI private network", "install-NASA.html#autotoc_md139", null ]
+      [ "Usage instructions for NASA users", "install-NASA.html#autotoc_md133", [
+        [ "Computer setup", "install-NASA.html#autotoc_md134", [
+          [ "Username", "install-NASA.html#autotoc_md135", null ],
+          [ "Access to the Astrobee Debian server", "install-NASA.html#autotoc_md136", [
+            [ "If on the ARC TI private network", "install-NASA.html#autotoc_md137", null ],
+            [ "If not on the ARC TI private network", "install-NASA.html#autotoc_md138", null ]
           ] ],
-          [ "Checkout the project source code", "install-NASA.html#autotoc_md140", null ],
-          [ "Dependencies", "install-NASA.html#autotoc_md141", [
-            [ "Extra options to install the dependencies", "install-NASA.html#autotoc_md142", null ]
+          [ "Checkout the project source code", "install-NASA.html#autotoc_md139", null ],
+          [ "Dependencies", "install-NASA.html#autotoc_md140", [
+            [ "Extra options to install the dependencies", "install-NASA.html#autotoc_md141", null ]
           ] ],
-          [ "Cross-compile setup", "install-NASA.html#autotoc_md143", null ]
+          [ "Cross-compile setup", "install-NASA.html#autotoc_md142", null ]
         ] ],
-        [ "Configuring the build", "install-NASA.html#autotoc_md144", [
-          [ "Note for both builds setup", "install-NASA.html#autotoc_md145", null ],
-          [ "Native build", "install-NASA.html#autotoc_md146", null ],
-          [ "Cross-compile build", "install-NASA.html#autotoc_md147", null ]
+        [ "Configuring the build", "install-NASA.html#autotoc_md143", [
+          [ "Note for both builds setup", "install-NASA.html#autotoc_md144", null ],
+          [ "Native build", "install-NASA.html#autotoc_md145", null ],
+          [ "Cross-compile build", "install-NASA.html#autotoc_md146", null ]
         ] ],
-        [ "Building the code", "install-NASA.html#autotoc_md148", null ],
-        [ "Switching build profiles", "install-NASA.html#autotoc_md149", null ],
-        [ "Running a simulation", "install-NASA.html#autotoc_md150", null ],
-        [ "Running the code on a real robot", "install-NASA.html#autotoc_md151", null ]
+        [ "Building the code", "install-NASA.html#autotoc_md147", null ],
+        [ "Switching build profiles", "install-NASA.html#autotoc_md148", null ],
+        [ "Running a simulation", "install-NASA.html#autotoc_md149", null ],
+        [ "Running the code on a real robot", "install-NASA.html#autotoc_md150", null ]
       ] ],
-      [ "Further information", "install-NASA.html#autotoc_md152", null ]
+      [ "Further information", "install-NASA.html#autotoc_md151", null ]
     ] ],
     [ "Docker build", "install-docker.html", [
       [ "Usage instructions for Docker", "install-docker.html#autotoc_md164", [

@@ -3,28 +3,6 @@ var tools =
     [ "Calibration", "calibration.html", [
       [ "Package Overview", "calibration.html#autotoc_md546", null ],
       [ "Camera Target Based Intrinsics Calibration", "calibration.html#autotoc_md547", [
-        [ "The program 'roslaunch/rosrun' is currently not installed", "sim-issues.html#autotoc_md526", null ],
-        [ "[Sim.launch] is neither a launch file in package [astrobee] ...", "sim-issues.html#autotoc_md527", null ],
-        [ "Rospack Error Finding Package", "sim-issues.html#autotoc_md528", null ],
-        [ "Issues Starting up the Simulator", "sim-issues.html#autotoc_md529", null ],
-        [ "Robot Body Does Not Show up in RVIZ", "sim-issues.html#autotoc_md530", null ],
-        [ "No Image message in RVIZ", "sim-issues.html#autotoc_md531", null ],
-        [ "Heartbeat Fault Detected", "sim-issues.html#autotoc_md532", [
-          [ "DDS ROS Bridge", "sim-issues.html#autotoc_md533", null ],
-          [ "Multiple Heartbeat Failures", "sim-issues.html#autotoc_md534", null ]
-        ] ],
-        [ "Command Fails due to Robot State", "sim-issues.html#autotoc_md535", null ],
-        [ "Tolerance Violated Errors", "sim-issues.html#autotoc_md536", null ],
-        [ "Keep in Zone Violation", "sim-issues.html#autotoc_md537", null ],
-        [ "Unable to Plan a Segment", "sim-issues.html#autotoc_md538", null ],
-        [ "Couldn't Configure the Mobility Node", "sim-issues.html#autotoc_md539", null ],
-        [ "Could Not Query the Pose of Robot", "sim-issues.html#autotoc_md540", null ],
-        [ "Dock Action Server Not Connected", "sim-issues.html#autotoc_md541", null ],
-        [ "GDS Node - Process has Died", "sim-issues.html#autotoc_md542", null ],
-        [ "The Robot is Spinning, Flying Higher Than the World, or Jumping Around Erratically", "sim-issues.html#autotoc_md543", [
-          [ "Teleop Tool Reports No Publisher for Acks Topic", "sim-issues.html#autotoc_md544", null ],
-          [ "Bumble not in repository", "sim-issues.html#autotoc_md545", null ]
-        ] ],
         [ "Example Usage", "calibration.html#autotoc_md548", [
           [ "Generate target detections from bagfiles", "calibration.html#autotoc_md549", null ],
           [ "View target detection coverage in image space", "calibration.html#autotoc_md550", null ],
