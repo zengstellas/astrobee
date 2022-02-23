@@ -155,7 +155,10 @@ Teleop Tool Reports No Publisher for Acks Topic</h3>
 <p>This issue occurs when a namespace is used for Astrobee but the namespace wasn't provided to the teleop tool or the namespace provided doesn't match Astrobee's namespace. Please check the namespace of Astrobee and make sure it matches the namespace provided to the teleop tool. Remember, Astrobee namespaces should not be capitialized.</p>
 <h3><a class="anchor" id="autotoc_md545"></a>
 Bumble not in repository</h3>
-<p>This error only occurs when running the simulator in a native linux machine instead of a virtual machine. To get rid of it, you will have to open the astrobee/config/communications/dds/RAPID_QOS_PROFILES.xml file and remove ip address '128.102.*' from line 118. </p>
+<p>This error only occurs when running the simulator in a native linux machine instead of a virtual machine. To get rid of it, you will have to open the astrobee/config/communications/dds/RAPID_QOS_PROFILES.xml file and remove ip address '128.102.*' from line 118.</p>
+<h2><a class="anchor" id="autotoc_md546"></a>
+Gazebo shows up black in VM Ubuntu 20.04</h2>
+<p>This is a known issue not specific to our project reported <a href="https://forum.parallels.com/threads/black-screen-with-3d-acceleration-enabled-for-gazebo-and-rviz-robotic.355825/">here</a>. The solution is to turn off 3D acceleration on the VM settings. Note that otherwise the simulation will still work and the robot is capable of moving, but all scicam data imagery will show up black. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

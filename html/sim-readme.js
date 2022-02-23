@@ -25,7 +25,8 @@ var sim_readme =
         [ "The Robot is Spinning, Flying Higher Than the World, or Jumping Around Erratically", "sim-issues.html#autotoc_md543", [
           [ "Teleop Tool Reports No Publisher for Acks Topic", "sim-issues.html#autotoc_md544", null ],
           [ "Bumble not in repository", "sim-issues.html#autotoc_md545", null ]
-        ] ]
+        ] ],
+        [ "Gazebo shows up black in VM Ubuntu 20.04", "sim-issues.html#autotoc_md546", null ]
       ] ]
     ] ]
 ];
