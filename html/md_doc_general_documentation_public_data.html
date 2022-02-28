@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NASA Astrobee Robot Software: Publicly Available Data</title>
+<title>NASA Astrobee Robot Software: Using Astrobee Robot Telemetry Logs</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
@@ -88,11 +88,118 @@ $(document).ready(function(){initNavTree('md_doc_general_documentation_public_da
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Publicly Available Data </div>  </div>
+<div class="title">Using Astrobee Robot Telemetry Logs </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Data from Astrobee collected during some ISS activities can be found <a href="https://nasagov.box.com/s/4ign43svk39guhy9ev8t5xkzui6tqjm1">here</a></p>
-<p>The data is available in bagfile format, you can learn more about bagfiles <a href="http://wiki.ros.org/rosbag">here</a>. If you didn't already install Astrobee <a class="el" href="install-nonNASA.html">Install for general users</a>, to play and extract the data you will have to import the custom Astrobee message types. </p>
+<div class="textblock"><p>The ISS Astrobee Facility has established an [Astrobee ISS telemetry log public release folder](<a href="https://nasagov.box.com/s/4ign43svk39guhy9ev8t5xkzui6tqjm1">https://nasagov.box.com/s/4ign43svk39guhy9ev8t5xkzui6tqjm1</a>).</p>
+<p>Astrobee telemetry logs are also called "bag files" and use the <a href="http://wiki.ros.org/rosbag">rosbag</a> format.</p>
+<h1><a class="anchor" id="autotoc_md156"></a>
+Understanding telemetry in context</h1>
+<p>This document focuses primarily on how to use Astrobee robot telemetry logs. However, for best understanding of an Astrobee ISS activity, you may benefit from context clues found in other information resources, including:</p>
+<ul>
+<li>Debrief notes. Immediately following an ISS activity, the Astrobee ground team assembles debrief notes that review the activity objectives, which objectives succeeded or failed, what anomalies were observed and follow-up actions were required, etc. These notes are usually archived on the NASA-internal <a href="https://babelfish.arc.nasa.gov/confluence/display/FFOPS/">Free Flyer Ops wiki</a>.</li>
+<li>Action logs. During the activity, certain notes may be logged live, for example, as timestamped comments on a NASA-internal wiki page. Typical events noted in the log might include when the robot software was reset, when a crew procedure step started/finished, when an anomaly was observed, etc.</li>
+<li>ISS crew procedures. Astronauts often perform setup/teardown tasks around an Astrobee activity (such as setting "nominal" light levels in the module, clearing clutter out of the module, installing Astrobee payloads, setting up ISS camcorders to live stream the activity, etc.). For some activities, astronauts play a much larger role, such as manually flying an Astrobee around to collect imagery. The crew procedure will tell you what instructions the astronaut was following.</li>
+<li>Ground procedures. The concept of operations for a typical Astrobee activity includes a team of operators on the ground playing multiple roles. These operators follow a ground procedure that often includes much more detail about the planned robot actions than the crew procedure. Astrobee ground procedures follow a table format which includes a column for the operator to record notes. If the operator filled out this column, it can provide valuable context.</li>
+<li>ISS imagery. Many Astrobee activities are recorded live by ISS camcorders pre-positioned by an astronaut. In other cases, astronauts may opportunistically grab a camera to capture some video or a few photos. After privacy review, this imagery can typically be found by searching for "astrobee" on the NASA-internal site <a href="https://io.jsc.nasa.gov/">Imagery Online</a>. A third-party camera view can be invaluable for understanding what actually happened during an activity, especially if there were significant anomalies.</li>
+<li>Post-activity data processing.<ul>
+<li>Certain simple processing steps are almost always applied to the telemetry logs before you receive them. For example:<ul>
+<li>Telemetry bag files that were split on the robot may have been merged into a single bag file.</li>
+<li>Bag file problems such as missing message definition metadata may have been repaired.</li>
+</ul>
+</li>
+<li>However, other types of post-activity processing are performed on a case-by-case basis, and the results may not be included in the ISS log file you receive. For example:<ul>
+<li>It is common to log Astrobee NavCam imagery during an ISS activity so that post-activity processing can generate higher-quality position estimates using a costly bundle-adjustment algorithm that can't run in real-time onboard the robot. When this type of processing has been performed, you may prefer to request and use the higher-quality post-activity position estimate vs. the real-time position estimate logged on the ISS.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Research publications. If the activity results were published, the publications are often the best resource for detailed context.</li>
+</ul>
+<p>In some cases, you may have access to the publicly released Astrobee telemetry log but not to these other resources documenting the ISS activity. Our data release processes are still evolving. For now, if you can't find a resource you need, feel free to ask for more information.</p>
+<h1><a class="anchor" id="autotoc_md157"></a>
+Basics of the bag format</h1>
+<p>Astrobee telemetry logs are also called "bag files" and use the <a href="http://wiki.ros.org/rosbag">rosbag</a> format.</p>
+<p>The <a href="https://www.ros.org/">ROS</a> middleware framework allows a complex robot software architecture to be implemented in distributed fashion. Individual software components are implemented as nodes that communicate using anonymous publish/subscribe message passing.</p>
+<p>Each message type has a format defined in a <code>*.msg</code> file that describes what fields are present in the message. When a node starts publishing a message, it first specifies both the message type and the "topic" name it will use for publishing. This same topic can be used by other nodes to subscribe and start receiving the message.</p>
+<p>A ROS bag file includes two main types of information:</p><ul>
+<li>Metadata about what topics are included and the message type for each topic</li>
+<li>The actual contents of the timestamped messages</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md158"></a>
+Finding the right bag</h1>
+<p>In the <a href="https://nasagov.box.com/s/4ign43svk39guhy9ev8t5xkzui6tqjm1">Astrobee ISS telemetry log public release folder</a>, the telemetry is packaged as ZIP archives, ordered by ISS activity date.</p>
+<p>The ZIP archive file name includes the Astrobee robot serial number and robot name. For example, in "2021-03-26_SN003_bumble.zip", "SN003_bumble" means Astrobee serial number 3, also known as "Bumble". If multiple robots were involved in an activity, there will be multiple ZIP files.</p>
+<p>When a ZIP archive is unpacked, it may contain multiple bag files. To explain why, we should first note that Astrobee flight software is able to log two concurrent telemetry streams:</p>
+<ol type="1">
+<li>The <code>immediate</code> stream contains relatively low-bandwidth housekeeping information useful for robot debugging. The list of topics logged in this stream stays fairly consistent over all Astrobee activities, only occasionally changing due to Astrobee baseline flight software upgrades. Bags that record the <code>immediate</code> stream typically have a filename ending in <code>ars_default.bag</code>. (Where "`ars`" stands for "Astrobee Robot Software".) Recording start/stop for this stream is usually related to starting or restarting the Astrobee baseline flight software.</li>
+<li>The <code>delayed</code> stream is configured much more dynamically. Typically, the Astrobee user defining the objectives of the activity will develop one or more logging profiles (i.e., lists of topics to log) that suit their objectives. During the course of a single ISS activity, ground operators can start and stop bag recording as well as switching logging profiles, as directed by the ground procedure. The tail end of the filename for each <code>delayed</code> stream bag file is also set by the operator. Recording start/stop is frequently used to separate the bag files relating to different procedure steps and give them meaningful names. Because high-bandwidth imagery logging can quickly exhaust Astrobee's onboard storage, <code>delayed</code> stream bag recording is often disabled for most of the activity.</li>
+</ol>
+<p>To reiterate, these two streams are logged concurrently, so it is common to have an <code>immediate</code> bag file and a <code>delayed</code> bag file that cover overlapping time intervals, recording different topics. The fact that the two streams are stored in separate bag files is not a barrier to analyzing them together: if needed, we have tools that enable you to merge bag files in message timestamp order.</p>
+<p>The first part of each bag filename gives the date and time when recording of the bag file started, specified in the UTC (also known as GMT) time zone used onboard the ISS. For long activities that generate many bag files, you will probably want to use context information such as the ground procedure to determine which bag files are relevant for your needs.</p>
+<h1><a class="anchor" id="autotoc_md159"></a>
+Install before working with bags</h1>
+<p>The short version is that you can get both the ROS bag file tools and the message definitions necessary for working with Astrobee bag files by following the installation instructions for the Astrobee robot software (<a class="el" href="install-nonNASA.html">Install for general users</a>).</p>
+<p>Depending on the activity, if there was guest science software installed and publishing additional message types, you may need to get the necessary message definitions by installing that software as well. For example, here are the <a href="https://nasa.github.io/isaac/html/md_INSTALL.html">ISAAC software installation instructions</a>.</p>
+<p>We also note that, if <code>rosbag</code> processing is all you need, it should suffice to do a minimal install of just the <code><a class="el" href="namespaceff__msgs.html">ff_msgs</a></code> and <code>ff_hw_msgs</code> ROS packages from the <a href="https://github.com/nasa/astrobee"><code>astrobee</code></a> repo without building the entire Astrobee software system and without installing all of its many third-party dependencies. And likewise, just the <code>isaac_msgs</code> and <code>isaac_hw_msgs</code> ROS packages from the <a href="https://github.com/nasa/isaac_msgs"><code>isaac_msgs</code></a> repo should suffice for ISAAC messages. (But that slimmed-down install process has not yet been tested and documented.)</p>
+<h1><a class="anchor" id="autotoc_md160"></a>
+Figuring out what's in the bag</h1>
+<p>There are many broader <a href="http://wiki.ros.org/rosbag/Tutorials">tutorials on rosbag</a>, and a full discussion is beyond the scope of this document.</p>
+<p>However, here are a few shortcuts for finding what's in a bag:</p>
+<ul>
+<li><code>rosbag info some.bag</code>: Lists topics contained in the bag, their message types, and other information.</li>
+<li><code>rosmsg info package_name/MsgType</code>: Lists the fields contained in a message type.</li>
+</ul>
+<p>You can also browse an overview of Astrobee message types in these folders:</p>
+<ul>
+<li><a href="https://github.com/nasa/astrobee/tree/master/communications/ff_msgs/msg"><code>ff_msgs</code></a></li>
+<li><a href="https://github.com/nasa/astrobee/tree/master/communications/ff_hw_msgs/msg"><code>ff_hw_msgs</code></a></li>
+<li><a href="https://github.com/nasa/isaac_msgs/tree/master/isaac_msgs/msg"><code>isaac_msgs</code></a></li>
+<li><a href="https://github.com/nasa/isaac_msgs/tree/master/isaac_hw_msgs/msg"><code>isaac_hw_msgs</code></a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md161"></a>
+Common bag processing tasks</h1>
+<h2><a class="anchor" id="autotoc_md162"></a>
+Converting a bag to CSV format for import to other tools</h2>
+<p>The following example CSV export uses a bag from the publicly released ZIP archive <code>2021-03-26_SN003_bumble.zip</code>:</p>
+<div class="fragment"><div class="line">ASTROBEE_DIR=$HOME/astrobee</div>
+<div class="line"># generate a smaller bag containing only the topic of interest (filtering out any bad message types)</div>
+<div class="line">$ASTROBEE_DIR/src/scripts/postprocessing/rosbag_topic_filter.py 20210326_1855_phase1Loc_survey_bay_5_attempt_2.bag -a /loc/pose loc_pose.bag</div>
+<div class="line"># export to CSV</div>
+<div class="line">rostopic echo -b loc_pose.bag -p /loc/pose &gt; loc_pose.csv</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md163"></a>
+Displaying imagery found within a bag file</h2>
+<p>Try using the <a href="http://wiki.ros.org/rqt_image_view"><code>rqt_image_view</code></a> or <a href="http://wiki.ros.org/rqt_bag"><code>rqt_bag</code></a> tools.</p>
+<p>TODO: Test and provide a detailed example with an Astrobee bag.</p>
+<h2><a class="anchor" id="autotoc_md164"></a>
+Exporting imagery found within a bag file</h2>
+<p>There are multiple tutorials about how to do this with ROS bags. Not clear what is the best method. Or an internal example we could build from: the Astrobee Facility has a script that extracts imagery in order to generate a movie for NASA imagery release review.</p>
+<p>TODO: Test and provide a detailed example with an Astrobee bag.</p>
+<h1><a class="anchor" id="autotoc_md165"></a>
+Potential issues</h1>
+<h2><a class="anchor" id="autotoc_md166"></a>
+Incomplete bag metadata</h2>
+<p>When processing a bag file, you may see an error message like this: </p><pre class="fragment">genmsg.msg_loader.MsgNotFound: Cannot locate message [Header]: unknown package [std_msgs] on search path [{}]
+</pre><p>It typically indicates that the bag file metadata is missing some required message definition information, most commonly due to a <a href="https://github.com/rosjava/rosjava_bootstrap/issues/16">known</a> <a href="https://github.com/nasa/astrobee/issues/402">bug</a> with messages published by nodes using <code>rosjava</code>, which we use on the Astrobee HLP).</p>
+<p>Frequently, the messages affected by this problem aren't important for your analysis goals. In that case, you can detect and filter out the affected messages as follows:</p>
+<div class="fragment"><div class="line">ASTROBEE_DIR=$HOME/astrobee</div>
+<div class="line"># optionally detect bad topics</div>
+<div class="line">$ASTROBEE_DIR/src/scripts/postprocessing/rosbag_detect_bad_topics.py in.bag</div>
+<div class="line"># example filtering out the usual bad topics</div>
+<div class="line">$ASTROBEE_DIR/src/scripts/postprocessing/rosbag_topic_filter.py in.bag -r &quot;/gs/*&quot; -r /hw/cam_sci/compressed fixed.bag</div>
+</div><!-- fragment --><p>If you care about analyzing the affected messages, an alternative workaround is to download a script that fixes the bag metadata from the <a href="https://github.com/gavanderhoorn/rosbag_fixer"><code>rosbag_fixer</code> repo</a>. You run it as follows:</p>
+<div class="fragment"><div class="line">git clone https://github.com/gavanderhoorn/rosbag_fixer.git</div>
+<div class="line">FIXER_DIR=`pwd`/rosbag_fixer</div>
+<div class="line">$FIXER_DIR/fix_bag_msg_def.py -l in.bag fixed.bag</div>
+<div class="line">rosbag reindex fixed.bag</div>
+</div><!-- fragment --><p>However, note that the fixer script output may be unusable if the input bag contains messages with outdated message definitions (see below).</p>
+<p>As our processes improve, we hope to ensure future bag files have this metadata issue fixed before public data release, so you will not have to deal with it.</p>
+<h2><a class="anchor" id="autotoc_md167"></a>
+Bags containing messages with outdated message definitions</h2>
+<p>TODO: Discuss how to handle older bags that include messages with outdated message definitions, where the message type has changed in the latest software version. For example, a new field may have been added to the message type, but messages in the older bag don't include it. A relevant resource: <a href="http://wiki.ros.org/rosbag/migration">rosbag migration</a>. In some cases, rather than migrating the bag, it might be easier to revert the installed version of the Astrobee flight software to the version that was used to record the bag file?</p>
+<h2><a class="anchor" id="autotoc_md168"></a>
+Analyzing different message types together based on their timestamps</h2>
+<p>TODO: Discuss issues involved in joining different message types based on timestamp, and the possibility of clock skew between multiple Astrobee processors. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

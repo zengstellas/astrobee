@@ -116,7 +116,23 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Tutorials", "md_doc_general_documentation_astrobee_usage.html", "md_doc_general_documentation_astrobee_usage" ],
-    [ "Publicly Available Data", "md_doc_general_documentation_public_data.html", null ],
+    [ "Using Astrobee Robot Telemetry Logs", "md_doc_general_documentation_public_data.html", [
+      [ "Understanding telemetry in context", "md_doc_general_documentation_public_data.html#autotoc_md156", null ],
+      [ "Basics of the bag format", "md_doc_general_documentation_public_data.html#autotoc_md157", null ],
+      [ "Finding the right bag", "md_doc_general_documentation_public_data.html#autotoc_md158", null ],
+      [ "Install before working with bags", "md_doc_general_documentation_public_data.html#autotoc_md159", null ],
+      [ "Figuring out what's in the bag", "md_doc_general_documentation_public_data.html#autotoc_md160", null ],
+      [ "Common bag processing tasks", "md_doc_general_documentation_public_data.html#autotoc_md161", [
+        [ "Converting a bag to CSV format for import to other tools", "md_doc_general_documentation_public_data.html#autotoc_md162", null ],
+        [ "Displaying imagery found within a bag file", "md_doc_general_documentation_public_data.html#autotoc_md163", null ],
+        [ "Exporting imagery found within a bag file", "md_doc_general_documentation_public_data.html#autotoc_md164", null ]
+      ] ],
+      [ "Potential issues", "md_doc_general_documentation_public_data.html#autotoc_md165", [
+        [ "Incomplete bag metadata", "md_doc_general_documentation_public_data.html#autotoc_md166", null ],
+        [ "Bags containing messages with outdated message definitions", "md_doc_general_documentation_public_data.html#autotoc_md167", null ],
+        [ "Analyzing different message types together based on their timestamps", "md_doc_general_documentation_public_data.html#autotoc_md168", null ]
+      ] ]
+    ] ],
     [ "Subsystems", "subsystems.html", "subsystems" ],
     [ "Simulation", "sim-readme.html", "sim-readme" ],
     [ "Tools", "tools.html", "tools" ],
@@ -129,8 +145,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"imuintegration.html#autotoc_md297",
-"new_robot.html#autotoc_md154"
+"imuintegration.html#autotoc_md310",
+"mobility.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
