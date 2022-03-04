@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NASA Astrobee Robot Software: Localization Rviz Plugins</title>
+<title>NASA Astrobee Robot Software: Bag Processing</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('localizationrvizplugins.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('bagprocessing.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -88,26 +88,42 @@ $(document).ready(function(){initNavTree('localizationrvizplugins.html',''); ini
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Localization Rviz Plugins </div>  </div>
+<div class="title">Bag Processing </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md636"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md560"></a>
 Package Overview</h1>
-<p>The localization rviz plugins package provides various plugins for use to display information on various localization components such as the graph localizer, imu augmentor, and sparse mapping results. Plugins have the advantage of allowing many customizations to visualize information. Additionally, whereas rviz provides visualization_msgs, plugins can subscibe to any message and prevent the creation of many visualization only messages that may live in functional code. The plugins in this package are spit between displays and panels, where displays provide 3D visualizations and panels display color coded text and numerical information.</p>
-<h2><a class="anchor" id="autotoc_md637"></a>
-Plugins</h2>
-<h2><a class="anchor" id="autotoc_md638"></a>
-Localization Graph Display</h2>
-<p>The localization graph display draws the full history of poses in the latest graph localization message. It also draws imu estimates between poses as arrows, and publishes optical flow feature track images using the feature tracks in the localizer.</p>
-<h2><a class="anchor" id="autotoc_md639"></a>
-Localization Graph Panel</h2>
-<p>The localization graph panel displays lots of information about the most recent graph localizer, including factor counts, factor information, timing, imu information, and more.</p>
-<h2><a class="anchor" id="autotoc_md640"></a>
-Imu Augmentor Display</h2>
-<p>The imu augmentor display draws imu augmentor poses. This is useful when comparing with graph localizer poses and sparse mapping poses, as ideally these are all alligned.</p>
-<h2><a class="anchor" id="autotoc_md641"></a>
-Pose Display</h2>
-<p>The pose display draws a history of poses. This is useful when comparing a pose topic such as sparse mapping poses or groundtruth poses with localization. </p>
+<p>The bag processing package provides several helper tools for handling bagfiles.</p>
+<h1><a class="anchor" id="autotoc_md561"></a>
+Usage Instructions</h1>
+<p>For each script, run <code>rosrun bag_processing script_name.py -h</code> for further details and usage instructions.</p>
+<h1><a class="anchor" id="autotoc_md562"></a>
+Scripts</h1>
+<h2><a class="anchor" id="autotoc_md563"></a>
+&lt;tt&gt;apply_histogram_equalization_to_images&lt;/tt&gt;</h2>
+<p>Applies either CLAHE or standard histogram equalization to images in a bagfile. <br  />
+</p>
+<h2><a class="anchor" id="autotoc_md564"></a>
+&lt;tt&gt;check_bag_for_gaps&lt;/tt&gt;</h2>
+<p>Prints gaps above provided maximum time for a bagfile and topic using either message header times or bag receive times. Also prints stats for the time differences for messages with the provided topic in the bagfile.</p>
+<h2><a class="anchor" id="autotoc_md565"></a>
+&lt;tt&gt;convert_bayer_to_grayscale&lt;/tt&gt;</h2>
+<p>Converts bayer encoded color images to grayscale.</p>
+<h2><a class="anchor" id="autotoc_md566"></a>
+&lt;tt&gt;convert_all_bayer_bags_to_grayscale&lt;/tt&gt;</h2>
+<p>Creates a new bagfile with grayscale images for the provided bags using their bayer encoded images. If no bags are provided, runs conversion for each bag in the current directory.</p>
+<h2><a class="anchor" id="autotoc_md567"></a>
+&lt;tt&gt;get_msg_stats&lt;/tt&gt;</h2>
+<p>Prints stats for a numeric field of a topic in a bagfile.</p>
+<h2><a class="anchor" id="autotoc_md568"></a>
+&lt;tt&gt;merge_bags&lt;/tt&gt;</h2>
+<p>Merges bagfiles with given prefix in the current directory.</p>
+<h2><a class="anchor" id="autotoc_md569"></a>
+&lt;tt&gt;merge_all_bags&lt;/tt&gt;</h2>
+<p>Creates merged bagfiles for each provided bag prefix or for each prefix in the current directory if none are provided.</p>
+<h2><a class="anchor" id="autotoc_md570"></a>
+&lt;tt&gt;trim_bag&lt;/tt&gt;</h2>
+<p>Creates a new bagfile with trimmed start and end times from a provided bagfile. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

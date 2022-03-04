@@ -135,6 +135,20 @@ var NAVTREE =
     ] ],
     [ "Subsystems", "subsystems.html", "subsystems" ],
     [ "Simulation", "sim-readme.html", "sim-readme" ],
+    [ "Bag Processing", "bagprocessing.html", [
+      [ "Package Overview", "bagprocessing.html#autotoc_md560", null ],
+      [ "Usage Instructions", "bagprocessing.html#autotoc_md561", null ],
+      [ "Scripts", "bagprocessing.html#autotoc_md562", [
+        [ "<tt>apply_histogram_equalization_to_images</tt>", "bagprocessing.html#autotoc_md563", null ],
+        [ "<tt>check_bag_for_gaps</tt>", "bagprocessing.html#autotoc_md564", null ],
+        [ "<tt>convert_bayer_to_grayscale</tt>", "bagprocessing.html#autotoc_md565", null ],
+        [ "<tt>convert_all_bayer_bags_to_grayscale</tt>", "bagprocessing.html#autotoc_md566", null ],
+        [ "<tt>get_msg_stats</tt>", "bagprocessing.html#autotoc_md567", null ],
+        [ "<tt>merge_bags</tt>", "bagprocessing.html#autotoc_md568", null ],
+        [ "<tt>merge_all_bags</tt>", "bagprocessing.html#autotoc_md569", null ],
+        [ "<tt>trim_bag</tt>", "bagprocessing.html#autotoc_md570", null ]
+      ] ]
+    ] ],
     [ "Tools", "tools.html", "tools" ],
     [ "Description", "urdf.html", null ],
     [ "Todo List", "todo.html", null ],
@@ -145,8 +159,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"imuintegration.html#autotoc_md310",
-"mobility.html"
+"imuaugmentor.html#autotoc_md305",
+"md_doc_general_documentation_public_data.html#autotoc_md159"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
