@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NASA Astrobee Robot Software: tools/graph_bag/include/graph_bag/depth_odometry_adder.h Source File</title>
+<title>NASA Astrobee Robot Software: tools/localization_analysis/include/localization_analysis/depth_odometry_adder.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" href="favicon.png" type="image/png" />
 <script type="text/javascript" src="jquery.js"></script>
@@ -109,8 +109,8 @@ $(document).ready(function(){initNavTree('depth__odometry__adder_8h_source.html'
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * under the License.</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef GRAPH_BAG_DEPTH_ODOMETRY_ADDER_H_</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define GRAPH_BAG_DEPTH_ODOMETRY_ADDER_H_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef LOCALIZATION_ANALYSIS_DEPTH_ODOMETRY_ADDER_H_</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define LOCALIZATION_ANALYSIS_DEPTH_ODOMETRY_ADDER_H_</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="depth__odometry__wrapper_8h.html">depth_odometry/depth_odometry_wrapper.h</a>&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
@@ -151,12 +151,12 @@ $(document).ready(function(){initNavTree('depth__odometry__adder_8h_source.html'
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegraph__bag.html">graph_bag</a> {</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classgraph__bag_1_1DepthOdometryAdder.html">   62</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgraph__bag_1_1DepthOdometryAdder.html">DepthOdometryAdder</a> {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacelocalization__analysis.html">localization_analysis</a> {</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classlocalization__analysis_1_1DepthOdometryAdder.html">   62</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlocalization__analysis_1_1DepthOdometryAdder.html">DepthOdometryAdder</a> {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="classgraph__bag_1_1DepthOdometryAdder.html#a967ed43cd63555b652ec14b6da75dc01">DepthOdometryAdder</a>(<span class="keyword">const</span> std::string&amp; input_bag_name, <span class="keyword">const</span> std::string&amp; output_bag_name, <span class="keyword">const</span> <span class="keywordtype">bool</span> save_all_topics,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="classlocalization__analysis_1_1DepthOdometryAdder.html#a2a2c4667bdb9e42e764494a654f03d42">DepthOdometryAdder</a>(<span class="keyword">const</span> std::string&amp; input_bag_name, <span class="keyword">const</span> std::string&amp; output_bag_name, <span class="keyword">const</span> <span class="keywordtype">bool</span> save_all_topics,</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                     <span class="keyword">const</span> std::string&amp; config_prefix = <span class="stringliteral">&quot;localization/&quot;</span>);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgraph__bag_1_1DepthOdometryAdder.html#ae06098c2542a083ea1127392a4e95881">AddDepthOdometry</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlocalization__analysis_1_1DepthOdometryAdder.html#a481fa6f91b24e2653f4d9d4920a4eafd">AddDepthOdometry</a>();</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classdepth__odometry_1_1DepthOdometryWrapper.html">depth_odometry::DepthOdometryWrapper</a> depth_odometry_wrapper_;</div>
@@ -164,17 +164,17 @@ $(document).ready(function(){initNavTree('depth__odometry__adder_8h_source.html'
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  rosbag::Bag output_bag_;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">bool</span> save_all_topics_;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}  <span class="comment">// namespace graph_bag</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}  <span class="comment">// namespace localization_analysis</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif  // GRAPH_BAG_DEPTH_ODOMETRY_ADDER_H_</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif  // LOCALIZATION_ANALYSIS_DEPTH_ODOMETRY_ADDER_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassgraph__bag_1_1DepthOdometryAdder_html"><div class="ttname"><a href="classgraph__bag_1_1DepthOdometryAdder.html">graph_bag::DepthOdometryAdder</a></div><div class="ttdef"><b>Definition:</b> depth_odometry_adder.h:62</div></div>
 <div class="ttc" id="adepth__odometry__wrapper_8h_html"><div class="ttname"><a href="depth__odometry__wrapper_8h.html">depth_odometry_wrapper.h</a></div></div>
+<div class="ttc" id="aclasslocalization__analysis_1_1DepthOdometryAdder_html"><div class="ttname"><a href="classlocalization__analysis_1_1DepthOdometryAdder.html">localization_analysis::DepthOdometryAdder</a></div><div class="ttdef"><b>Definition:</b> depth_odometry_adder.h:62</div></div>
+<div class="ttc" id="anamespacelocalization__analysis_html"><div class="ttname"><a href="namespacelocalization__analysis.html">localization_analysis</a></div><div class="ttdef"><b>Definition:</b> bag_imu_filterer.h:29</div></div>
+<div class="ttc" id="aclasslocalization__analysis_1_1DepthOdometryAdder_html_a481fa6f91b24e2653f4d9d4920a4eafd"><div class="ttname"><a href="classlocalization__analysis_1_1DepthOdometryAdder.html#a481fa6f91b24e2653f4d9d4920a4eafd">localization_analysis::DepthOdometryAdder::AddDepthOdometry</a></div><div class="ttdeci">void AddDepthOdometry()</div><div class="ttdef"><b>Definition:</b> depth_odometry_adder.cc:35</div></div>
+<div class="ttc" id="aclasslocalization__analysis_1_1DepthOdometryAdder_html_a2a2c4667bdb9e42e764494a654f03d42"><div class="ttname"><a href="classlocalization__analysis_1_1DepthOdometryAdder.html#a2a2c4667bdb9e42e764494a654f03d42">localization_analysis::DepthOdometryAdder::DepthOdometryAdder</a></div><div class="ttdeci">DepthOdometryAdder(const std::string &amp;input_bag_name, const std::string &amp;output_bag_name, const bool save_all_topics, const std::string &amp;config_prefix=&quot;localization/&quot;)</div><div class="ttdef"><b>Definition:</b> depth_odometry_adder.cc:28</div></div>
 <div class="ttc" id="aclassdepth__odometry_1_1DepthOdometryWrapper_html"><div class="ttname"><a href="classdepth__odometry_1_1DepthOdometryWrapper.html">depth_odometry::DepthOdometryWrapper</a></div><div class="ttdef"><b>Definition:</b> depth_odometry_wrapper.h:39</div></div>
-<div class="ttc" id="aclassgraph__bag_1_1DepthOdometryAdder_html_ae06098c2542a083ea1127392a4e95881"><div class="ttname"><a href="classgraph__bag_1_1DepthOdometryAdder.html#ae06098c2542a083ea1127392a4e95881">graph_bag::DepthOdometryAdder::AddDepthOdometry</a></div><div class="ttdeci">void AddDepthOdometry()</div><div class="ttdef"><b>Definition:</b> depth_odometry_adder.cc:35</div></div>
-<div class="ttc" id="aclassgraph__bag_1_1DepthOdometryAdder_html_a967ed43cd63555b652ec14b6da75dc01"><div class="ttname"><a href="classgraph__bag_1_1DepthOdometryAdder.html#a967ed43cd63555b652ec14b6da75dc01">graph_bag::DepthOdometryAdder::DepthOdometryAdder</a></div><div class="ttdeci">DepthOdometryAdder(const std::string &amp;input_bag_name, const std::string &amp;output_bag_name, const bool save_all_topics, const std::string &amp;config_prefix=&quot;localization/&quot;)</div><div class="ttdef"><b>Definition:</b> depth_odometry_adder.cc:28</div></div>
-<div class="ttc" id="anamespacegraph__bag_html"><div class="ttname"><a href="namespacegraph__bag.html">graph_bag</a></div><div class="ttdef"><b>Definition:</b> bag_imu_filterer.h:29</div></div>
 <!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 </body>

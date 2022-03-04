@@ -41,9 +41,13 @@ var tools =
     ] ],
     [ "EKF Video", "ekfvideo.html", null ],
     [ "GNC Visualizer", "gncvisualizer.html", "gncvisualizer" ],
-    [ "Graph Bag", "graphbag.html", [
-      [ "Package Overview", "graphbag.html#autotoc_md621", null ],
-      [ "Tools", "graphbag.html#autotoc_md622", [
+    [ "Imu Bias Tester", "imubiastester.html", [
+      [ "Usage", "imubiastester.html#autotoc_md622", null ],
+      [ "Inputs", "imubiastester.html#autotoc_md623", null ],
+      [ "Outputs", "imubiastester.html#autotoc_md624", null ]
+    ] ],
+    [ "Localization Analysis", "localizationanalysis.html", [
+      [ "Package Overview", "localizationanalysis.html#autotoc_md625", [
         [ "ROS Mode", "gncvisualizer.html#autotoc_md604", null ],
         [ "DDS Mode", "gncvisualizer.html#autotoc_md605", [
           [ "On-orbit activities", "gncvisualizer.html#autotoc_md606", null ]
@@ -59,31 +63,39 @@ var tools =
           [ "Installing QT in standalone mode", "gncvisualizer.html#autotoc_md614", null ]
         ] ],
         [ "Platform support", "gncvisualizer.html#autotoc_md615", null ],
-        [ "GraphBag", "graphbag.html#autotoc_md623", null ],
-        [ "BagImuFilterer", "graphbag.html#autotoc_md624", null ]
+        [ "ImuBiasTester", "imubiastester.html#autotoc_md621", null ],
+        [ "Usage Instructions", "localizationanalysis.html#autotoc_md626", null ]
       ] ],
-      [ "Scripts", "graphbag.html#autotoc_md625", [
-        [ "bag_sweep", "graphbag.html#autotoc_md626", null ],
-        [ "imu_analyzer_main", "graphbag.html#autotoc_md627", null ],
-        [ "run_graph_bag_and_plot_results", "graphbag.html#autotoc_md628", null ],
-        [ "make_groundtruth.py", "graphbag.html#autotoc_md629", null ],
-        [ "make_groundtruth_map.py", "graphbag.html#autotoc_md630", null ],
-        [ "groundtruth_sweep.py", "graphbag.html#autotoc_md631", null ],
-        [ "depth_odometry_parameter_sweep.py", "graphbag.html#autotoc_md632", null ]
+      [ "Tools", "localizationanalysis.html#autotoc_md627", [
+        [ "<tt>convert_depth_msg</tt>", "localizationanalysis.html#autotoc_md628", null ],
+        [ "<tt>run_bag_imu_filterer</tt>", "localizationanalysis.html#autotoc_md629", null ],
+        [ "<tt>run_depth_odometry_adder</tt>", "localizationanalysis.html#autotoc_md630", null ],
+        [ "<tt>run_graph_bag</tt>", "localizationanalysis.html#autotoc_md631", null ],
+        [ "<tt>run_imu_bias_tester_adder</tt>", "localizationanalysis.html#autotoc_md632", null ],
+        [ "<tt>run_sparse_mapping_pose_adder</tt>", "localizationanalysis.html#autotoc_md633", null ]
+      ] ],
+      [ "Scripts", "localizationanalysis.html#autotoc_md634", [
+        [ "<tt>bag_and_parameter_sweep</tt>", "localizationanalysis.html#autotoc_md635", null ],
+        [ "<tt>bag_sweep</tt>", "localizationanalysis.html#autotoc_md636", null ],
+        [ "<tt>depth_odometry_parameter_sweep</tt>", "localizationanalysis.html#autotoc_md637", null ],
+        [ "<tt>get_average_opt_and_update_times</tt>", "localizationanalysis.html#autotoc_md638", null ],
+        [ "<tt>groundtruth_sweep</tt>", "localizationanalysis.html#autotoc_md639", null ],
+        [ "<tt>imu_analyzer</tt>", "localizationanalysis.html#autotoc_md640", null ],
+        [ "<tt>make_groundtruth</tt>", "localizationanalysis.html#autotoc_md641", null ],
+        [ "<tt>make_map</tt>", "localizationanalysis.html#autotoc_md642", null ],
+        [ "<tt>parameter_sweep</tt>", "localizationanalysis.html#autotoc_md643", null ],
+        [ "<tt>plot_all_results</tt>", "localizationanalysis.html#autotoc_md644", null ],
+        [ "<tt>plot_results</tt>", "localizationanalysis.html#autotoc_md645", null ],
+        [ "<tt>run_graph_bag_and_plot_results</tt>", "localizationanalysis.html#autotoc_md646", null ]
       ] ]
     ] ],
-    [ "Imu Bias Tester", "imubiastester.html", [
-      [ "Inputs", "imubiastester.html#autotoc_md634", null ],
-      [ "Outputs", "imubiastester.html#autotoc_md635", null ]
-    ] ],
     [ "Localization Rviz Plugins", "localizationrvizplugins.html", [
-      [ "Package Overview", "localizationrvizplugins.html#autotoc_md636", [
-        [ "ImuBiasTester", "imubiastester.html#autotoc_md633", null ],
-        [ "Plugins", "localizationrvizplugins.html#autotoc_md637", null ],
-        [ "Localization Graph Display", "localizationrvizplugins.html#autotoc_md638", null ],
-        [ "Localization Graph Panel", "localizationrvizplugins.html#autotoc_md639", null ],
-        [ "Imu Augmentor Display", "localizationrvizplugins.html#autotoc_md640", null ],
-        [ "Pose Display", "localizationrvizplugins.html#autotoc_md641", null ]
+      [ "Package Overview", "localizationrvizplugins.html#autotoc_md647", [
+        [ "Plugins", "localizationrvizplugins.html#autotoc_md648", null ],
+        [ "Localization Graph Display", "localizationrvizplugins.html#autotoc_md649", null ],
+        [ "Localization Graph Panel", "localizationrvizplugins.html#autotoc_md650", null ],
+        [ "Imu Augmentor Display", "localizationrvizplugins.html#autotoc_md651", null ],
+        [ "Pose Display", "localizationrvizplugins.html#autotoc_md652", null ]
       ] ]
     ] ],
     [ "DDS Profile and Types", "dds_profile.html", null ],

@@ -1,7 +1,7 @@
 <map id="tools/localization_rviz_plugins/src/localization_graph_display.cc" name="tools/localization_rviz_plugins/src/localization_graph_display.cc">
 <area shape="rect" id="node1" title=" " alt="" coords="5306,5,5515,61"/>
 <area shape="rect" id="node2" href="$ff__names_8h.html" title=" " alt="" coords="295,117,430,143"/>
-<area shape="rect" id="node3" href="$tools_2graph__bag_2include_2graph__bag_2utilities_8h.html" title=" " alt="" coords="1892,117,2047,143"/>
+<area shape="rect" id="node3" href="$tools_2localization__analysis_2include_2localization__analysis_2utilities_8h.html" title=" " alt="" coords="1889,109,2047,151"/>
 <area shape="rect" id="node7" title=" " alt="" coords="2159,503,2217,530"/>
 <area shape="rect" id="node14" href="$time_8h.html" title=" " alt="" coords="4683,585,4845,627"/>
 <area shape="rect" id="node23" href="$combined__nav__state_8h.html" title=" " alt="" coords="5331,496,5504,537"/>
