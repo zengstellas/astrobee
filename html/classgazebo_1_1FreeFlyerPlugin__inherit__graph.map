@@ -1,9 +1,9 @@
 <map id="gazebo::FreeFlyerPlugin" name="gazebo::FreeFlyerPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="3051,520,3238,876"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2919,520,3106,876"/>
 <area shape="rect" id="node4" href="$classgazebo_1_1FreeFlyerModelPlugin.html" title=" " alt="" coords="1697,924,1912,1104"/>
-<area shape="rect" id="node18" href="$classgazebo_1_1FreeFlyerSensorPlugin.html" title=" " alt="" coords="4505,924,4725,1104"/>
-<area shape="rect" id="node2" href="$classff__util_1_1FreeFlyerNodelet.html" title=" " alt="" coords="3056,131,3233,472"/>
-<area shape="rect" id="node3" title=" " alt="" coords="3079,5,3210,83"/>
+<area shape="rect" id="node18" href="$classgazebo_1_1FreeFlyerSensorPlugin.html" title=" " alt="" coords="4373,924,4593,1104"/>
+<area shape="rect" id="node2" href="$classff__util_1_1FreeFlyerNodelet.html" title=" " alt="" coords="2924,131,3101,472"/>
+<area shape="rect" id="node3" title=" " alt="" coords="2947,5,3078,83"/>
 <area shape="rect" id="node5" href="$classgazebo_1_1GazeboModelPluginDrag.html" title=" " alt="" coords="5,1328,241,1464"/>
 <area shape="rect" id="node6" href="$classgazebo_1_1GazeboModelPluginEps.html" title=" " alt="" coords="265,1269,493,1523"/>
 <area shape="rect" id="node7" href="$classgazebo_1_1GazeboModelPluginFlashlight.html" title=" " alt="" coords="517,1306,767,1486"/>
@@ -25,6 +25,5 @@
 <area shape="rect" id="node24" href="$classgazebo_1_1GazeboSensorPluginNavCam.html" title=" " alt="" coords="4756,1313,5003,1479"/>
 <area shape="rect" id="node25" href="$classgazebo_1_1GazeboSensorPluginOpticalFlow.html" title=" " alt="" coords="5027,1299,5294,1493"/>
 <area shape="rect" id="node26" href="$classgazebo_1_1GazeboSensorPluginPerchCam.html" title=" " alt="" coords="5319,1313,5576,1479"/>
-<area shape="rect" id="node27" href="$classgazebo_1_1GazeboSensorPluginSciCam.html" title=" " alt="" coords="5601,1306,5841,1486"/>
-<area shape="rect" id="node28" href="$classgazebo_1_1GazeboSensorPluginSparseMap.html" title=" " alt="" coords="5865,1306,6128,1486"/>
+<area shape="rect" id="node27" href="$classgazebo_1_1GazeboSensorPluginSparseMap.html" title=" " alt="" coords="5600,1306,5863,1486"/>
 </map>

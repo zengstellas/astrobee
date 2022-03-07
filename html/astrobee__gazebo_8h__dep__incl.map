@@ -1,5 +1,5 @@
 <map id="simulation/include/astrobee_gazebo/astrobee_gazebo.h" name="simulation/include/astrobee_gazebo/astrobee_gazebo.h">
-<area shape="rect" id="node1" title=" " alt="" coords="2791,5,2989,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2660,5,2859,61"/>
 <area shape="rect" id="node2" href="$astrobee__gazebo_8cc.html" title=" " alt="" coords="5,124,180,165"/>
 <area shape="rect" id="node3" href="$gazebo__model__plugin__drag_8cc.html" title=" " alt="" coords="204,117,408,173"/>
 <area shape="rect" id="node4" href="$gazebo__model__plugin__eps_8cc.html" title=" " alt="" coords="432,117,631,173"/>
@@ -22,6 +22,5 @@
 <area shape="rect" id="node21" href="$gazebo__sensor__plugin__nav__cam_8cc.html" title=" " alt="" coords="4659,117,4913,173"/>
 <area shape="rect" id="node22" href="$gazebo__sensor__plugin__optical__flow_8cc.html" title=" " alt="" coords="4937,109,5141,180"/>
 <area shape="rect" id="node23" href="$gazebo__sensor__plugin__perch__cam_8cc.html" title=" " alt="" coords="5166,109,5371,180"/>
-<area shape="rect" id="node24" href="$gazebo__sensor__plugin__sci__cam_8cc.html" title=" " alt="" coords="5395,117,5643,173"/>
-<area shape="rect" id="node25" href="$gazebo__sensor__plugin__sparse__map_8cc.html" title=" " alt="" coords="5668,109,5875,180"/>
+<area shape="rect" id="node24" href="$gazebo__sensor__plugin__sparse__map_8cc.html" title=" " alt="" coords="5396,109,5603,180"/>
 </map>
