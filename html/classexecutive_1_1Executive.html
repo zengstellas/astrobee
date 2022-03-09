@@ -103,7 +103,7 @@ Inheritance diagram for executive::Executive:</div>
 <div class="dyncontent">
 <div class="center"><img src="classexecutive_1_1Executive__inherit__graph.png" border="0" usemap="#aexecutive_1_1Executive_inherit__map" alt="Inheritance graph"/></div>
 <map name="executive_1_1Executive_inherit__map" id="aexecutive_1_1Executive_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,520,264,1067"/>
+<area shape="rect" title=" " alt="" coords="5,520,264,1081"/>
 <area shape="rect" href="classff__util_1_1FreeFlyerNodelet.html" title=" " alt="" coords="46,131,223,472"/>
 <area shape="rect" title=" " alt="" coords="69,5,200,83"/>
 </map>
@@ -369,6 +369,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a64fcda041630010f531fd39b53a26f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe30959f0bbc44284c3cb9808e47aeaa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#abe30959f0bbc44284c3cb9808e47aeaa">ReadParams</a> ()</td></tr>
 <tr class="separator:abe30959f0bbc44284c3cb9808e47aeaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd2f46017614f36004b41143448cebc2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#abd2f46017614f36004b41143448cebc2">ReadMapperParams</a> ()</td></tr>
+<tr class="separator:abd2f46017614f36004b41143448cebc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23b33c3702be4b4e0e852fa34b599cde"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#a23b33c3702be4b4e0e852fa34b599cde">ReadCommand</a> (<a class="el" href="classconfig__reader_1_1ConfigReader_1_1Table.html">config_reader::ConfigReader::Table</a> *response, ff_msgs::CommandStampedPtr cmd)</td></tr>
 <tr class="separator:a23b33c3702be4b4e0e852fa34b599cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a366ce609a2c982d580220c0b513be6d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#a366ce609a2c982d580220c0b513be6d7">PublishAgentState</a> ()</td></tr>
@@ -403,6 +405,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a7db046cc0586e56b5746bbfcfdfc39f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade55600baaf1c63fea8a98a7832b4bf4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#ade55600baaf1c63fea8a98a7832b4bf4">config_params_</a></td></tr>
 <tr class="separator:ade55600baaf1c63fea8a98a7832b4bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade608b1fd787ebdc1daba8bdfe582d50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#ade608b1fd787ebdc1daba8bdfe582d50">mapper_config_params_</a></td></tr>
+<tr class="separator:ade608b1fd787ebdc1daba8bdfe582d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed820355b774209b22cd377f1d7417c8"><td class="memItemLeft" align="right" valign="top">ff_msgs::AgentStateStamped&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#aed820355b774209b22cd377f1d7417c8">agent_state_</a></td></tr>
 <tr class="separator:aed820355b774209b22cd377f1d7417c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e820a67f6b0616da14625c1b25e0ad0"><td class="memItemLeft" align="right" valign="top">ff_msgs::AckStamped&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#a0e820a67f6b0616da14625c1b25e0ad0">ack_</a></td></tr>
@@ -2034,6 +2038,31 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd2f46017614f36004b41143448cebc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd2f46017614f36004b41143448cebc2">&#9670;&nbsp;</a></span>ReadMapperParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool executive::Executive::ReadMapperParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -4113,6 +4142,28 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::shared_ptr&lt;<a class="el" href="classff__util_1_1ConfigClient.html">ff_util::ConfigClient</a>&gt; executive::Executive::mapper_cfg_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade608b1fd787ebdc1daba8bdfe582d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade608b1fd787ebdc1daba8bdfe582d50">&#9670;&nbsp;</a></span>mapper_config_params_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> executive::Executive::mapper_config_params_</td>
         </tr>
       </table>
   </td>
