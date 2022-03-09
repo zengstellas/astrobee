@@ -123,30 +123,31 @@ var NAVTREE =
       [ "Install before working with bags", "md_doc_general_documentation_public_data.html#autotoc_md159", null ],
       [ "Figuring out what's in the bag", "md_doc_general_documentation_public_data.html#autotoc_md160", null ],
       [ "Common bag processing tasks", "md_doc_general_documentation_public_data.html#autotoc_md161", [
-        [ "Converting a bag to CSV format for import to other tools", "md_doc_general_documentation_public_data.html#autotoc_md162", null ],
-        [ "Displaying imagery found within a bag file", "md_doc_general_documentation_public_data.html#autotoc_md163", null ],
-        [ "Exporting imagery found within a bag file", "md_doc_general_documentation_public_data.html#autotoc_md164", null ]
+        [ "Converting a bag to CSV format", "md_doc_general_documentation_public_data.html#autotoc_md162", null ],
+        [ "Combining different message topics based on their timestamps", "md_doc_general_documentation_public_data.html#autotoc_md163", null ],
+        [ "Displaying imagery found within a bag file", "md_doc_general_documentation_public_data.html#autotoc_md164", null ],
+        [ "Exporting imagery found within a bag file", "md_doc_general_documentation_public_data.html#autotoc_md165", null ]
       ] ],
-      [ "Potential issues", "md_doc_general_documentation_public_data.html#autotoc_md165", [
-        [ "Incomplete bag metadata", "md_doc_general_documentation_public_data.html#autotoc_md166", null ],
-        [ "Bags containing messages with outdated message definitions", "md_doc_general_documentation_public_data.html#autotoc_md167", null ],
-        [ "Analyzing different message types together based on their timestamps", "md_doc_general_documentation_public_data.html#autotoc_md168", null ]
+      [ "Potential issues", "md_doc_general_documentation_public_data.html#autotoc_md166", [
+        [ "Incomplete bag metadata", "md_doc_general_documentation_public_data.html#autotoc_md167", null ],
+        [ "Bags containing messages with outdated message definitions", "md_doc_general_documentation_public_data.html#autotoc_md168", null ],
+        [ "Timestamp clock skew", "md_doc_general_documentation_public_data.html#autotoc_md169", null ]
       ] ]
     ] ],
     [ "Subsystems", "subsystems.html", "subsystems" ],
     [ "Simulation", "sim-readme.html", "sim-readme" ],
     [ "Bag Processing", "bagprocessing.html", [
-      [ "Package Overview", "bagprocessing.html#autotoc_md560", null ],
-      [ "Usage Instructions", "bagprocessing.html#autotoc_md561", null ],
-      [ "Scripts", "bagprocessing.html#autotoc_md562", [
-        [ "<tt>apply_histogram_equalization_to_images</tt>", "bagprocessing.html#autotoc_md563", null ],
-        [ "<tt>check_bag_for_gaps</tt>", "bagprocessing.html#autotoc_md564", null ],
-        [ "<tt>convert_bayer_to_grayscale</tt>", "bagprocessing.html#autotoc_md565", null ],
-        [ "<tt>convert_all_bayer_bags_to_grayscale</tt>", "bagprocessing.html#autotoc_md566", null ],
-        [ "<tt>get_msg_stats</tt>", "bagprocessing.html#autotoc_md567", null ],
-        [ "<tt>merge_bags</tt>", "bagprocessing.html#autotoc_md568", null ],
-        [ "<tt>merge_all_bags</tt>", "bagprocessing.html#autotoc_md569", null ],
-        [ "<tt>trim_bag</tt>", "bagprocessing.html#autotoc_md570", null ]
+      [ "Package Overview", "bagprocessing.html#autotoc_md561", null ],
+      [ "Usage Instructions", "bagprocessing.html#autotoc_md562", null ],
+      [ "Scripts", "bagprocessing.html#autotoc_md563", [
+        [ "<tt>apply_histogram_equalization_to_images</tt>", "bagprocessing.html#autotoc_md564", null ],
+        [ "<tt>check_bag_for_gaps</tt>", "bagprocessing.html#autotoc_md565", null ],
+        [ "<tt>convert_bayer_to_grayscale</tt>", "bagprocessing.html#autotoc_md566", null ],
+        [ "<tt>convert_all_bayer_bags_to_grayscale</tt>", "bagprocessing.html#autotoc_md567", null ],
+        [ "<tt>get_msg_stats</tt>", "bagprocessing.html#autotoc_md568", null ],
+        [ "<tt>merge_bags</tt>", "bagprocessing.html#autotoc_md569", null ],
+        [ "<tt>merge_all_bags</tt>", "bagprocessing.html#autotoc_md570", null ],
+        [ "<tt>trim_bag</tt>", "bagprocessing.html#autotoc_md571", null ]
       ] ]
     ] ],
     [ "Tools", "tools.html", "tools" ],
@@ -159,7 +160,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"imuintegration.html#autotoc_md312",
+"imuintegration.html#autotoc_md313",
 "md_RELEASE.html#autotoc_md83",
 "visioncommon.html#autotoc_md424"
 ];
