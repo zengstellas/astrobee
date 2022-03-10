@@ -142,8 +142,8 @@ var NAVTREE =
       [ "Scripts", "bagprocessing.html#autotoc_md557", [
         [ "<tt>apply_histogram_equalization_to_images</tt>", "bagprocessing.html#autotoc_md558", null ],
         [ "<tt>check_bag_for_gaps</tt>", "bagprocessing.html#autotoc_md559", null ],
-        [ "<tt>convert_bayer_to_grayscale</tt>", "bagprocessing.html#autotoc_md560", null ],
-        [ "<tt>convert_all_bayer_bags_to_grayscale</tt>", "bagprocessing.html#autotoc_md561", null ],
+        [ "<tt>convert_bayer</tt>", "bagprocessing.html#autotoc_md560", null ],
+        [ "<tt>convert_all_bayer_bags</tt>", "bagprocessing.html#autotoc_md561", null ],
         [ "<tt>get_msg_stats</tt>", "bagprocessing.html#autotoc_md562", null ],
         [ "<tt>merge_bags</tt>", "bagprocessing.html#autotoc_md563", null ],
         [ "<tt>merge_all_bags</tt>", "bagprocessing.html#autotoc_md564", null ],
