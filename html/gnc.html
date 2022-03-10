@@ -91,21 +91,20 @@ $(document).ready(function(){initNavTree('gnc.html',''); initResizable(); });
 <div class="title">Guidance, Navigation &amp; Control </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The Guidance, Navigation &amp; Control subsystem is responsible for tracking the robot's pose and controlling the robot's motion.</p>
-<h2><a class="anchor" id="autotoc_md247"></a>
+<div class="textblock"><p>The Guidance, Navigation &amp; Control subsystem is responsible for controlling the robot's motion.</p>
+<h2><a class="anchor" id="autotoc_md241"></a>
 GNC Subsystems</h2>
 <p>GNC consists of four main subsystems, that run in a chain:</p>
 <ol type="1">
-<li><a class="el" href="ekf.html">GNC EKF Wrapper</a> : The extended Kalman filter integrates <a class="el" href="structIMU.html">IMU</a> measurements, as well as visual measurements from the localization subsystem, to track the robot's pose.</li>
-<li><a class="el" href="ctl.html">Control (CTL)</a> : The control subsystem takes the robot's current state from the EKF, and determines the forces and torques needed to execute the commands sent from the mobility subsystem.</li>
+<li><a class="el" href="ctl.html">Control (CTL)</a> : The control subsystem takes the robot's current state from the localizer, and determines the forces and torques needed to execute the commands sent from the mobility subsystem.</li>
 <li><a class="el" href="fam.html">Force Allocation Module (FAM)</a> : The force allocation module takes the force and torque commands from the control subsystem, and determines the PMC speeds and nozzle positions to best execute these forces and torques.</li>
-<li><a class="el" href="simwrapper.html">GNC Simulation Wrapper</a> : The simulator simulates the inputs to the EKF, and simulates the robot's motion based on the outputs of the FAM.</li>
+<li><a class="el" href="simwrapper.html">GNC Simulation Wrapper</a> : The simulator simulates the inputs to the localizer, and simulates the robot's motion based on the outputs of the FAM.</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md248"></a>
+<h2><a class="anchor" id="autotoc_md242"></a>
 GNC Code Organization</h2>
 <p>Unlike the rest of flight software, the GNC systems are written mainly in Simulink. Simulink drag and drop box diagrams are then converted to automatically generated C code. The structure of the GNC code is:</p>
 <ol type="1">
-<li><a class="el" href="ekf.html">EKF</a>, <a class="el" href="ctl.html">CTL</a> and <a class="el" href="fam.html">FAM</a> are GN&amp;C ROS Wrapper. <a class="el" href="simwrapper.html">Sim Wrapper</a> is the model side of the GN&amp;C ROS Wrapper. These folders contain ROS nodelets that mainly convert inputs and outputs between ROS messages and Simulink.</li>
+<li><a class="el" href="ctl.html">CTL</a> and <a class="el" href="fam.html">FAM</a> are GN&amp;C ROS Wrapper. <a class="el" href="simwrapper.html">Sim Wrapper</a> is the model side of the GN&amp;C ROS Wrapper. These folders contain ROS nodelets that mainly convert inputs and outputs between ROS messages and Simulink.</li>
 <li><a class="el" href="gncautocode.html">GNC Autocode Wrapper</a> : This folder contains a thin C++ wrapper around the auto-generated C functions, which are all compiled in this package into a library.</li>
 <li><a class="el" href="matlab.html">GNC Matlab Code</a> : This folder contains the Matlab / Simulink code. This is where all the core functionality is located. </li>
 </ol>
