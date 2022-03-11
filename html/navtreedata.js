@@ -116,38 +116,51 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Tutorials", "md_doc_general_documentation_astrobee_usage.html", "md_doc_general_documentation_astrobee_usage" ],
-    [ "Using Astrobee Robot Telemetry Logs", "md_doc_general_documentation_public_data.html", [
-      [ "Understanding telemetry in context", "md_doc_general_documentation_public_data.html#autotoc_md156", null ],
-      [ "Basics of the bag format", "md_doc_general_documentation_public_data.html#autotoc_md157", null ],
-      [ "Finding the right bag", "md_doc_general_documentation_public_data.html#autotoc_md158", null ],
-      [ "Install before working with bags", "md_doc_general_documentation_public_data.html#autotoc_md159", null ],
-      [ "Figuring out what's in the bag", "md_doc_general_documentation_public_data.html#autotoc_md160", null ],
-      [ "Common bag processing tasks", "md_doc_general_documentation_public_data.html#autotoc_md161", [
-        [ "Converting a bag to CSV format", "md_doc_general_documentation_public_data.html#autotoc_md162", null ],
-        [ "Combining different message topics based on their timestamps", "md_doc_general_documentation_public_data.html#autotoc_md163", null ],
-        [ "Displaying imagery found within a bag file", "md_doc_general_documentation_public_data.html#autotoc_md164", null ],
-        [ "Exporting imagery found within a bag file", "md_doc_general_documentation_public_data.html#autotoc_md165", null ]
-      ] ],
-      [ "Potential issues", "md_doc_general_documentation_public_data.html#autotoc_md166", [
-        [ "Incomplete bag metadata", "md_doc_general_documentation_public_data.html#autotoc_md167", null ],
-        [ "Bags containing messages with outdated message definitions", "md_doc_general_documentation_public_data.html#autotoc_md168", null ],
-        [ "Timestamp clock skew", "md_doc_general_documentation_public_data.html#autotoc_md169", null ]
+    [ "Maintaining Astrobee Telemetry Backward Compatibility", "md_doc_general_documentation_maintaining_telemetry.html", [
+      [ "Motivation and scope", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md121", null ],
+      [ "Telemetry maintenance objectives", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md122", null ],
+      [ "Telemetry maintenance requirements", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md123", null ],
+      [ "Telemetry maintenance approach", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md124", null ],
+      [ "Developer guidelines for modifying messages", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md125", null ],
+      [ "Ops approach for fixing bags", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md126", null ],
+      [ "Complementary backward compatibility approach", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md127", null ],
+      [ "Retroactive migration technical debt", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md128", null ]
+    ] ],
+    [ "using_telemetry", "using_telemetry.html", [
+      [ "Using Astrobee Robot Telemetry Logs", "using_telemetry.html#autotoc_md164", [
+        [ "Understanding telemetry in context", "using_telemetry.html#autotoc_md165", null ],
+        [ "Basics of the bag format", "using_telemetry.html#autotoc_md166", null ],
+        [ "Finding the right bag", "using_telemetry.html#autotoc_md167", null ],
+        [ "Install before working with bags", "using_telemetry.html#autotoc_md168", null ],
+        [ "Preparing the bag for analysis", "using_telemetry.html#autotoc_md169", null ],
+        [ "Figuring out what's in the bag", "using_telemetry.html#autotoc_md170", null ],
+        [ "Common bag processing tasks", "using_telemetry.html#autotoc_md171", [
+          [ "Converting a bag to CSV format", "using_telemetry.html#autotoc_md172", null ],
+          [ "Combining different message topics based on their timestamps", "using_telemetry.html#autotoc_md173", null ],
+          [ "Displaying imagery found within a bag file", "using_telemetry.html#autotoc_md174", null ],
+          [ "Exporting imagery found within a bag file", "using_telemetry.html#autotoc_md175", null ]
+        ] ],
+        [ "Potential issues", "using_telemetry.html#autotoc_md176", [
+          [ "Incomplete bag metadata", "using_telemetry.html#autotoc_md177", null ],
+          [ "Bags containing messages with outdated message definitions", "using_telemetry.html#autotoc_md178", null ],
+          [ "Timestamp clock skew", "using_telemetry.html#autotoc_md179", null ]
+        ] ]
       ] ]
     ] ],
     [ "Subsystems", "subsystems.html", "subsystems" ],
     [ "Simulation", "sim-readme.html", "sim-readme" ],
     [ "Bag Processing", "bagprocessing.html", [
-      [ "Package Overview", "bagprocessing.html#autotoc_md555", null ],
-      [ "Usage Instructions", "bagprocessing.html#autotoc_md556", null ],
-      [ "Scripts", "bagprocessing.html#autotoc_md557", [
-        [ "<tt>apply_histogram_equalization_to_images</tt>", "bagprocessing.html#autotoc_md558", null ],
-        [ "<tt>check_bag_for_gaps</tt>", "bagprocessing.html#autotoc_md559", null ],
-        [ "<tt>convert_bayer</tt>", "bagprocessing.html#autotoc_md560", null ],
-        [ "<tt>convert_all_bayer_bags</tt>", "bagprocessing.html#autotoc_md561", null ],
-        [ "<tt>get_msg_stats</tt>", "bagprocessing.html#autotoc_md562", null ],
-        [ "<tt>merge_bags</tt>", "bagprocessing.html#autotoc_md563", null ],
-        [ "<tt>merge_all_bags</tt>", "bagprocessing.html#autotoc_md564", null ],
-        [ "<tt>trim_bag</tt>", "bagprocessing.html#autotoc_md565", null ]
+      [ "Package Overview", "bagprocessing.html#autotoc_md565", null ],
+      [ "Usage Instructions", "bagprocessing.html#autotoc_md566", null ],
+      [ "Scripts", "bagprocessing.html#autotoc_md567", [
+        [ "<tt>apply_histogram_equalization_to_images</tt>", "bagprocessing.html#autotoc_md568", null ],
+        [ "<tt>check_bag_for_gaps</tt>", "bagprocessing.html#autotoc_md569", null ],
+        [ "<tt>convert_bayer</tt>", "bagprocessing.html#autotoc_md570", null ],
+        [ "<tt>convert_all_bayer_bags</tt>", "bagprocessing.html#autotoc_md571", null ],
+        [ "<tt>get_msg_stats</tt>", "bagprocessing.html#autotoc_md572", null ],
+        [ "<tt>merge_bags</tt>", "bagprocessing.html#autotoc_md573", null ],
+        [ "<tt>merge_all_bags</tt>", "bagprocessing.html#autotoc_md574", null ],
+        [ "<tt>trim_bag</tt>", "bagprocessing.html#autotoc_md575", null ]
       ] ]
     ] ],
     [ "Tools", "tools.html", "tools" ],
@@ -160,8 +173,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"install-NASA.html#autotoc_md141",
-"md_doc_general_documentation_public_data.html#autotoc_md167"
+"install-NASA.html#autotoc_md150",
+"mobility.html#autotoc_md450"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
