@@ -144,8 +144,7 @@ Install before working with bags</h2>
 Preparing the bag for analysis</h2>
 <p>As Astrobee flight software continues to evolve, its telemetry message definitions occasionally change in ways that break backward compatibility for analysis of archived telemetry bags.</p>
 <p>We recommend "fixing" a bag (rewriting it for compatibility with the latest message definitions) before using it, as follows:</p>
-<div class="fragment"><div class="line">ASTROBEE_DIR=$HOME/astrobee</div>
-<div class="line">$ASTROBEE_DIR/src/scripts/postprocessing/rosbag_fix_all.py in.bag</div>
+<div class="fragment"><div class="line">rosrun bag_processing rosbag_fix_all.py in.bag</div>
 </div><!-- fragment --><p>However, fixing the bag may not be needed if you plan to analyze it only with <code>bagpy</code> and not with the core ROS tools.</p>
 <h2><a class="anchor" id="autotoc_md170"></a>
 Figuring out what's in the bag</h2>
@@ -167,26 +166,24 @@ Common bag processing tasks</h2>
 <h3><a class="anchor" id="autotoc_md172"></a>
 Converting a bag to CSV format</h3>
 <p>The following example CSV export uses a bag from the publicly released ZIP archive <code>2021-03-26_SN003_bumble.zip</code>:</p>
-<div class="fragment"><div class="line">ASTROBEE_DIR=$HOME/astrobee</div>
-<div class="line">BAG=20210326_1855_phase1Loc_survey_bay_5_attempt_2.bag</div>
+<div class="fragment"><div class="line">BAG=20210326_1855_phase1Loc_survey_bay_5_attempt_2.bag</div>
 <div class="line"># generate a smaller bag containing only the topic of interest (filtering out any bad message types)</div>
-<div class="line">$ASTROBEE_DIR/src/scripts/postprocessing/rosbag_topic_filter.py $BAG -a /loc/pose loc_pose.bag</div>
+<div class="line">rosrun bag_processing rosbag_topic_filter.py $BAG -a /loc/pose loc_pose.bag</div>
 <div class="line"># export to CSV</div>
 <div class="line">rostopic echo -b loc_pose.bag -p /loc/pose &gt; loc_pose.csv</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md173"></a>
 Combining different message topics based on their timestamps</h3>
 <p>Often we want to analyze two message topics together, combining the fields of messages on both topics that were received around the same time. For example, we might want to join sensor measurement messages with pose messages to generate combined sensor+pose records that can be used to plot a map.</p>
 <p>We provide the <code>csv_join.py</code> script to perform this task on exported CSV files. The following example uses a bag from the publicly released ZIP archive <code>2021-03-26_SN003_bumble.zip</code>:</p>
-<div class="fragment"><div class="line">ASTROBEE_DIR=$HOME/astrobee</div>
-<div class="line">BAG=20210326_1855_phase1Loc_survey_bay_5_attempt_2.bag</div>
+<div class="fragment"><div class="line">BAG=20210326_1855_phase1Loc_survey_bay_5_attempt_2.bag</div>
 <div class="line"> </div>
-<div class="line">$ASTROBEE_DIR/src/scripts/postprocessing/rosbag_topic_filter.py $BAG -a /hw/wifi hw_wifi.bag</div>
+<div class="line">rosrun bag_processing rosbag_topic_filter.py $BAG -a /hw/wifi hw_wifi.bag</div>
 <div class="line">rostopic echo -b hw_wifi.bag -p /hw/wifi &gt; hw_wifi.csv</div>
 <div class="line"> </div>
-<div class="line">$ASTROBEE_DIR/src/scripts/postprocessing/rosbag_topic_filter.py $BAG -a /loc/pose loc_pose.bag</div>
+<div class="line">rosrun bag_processing rosbag_topic_filter.py $BAG -a /loc/pose loc_pose.bag</div>
 <div class="line">rostopic echo -b loc_pose.bag -p /loc/pose &gt; loc_pose.csv</div>
 <div class="line"> </div>
-<div class="line">$ASTROBEE_DIR/src/scripts/postprocessing/csv_join.py hw_wifi.csv loc_pose.csv wifi_plus_pose.csv</div>
+<div class="line">rosrun bag_processing csv_join.py hw_wifi.csv loc_pose.csv wifi_plus_pose.csv</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md174"></a>
 Displaying imagery found within a bag file</h3>
 <p>Try using the <a href="http://wiki.ros.org/rqt_image_view"><code>rqt_image_view</code></a> or <a href="http://wiki.ros.org/rqt_bag"><code>rqt_bag</code></a> tools.</p>
@@ -203,10 +200,9 @@ Incomplete bag metadata</h3>
 </pre><p>It typically indicates that the bag file metadata is missing some required message definition information, most commonly due to a <a href="https://github.com/rosjava/rosjava_bootstrap/issues/16">known</a> <a href="https://github.com/nasa/astrobee/issues/402">bug</a> with messages published by nodes using <code>rosjava</code>, which we use on the Astrobee HLP).</p>
 <p>If you encounter this problem, first make sure you <a href="#preparing-the-bag-for-analysis">fixed the bag as described above</a>.</p>
 <p>If that doesn't work, you can try filtering out the bad topics instead of trying to fix their message definitions:</p>
-<div class="fragment"><div class="line">ASTROBEE_DIR=$HOME/astrobee</div>
-<div class="line">$ASTROBEE_DIR/src/scripts/postprocessing/rosbag_topic_filter.py in.bag -r &quot;/gs/*&quot; -r /hw/cam_sci/compressed fixed.bag</div>
+<div class="fragment"><div class="line">rosrun bag_processing rosbag_topic_filter.py in.bag -r &quot;/gs/*&quot; -r /hw/cam_sci/compressed fixed.bag</div>
 </div><!-- fragment --><p>And this command may help determine which topics are problematic in case more topics need to be fixed with the filtering approach:</p>
-<div class="fragment"><div class="line">$ASTROBEE_DIR/src/scripts/postprocessing/rosbag_detect_bad_topics.py in.bag</div>
+<div class="fragment"><div class="line">rosrun bag_processing rosbag_detect_bad_topics.py in.bag</div>
 </div><!-- fragment --><p>As our processes improve, we hope to ensure future bag files have this metadata issue fixed before public data release, so you will not have to deal with it.</p>
 <h3><a class="anchor" id="autotoc_md178"></a>
 Bags containing messages with outdated message definitions</h3>
