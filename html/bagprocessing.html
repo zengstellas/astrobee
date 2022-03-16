@@ -103,37 +103,40 @@ Scripts</h1>
 &lt;tt&gt;apply_histogram_equalization_to_images&lt;/tt&gt;</h2>
 <p>Applies either CLAHE or standard histogram equalization to images in a bagfile.</p>
 <h2><a class="anchor" id="autotoc_md569"></a>
+&lt;tt&gt;bmr_renumber_enum&lt;/tt&gt;</h2>
+<p>This is not a standalone script. It is a library that provides utility functions to be used in *.bmr bag migration rules to help with migrating legacy messages that contain an enumerated field where the label numbering has changed.</p>
+<h2><a class="anchor" id="autotoc_md570"></a>
 &lt;tt&gt;check_bag_for_gaps&lt;/tt&gt;</h2>
 <p>Prints gaps above provided maximum time for a bagfile and topic using either message header times or bag receive times. Also prints stats for the time differences for messages with the provided topic in the bagfile.</p>
-<h2><a class="anchor" id="autotoc_md570"></a>
+<h2><a class="anchor" id="autotoc_md571"></a>
 &lt;tt&gt;clock_skew&lt;/tt&gt;</h2>
 <p>Analyze clock skew LLP-&gt;MLP and HLP-&gt;MLP. Inputs an <code>ars_default.bag</code> containing the <code>/mgt/sys_monitor/time_sync</code> topic.</p>
-<h2><a class="anchor" id="autotoc_md571"></a>
+<h2><a class="anchor" id="autotoc_md572"></a>
 &lt;tt&gt;convert_bayer&lt;/tt&gt;</h2>
 <p>Converts bayer encoded color images to grayscale and color image.</p>
-<h2><a class="anchor" id="autotoc_md572"></a>
+<h2><a class="anchor" id="autotoc_md573"></a>
 &lt;tt&gt;convert_all_bayer_bags&lt;/tt&gt;</h2>
 <p>Creates a new bagfile with grayscale and color images for the provided bags using their bayer encoded images. If no bags are provided, runs conversion for each bag in the current directory.</p>
-<h2><a class="anchor" id="autotoc_md573"></a>
+<h2><a class="anchor" id="autotoc_md574"></a>
 &lt;tt&gt;csv_join&lt;/tt&gt;</h2>
 <p>Join two CSV files by timestamp. (After creating the CSV files by exporting a message topic from a bag.)</p>
-<h2><a class="anchor" id="autotoc_md574"></a>
+<h2><a class="anchor" id="autotoc_md575"></a>
 &lt;tt&gt;get_msg_stats&lt;/tt&gt;</h2>
 <p>Prints stats for a numeric field of a topic in a bagfile.</p>
-<h2><a class="anchor" id="autotoc_md575"></a>
+<h2><a class="anchor" id="autotoc_md576"></a>
 &lt;tt&gt;merge_bags&lt;/tt&gt;</h2>
 <p>Merges bagfiles with given prefix in the current directory.</p>
-<h2><a class="anchor" id="autotoc_md576"></a>
+<h2><a class="anchor" id="autotoc_md577"></a>
 &lt;tt&gt;merge_all_bags&lt;/tt&gt;</h2>
 <p>Creates merged bagfiles for each provided bag prefix or for each prefix in the current directory if none are provided.</p>
-<h2><a class="anchor" id="autotoc_md577"></a>
+<h2><a class="anchor" id="autotoc_md578"></a>
 &lt;tt&gt;rosbag_detect_bad_topics&lt;/tt&gt;</h2>
 <p>Detect bad topics that the <code>rosbag</code> API can't handle. (The main problem so far has been <code>rosjava</code> messages that have incomplete message definition dependency information that causes <code>rosbag</code> to raise an exception when it tries to deserialize the message.)</p>
-<h2><a class="anchor" id="autotoc_md578"></a>
+<h2><a class="anchor" id="autotoc_md579"></a>
 &lt;tt&gt;rosbag_fix_all&lt;/tt&gt;</h2>
 <p>Master script to apply all passes of processing needed to fix our legacy bag files. The actual processing steps are found in <code>Makefile.rosbag_fix_all</code>. The strategy is explained in [1].</p>
 <p>[1] <a href="https://github.com/nasa/astrobee/blob/develop/doc/general_documentation/maintaining_telemetry.md">https://github.com/nasa/astrobee/blob/develop/doc/general_documentation/maintaining_telemetry.md</a></p>
-<h2><a class="anchor" id="autotoc_md579"></a>
+<h2><a class="anchor" id="autotoc_md580"></a>
 &lt;tt&gt;rosbag_rewrite_types&lt;/tt&gt;</h2>
 <p>Tool that applies rules to fix bag files, as specified in <code>rosbag_rewrite_types_rules.json</code>. It performs two types of fix:</p>
 <ol type="1">
@@ -141,10 +144,10 @@ Scripts</h1>
 <li>For message types whose definition changed in a way that makes migration infeasible, changes the message type name to be the "frozen" type name, so that migration is not needed. Which message types to fix is specified in the <code>rename_types</code> field of the rules file.</li>
 </ol>
 <p>This script is normally invoked by <code>rosbag_fix_all</code>.</p>
-<h2><a class="anchor" id="autotoc_md580"></a>
+<h2><a class="anchor" id="autotoc_md581"></a>
 &lt;tt&gt;rosbag_topic_filter&lt;/tt&gt;</h2>
 <p>Filter <code>rosbag</code> messages based on topic. Like a subset of <code>rosbag filter</code> functionality, but more robust to incomplete message definitions because it doesn't need to deserialize the messages to filter on topic.</p>
-<h2><a class="anchor" id="autotoc_md581"></a>
+<h2><a class="anchor" id="autotoc_md582"></a>
 &lt;tt&gt;trim_bag&lt;/tt&gt;</h2>
 <p>Creates a new bagfile with trimmed start and end times from a provided bagfile. </p>
 </div></div><!-- contents -->

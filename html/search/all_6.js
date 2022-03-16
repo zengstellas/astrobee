@@ -177,7 +177,7 @@ var searchData=
   ['ff_5fflight_2eh_1762',['ff_flight.h',['../ff__flight_8h.html',1,'']]],
   ['ff_5ffsm_2eh_1763',['ff_fsm.h',['../ff__fsm_8h.html',1,'']]],
   ['ff_5finfo_1764',['FF_INFO',['../ff__nodelet_8h.html#aeeb77e845d9d7861c3b04b91f49f210b',1,'ff_nodelet.h']]],
-  ['ff_5fmsgs_1765',['ff_msgs',['../namespaceff__msgs.html',1,'']]],
+  ['ff_5fmsgs_1765',['ff_msgs',['../namespaceff__msgs.html',1,'ff_msgs'],['../ff_msgs.html',1,'(Global Namespace)']]],
   ['ff_5fnames_2eh_1766',['ff_names.h',['../ff__names_8h.html',1,'']]],
   ['ff_5fnodelet_2ecc_1767',['ff_nodelet.cc',['../ff__nodelet_8cc.html',1,'']]],
   ['ff_5fnodelet_2eh_1768',['ff_nodelet.h',['../ff__nodelet_8h.html',1,'']]],

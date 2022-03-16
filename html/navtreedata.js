@@ -148,25 +148,27 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Subsystems", "subsystems.html", "subsystems" ],
+    [ "Free Flyer ROS Messages", "ff_msgs.html", null ],
     [ "Simulation", "sim-readme.html", "sim-readme" ],
     [ "Bag Processing", "bagprocessing.html", [
       [ "Package Overview", "bagprocessing.html#autotoc_md565", null ],
       [ "Usage Instructions", "bagprocessing.html#autotoc_md566", null ],
       [ "Scripts", "bagprocessing.html#autotoc_md567", [
         [ "<tt>apply_histogram_equalization_to_images</tt>", "bagprocessing.html#autotoc_md568", null ],
-        [ "<tt>check_bag_for_gaps</tt>", "bagprocessing.html#autotoc_md569", null ],
-        [ "<tt>clock_skew</tt>", "bagprocessing.html#autotoc_md570", null ],
-        [ "<tt>convert_bayer</tt>", "bagprocessing.html#autotoc_md571", null ],
-        [ "<tt>convert_all_bayer_bags</tt>", "bagprocessing.html#autotoc_md572", null ],
-        [ "<tt>csv_join</tt>", "bagprocessing.html#autotoc_md573", null ],
-        [ "<tt>get_msg_stats</tt>", "bagprocessing.html#autotoc_md574", null ],
-        [ "<tt>merge_bags</tt>", "bagprocessing.html#autotoc_md575", null ],
-        [ "<tt>merge_all_bags</tt>", "bagprocessing.html#autotoc_md576", null ],
-        [ "<tt>rosbag_detect_bad_topics</tt>", "bagprocessing.html#autotoc_md577", null ],
-        [ "<tt>rosbag_fix_all</tt>", "bagprocessing.html#autotoc_md578", null ],
-        [ "<tt>rosbag_rewrite_types</tt>", "bagprocessing.html#autotoc_md579", null ],
-        [ "<tt>rosbag_topic_filter</tt>", "bagprocessing.html#autotoc_md580", null ],
-        [ "<tt>trim_bag</tt>", "bagprocessing.html#autotoc_md581", null ]
+        [ "<tt>bmr_renumber_enum</tt>", "bagprocessing.html#autotoc_md569", null ],
+        [ "<tt>check_bag_for_gaps</tt>", "bagprocessing.html#autotoc_md570", null ],
+        [ "<tt>clock_skew</tt>", "bagprocessing.html#autotoc_md571", null ],
+        [ "<tt>convert_bayer</tt>", "bagprocessing.html#autotoc_md572", null ],
+        [ "<tt>convert_all_bayer_bags</tt>", "bagprocessing.html#autotoc_md573", null ],
+        [ "<tt>csv_join</tt>", "bagprocessing.html#autotoc_md574", null ],
+        [ "<tt>get_msg_stats</tt>", "bagprocessing.html#autotoc_md575", null ],
+        [ "<tt>merge_bags</tt>", "bagprocessing.html#autotoc_md576", null ],
+        [ "<tt>merge_all_bags</tt>", "bagprocessing.html#autotoc_md577", null ],
+        [ "<tt>rosbag_detect_bad_topics</tt>", "bagprocessing.html#autotoc_md578", null ],
+        [ "<tt>rosbag_fix_all</tt>", "bagprocessing.html#autotoc_md579", null ],
+        [ "<tt>rosbag_rewrite_types</tt>", "bagprocessing.html#autotoc_md580", null ],
+        [ "<tt>rosbag_topic_filter</tt>", "bagprocessing.html#autotoc_md581", null ],
+        [ "<tt>trim_bag</tt>", "bagprocessing.html#autotoc_md582", null ]
       ] ]
     ] ],
     [ "Tools", "tools.html", "tools" ],
@@ -179,9 +181,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"install-NASA.html#autotoc_md144",
-"md_doc_general_documentation_maintaining_telemetry.html#autotoc_md126",
-"visioncommon.html#autotoc_md430"
+"install-NASA.html#autotoc_md142",
+"md_doc_general_documentation_maintaining_telemetry.html#autotoc_md124",
+"visioncommon.html#autotoc_md428"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
