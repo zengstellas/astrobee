@@ -303,5 +303,5 @@ var searchData=
   ['dynamicimufilter_1392',['DynamicImuFilter',['../classimu__integration_1_1DynamicImuFilter.html',1,'imu_integration::DynamicImuFilter'],['../classimu__integration_1_1DynamicImuFilter.html#ab89ec7dade19ac7b472b69148352f507',1,'imu_integration::DynamicImuFilter::DynamicImuFilter()']]],
   ['docker_20build_1393',['Docker build',['../install-docker.html',1,'md_INSTALL']]],
   ['debians_20management_20for_20deployment_20on_20the_20physical_20robots_1394',['Debians management for deployment on the physical robots',['../managing_debians.html',1,'md_doc_general_documentation_astrobee_usage']]],
-  ['description_1395',['Description',['../urdf.html',1,'']]]
+  ['description_1395',['Description',['../urdf.html',1,'subsystems']]]
 ];

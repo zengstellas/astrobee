@@ -116,64 +116,11 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Tutorials", "md_doc_general_documentation_astrobee_usage.html", "md_doc_general_documentation_astrobee_usage" ],
-    [ "Maintaining Astrobee Telemetry Backward Compatibility", "md_doc_general_documentation_maintaining_telemetry.html", [
-      [ "Motivation and scope", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md121", null ],
-      [ "Telemetry maintenance objectives", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md122", null ],
-      [ "Telemetry maintenance requirements", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md123", null ],
-      [ "Telemetry maintenance approach", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md124", null ],
-      [ "Developer guidelines for modifying messages", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md125", null ],
-      [ "Ops approach for fixing bags", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md126", null ],
-      [ "Complementary backward compatibility approach", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md127", null ],
-      [ "Retroactive migration technical debt", "md_doc_general_documentation_maintaining_telemetry.html#autotoc_md128", null ]
-    ] ],
-    [ "using_telemetry", "using_telemetry.html", [
-      [ "Using Astrobee Robot Telemetry Logs", "using_telemetry.html#autotoc_md164", [
-        [ "Understanding telemetry in context", "using_telemetry.html#autotoc_md165", null ],
-        [ "Basics of the bag format", "using_telemetry.html#autotoc_md166", null ],
-        [ "Finding the right bag", "using_telemetry.html#autotoc_md167", null ],
-        [ "Install before working with bags", "using_telemetry.html#autotoc_md168", null ],
-        [ "Preparing the bag for analysis", "using_telemetry.html#autotoc_md169", null ],
-        [ "Figuring out what's in the bag", "using_telemetry.html#autotoc_md170", null ],
-        [ "Common bag processing tasks", "using_telemetry.html#autotoc_md171", [
-          [ "Converting a bag to CSV format", "using_telemetry.html#autotoc_md172", null ],
-          [ "Combining different message topics based on their timestamps", "using_telemetry.html#autotoc_md173", null ],
-          [ "Displaying imagery found within a bag file", "using_telemetry.html#autotoc_md174", null ],
-          [ "Exporting imagery found within a bag file", "using_telemetry.html#autotoc_md175", null ]
-        ] ],
-        [ "Potential issues", "using_telemetry.html#autotoc_md176", [
-          [ "Incomplete bag metadata", "using_telemetry.html#autotoc_md177", null ],
-          [ "Bags containing messages with outdated message definitions", "using_telemetry.html#autotoc_md178", null ],
-          [ "Timestamp clock skew", "using_telemetry.html#autotoc_md179", null ]
-        ] ]
-      ] ]
-    ] ],
+    [ "Command Dictionary", "command_dictionary.html", null ],
     [ "Subsystems", "subsystems.html", "subsystems" ],
     [ "Free Flyer ROS Messages", "ff_msgs.html", null ],
     [ "Simulation", "sim-readme.html", "sim-readme" ],
-    [ "Bag Processing", "bagprocessing.html", [
-      [ "Package Overview", "bagprocessing.html#autotoc_md565", null ],
-      [ "Usage Instructions", "bagprocessing.html#autotoc_md566", null ],
-      [ "Scripts", "bagprocessing.html#autotoc_md567", [
-        [ "<tt>apply_histogram_equalization_to_images</tt>", "bagprocessing.html#autotoc_md568", null ],
-        [ "<tt>bmr_renumber_enum</tt>", "bagprocessing.html#autotoc_md569", null ],
-        [ "<tt>check_bag_for_gaps</tt>", "bagprocessing.html#autotoc_md570", null ],
-        [ "<tt>clock_skew</tt>", "bagprocessing.html#autotoc_md571", null ],
-        [ "<tt>convert_bayer</tt>", "bagprocessing.html#autotoc_md572", null ],
-        [ "<tt>convert_all_bayer_bags</tt>", "bagprocessing.html#autotoc_md573", null ],
-        [ "<tt>csv_join</tt>", "bagprocessing.html#autotoc_md574", null ],
-        [ "<tt>get_msg_stats</tt>", "bagprocessing.html#autotoc_md575", null ],
-        [ "<tt>merge_bags</tt>", "bagprocessing.html#autotoc_md576", null ],
-        [ "<tt>merge_all_bags</tt>", "bagprocessing.html#autotoc_md577", null ],
-        [ "<tt>rosbag_detect_bad_topics</tt>", "bagprocessing.html#autotoc_md578", null ],
-        [ "<tt>rosbag_fix_all</tt>", "bagprocessing.html#autotoc_md579", null ],
-        [ "<tt>rosbag_rewrite_types</tt>", "bagprocessing.html#autotoc_md580", null ],
-        [ "<tt>rosbag_topic_filter</tt>", "bagprocessing.html#autotoc_md581", null ],
-        [ "<tt>trim_bag</tt>", "bagprocessing.html#autotoc_md582", null ]
-      ] ]
-    ] ],
     [ "Tools", "tools.html", "tools" ],
-    [ "Description", "urdf.html", null ],
-    [ "Todo List", "todo.html", null ],
     [ "Class Index", "classes.html", null ]
   ] ]
 ];
@@ -181,8 +128,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "access_control.html",
-"install-NASA.html#autotoc_md142",
-"md_doc_general_documentation_maintaining_telemetry.html#autotoc_md124",
+"install-NASA.html#autotoc_md141",
+"md_RELEASE.html#autotoc_md85",
 "visioncommon.html#autotoc_md428"
 ];
 

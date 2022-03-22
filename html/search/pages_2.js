@@ -3,7 +3,7 @@ var searchData=
   ['calibration_14701',['Calibration',['../calibration.html',1,'tools']]],
   ['camera_20library_14702',['Camera library',['../camera.html',1,'localization']]],
   ['choreographer_14703',['Choreographer',['../choreographer.html',1,'mobility']]],
-  ['command_20dictionary_14704',['Command Dictionary',['../command_dictionary.html',1,'md_doc_general_documentation_astrobee_usage']]],
+  ['command_20dictionary_14704',['Command Dictionary',['../command_dictionary.html',1,'']]],
   ['communications_14705',['Communications',['../comms.html',1,'subsystems']]],
   ['config_20reader_14706',['Config Reader',['../config_reader.html',1,'shared']]],
   ['conventions_14707',['Conventions',['../conventions.html',1,'md_doc_general_documentation_astrobee_usage']]],
