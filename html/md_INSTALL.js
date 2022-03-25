@@ -54,10 +54,12 @@ var md_INSTALL =
     ] ],
     [ "Docker build", "install-docker.html", [
       [ "Usage instructions for Docker", "install-docker.html#autotoc_md187", [
-        [ "Building the docker images", "install-docker.html#autotoc_md188", null ],
-        [ "Run the container", "install-docker.html#autotoc_md189", null ],
-        [ "Cross-compile Astrobee (NASA users only)", "install-docker.html#autotoc_md190", null ],
-        [ "Building an Astrobee Debian (NASA users only)", "install-docker.html#autotoc_md191", null ]
+        [ "Optional: Build the docker image", "install-docker.html#autotoc_md188", null ],
+        [ "Run the Astrobee simulator in the container", "install-docker.html#autotoc_md189", null ],
+        [ "Run other commands in the container", "install-docker.html#autotoc_md190", null ],
+        [ "Run unit tests in the container", "install-docker.html#autotoc_md191", null ],
+        [ "Cross-compile Astrobee (NASA users only)", "install-docker.html#autotoc_md192", null ],
+        [ "Building an Astrobee Debian (NASA users only)", "install-docker.html#autotoc_md193", null ]
       ] ]
     ] ]
 ];

@@ -1,27 +1,27 @@
 var md_doc_general_documentation_astrobee_usage =
 [
     [ "General Considerations", "astrobee.html", [
-      [ "Folder description", "astrobee.html#autotoc_md499", null ],
-      [ "Environment variables", "astrobee.html#autotoc_md500", null ],
-      [ "Context determination", "astrobee.html#autotoc_md501", null ],
-      [ "Default contexts", "astrobee.html#autotoc_md502", null ],
-      [ "Remotely launching nodes", "astrobee.html#autotoc_md503", null ],
-      [ "Launching only specific nodes", "astrobee.html#autotoc_md504", null ],
-      [ "Launch file examples", "astrobee.html#autotoc_md505", null ],
-      [ "Roslaunch, [machine] tags, env scripts and environment variables", "astrobee.html#autotoc_md506", [
-        [ "Takeaway points:", "astrobee.html#autotoc_md507", null ]
+      [ "Folder description", "astrobee.html#autotoc_md501", null ],
+      [ "Environment variables", "astrobee.html#autotoc_md502", null ],
+      [ "Context determination", "astrobee.html#autotoc_md503", null ],
+      [ "Default contexts", "astrobee.html#autotoc_md504", null ],
+      [ "Remotely launching nodes", "astrobee.html#autotoc_md505", null ],
+      [ "Launching only specific nodes", "astrobee.html#autotoc_md506", null ],
+      [ "Launch file examples", "astrobee.html#autotoc_md507", null ],
+      [ "Roslaunch, [machine] tags, env scripts and environment variables", "astrobee.html#autotoc_md508", [
+        [ "Takeaway points:", "astrobee.html#autotoc_md509", null ]
       ] ]
     ] ],
     [ "Running the Astrobee Simulator", "running-the-sim.html", [
-      [ "Simulator Issues", "running-the-sim.html#autotoc_md542", null ]
+      [ "Simulator Issues", "running-the-sim.html#autotoc_md544", null ]
     ] ],
     [ "Advanced Simulation Information", "advanced-sim-info.html", [
-      [ "Rviz in Localization Only Mode", "advanced-sim-info.html#autotoc_md508", null ],
-      [ "Collisions and performance", "advanced-sim-info.html#autotoc_md509", null ],
-      [ "Frame consistency between simulation and perception", "advanced-sim-info.html#autotoc_md510", null ],
-      [ "Development and debugging", "advanced-sim-info.html#autotoc_md511", null ],
-      [ "Changing Simulation properties", "advanced-sim-info.html#autotoc_md512", null ],
-      [ "Under the hood", "advanced-sim-info.html#autotoc_md513", null ]
+      [ "Rviz in Localization Only Mode", "advanced-sim-info.html#autotoc_md510", null ],
+      [ "Collisions and performance", "advanced-sim-info.html#autotoc_md511", null ],
+      [ "Frame consistency between simulation and perception", "advanced-sim-info.html#autotoc_md512", null ],
+      [ "Development and debugging", "advanced-sim-info.html#autotoc_md513", null ],
+      [ "Changing Simulation properties", "advanced-sim-info.html#autotoc_md514", null ],
+      [ "Under the hood", "advanced-sim-info.html#autotoc_md515", null ]
     ] ],
     [ "Teleoperation Tool Instructions", "teleop.html", null ],
     [ "Astrobee code style", "astrobee-code-style.html", null ],
@@ -37,54 +37,54 @@ var md_doc_general_documentation_astrobee_usage =
       [ "Update the Commands Spreadsheet", "adding_a_command.html#autotoc_md90", null ],
       [ "Add Command to the Plan Schema", "adding_a_command.html#autotoc_md91", null ],
       [ "File Generation", "adding_a_command.html#autotoc_md92", [
-        [ "Communication Nodes", "running-the-sim.html#autotoc_md517", null ],
-        [ "Setting up your Environment", "running-the-sim.html#autotoc_md518", null ],
-        [ "Running the Simulator", "running-the-sim.html#autotoc_md519", [
-          [ "Simulator Flags", "running-the-sim.html#autotoc_md520", [
-            [ "pose", "running-the-sim.html#autotoc_md521", null ],
-            [ "gds", "running-the-sim.html#autotoc_md522", null ],
-            [ "rviz", "running-the-sim.html#autotoc_md523", null ],
-            [ "sviz", "running-the-sim.html#autotoc_md524", null ],
-            [ "gviz", "running-the-sim.html#autotoc_md525", null ],
-            [ "dds", "running-the-sim.html#autotoc_md526", null ],
-            [ "speed", "running-the-sim.html#autotoc_md527", null ],
-            [ "ns", "running-the-sim.html#autotoc_md528", null ],
-            [ "robot", "running-the-sim.html#autotoc_md529", null ],
-            [ "default_robot", "running-the-sim.html#autotoc_md530", null ],
-            [ "perch", "running-the-sim.html#autotoc_md531", null ],
-            [ "world", "running-the-sim.html#autotoc_md532", null ],
-            [ "debug", "running-the-sim.html#autotoc_md533", null ]
+        [ "Communication Nodes", "running-the-sim.html#autotoc_md519", null ],
+        [ "Setting up your Environment", "running-the-sim.html#autotoc_md520", null ],
+        [ "Running the Simulator", "running-the-sim.html#autotoc_md521", [
+          [ "Simulator Flags", "running-the-sim.html#autotoc_md522", [
+            [ "pose", "running-the-sim.html#autotoc_md523", null ],
+            [ "gds", "running-the-sim.html#autotoc_md524", null ],
+            [ "rviz", "running-the-sim.html#autotoc_md525", null ],
+            [ "sviz", "running-the-sim.html#autotoc_md526", null ],
+            [ "gviz", "running-the-sim.html#autotoc_md527", null ],
+            [ "dds", "running-the-sim.html#autotoc_md528", null ],
+            [ "speed", "running-the-sim.html#autotoc_md529", null ],
+            [ "ns", "running-the-sim.html#autotoc_md530", null ],
+            [ "robot", "running-the-sim.html#autotoc_md531", null ],
+            [ "default_robot", "running-the-sim.html#autotoc_md532", null ],
+            [ "perch", "running-the-sim.html#autotoc_md533", null ],
+            [ "world", "running-the-sim.html#autotoc_md534", null ],
+            [ "debug", "running-the-sim.html#autotoc_md535", null ]
           ] ]
         ] ],
-        [ "Moving the Robot", "running-the-sim.html#autotoc_md534", [
-          [ "Ground Data System", "running-the-sim.html#autotoc_md535", [
-            [ "External Users", "running-the-sim.html#autotoc_md536", null ],
-            [ "Internal Users", "running-the-sim.html#autotoc_md537", null ]
+        [ "Moving the Robot", "running-the-sim.html#autotoc_md536", [
+          [ "Ground Data System", "running-the-sim.html#autotoc_md537", [
+            [ "External Users", "running-the-sim.html#autotoc_md538", null ],
+            [ "Internal Users", "running-the-sim.html#autotoc_md539", null ]
           ] ],
-          [ "Teleop Tool", "running-the-sim.html#autotoc_md538", null ],
-          [ "Guest Science Applications", "running-the-sim.html#autotoc_md539", null ]
+          [ "Teleop Tool", "running-the-sim.html#autotoc_md540", null ],
+          [ "Guest Science Applications", "running-the-sim.html#autotoc_md541", null ]
         ] ],
-        [ "Images", "running-the-sim.html#autotoc_md540", null ],
-        [ "Launching Multiple Robots", "running-the-sim.html#autotoc_md541", null ],
-        [ "Basic Usage", "teleop.html#autotoc_md460", [
-          [ "Dock", "teleop.html#autotoc_md461", null ],
-          [ "Move", "teleop.html#autotoc_md462", null ],
-          [ "Stop", "teleop.html#autotoc_md463", null ],
-          [ "Undock", "teleop.html#autotoc_md464", null ],
-          [ "Get Position", "teleop.html#autotoc_md465", null ],
-          [ "Get State", "teleop.html#autotoc_md466", null ],
-          [ "Reset Ekf", "teleop.html#autotoc_md467", null ]
+        [ "Images", "running-the-sim.html#autotoc_md542", null ],
+        [ "Launching Multiple Robots", "running-the-sim.html#autotoc_md543", null ],
+        [ "Basic Usage", "teleop.html#autotoc_md462", [
+          [ "Dock", "teleop.html#autotoc_md463", null ],
+          [ "Move", "teleop.html#autotoc_md464", null ],
+          [ "Stop", "teleop.html#autotoc_md465", null ],
+          [ "Undock", "teleop.html#autotoc_md466", null ],
+          [ "Get Position", "teleop.html#autotoc_md467", null ],
+          [ "Get State", "teleop.html#autotoc_md468", null ],
+          [ "Reset Ekf", "teleop.html#autotoc_md469", null ]
         ] ],
-        [ "Advanced Usage", "teleop.html#autotoc_md468", [
-          [ "Namespace", "teleop.html#autotoc_md469", null ],
-          [ "Reset Bias", "teleop.html#autotoc_md470", null ],
-          [ "Get Faults", "teleop.html#autotoc_md471", null ],
-          [ "Set Planner", "teleop.html#autotoc_md472", null ],
-          [ "Get Planner", "teleop.html#autotoc_md473", null ],
-          [ "Set Face Forward", "teleop.html#autotoc_md474", null ],
-          [ "Get Face Forward", "teleop.html#autotoc_md475", null ],
-          [ "Set Operating Limits", "teleop.html#autotoc_md476", null ],
-          [ "Get Operating Limits", "teleop.html#autotoc_md477", null ]
+        [ "Advanced Usage", "teleop.html#autotoc_md470", [
+          [ "Namespace", "teleop.html#autotoc_md471", null ],
+          [ "Reset Bias", "teleop.html#autotoc_md472", null ],
+          [ "Get Faults", "teleop.html#autotoc_md473", null ],
+          [ "Set Planner", "teleop.html#autotoc_md474", null ],
+          [ "Get Planner", "teleop.html#autotoc_md475", null ],
+          [ "Set Face Forward", "teleop.html#autotoc_md476", null ],
+          [ "Get Face Forward", "teleop.html#autotoc_md477", null ],
+          [ "Set Operating Limits", "teleop.html#autotoc_md478", null ],
+          [ "Get Operating Limits", "teleop.html#autotoc_md479", null ]
         ] ],
         [ "Quaternions", "conventions.html#autotoc_md98", null ],
         [ "Create a new \"custom\" image for the robot", "new_robot.html#autotoc_md160", null ],
