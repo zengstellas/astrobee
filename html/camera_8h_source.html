@@ -167,47 +167,50 @@ $(document).ready(function(){initNavTree('camera_8h_source.html',''); initResiza
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">void</span> PublishLoop();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">bool</span> EnableService(ff_msgs::SetBool::Request&amp; req, ff_msgs::SetBool::Response&amp; res);  <span class="comment">// NOLINT</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">size_t</span> getNumBayerSubscribers();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  sensor_msgs::ImagePtr img_msg_buffer_[<a class="code" href="classis__camera_1_1CameraNodelet.html#ad80554f69cbacb82ab9de75374030c29">kImageMsgBuffer</a>];</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  sensor_msgs::ImagePtr bayer_img_msg_buffer_[<a class="code" href="classis__camera_1_1CameraNodelet.html#a789df38acd44720d84ae67de61fb0026">kBayerImageMsgBufferLength</a>];</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">size_t</span> img_msg_buffer_idx_;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">size_t</span> bayer_img_msg_buffer_idx_;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  std::thread thread_;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  std::atomic&lt;bool&gt; thread_running_;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  ros::Publisher pub_;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  ros::Publisher bayer_pub_;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  std::shared_ptr&lt;V4LStruct&gt; v4l_;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> config_;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  ros::Timer config_timer_;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  std::string camera_device_;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  std::string camera_topic_;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  std::string bayer_camera_topic_;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  std::string config_name_;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">int</span> camera_gain_, camera_exposure_;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">bool</span> calibration_mode_;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="comment">// bayer_enable: Set to true to enable publishing raw Bayer image</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">// (can be converted to RGB). May incur significant I/O overhead.</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">bool</span> bayer_enable_;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="comment">// bayer_throttle_ratio: Set to n to publish 1 raw Bayer image for</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="comment">// every n images grabbed. With n = 1, every image is</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="comment">// published. Larger n reduces I/O overhead.</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> bayer_throttle_ratio_;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">size_t</span> bayer_throttle_ratio_counter_;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}  <span class="comment">// end namespace is_camera</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#endif  // IS_CAMERA_CAMERA_H_</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> EnableBayer();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">bool</span> EnableBayerService(ff_msgs::SetBool::Request&amp; req, ff_msgs::SetBool::Response&amp; res);  <span class="comment">// NOLINT</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">size_t</span> getNumBayerSubscribers();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  ros::NodeHandle *nh_;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  sensor_msgs::ImagePtr img_msg_buffer_[<a class="code" href="classis__camera_1_1CameraNodelet.html#ad80554f69cbacb82ab9de75374030c29">kImageMsgBuffer</a>];</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  sensor_msgs::ImagePtr bayer_img_msg_buffer_[<a class="code" href="classis__camera_1_1CameraNodelet.html#a789df38acd44720d84ae67de61fb0026">kBayerImageMsgBufferLength</a>];</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">size_t</span> img_msg_buffer_idx_;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">size_t</span> bayer_img_msg_buffer_idx_;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  std::thread thread_;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  std::atomic&lt;bool&gt; thread_running_;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  ros::Publisher pub_;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  ros::Publisher bayer_pub_;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  ros::ServiceServer enable_bayer_srv_;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  std::shared_ptr&lt;V4LStruct&gt; v4l_;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="classconfig__reader_1_1ConfigReader.html">config_reader::ConfigReader</a> config_;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  ros::Timer config_timer_;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  std::string camera_device_;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  std::string camera_topic_;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  std::string bayer_camera_topic_;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  std::string config_name_;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">int</span> camera_gain_, camera_exposure_;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">bool</span> calibration_mode_;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">// bayer_enable: Set to true to enable publishing raw Bayer image</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="comment">// (can be converted to RGB). May incur significant I/O overhead.</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">bool</span> bayer_enable_;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="comment">// bayer_throttle_ratio: Set to n to publish 1 raw Bayer image for</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="comment">// every n images grabbed. With n = 1, every image is</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="comment">// published. Larger n reduces I/O overhead.</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> bayer_throttle_ratio_;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">size_t</span> bayer_throttle_ratio_counter_;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}  <span class="comment">// end namespace is_camera</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif  // IS_CAMERA_CAMERA_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassis__camera_1_1CameraNodelet_html_ad80554f69cbacb82ab9de75374030c29"><div class="ttname"><a href="classis__camera_1_1CameraNodelet.html#ad80554f69cbacb82ab9de75374030c29">is_camera::CameraNodelet::kImageMsgBuffer</a></div><div class="ttdeci">static constexpr size_t kImageMsgBuffer</div><div class="ttdef"><b>Definition:</b> camera.h:56</div></div>
 <div class="ttc" id="aclassis__camera_1_1CameraNodelet_html_a26d1de34971cff3cfb6139d2da86f88e"><div class="ttname"><a href="classis__camera_1_1CameraNodelet.html#a26d1de34971cff3cfb6139d2da86f88e">is_camera::CameraNodelet::kImageWidth</a></div><div class="ttdeci">static constexpr size_t kImageWidth</div><div class="ttdef"><b>Definition:</b> camera.h:65</div></div>
-<div class="ttc" id="aclassis__camera_1_1CameraNodelet_html_a5f5bff200d3d3882f14c54d39b46f1fe"><div class="ttname"><a href="classis__camera_1_1CameraNodelet.html#a5f5bff200d3d3882f14c54d39b46f1fe">is_camera::CameraNodelet::~CameraNodelet</a></div><div class="ttdeci">virtual ~CameraNodelet()</div><div class="ttdef"><b>Definition:</b> camera.cc:173</div></div>
+<div class="ttc" id="aclassis__camera_1_1CameraNodelet_html_a5f5bff200d3d3882f14c54d39b46f1fe"><div class="ttname"><a href="classis__camera_1_1CameraNodelet.html#a5f5bff200d3d3882f14c54d39b46f1fe">is_camera::CameraNodelet::~CameraNodelet</a></div><div class="ttdeci">virtual ~CameraNodelet()</div><div class="ttdef"><b>Definition:</b> camera.cc:174</div></div>
 <div class="ttc" id="aclassis__camera_1_1CameraNodelet_html_a1c1f871c1d0a9af46724491213ae515e"><div class="ttname"><a href="classis__camera_1_1CameraNodelet.html#a1c1f871c1d0a9af46724491213ae515e">is_camera::CameraNodelet::kImageHeight</a></div><div class="ttdeci">static constexpr size_t kImageHeight</div><div class="ttdef"><b>Definition:</b> camera.h:66</div></div>
 <div class="ttc" id="aff__nodelet_8h_html"><div class="ttname"><a href="ff__nodelet_8h.html">ff_nodelet.h</a></div></div>
 <div class="ttc" id="anamespaceis__camera_html_af2b6aa3b81775a414f0b9e1484acfd1f"><div class="ttname"><a href="namespaceis__camera.html#af2b6aa3b81775a414f0b9e1484acfd1f">is_camera::xioctl</a></div><div class="ttdeci">static void xioctl(int fh, int request, void *arg)</div></div>
@@ -221,9 +224,9 @@ $(document).ready(function(){initNavTree('camera_8h_source.html',''); initResiza
 <div class="ttc" id="aconfig__reader_8h_html"><div class="ttname"><a href="config__reader_8h.html">config_reader.h</a></div></div>
 <div class="ttc" id="anamespaceis__camera_html"><div class="ttname"><a href="namespaceis__camera.html">is_camera</a></div><div class="ttdef"><b>Definition:</b> camera.h:33</div></div>
 <div class="ttc" id="astructis__camera_1_1buffer_html"><div class="ttname"><a href="structis__camera_1_1buffer.html">is_camera::buffer</a></div><div class="ttdef"><b>Definition:</b> camera.h:36</div></div>
-<div class="ttc" id="aclassis__camera_1_1CameraNodelet_html_aa03ac41837603c8499a9b882dab02049"><div class="ttname"><a href="classis__camera_1_1CameraNodelet.html#aa03ac41837603c8499a9b882dab02049">is_camera::CameraNodelet::ReadParams</a></div><div class="ttdeci">void ReadParams(void)</div><div class="ttdef"><b>Definition:</b> camera.cc:247</div></div>
+<div class="ttc" id="aclassis__camera_1_1CameraNodelet_html_aa03ac41837603c8499a9b882dab02049"><div class="ttname"><a href="classis__camera_1_1CameraNodelet.html#aa03ac41837603c8499a9b882dab02049">is_camera::CameraNodelet::ReadParams</a></div><div class="ttdeci">void ReadParams(void)</div><div class="ttdef"><b>Definition:</b> camera.cc:239</div></div>
 <div class="ttc" id="astructis__camera_1_1buffer_html_a8c2df96baae27cba0c81bc2e5e45aba1"><div class="ttname"><a href="structis__camera_1_1buffer.html#a8c2df96baae27cba0c81bc2e5e45aba1">is_camera::buffer::length</a></div><div class="ttdeci">size_t length</div><div class="ttdef"><b>Definition:</b> camera.h:38</div></div>
-<div class="ttc" id="aclassis__camera_1_1CameraNodelet_html_ab732bb867cfd6278c7268f5fd1cab233"><div class="ttname"><a href="classis__camera_1_1CameraNodelet.html#ab732bb867cfd6278c7268f5fd1cab233">is_camera::CameraNodelet::Initialize</a></div><div class="ttdeci">virtual void Initialize(ros::NodeHandle *nh)</div><div class="ttdef"><b>Definition:</b> camera.cc:179</div></div>
+<div class="ttc" id="aclassis__camera_1_1CameraNodelet_html_ab732bb867cfd6278c7268f5fd1cab233"><div class="ttname"><a href="classis__camera_1_1CameraNodelet.html#ab732bb867cfd6278c7268f5fd1cab233">is_camera::CameraNodelet::Initialize</a></div><div class="ttdeci">virtual void Initialize(ros::NodeHandle *nh)</div><div class="ttdef"><b>Definition:</b> camera.cc:180</div></div>
 <!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 </body>
