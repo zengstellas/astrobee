@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.16.2</span>
+   &#160;<span id="projectnumber">0.16.3</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -91,18 +91,18 @@ $(document).ready(function(){initNavTree('calibration.html',''); initResizable()
 <div class="title"><a class="el" href="structCalibration.html">Calibration</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md585"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md586"></a>
 Package Overview</h1>
-<h1><a class="anchor" id="autotoc_md586"></a>
+<h1><a class="anchor" id="autotoc_md587"></a>
 Camera Target Based Intrinsics Calibration</h1>
 <p>Calibrating camera intrinsics involves generating target detection files from a set of bagfiles, generating or providing an initial estimate for the camera intrinsics and distortion values, and finally running the calibrator. Several camera distortion models (fov, rad, radtan) are supported for calibration and various scripts are provided to view the quality of the input target detections and the calibration results.</p>
-<h2><a class="anchor" id="autotoc_md587"></a>
+<h2><a class="anchor" id="autotoc_md588"></a>
 Example Usage</h2>
-<h3><a class="anchor" id="autotoc_md588"></a>
+<h3><a class="anchor" id="autotoc_md589"></a>
 Generate target detections from bagfiles</h3>
 <p><code>rosrun calibration save\_images\_with\_target\_detections -d ~/bag\_files -o target\_detections -t ~/target.yaml</code> <br  />
  Here <code>~/bag\_files</code> contains a directory of bagfiles containing target detection images. </p>
-<h3><a class="anchor" id="autotoc_md589"></a>
+<h3><a class="anchor" id="autotoc_md590"></a>
 View target detection coverage in image space</h3>
 <p align="center"><code>rosrun calibration view\_all\_detections.py -d target\_detections</code><br  />
  <code>feh detection\_image.jpg</code><br  />
@@ -110,37 +110,37 @@ View target detection coverage in image space</h3>
 <p><img src="./doc/images/detection_image.jpg" alt="" width="330" class="inline"/> </p>
 <p>Ideally the target detections span the entire image. If only the middle of the image contains detections or if parts of the image have no detections, this may lead to an underconstrained calibration problem. Ensure good target coverage before attempting to calibrate a camera. <br  />
  </p>
-<h3><a class="anchor" id="autotoc_md590"></a>
+<h3><a class="anchor" id="autotoc_md591"></a>
 Calibrate</h3>
-<h4><a class="anchor" id="autotoc_md591"></a>
+<h4><a class="anchor" id="autotoc_md592"></a>
 Calibration Parameters</h4>
 <p>In addition to the script parameters, the camera_target_based_intrinsics_calibrator.config contains most of the configuration options for camera target based intrinsics calibration. The distortion model, camera name, parameters for the reprojection pose estimator handling target pose estimation, visualization, and other general parameters can be selected. <br  />
  The parameters to calibrate can also be selected. Depending on the distortion model used, different parameters should be calibrated concurrently to avoid degeneracies and underconstrained calibration. For example, calibrating the camera principal points and target poses at the same time should be avoided. <a class="el" href="structCalibration.html">Calibration</a> may be repeated while incrementally updating solved parameters and toggling different concurrent parameter sets to solve for until all parameters are adequately calibrated. <br  />
  </p>
-<h4><a class="anchor" id="autotoc_md592"></a>
+<h4><a class="anchor" id="autotoc_md593"></a>
 Run Calibration</h4>
 <p><code>rosrun calibration calibrate\_intrinsics\_and\_save\_results.py target\_detections ~\/astrobee\/src\/astrobee\/config config\/robots\/bumble.config -u -p -i target\_detections -d fov</code> <br  />
  For more details of the calibration script see below in the Scripts section. </p>
-<h4><a class="anchor" id="autotoc_md593"></a>
+<h4><a class="anchor" id="autotoc_md594"></a>
 Calibration Output</h4>
 <p>The calibrated results are saved in the calibrated_params.txt file while more verbose output is saved to the calibration_output.txt file. <br  />
  </p>
-<h4><a class="anchor" id="autotoc_md594"></a>
+<h4><a class="anchor" id="autotoc_md595"></a>
 Judging Calibration Results</h4>
 <p>Rely primarily on the covariances for each calibrated parameter reported at the end of the calibration_output.txt file. <br  />
- <a class="anchor" id="autotoc_md595"></a></p><h5>Reprojection Image</h5>
+ <a class="anchor" id="autotoc_md596"></a></p><h5>Reprojection Image</h5>
 <p align="center">The output calibrated_reprojection_from_all_targets_absolute_image.png displays reprojection errors after the calibration procedure has completed and can give a general sense of the calibration accuracy, although it does not discern between accurate calibration and overfitting, which is why the covariances mentioned previously should be the primary indicator of calibration accuracy.<br  />
  Here reprojection errors are colored by the norm of the error on a continuous color spectrum, with dark blue indicated small/zero error and red indicating large error. <br  />
  </p>
 <p><img src="./doc/images/calibrated_reprojection_from_all_targets_absolute_image.png" alt="" width="330" class="inline"/> </p>
-<p><a class="anchor" id="autotoc_md596"></a></p><h5>Error Histogram</h5>
+<p><a class="anchor" id="autotoc_md597"></a></p><h5>Error Histogram</h5>
 <p align="center">The generated error histogram (which displays the overall norm, x, and y errors on seperate plots) can be helpful to view overall error during calibration and to see if any bias exists in the errors. For example, if the x or y error histograms are not zero centered, this can indicate an error in the calibrated principal points. <br  />
  </p>
 <p><img src="./doc/images/norm_errors.png" alt="" width="330" class="inline"/> </p>
 <p><img src="./doc/images/x_errors.png" alt="" width="330" class="inline"/> </p>
 <p><img src="./doc/images/y_errors.png" alt="" width="330" class="inline"/> </p>
 <p>This is generated by passing the -p option to the calibration script or by running the make_error_histograms.py script on the output errors.txt file after calibration has completed.</p>
-<p><a class="anchor" id="autotoc_md597"></a></p><h5>Undistorted Images</h5>
+<p><a class="anchor" id="autotoc_md598"></a></p><h5>Undistorted Images</h5>
 <p>The undistorted images generated by passing -u to the calibration script or by seperately running the create_undistorted_images script give an additional indicator of calibration accuracy. Undistorted calibration targets should have straight boundary edges and straight lines within the target. Curved lines can indicate an error in the calibration distortion parameters. <br  />
 </p>
 <p>Distorted Image:</p>
@@ -148,32 +148,32 @@ Judging Calibration Results</h4>
 <p>Undistorted Image (FOV distortion):</p>
 <p><img src="./doc/images/fov_undistorted.png" alt="" width="330" class="inline"/> </p>
 <p>The black dots in the undistorted image are a result of the FOV undistortion procedure, while the Rad and RadTan uses interpolation to fill these.</p>
-<h1><a class="anchor" id="autotoc_md598"></a>
+<h1><a class="anchor" id="autotoc_md599"></a>
 Tools</h1>
-<h2><a class="anchor" id="autotoc_md599"></a>
+<h2><a class="anchor" id="autotoc_md600"></a>
 create_undistorted_images</h2>
 <p>Generates undistorted images from a set of distorted images and provided camera calibration parameters. See 'rosrun calibration create_undistorted_images -h' for further details and usage instructions.</p>
-<h2><a class="anchor" id="autotoc_md600"></a>
+<h2><a class="anchor" id="autotoc_md601"></a>
 run_camera_target_based_intrinsics_calibrator</h2>
 <p>Runs the intrinsics calibrator using a set of target detection files and initial estimates for the camera intrinsics and distortion values. Support various distortion models. See 'rosrun calibration run_camera_target_based_intrinsics_calibrator -h' for further details and usage instructions.</p>
-<h1><a class="anchor" id="autotoc_md601"></a>
+<h1><a class="anchor" id="autotoc_md602"></a>
 Scripts</h1>
-<h2><a class="anchor" id="autotoc_md602"></a>
+<h2><a class="anchor" id="autotoc_md603"></a>
 calibrate_intrinsics_and_save_results.py</h2>
 <p>Runs camera intrinsic calibration using provided target detections and a config file with camera parameters (including initial estimate for camera intrinsics and distortion values). See 'rosrun calibration calibrate_intrinsics_and_save_results.py -h' for further details and usage instructions.</p>
-<h2><a class="anchor" id="autotoc_md603"></a>
+<h2><a class="anchor" id="autotoc_md604"></a>
 copy_calibration_params_to_config.py</h2>
 <p>Helper script that copies calibration parameters from the output of the calibration pipeline and writes these to the camera config file. See 'rosrun calibration copy_calibration_params_to_config.py -h' for further details and usage instructions.</p>
-<h2><a class="anchor" id="autotoc_md604"></a>
+<h2><a class="anchor" id="autotoc_md605"></a>
 get_bags_with_topic.py</h2>
 <p>Helper script that generates a list of bag files in a directory with the provided topic. See 'rosrun calibration get_bags_with_topic.py -h' for further details and usage instructions.</p>
-<h2><a class="anchor" id="autotoc_md605"></a>
+<h2><a class="anchor" id="autotoc_md606"></a>
 make_error_histograms.py</h2>
 <p>Generates a histogram of errors using the output errors from the calibration pipeline. See 'rosrun calibration make_error_histograms.py -h' for further details and usage instructions.</p>
-<h2><a class="anchor" id="autotoc_md606"></a>
+<h2><a class="anchor" id="autotoc_md607"></a>
 save_images_with_target_detections.py</h2>
 <p>Generates target detection files for use with the calibration pipeline from a set of bagfiles containing images of target detections. See 'rosrun calibration save_images_with_target_detections.py -h' for further details and usage instructions.</p>
-<h2><a class="anchor" id="autotoc_md607"></a>
+<h2><a class="anchor" id="autotoc_md608"></a>
 view_all_detections.py</h2>
 <p>Generates an image containing all images space detections of a target for a set of target detection files. See 'rosrun calibration view_all_detections.py -h' for further details and usage instructions. </p>
 </div></div><!-- contents -->
