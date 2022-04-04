@@ -120,6 +120,9 @@ $(document).ready(function(){initNavTree('functions_r.html',''); initResizable()
 <li>ransac_pnp
 : <a class="el" href="structvision__common_1_1ReprojectionPoseEstimateParams.html#a297a4902d15599258d8d6e51798c524e">vision_common::ReprojectionPoseEstimateParams</a>
 </li>
+<li>RapidAccessControlStateToRos()
+: <a class="el" href="classff_1_1RapidAccessControlStateToRos.html#a60da57c5ccb0d4d37739bb014bdddbd0">ff::RapidAccessControlStateToRos</a>
+</li>
 <li>RapidCommandRosCommand()
 : <a class="el" href="classff_1_1RapidCommandRosCommand.html#a618d19f9ec542b8c320c093d25bb3fb5">ff::RapidCommandRosCommand</a>
 </li>
@@ -130,7 +133,13 @@ $(document).ready(function(){initNavTree('functions_r.html',''); initResizable()
 : <a class="el" href="classff_1_1RapidEkfToRos.html#a529f2ee7e6b7d1418dd78afdcec270d6">ff::RapidEkfToRos</a>
 </li>
 <li>RapidGuestScienceDataToRos()
-: <a class="el" href="classff_1_1RapidGuestScienceDataToRos.html#adac329dc598faeba7637ac0fb0a2bb78">ff::RapidGuestScienceDataToRos</a>
+: <a class="el" href="classff_1_1RapidGuestScienceDataToRos.html#ad82d5358c268505d7c49fb056114e0db">ff::RapidGuestScienceDataToRos</a>
+</li>
+<li>RapidImageToRos()
+: <a class="el" href="classff_1_1RapidImageToRos.html#a070722347be0f634d179b5eec4d02c68">ff::RapidImageToRos</a>
+</li>
+<li>RapidPositionToRos()
+: <a class="el" href="classff_1_1RapidPositionToRos.html#abc8fe3e87b9eb40f9bdd54f287362f39">ff::RapidPositionToRos</a>
 </li>
 <li>RapidPub()
 : <a class="el" href="classff_1_1RapidPub.html#af85c5727c92ddd639403dfa2c1a5e9b5">ff::RapidPub</a>
@@ -218,6 +227,7 @@ $(document).ready(function(){initNavTree('functions_r.html',''); initResizable()
 , <a class="el" href="classgnc__autocode_1_1GncCtlAutocode.html#af861473b06e72f33b87a84127596cdb6">gnc_autocode::GncCtlAutocode</a>
 , <a class="el" href="classgnc__autocode_1_1GncFamAutocode.html#af3d99d1ac59973f9164e6532704d05dd">gnc_autocode::GncFamAutocode</a>
 , <a class="el" href="classgnc__autocode_1_1GncSimAutocode.html#a9d867f46c257d06a6ec5ad6c7ba88fc1">gnc_autocode::GncSimAutocode</a>
+, <a class="el" href="classground__dds__ros__bridge_1_1GroundDdsRosBridge.html#a2b926c7e478acc530b1e356c9aab040f">ground_dds_ros_bridge::GroundDdsRosBridge</a>
 , <a class="el" href="classhandrail__detect_1_1HandrailDetect.html#a732d2f9374a07f20e022349768972e95">handrail_detect::HandrailDetect</a>
 , <a class="el" href="classis__camera_1_1CameraNodelet.html#aa03ac41837603c8499a9b882dab02049">is_camera::CameraNodelet</a>
 , <a class="el" href="classlk__optical__flow_1_1LKOpticalFlow.html#acee9bf1c96c1a9fcf3f4c8b48af0d382">lk_optical_flow::LKOpticalFlow</a>
@@ -265,6 +275,7 @@ $(document).ready(function(){initNavTree('functions_r.html',''); initResizable()
 </li>
 <li>ReadTopicInfo()
 : <a class="el" href="classdds__ros__bridge_1_1DdsRosBridge.html#a07d38a34ab440d2043be13aedf2d64f1">dds_ros_bridge::DdsRosBridge</a>
+, <a class="el" href="classground__dds__ros__bridge_1_1GroundDdsRosBridge.html#a5ae46a75324b90ea1261e4395cf2cbd1">ground_dds_ros_bridge::GroundDdsRosBridge</a>
 </li>
 <li>ReadUInt()
 : <a class="el" href="classconfig__reader_1_1ConfigReader.html#a959d6a6df3b9a7a05237f77051b8067a">config_reader::ConfigReader</a>
@@ -561,7 +572,7 @@ $(document).ready(function(){initNavTree('functions_r.html',''); initResizable()
 : <a class="el" href="classtraj__opt_1_1LegendreTrajectory.html#ac57a925d19d22a0e9247cd7e538acdd5">traj_opt::LegendreTrajectory</a>
 </li>
 <li>ResetEkf()
-: <a class="el" href="classexecutive_1_1Executive.html#a7c88665879474d1dc9455c29636f6fb9">executive::Executive</a>
+: <a class="el" href="classexecutive_1_1Executive.html#ad4d6e7969c1eb7825cc2c7da3f083f65">executive::Executive</a>
 </li>
 <li>ResetFilter()
 : <a class="el" href="classlocalization__manager_1_1LocalizationManagerNodelet.html#ac8ed59d7c145e4c349b7e0e4e2adf0c0">localization_manager::LocalizationManagerNodelet</a>
@@ -698,7 +709,7 @@ $(document).ready(function(){initNavTree('functions_r.html',''); initResizable()
 : <a class="el" href="classsim__wrapper_1_1Sim.html#acbd1f5250f971d2a1e22200a79e54c9b">sim_wrapper::Sim</a>
 </li>
 <li>ROS_STATIC_ASSERT()
-: <a class="el" href="structros_1_1message__traits_1_1MD5Sum_3_01pcl_1_1PCLPointCloud2_01_4.html#ac42f9f7167a7419764e4b5df60d56dea">ros::message_traits::MD5Sum&lt; pcl::PCLPointCloud2 &gt;</a>
+: <a class="el" href="structros_1_1message__traits_1_1MD5Sum_3_01pcl_1_1PCLPointCloud2_01_4.html#ab2d8a919572a3ecdfc8b163867bb389e">ros::message_traits::MD5Sum&lt; pcl::PCLPointCloud2 &gt;</a>
 , <a class="el" href="structros_1_1message__traits_1_1MD5Sum_3_01pcl_1_1PointCloud_3_01T_01_4_01_4.html#acc573b722125550fdd2efd633a685ad6">ros::message_traits::MD5Sum&lt; pcl::PointCloud&lt; T &gt; &gt;</a>
 </li>
 <li>ros_tag_
@@ -735,7 +746,7 @@ $(document).ready(function(){initNavTree('functions_r.html',''); initResizable()
 : <a class="el" href="classff_1_1RosCommandConfigRapidCommandConfig.html#ac60f08890ed74a6d6f73a39a838f83ad">ff::RosCommandConfigRapidCommandConfig</a>
 </li>
 <li>RosCommandToRapid()
-: <a class="el" href="classff_1_1RosCommandToRapid.html#a7a37a54be41ec821327a6c61a1eba05f">ff::RosCommandToRapid</a>
+: <a class="el" href="classff_1_1RosCommandToRapid.html#a22aa37508d72ad6d050ae1389ef8892c">ff::RosCommandToRapid</a>
 </li>
 <li>RosCompressedFileAckToRapid()
 : <a class="el" href="classff_1_1RosCompressedFileAckToRapid.html#aa7d00b6952458e018629642e01146825">ff::RosCompressedFileAckToRapid</a>
