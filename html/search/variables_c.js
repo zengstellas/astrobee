@@ -119,10 +119,11 @@ var searchData=
   ['msg_5fspeed_5f_12577',['msg_speed_',['../namespacespeed__cam.html#a8f66a659031854119b9b07935737f2ea',1,'speed_cam']]],
   ['mutex_5f_12578',['mutex_',['../namespaceperching__arm.html#a194bed8f2349ed1dea24c74c60fd935e',1,'perching_arm::mutex_()'],['../smart__dock__service_8cc.html#a281b5ec791338d4378e22ef44a51b4a1',1,'mutex_():&#160;smart_dock_service.cc']]],
   ['mutex_5fcamera_5fimage_5f_12579',['mutex_camera_image_',['../namespacespeed__cam.html#ae55c196d9a16266d73c8a4bd5c6140ab',1,'speed_cam']]],
-  ['mutex_5fimu_5f_12580',['mutex_imu_',['../namespacespeed__cam.html#a5337526023574d85ff13143560f795e0',1,'speed_cam']]],
-  ['mutex_5fmass_5f_12581',['mutex_mass_',['../classfam_1_1Fam.html#a9dceeaf98a2136a385a065db11088212',1,'fam::Fam']]],
-  ['mutex_5foptical_5fflow_5f_12582',['mutex_optical_flow_',['../namespacespeed__cam.html#a337044bcb584a19f9e5eae96ccc753a9',1,'speed_cam']]],
-  ['mutex_5fspeed_5f_12583',['mutex_speed_',['../classfam_1_1Fam.html#a02f733f911d51c1934e177e35aa1ec2d',1,'fam::Fam::mutex_speed_()'],['../namespacespeed__cam.html#a8b7c4d180b35f96d8161882b9dad6814',1,'speed_cam::mutex_speed_()']]],
-  ['mutex_5fstate_5f_12584',['mutex_state_',['../namespacespeed__cam.html#a2c1c7c274ef26ed6158de5d172723314',1,'speed_cam']]],
-  ['mutex_5fversion_5f_12585',['mutex_version_',['../namespacespeed__cam.html#add1215923fd0d4f78bf10bdfb56ea8a6',1,'speed_cam']]]
+  ['mutex_5fdetector_5f_12580',['mutex_detector_',['../structsparse__mapping_1_1SparseMap.html#ae24863994af2a0b2960d87e967655c8d',1,'sparse_mapping::SparseMap']]],
+  ['mutex_5fimu_5f_12581',['mutex_imu_',['../namespacespeed__cam.html#a5337526023574d85ff13143560f795e0',1,'speed_cam']]],
+  ['mutex_5fmass_5f_12582',['mutex_mass_',['../classfam_1_1Fam.html#a9dceeaf98a2136a385a065db11088212',1,'fam::Fam']]],
+  ['mutex_5foptical_5fflow_5f_12583',['mutex_optical_flow_',['../namespacespeed__cam.html#a337044bcb584a19f9e5eae96ccc753a9',1,'speed_cam']]],
+  ['mutex_5fspeed_5f_12584',['mutex_speed_',['../classfam_1_1Fam.html#a02f733f911d51c1934e177e35aa1ec2d',1,'fam::Fam::mutex_speed_()'],['../namespacespeed__cam.html#a8b7c4d180b35f96d8161882b9dad6814',1,'speed_cam::mutex_speed_()']]],
+  ['mutex_5fstate_5f_12585',['mutex_state_',['../namespacespeed__cam.html#a2c1c7c274ef26ed6158de5d172723314',1,'speed_cam']]],
+  ['mutex_5fversion_5f_12586',['mutex_version_',['../namespacespeed__cam.html#add1215923fd0d4f78bf10bdfb56ea8a6',1,'speed_cam']]]
 ];
