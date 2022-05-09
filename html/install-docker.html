@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.16.3</span>
+   &#160;<span id="projectnumber">0.16.4</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('install-docker.html',''); initResizabl
 <div class="title">Docker build </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md188"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md189"></a>
 Usage instructions for Docker</h1>
 <p>Here there are instructions on how to build and run the FSW using Docker. First, clone the flight software repository and media: </p><pre class="fragment">git clone https://github.com/nasa/astrobee.git $SOURCE_PATH
 git submodule update --init --depth 1 description/media
@@ -114,13 +114,13 @@ git submodule update --init --depth 1 description/media
 <li><code>REMOTE</code> - The repository where the dockerfile should derive its base. Valid values are <code>astrobee</code> (the default for local builds) or <code>ghcr.io/nasa</code> (the official repository).</li>
 <li><code>REMOTE_CACHED</code> - (Only for <code>astrobee_quick.dockerfile</code>, defaults to <code>${REMOTE}</code>). The repository for the build cache image. Valid values are <code>astrobee</code> (the default for local builds) or <code>ghcr.io/nasa</code> (the official repository).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md189"></a>
+<h2><a class="anchor" id="autotoc_md190"></a>
 Optional: Build the docker image</h2>
 <p>The fastest way to start running the software is to fetch a remote docker image by using the <code>--remote</code> option with the <code>run.sh</code> script described below. Building the docker images is not required.</p>
 <p>However, if you need to build a local copy of the docker images, run: </p><pre class="fragment">./build.sh
 </pre><p>By default, the build script will automatically detect your host's Ubuntu OS version and configure the docker image to use the same version using the Dockerfile variables <code>UBUNTU_VERSION</code>, <code>ROS_VERSION</code>, and <code>PYTHON</code>.</p>
 <p>However, there is no requirement for the host OS and the docker image OS to match. You can override the default and select a specific docker image Ubuntu version by specifying <code>--xenial</code>, <code>--bionic</code>, or <code>--focal</code> for Ubuntu 16.04, 18.04, or 20.04 docker images, respectively.</p>
-<h2><a class="anchor" id="autotoc_md190"></a>
+<h2><a class="anchor" id="autotoc_md191"></a>
 Run the Astrobee simulator in the container</h2>
 <p><em>Note: To run the simulator within a docker container, the container generally needs to have hardware-accelerated graphics support. This requires compatible graphics hardware and may also require installing a special support package, such as <code>nvidia-container-toolkit</code>.</em></p>
 <p>To run the Astrobee simulator in the container: </p><pre class="fragment">./run.sh --remote
@@ -128,7 +128,7 @@ Run the Astrobee simulator in the container</h2>
 </pre><p>To open another terminal inside the same docker container: </p><pre class="fragment">docker exec -it astrobee /astrobee_init.sh bash
 </pre><p>(The <code>/astrobee_init.sh</code> script configures the shell in the container to know about the Astrobee development environment, then runs the specified command, in this case <code>bash</code>, to get an interactive shell.)</p>
 <p>To shutdown the docker container, run: </p><pre class="fragment">./shutdown.sh
-</pre><h2><a class="anchor" id="autotoc_md191"></a>
+</pre><h2><a class="anchor" id="autotoc_md192"></a>
 Run other commands in the container</h2>
 <p>Besides the simulator, you can also run arbitrary commands with <code>run.sh</code>. To get an interactive shell: </p><pre class="fragment">./run.sh --remote -- bash
 </pre><p>Or run any other command: </p><pre class="fragment">./run.sh --remote -- rosmsg info std_msgs/Header
@@ -137,7 +137,7 @@ Run other commands in the container</h2>
 <p>Use <code>--remote</code> to fetch and run a pre-built Astrobee docker image. (Omit <code>--remote</code> to run using a docker image built locally by <code>./build.sh</code>.)</p>
 <p>Use <code>--no-display</code> to skip setting up the X graphical environment. The script will also automatically skip X setup if it detects you are in a headless host environment. Of course, graphical applications will not be available.</p>
 <p>Use <code>--mount</code> to mount your local source checkout into its standard location in the docker container, where it will override the copy embedded within the container. This is ideal for making changes in your host environment, then quickly testing them in the container.</p>
-<h2><a class="anchor" id="autotoc_md192"></a>
+<h2><a class="anchor" id="autotoc_md193"></a>
 Run unit tests in the container</h2>
 <p>The <code>run_tests.sh</code> script (located in the parent <code>scripts</code> folder) is designed to run within the container and closely mimic the testing actions in <code>test_astrobee.Dockerfile</code>, which is invoked by the <code>astrobee</code> GitHub continuous integration workflow. You can use it to replicate and debug failed CI tests.</p>
 <p>Example usage: </p><pre class="fragment">host$ ./run.sh --remote --mount
@@ -148,7 +148,7 @@ docker# /src/astrobee/src/scripts/run_tests.sh [package]
 <p>Note: integration tests that use Gazebo simulation will be silently disabled when running with <code>--no-display</code>. To ensure complete testing, run in a host environment that supports X graphics.</p>
 <p>If you care about higher-fidelity replication of CI problems and are willing to wait through a full <code>astrobee</code> build, you can also use <code>build.sh</code> to invoke <code>test_astrobee.Dockerfile</code> itself, like this: </p><pre class="fragment">./build.sh --remote astrobee test_astrobee
 </pre><p>Or, if you made changes that affect <code>astrobee_base.Dockerfile</code>, you will need to rebuild that locally as well: </p><pre class="fragment">./build.sh astrobee_base astrobee test_astrobee
-</pre><h2><a class="anchor" id="autotoc_md193"></a>
+</pre><h2><a class="anchor" id="autotoc_md194"></a>
 Cross-compile Astrobee (NASA users only)</h2>
 <p>To cross-compile Astrobee, you will need to install a cross-compile chroot and toolchain. Select two directories for these: </p><pre class="fragment">export ARMHF_CHROOT_DIR=$HOME/arm_cross/rootfs
 export ARMHF_TOOLCHAIN=$HOME/arm_cross/toolchain/gcc
@@ -160,7 +160,7 @@ $SOURCE_PATH/submodules/platform/rootfs/make_xenial.sh dev $ARMHF_CHROOT_DIR
 </pre><p>From the root of the repository, run: </p><pre class="fragment">./scripts/docker/cross_compile/cross_compile.sh
 </pre><p>The code will be cross-compiles inside the docker container in /opt/astrobee, and can be copied to the robot.</p>
 <p>After the debian files are generated inside the docker image, they are copied to in order of priority: 1) To the INSTALL_PATH, if defined 2) To ${DIR}/../../../../astrobee_install/armhf/, if the directoy already exists, where $DIR is the directory where the cross_compile.sh script is located. 3) To $HOME/astrobee_build/armhf otherwise</p>
-<h2><a class="anchor" id="autotoc_md194"></a>
+<h2><a class="anchor" id="autotoc_md195"></a>
 Building an Astrobee Debian (NASA users only)</h2>
 <p>This step assumes that the cross compile setup was successful and that ARMHF_CHROOT_DIR and ARMHF_TOOLCHAIN are defined. If not, please follow the cross-compile instructions.</p>
 <p>To generate the debians, from the root of the repository, run: </p><pre class="fragment">./scripts/docker/cross_compile/debian_compile.sh
