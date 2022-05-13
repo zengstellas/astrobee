@@ -91,72 +91,72 @@ $(document).ready(function(){initNavTree('localizationanalysis.html',''); initRe
 <div class="title">Localization Analysis </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md631"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md638"></a>
 Package Overview</h1>
 <p>The localization analysis package provides several tools for measuring localization performance as described below.</p>
-<h2><a class="anchor" id="autotoc_md632"></a>
+<h2><a class="anchor" id="autotoc_md639"></a>
 Usage Instructions</h2>
 <p>For each tool and script, run <code>rosrun <a class="el" href="namespacelocalization__analysis.html">localization_analysis</a> tool_or_script_name -h</code> for further details and usage instructions.</p>
-<h1><a class="anchor" id="autotoc_md633"></a>
+<h1><a class="anchor" id="autotoc_md640"></a>
 Tools</h1>
-<h2><a class="anchor" id="autotoc_md634"></a>
+<h2><a class="anchor" id="autotoc_md641"></a>
 &lt;tt&gt;convert_depth_msg&lt;/tt&gt;</h2>
 <p>Converts depth messages in a provided bagfile to intensity images.</p>
-<h2><a class="anchor" id="autotoc_md635"></a>
+<h2><a class="anchor" id="autotoc_md642"></a>
 &lt;tt&gt;run_bag_imu_filterer&lt;/tt&gt;</h2>
 <p>Reads through a bag file and filters imu measurements, replacing the old imu measurements with new filtered ones. The filtered data is saved to a bagfile and can be plotted and analyzed using the imu_analyzer script.</p>
-<h2><a class="anchor" id="autotoc_md636"></a>
+<h2><a class="anchor" id="autotoc_md643"></a>
 &lt;tt&gt;run_depth_odometry_adder&lt;/tt&gt;</h2>
 <p>Generates depth odometry relative poses using recorded depth camera data and saves these to a bag file.</p>
-<h2><a class="anchor" id="autotoc_md637"></a>
+<h2><a class="anchor" id="autotoc_md644"></a>
 &lt;tt&gt;run_graph_bag&lt;/tt&gt;</h2>
 <p>Runs graph localization on a bagfile and saves the results to a new bagfile. The results can be plotted using the <code>plot_results.py</code> script.</p>
-<h2><a class="anchor" id="autotoc_md638"></a>
+<h2><a class="anchor" id="autotoc_md645"></a>
 &lt;tt&gt;run_imu_bias_tester_adder&lt;/tt&gt;</h2>
 <p>Generates imu bias integrated poses and saves these to a bagfile. The results can be plotted using the <code>plot_results.py</code> script. See the <code><a class="el" href="namespaceimu__bias__tester.html">imu_bias_tester</a></code> package readme for more details.</p>
-<h2><a class="anchor" id="autotoc_md639"></a>
+<h2><a class="anchor" id="autotoc_md646"></a>
 &lt;tt&gt;run_sparse_mapping_pose_adder&lt;/tt&gt;</h2>
 <p>Generates sparse mapping poses using sparse mapping feature messages and the body_T_nav_cam extrinsics from the provided robot config file.</p>
-<h1><a class="anchor" id="autotoc_md640"></a>
+<h1><a class="anchor" id="autotoc_md647"></a>
 Scripts</h1>
-<h2><a class="anchor" id="autotoc_md641"></a>
+<h2><a class="anchor" id="autotoc_md648"></a>
 &lt;tt&gt;bag_and_parameter_sweep&lt;/tt&gt;</h2>
 <p>Runs a parameter sweep on a set of bagfiles. See parameter_sweep.py and bag_sweep.py for more details on parameter and bag sweeps.</p>
-<h2><a class="anchor" id="autotoc_md642"></a>
+<h2><a class="anchor" id="autotoc_md649"></a>
 &lt;tt&gt;bag_sweep&lt;/tt&gt;</h2>
 <p>Runs the graph bag tool in parallel on multiple bag files. It takes config file with bag names, map names, and robot configs and produces pdfs and result bagfiles for each entry. Example config file: <br  />
  </p><div class="fragment"><div class="line">/home/bag_name.bag /home/map_name.map /mgt/img_sampler/nav_cam/image_record /home/astrobee/src/astrobee config/robots/bumble.config iss false  </div>
 <div class="line">/home/bag_name_2.bag /home/map_name.map /mgt/img_sampler/nav_cam/image_record /home/astrobee/src/astrobee config/robots/bumble.config iss false</div>
 </div><!-- fragment --><p>Example bag sweep command: <br  />
  </p><div class="fragment"><div class="line">rosrun localization_analysis bag_sweep.py /home/bag_sweep_config.csv /home/output_dir</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md643"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md650"></a>
 &lt;tt&gt;depth_odometry_parameter_sweep&lt;/tt&gt;</h2>
 <p>Runs a parameter sweep for depth odometry relative pose estimation and plots the results.</p>
-<h2><a class="anchor" id="autotoc_md644"></a>
+<h2><a class="anchor" id="autotoc_md651"></a>
 &lt;tt&gt;get_average_opt_and_update_times&lt;/tt&gt;</h2>
 <p>Prints stats for the optimization and update times of the graph localizer from the recorded graph_state messages in the provided bagfile.</p>
-<h2><a class="anchor" id="autotoc_md645"></a>
+<h2><a class="anchor" id="autotoc_md652"></a>
 &lt;tt&gt;groundtruth_sweep&lt;/tt&gt;</h2>
 <p>Creates groundtruth in parallel for a set of bagfiles.</p>
-<h2><a class="anchor" id="autotoc_md646"></a>
+<h2><a class="anchor" id="autotoc_md653"></a>
 &lt;tt&gt;imu_analyzer&lt;/tt&gt;</h2>
 <p>Generates comparison plots for raw and filtered <a class="el" href="structIMU.html">IMU</a> data.</p>
-<h2><a class="anchor" id="autotoc_md647"></a>
+<h2><a class="anchor" id="autotoc_md654"></a>
 &lt;tt&gt;make_groundtruth&lt;/tt&gt;</h2>
 <p>Creates a groundtruth map and bagfile containing groundtruth poses for a provided bagfile.</p>
-<h2><a class="anchor" id="autotoc_md648"></a>
+<h2><a class="anchor" id="autotoc_md655"></a>
 &lt;tt&gt;make_map&lt;/tt&gt;</h2>
 <p>Creates a map for a provided bagfile, optionally merged with an existing map as well.</p>
-<h2><a class="anchor" id="autotoc_md649"></a>
+<h2><a class="anchor" id="autotoc_md656"></a>
 &lt;tt&gt;parameter_sweep&lt;/tt&gt;</h2>
 <p>Runs a parameter sweep for the graph localizer on a bagfile and plots the results.</p>
-<h2><a class="anchor" id="autotoc_md650"></a>
+<h2><a class="anchor" id="autotoc_md657"></a>
 &lt;tt&gt;plot_all_results&lt;/tt&gt;</h2>
 <p>Plots localization results for each bagfile in a directory.</p>
-<h2><a class="anchor" id="autotoc_md651"></a>
+<h2><a class="anchor" id="autotoc_md658"></a>
 &lt;tt&gt;plot_results&lt;/tt&gt;</h2>
 <p>Plots localization information for a bagfile to a pdf. Uses either sparse mapping poses from the input bagfile or a seperate bagfile containing groundtruth poses for comparison with the localization estimates.</p>
-<h2><a class="anchor" id="autotoc_md652"></a>
+<h2><a class="anchor" id="autotoc_md659"></a>
 &lt;tt&gt;run_graph_bag_and_plot_results&lt;/tt&gt;</h2>
 <p>Generates localization estimates and plots results for a provided bagfile. </p>
 </div></div><!-- contents -->

@@ -1,40 +1,49 @@
 var sparsemapping =
 [
-    [ "Creation of sparse maps for robot localization", "sparsemapping.html#autotoc_md396", [
-      [ "What is a map", "sparsemapping.html#autotoc_md397", null ],
-      [ "Map files", "sparsemapping.html#autotoc_md398", null ],
-      [ "ROS node", "sparsemapping.html#autotoc_md399", [
+    [ "Creation of sparse maps for robot localization", "sparsemapping.html#autotoc_md403", [
+      [ "What is a map", "sparsemapping.html#autotoc_md404", null ],
+      [ "Map files", "sparsemapping.html#autotoc_md405", null ],
+      [ "ROS node", "sparsemapping.html#autotoc_md406", [
         [ "Residuals", "optimizationcommon.html#autotoc_md342", null ],
         [ "SE3 Local Parameterization", "optimizationcommon.html#autotoc_md343", null ],
         [ "Utilities", "optimizationcommon.html#autotoc_md344", null ],
         [ "PointToPlaneICP", "pointcloudcommon.html#autotoc_md346", null ],
         [ "PointCloudWithKnownCorrespondencesAligner", "pointcloudcommon.html#autotoc_md347", null ],
         [ "Utilities", "pointcloudcommon.html#autotoc_md348", null ],
-        [ "Inputs", "sparsemapping.html#autotoc_md400", null ],
-        [ "Outputs", "sparsemapping.html#autotoc_md401", null ]
+        [ "Inputs", "sparsemapping.html#autotoc_md407", null ],
+        [ "Outputs", "sparsemapping.html#autotoc_md408", null ]
       ] ],
-      [ "The environment", "sparsemapping.html#autotoc_md402", null ],
-      [ "Tools and procedures", "sparsemapping.html#autotoc_md403", [
-        [ "Record a bag", "sparsemapping.html#autotoc_md404", null ],
-        [ "Filter the bag", "sparsemapping.html#autotoc_md405", null ],
-        [ "Copy the bag from the robot", "sparsemapping.html#autotoc_md406", null ],
-        [ "Merging bags", "sparsemapping.html#autotoc_md407", null ],
-        [ "Extracting images", "sparsemapping.html#autotoc_md408", null ],
-        [ "Building a map", "sparsemapping.html#autotoc_md409", null ],
-        [ "Visualization", "sparsemapping.html#autotoc_md410", null ],
-        [ "Localize a single frame", "sparsemapping.html#autotoc_md411", null ],
-        [ "Testing localization using two maps", "sparsemapping.html#autotoc_md412", null ],
-        [ "Testing localization using a bag", "sparsemapping.html#autotoc_md413", null ],
-        [ "Extract sub-maps", "sparsemapping.html#autotoc_md414", null ],
-        [ "Merge maps", "sparsemapping.html#autotoc_md415", null ],
-        [ "How to build a map efficiently", "sparsemapping.html#autotoc_md416", null ],
-        [ "Map strategy for the space station", "sparsemapping.html#autotoc_md417", null ],
-        [ "Growing a map when more images are acquired", "sparsemapping.html#autotoc_md418", null ],
-        [ "Reducing the number of images in a map", "sparsemapping.html#autotoc_md419", null ]
+      [ "The environment", "sparsemapping.html#autotoc_md409", null ],
+      [ "Tools and procedures", "sparsemapping.html#autotoc_md410", [
+        [ "Record a bag", "sparsemapping.html#autotoc_md411", null ],
+        [ "Filter the bag", "sparsemapping.html#autotoc_md412", null ],
+        [ "Copy the bag from the robot", "sparsemapping.html#autotoc_md413", null ],
+        [ "Merging bags", "sparsemapping.html#autotoc_md414", null ],
+        [ "Extracting images", "sparsemapping.html#autotoc_md415", null ],
+        [ "Building a map", "sparsemapping.html#autotoc_md416", null ],
+        [ "Visualization", "sparsemapping.html#autotoc_md417", null ],
+        [ "Localize a single frame", "sparsemapping.html#autotoc_md418", null ],
+        [ "Testing localization using two maps", "sparsemapping.html#autotoc_md419", null ],
+        [ "Testing localization using a bag", "sparsemapping.html#autotoc_md420", null ],
+        [ "Extract sub-maps", "sparsemapping.html#autotoc_md421", null ],
+        [ "Merge maps", "sparsemapping.html#autotoc_md422", null ],
+        [ "How to build a map efficiently", "sparsemapping.html#autotoc_md423", null ],
+        [ "Map strategy for the space station", "sparsemapping.html#autotoc_md424", null ],
+        [ "Growing a map when more images are acquired", "sparsemapping.html#autotoc_md425", null ],
+        [ "Reducing the number of images in a map", "sparsemapping.html#autotoc_md426", null ]
       ] ]
     ] ],
+    [ "Build map from multiple bags", "build_map_from_multiple_bags.html", null ],
     [ "Map building", "map_building.html", [
       [ "Detailed explanation", "map_building.html#autotoc_md350", [
+        [ "Steps", "build_map_from_multiple_bags.html#autotoc_md391", [
+          [ "1. Convert bags from bayer to rgb if necessary", "build_map_from_multiple_bags.html#autotoc_md392", null ],
+          [ "2. Splice bags using splice tool", "build_map_from_multiple_bags.html#autotoc_md393", null ],
+          [ "3. Build individual maps for each spliced bag", "build_map_from_multiple_bags.html#autotoc_md394", null ],
+          [ "4. Merge maps", "build_map_from_multiple_bags.html#autotoc_md395", null ],
+          [ "5. Register map against real world", "build_map_from_multiple_bags.html#autotoc_md396", null ],
+          [ "6. Verify the resulting map", "build_map_from_multiple_bags.html#autotoc_md397", null ]
+        ] ],
         [ "Summary", "map_building.html#autotoc_md349", null ],
         [ "Setup the environment", "map_building.html#autotoc_md351", null ],
         [ "Reduce the number of images", "map_building.html#autotoc_md352", null ],
@@ -85,26 +94,26 @@ var sparsemapping =
       ] ]
     ] ],
     [ "Total Station", "total_station.html", [
-      [ "Doing a Survey with the Total Station", "total_station.html#autotoc_md429", null ]
+      [ "Doing a Survey with the Total Station", "total_station.html#autotoc_md436", null ]
     ] ],
     [ "Granite Lab Registration", "granite_lab_registration.html", [
-      [ "Locations of the control points in the granite lab used for registration", "granite_lab_registration.html#autotoc_md391", [
-        [ "Point 1", "granite_lab_registration.html#autotoc_md392", null ],
-        [ "Point 2", "granite_lab_registration.html#autotoc_md393", null ],
-        [ "Point 3", "granite_lab_registration.html#autotoc_md394", null ],
-        [ "Point 4", "granite_lab_registration.html#autotoc_md395", null ]
+      [ "Locations of the control points in the granite lab used for registration", "granite_lab_registration.html#autotoc_md398", [
+        [ "Point 1", "granite_lab_registration.html#autotoc_md399", null ],
+        [ "Point 2", "granite_lab_registration.html#autotoc_md400", null ],
+        [ "Point 3", "granite_lab_registration.html#autotoc_md401", null ],
+        [ "Point 4", "granite_lab_registration.html#autotoc_md402", null ]
       ] ]
     ] ],
     [ "Faro", "faro.html", null ],
     [ "Building a map with Theia", "theia_map.html", [
-      [ "Install Theia's prerequisites", "theia_map.html#autotoc_md420", null ],
-      [ "Fetch and build Theia", "theia_map.html#autotoc_md421", null ],
-      [ "Hide the conda environment", "theia_map.html#autotoc_md422", null ],
-      [ "Set up the environment for Theia and Astrobee", "theia_map.html#autotoc_md423", null ],
-      [ "Prepare the data", "theia_map.html#autotoc_md424", null ],
-      [ "Run the Astrobee wrapper around the Theia tools", "theia_map.html#autotoc_md425", null ],
-      [ "Command line options", "theia_map.html#autotoc_md426", null ],
-      [ "Next steps", "theia_map.html#autotoc_md427", null ],
-      [ "Auxiliary import_map tool", "theia_map.html#autotoc_md428", null ]
+      [ "Install Theia's prerequisites", "theia_map.html#autotoc_md427", null ],
+      [ "Fetch and build Theia", "theia_map.html#autotoc_md428", null ],
+      [ "Hide the conda environment", "theia_map.html#autotoc_md429", null ],
+      [ "Set up the environment for Theia and Astrobee", "theia_map.html#autotoc_md430", null ],
+      [ "Prepare the data", "theia_map.html#autotoc_md431", null ],
+      [ "Run the Astrobee wrapper around the Theia tools", "theia_map.html#autotoc_md432", null ],
+      [ "Command line options", "theia_map.html#autotoc_md433", null ],
+      [ "Next steps", "theia_map.html#autotoc_md434", null ],
+      [ "Auxiliary import_map tool", "theia_map.html#autotoc_md435", null ]
     ] ]
 ];
