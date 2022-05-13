@@ -121,13 +121,9 @@ export ASTROBEE_WORLD=granite
 <p>More details on these and other environmental variables can be found in the <a class="el" href="astrobee.html">General Considerations</a> configuration documentation.</p>
 <h2><a class="anchor" id="autotoc_md352"></a>
 Reduce the number of images</h2>
-<p>Here, we delete the images that overlap highly. (This tool is, like all others, in astrobee_build/native.) </p><pre class="fragment">select_images -density_factor 1.4 &lt;image dir&gt;/*.jpg
-</pre><p>This is a non-reversible operation, so it should be invoked on a copy of the images.</p>
-<p>The higher the value of the density factor, the more images will be kept. Some experimentation with this number is necessary. A value of 1.4 seems to work well. It may be needed to decrease this to 1.0 if images appear to be too dense. Ideally the images should have perhaps on the order of 3/4 to 4/5 of overlap. This tool is not perfect. One should inspect the images in the <code>eog</code> viewer, and delete redundant ones from it manually, using the Delete key.</p>
-<p>The images can also be inspected and deleted with <code>nvm_visualize</code>, a tool included with this software. See <a class="el" href="sparsemapping.html">Sparse mapping</a> for details. This tool, unlike <code>eog</code>, echoes each image name as it is displayed, which can be useful with image manipulation tasks.</p>
-<p>If the images do not have enough overlap, the selection tool needs to be run again with a different value of this factor, or otherwise images must be added back manually.</p>
-<p>Alternatively, one can simply first pick every 10th or 20th image, such as: </p><pre class="fragment">ls &lt;image dir&gt;/*.jpg
-</pre><p>then copy these to a new directory.</p>
+<p>Remove low movement images: rosrun <a class="el" href="namespacesparse__mapping.html">sparse_mapping</a> remove_low_movement_images image_directory_name</p>
+<p>This will delete subsequent images with low movement from that directory to improve mapping performance and accuracy.</p>
+<p>This is a non-reversible operation, so it should be invoked on a copy of the images.</p>
 <p>It is important to avoid rotating the bot in place when acquiring images, as then the map could be of poor quality. Hence, the robot should have some translation motion (in addition to any rotation) when the data is acquired.</p>
 <h2><a class="anchor" id="autotoc_md353"></a>
 Building a map</h2>

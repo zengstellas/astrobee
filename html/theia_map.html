@@ -143,10 +143,8 @@ Prepare the data</h1>
   -image_topic /hw/cam_nav -output_directory image_dir
 </pre><p>If the images were recorded with the image sampler, the nav_cam image topic needs to be changed to: </p><pre class="fragment">/mgt/img_sampler/nav_cam/image_record
 </pre><p>The <code>-use_timestamp_as_image_name</code> option is not strictly necessary, but it is helpful if a lot of datasets needs to be processed jointly. With it, the image filename is the timestamp (in double-precision seconds since epoch), which provides for a rather unique name, as compared to using the image index in the bag without that option.</p>
-<p>Select a subset of the images: </p><pre class="fragment">select_images -density_factor 1.4 image_dir/*.jpg
-</pre><p>This will delete a lot of similar images from that directory. This is not a foolproof process, and sometimes too many images are deleted but most of the time too many are left. It is suggested to open the remaining images with <code>eog</code> as: </p><pre class="fragment">eog image_dir/*.jpg
-</pre><p>and use the <code>Delete</code> key to remove redundant ones. The <code>nvm_visualize</code> tool (see <a class="el" href="sparsemapping.html">Sparse mapping</a>) can be used exactly as <code>eog</code>, and it has the advantage that it echoes the current image name in the terminal, which can be useful in some occasions.</p>
-<p>A good rule of thumb is for each image to have a 4/5 overlap with the next one. Too much or too little overlap will cause Theia to fail.</p>
+<p>Remove low movement images: rosrun <a class="el" href="namespacesparse__mapping.html">sparse_mapping</a> remove_low_movement_images image_directory_name</p>
+<p>This will delete subsequent images with low movement from that directory to improve mapping performance and accuracy.</p>
 <p>It is suggested to avoid images with pure camera rotation, or at least to have in the mix additional images of the same environemnt without such rotations.</p>
 <p>Put the selected images in a list: </p><pre class="fragment">ls image_dir/*jpg &gt; image_list.txt
 </pre><h1><a class="anchor" id="autotoc_md425"></a>
