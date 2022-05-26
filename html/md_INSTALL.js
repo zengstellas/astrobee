@@ -13,53 +13,53 @@ var md_INSTALL =
     ] ],
     [ "Using Docker", "md_INSTALL.html#autotoc_md12", null ],
     [ "Install for general users", "install-nonNASA.html", [
-      [ "Usage instructions for non-NASA users", "install-nonNASA.html#autotoc_md113", [
-        [ "Machine setup", "install-nonNASA.html#autotoc_md114", [
-          [ "Checkout the project source code", "install-nonNASA.html#autotoc_md115", null ],
-          [ "Dependencies", "install-nonNASA.html#autotoc_md116", null ]
+      [ "Usage instructions for non-NASA users", "install-nonNASA.html#autotoc_md114", [
+        [ "Machine setup", "install-nonNASA.html#autotoc_md115", [
+          [ "Checkout the project source code", "install-nonNASA.html#autotoc_md116", null ],
+          [ "Dependencies", "install-nonNASA.html#autotoc_md117", null ]
         ] ],
-        [ "Configuring the build", "install-nonNASA.html#autotoc_md117", [
-          [ "Note for the build setup", "install-nonNASA.html#autotoc_md118", null ],
-          [ "Native build", "install-nonNASA.html#autotoc_md119", null ]
+        [ "Configuring the build", "install-nonNASA.html#autotoc_md118", [
+          [ "Note for the build setup", "install-nonNASA.html#autotoc_md119", null ],
+          [ "Native build", "install-nonNASA.html#autotoc_md120", null ]
         ] ],
-        [ "Building the code", "install-nonNASA.html#autotoc_md120", null ],
-        [ "Cross Compiling", "install-nonNASA.html#autotoc_md121", null ]
+        [ "Building the code", "install-nonNASA.html#autotoc_md121", null ],
+        [ "Cross Compiling", "install-nonNASA.html#autotoc_md122", null ]
       ] ]
     ] ],
     [ "Install for NASA users", "install-NASA.html", [
-      [ "Usage instructions for NASA users", "install-NASA.html#autotoc_md143", [
-        [ "Computer setup", "install-NASA.html#autotoc_md144", [
-          [ "Username", "install-NASA.html#autotoc_md145", null ],
-          [ "Access to the Astrobee Debian server", "install-NASA.html#autotoc_md146", [
-            [ "If on the ARC TI private network", "install-NASA.html#autotoc_md147", null ],
-            [ "If not on the ARC TI private network", "install-NASA.html#autotoc_md148", null ]
+      [ "Usage instructions for NASA users", "install-NASA.html#autotoc_md144", [
+        [ "Computer setup", "install-NASA.html#autotoc_md145", [
+          [ "Username", "install-NASA.html#autotoc_md146", null ],
+          [ "Access to the Astrobee Debian server", "install-NASA.html#autotoc_md147", [
+            [ "If on the ARC TI private network", "install-NASA.html#autotoc_md148", null ],
+            [ "If not on the ARC TI private network", "install-NASA.html#autotoc_md149", null ]
           ] ],
-          [ "Checkout the project source code", "install-NASA.html#autotoc_md149", null ],
-          [ "Dependencies", "install-NASA.html#autotoc_md150", [
-            [ "Extra options to install the dependencies", "install-NASA.html#autotoc_md151", null ]
+          [ "Checkout the project source code", "install-NASA.html#autotoc_md150", null ],
+          [ "Dependencies", "install-NASA.html#autotoc_md151", [
+            [ "Extra options to install the dependencies", "install-NASA.html#autotoc_md152", null ]
           ] ],
-          [ "Cross-compile setup", "install-NASA.html#autotoc_md152", null ]
+          [ "Cross-compile setup", "install-NASA.html#autotoc_md153", null ]
         ] ],
-        [ "Configuring the build", "install-NASA.html#autotoc_md153", [
-          [ "Note for both builds setup", "install-NASA.html#autotoc_md154", null ],
-          [ "Native build", "install-NASA.html#autotoc_md155", null ],
-          [ "Cross-compile build", "install-NASA.html#autotoc_md156", null ]
+        [ "Configuring the build", "install-NASA.html#autotoc_md154", [
+          [ "Note for both builds setup", "install-NASA.html#autotoc_md155", null ],
+          [ "Native build", "install-NASA.html#autotoc_md156", null ],
+          [ "Cross-compile build", "install-NASA.html#autotoc_md157", null ]
         ] ],
-        [ "Building the code", "install-NASA.html#autotoc_md157", null ],
-        [ "Switching build profiles", "install-NASA.html#autotoc_md158", null ],
-        [ "Running a simulation", "install-NASA.html#autotoc_md159", null ],
-        [ "Running the code on a real robot", "install-NASA.html#autotoc_md160", null ]
+        [ "Building the code", "install-NASA.html#autotoc_md158", null ],
+        [ "Switching build profiles", "install-NASA.html#autotoc_md159", null ],
+        [ "Running a simulation", "install-NASA.html#autotoc_md160", null ],
+        [ "Running the code on a real robot", "install-NASA.html#autotoc_md161", null ]
       ] ],
-      [ "Further information", "install-NASA.html#autotoc_md161", null ]
+      [ "Further information", "install-NASA.html#autotoc_md162", null ]
     ] ],
     [ "Docker build", "install-docker.html", [
-      [ "Usage instructions for Docker", "install-docker.html#autotoc_md189", [
-        [ "Optional: Build the docker image", "install-docker.html#autotoc_md190", null ],
-        [ "Run the Astrobee simulator in the container", "install-docker.html#autotoc_md191", null ],
-        [ "Run other commands in the container", "install-docker.html#autotoc_md192", null ],
-        [ "Run unit tests in the container", "install-docker.html#autotoc_md193", null ],
-        [ "Cross-compile Astrobee (NASA users only)", "install-docker.html#autotoc_md194", null ],
-        [ "Building an Astrobee Debian (NASA users only)", "install-docker.html#autotoc_md195", null ]
+      [ "Usage instructions for Docker", "install-docker.html#autotoc_md190", [
+        [ "Optional: Build the docker image", "install-docker.html#autotoc_md191", null ],
+        [ "Run the Astrobee simulator in the container", "install-docker.html#autotoc_md192", null ],
+        [ "Run other commands in the container", "install-docker.html#autotoc_md193", null ],
+        [ "Run unit tests in the container", "install-docker.html#autotoc_md194", null ],
+        [ "Cross-compile Astrobee (NASA users only)", "install-docker.html#autotoc_md195", null ],
+        [ "Building an Astrobee Debian (NASA users only)", "install-docker.html#autotoc_md196", null ]
       ] ]
     ] ]
 ];
