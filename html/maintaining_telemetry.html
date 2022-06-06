@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.16.5</span>
+   &#160;<span id="projectnumber">0.16.6</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -91,13 +91,13 @@ $(document).ready(function(){initNavTree('maintaining_telemetry.html',''); initR
 <div class="title">Maintaining Astrobee Telemetry Backward Compatibility </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md123"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md124"></a>
 Motivation and scope</h2>
 <p>The Astrobee Facility has built up a valuable archive of telemetry bags recorded by Astrobee robots on the ISS since commissioning in April</p><ol type="1">
 <li>Astrobee's flight software (FSW) has also changed substantially over that time, including several changes to the definitions of the message types contained in the telemetry bags. As a result, it has become more difficult over time to analyze or play back older legacy bags with the latest version of FSW.</li>
 </ol>
 <p>This document establishes objectives for backward compatibility and proposes a maintenance approach.</p>
-<h2><a class="anchor" id="autotoc_md124"></a>
+<h2><a class="anchor" id="autotoc_md125"></a>
 Telemetry maintenance objectives</h2>
 <ol type="1">
 <li>Astrobee developers should be able to <code>rosbag play</code> archived Astrobee ISS telemetry bags with the latest FSW, as a way to test the software in the ISS environment. For example, localization system development has relied heavily on bag playback as a way to iterate and overcome challenges related to the complex ISS interior that can't be replicated on the ground.</li>
@@ -110,7 +110,7 @@ Telemetry maintenance objectives</h2>
 </li>
 <li>We should minimize the burden on Astrobee developers and the Astrobee Facility ops team required to realize these goals.</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md125"></a>
+<h2><a class="anchor" id="autotoc_md126"></a>
 Telemetry maintenance requirements</h2>
 <ol type="1">
 <li>Developers should have guidance about steps they can take to maintain legacy bag compatibility with minimum effort (this document).</li>
@@ -127,7 +127,7 @@ Telemetry maintenance requirements</h2>
 </li>
 <li>Out of scope: The primary focus is on legacy messages recorded in ISS telemetry bags, or particularly important ground experiments. We will avoid investing effort in backward compatibility with old message definitions that were never recorded on the ISS. For example, certain older versions of Astrobee perching messages were tested on the ground, but never deployed on the ISS, and in those cases backward compatibility is not important.</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md126"></a>
+<h2><a class="anchor" id="autotoc_md127"></a>
 Telemetry maintenance approach</h2>
 <p>We will provide a fully automated script that can fix arbitrary legacy ISS Astrobee bags to be compatible with the latest FSW.</p>
 <p>The starting point for the script is the standard <a href="http://wiki.ros.org/rosbag/migration"><code>rosbag</code> migration</a> system provided with ROS. If we invest in maintaining the necessary <code>*.bmr</code> bag migration rules, the <code>rosbag fix</code> script can fix most but not all message definition problems.</p>
@@ -138,7 +138,7 @@ Telemetry maintenance approach</h2>
 <li>If the change is sufficiently complicated, it may not be worth the effort to figure out how to reliably remap old data into the new structure.</li>
 </ul>
 <p>When migration is problematic, we will instead "freeze" the old message definition by copying it to a legacy message type name, and rename the message type in legacy bags to use the frozen type name.</p>
-<h2><a class="anchor" id="autotoc_md127"></a>
+<h2><a class="anchor" id="autotoc_md128"></a>
 Developer guidelines for modifying messages</h2>
 <ul>
 <li>Begin by trying hard to get the initial design of any new messages correct on the first pass, avoiding later changes that will cause a migration hassle.</li>
@@ -190,7 +190,7 @@ Developer guidelines for modifying messages</h2>
 <li>Run <code>rosbag_fix_all.py</code> on an archived bag containing the legacy message. It automatically applies various consistency checks.</li>
 <li>Run <code>rostopic echo -b &lt;bag&gt; -p &lt;topic&gt;</code> on the fixed bag and spot check the field values in the output CSV file.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md128"></a>
+<h2><a class="anchor" id="autotoc_md129"></a>
 Ops approach for fixing bags</h2>
 <p>As long as FSW keeps evolving with changing message definitions, no matter how many times we apply our automated fix script to an archived bag, a future FSW change could always break its compatibility again.</p>
 <p>Therefore, we should take a layered approach to fixing bags:</p>
@@ -199,11 +199,11 @@ Ops approach for fixing bags</h2>
 <li>Since future FSW changes will continue to break bags, and we don't want to take on the burden of reprocessing all the previously released bags after every breaking message definition change, we should also provide a simple, documented approach for external users to fix them.</li>
 </ul>
 <p>Usage instructions for fixing bags are documented in: <a class="el" href="using_telemetry.html">Using Astrobee Robot Telemetry Logs</a></p>
-<h2><a class="anchor" id="autotoc_md129"></a>
+<h2><a class="anchor" id="autotoc_md130"></a>
 Complementary backward compatibility approach</h2>
 <p>This document focuses on maintaining backward compatibility of legacy bags with the ROS tools such as <code>rosbag</code> and <code>rostopic</code> that need the old messages to be compatible with the latest message definition. Clearly, this simplifies uses like testing the latest FSW using legacy bag playback.</p>
 <p>However, if all you need is offline analysis outside the ROS tools, the <a href="https://jmscslgroup.github.io/bagpy/"><code>bagpy</code> library</a> for Python 3 is a viable alternative. It relies on the fact that the <code>rosbag</code> format includes complete embedded message definitions, allowing it to deserialize the binary messages and output CSV with named fields, even if the latest ROS packages that define the messages no longer have consistent message definitions. In fact, it doesn't even require a full ROS installation. Fixed bags will never break from the <code>bagpy</code> analysis perspective. Using <code>bagpy</code> may be especially attractive for users who lack prior ROS experience.</p>
-<h2><a class="anchor" id="autotoc_md130"></a>
+<h2><a class="anchor" id="autotoc_md131"></a>
 Retroactive migration technical debt</h2>
 <p>Since Astrobee went through ISS commissioning in April 2019, there have been several message definition changes that lack corresponding migration rules.</p>
 <p>Our developers should retroactively create the necessary migration rules on a lazy as-needed basis. The most common triggering event to create a new rule would be noticing that <code>rosbag_fix_all.py</code> fails on an archived bag during the public data release process. </p>

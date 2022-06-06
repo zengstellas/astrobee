@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="astrobee-logo.png" height="100"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">NASA Astrobee Robot Software
-   &#160;<span id="projectnumber">0.16.5</span>
+   &#160;<span id="projectnumber">0.16.6</span>
    </div>
    <div id="projectbrief">Flight software for the Astrobee robot operating inside the International Space Station.</div>
   </td>
@@ -94,15 +94,15 @@ $(document).ready(function(){initNavTree('build_map_from_multiple_bags.html','')
 <div class="textblock"><p><br  />
  Several tools exist to ease the process of building a new map from a set of bagfiles. For more options/instructions for each tool, use <br  />
  <code>rosrun package_name tool_name.py -h</code>.</p>
-<h2><a class="anchor" id="autotoc_md392"></a>
+<h2><a class="anchor" id="autotoc_md393"></a>
 Steps</h2>
-<h3><a class="anchor" id="autotoc_md393"></a>
+<h3><a class="anchor" id="autotoc_md394"></a>
 1. Convert bags from bayer to rgb if necessary</h3>
 <p>Assuming the bags are all in the same directory, from that directory use: <br  />
  <code>rosrun bag_processing convert_all_bayer_bags.py</code> <br  />
 </p>
 <p>The original bayer bags can now be removed or moved elsewhere.</p>
-<h3><a class="anchor" id="autotoc_md394"></a>
+<h3><a class="anchor" id="autotoc_md395"></a>
 2. Splice bags using splice tool</h3>
 <p>For each bagfile, use the splice tool with: <br  />
  <code>rosrun bag_processing splice_bag.py bag_name</code> <br  />
@@ -110,32 +110,32 @@ Steps</h2>
 <p>The mapping pipeline struggles with in place rotations, so try to splice a bagfile before and after the rotation if necessary. If the rotation contains enough simultaneous translational movement, do not splice around the rotation since splicing could result in different segments of a movement no longer matching to each other when they are later merged if there is not enough overlap in their images.</p>
 <p>If a bag contains multiple movements that contain sufficient overlap, these can be spliced to make the mapping process more efficient (smaller bags are faster to create maps for) and allow for more modular sanity checks (if movements are spliced and one fails to map well, the other may still be usable).</p>
 <p>After splicing, the original bags can be removed or moved elsewhere.</p>
-<h3><a class="anchor" id="autotoc_md395"></a>
+<h3><a class="anchor" id="autotoc_md396"></a>
 3. Build individual SURF maps for each spliced bag</h3>
 <p>Run <br  />
  <code>rosrun <a class="el" href="namespacesparse__mapping.html">sparse_mapping</a> make_surf_maps.py -r robot_name -w world_name</code></p>
 <p>This builds individual maps in parallel for each spliced bag in the directory. The mapping process first removes low movement images from a bagfile to prevent triangulation issues and make the mapping process more efficient, then builds a surf map (detects image features, matches features, runs incremental bundle adjustment using successive images, runs a final round of bundle adjustment on the whole map).</p>
 <p>View the map poses using <br  />
  <code>rosrun <a class="el" href="namespacesparse__mapping.html">sparse_mapping</a> nvm_visualize -only_poses</code> to ensure the maps were built successfully.</p>
-<h3><a class="anchor" id="autotoc_md396"></a>
+<h3><a class="anchor" id="autotoc_md397"></a>
 4. Merge SURF maps</h3>
 <p>A common merge strategy for a set of movements is to identify the longest movement that covers the most of an area and incrementally merge in maps that have sufficient overlap with this. Use: <br  />
  <code>rosrun <a class="el" href="namespacesparse__mapping.html">sparse_mapping</a> merge_maps larger_map_name smaller_map_name -output_map combined_map_name -num_image_overlaps_at_endpoints 1000000</code></p>
 <p>First merge the new movements together using the above strategy, then optionally merge the resultant combined new movements map into an already existing map (that has some overlap with the new combined movements maps).</p>
 <p>View the resulting map poses using <br  />
  <code>rosrun <a class="el" href="namespacesparse__mapping.html">sparse_mapping</a> nvm_visualize -only_poses</code> to ensure the maps were built successfully.</p>
-<h3><a class="anchor" id="autotoc_md397"></a>
+<h3><a class="anchor" id="autotoc_md398"></a>
 5. Register SURF map using provided world points</h3>
 <p>Since mapping is perfomed using monocular images, no set scale is provied and the map needs to be registered using real world points before being used for localization. Additionally, providing known point locations for images in the map can improve the accuracy of the map creation.</p>
 <p>First copy the map that should be registered then run: <br  />
  <code>rosrun <a class="el" href="namespacesparse__mapping.html">sparse_mapping</a> build_map -registration registration_points.pto registration_points.txt -output_map registered_map_name</code></p>
 <p>The creation of registration points is detailed in <code><a class="el" href="build__map_8md.html">build_map.md</a></code>, images from the map are used to manually select feature locations and 3D points for these features are selected using a 3D model of the mapped environment provided externally.</p>
-<h3><a class="anchor" id="autotoc_md398"></a>
+<h3><a class="anchor" id="autotoc_md399"></a>
 6. Build BRISK map for localization</h3>
 <p>Use: <br  />
  <code>rosrun <a class="el" href="namespacesparse__mapping.html">sparse_mapping</a> make_brisk_map.py surf_map_name -r robot_name -w world_name -d map_directory</code> <br  />
  to rebuild the SURF map with BRISK features for use with localization.</p>
-<h3><a class="anchor" id="autotoc_md399"></a>
+<h3><a class="anchor" id="autotoc_md400"></a>
 7. Verify BRISK map using localization</h3>
 <p>Use: <br  />
  <code>rosrun <a class="el" href="namespacesparse__mapping.html">sparse_mapping</a> run_graph_bag_and_plot_results bag_name brisk_map_name config_path --generate-image-features -r robot_config -w world_name</code> <br  />
