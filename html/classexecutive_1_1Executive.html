@@ -249,6 +249,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3c7c12183405e7735c0a628907662791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab61018658ab41bfaf399c89bfc8caafa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#ab61018658ab41bfaf399c89bfc8caafa">Dock</a> (ff_msgs::CommandStampedPtr const &amp;cmd)</td></tr>
 <tr class="separator:ab61018658ab41bfaf399c89bfc8caafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7bf594cf42b30c024475528310f161f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#aa7bf594cf42b30c024475528310f161f">EnableAstrobeeIntercomms</a> (ff_msgs::CommandStampedPtr const &amp;cmd)</td></tr>
+<tr class="separator:aa7bf594cf42b30c024475528310f161f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a898f074a864a15bb6a9c10dcf707c5c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#a898f074a864a15bb6a9c10dcf707c5c8">Fault</a> (ff_msgs::CommandStampedPtr const &amp;cmd)</td></tr>
 <tr class="separator:a898f074a864a15bb6a9c10dcf707c5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d932b784bf20160ca3ecc1bd3c733d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#a2d932b784bf20160ca3ecc1bd3c733d7">GripperControl</a> (ff_msgs::CommandStampedPtr const &amp;cmd)</td></tr>
@@ -507,6 +509,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:abc1b8610c750f445e908a5e345957476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affe75dfd76b71b1b708267c5d73982f9"><td class="memItemLeft" align="right" valign="top">ros::ServiceClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#affe75dfd76b71b1b708267c5d73982f9">eps_terminate_client_</a></td></tr>
 <tr class="separator:affe75dfd76b71b1b708267c5d73982f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8dc8a518d874e82c9268ddc8fd209e"><td class="memItemLeft" align="right" valign="top">ros::ServiceClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#abb8dc8a518d874e82c9268ddc8fd209e">enable_astrobee_intercommunication_client_</a></td></tr>
+<tr class="separator:abb8dc8a518d874e82c9268ddc8fd209e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2abdd945bb16caa1b6792acb442abbcf"><td class="memItemLeft" align="right" valign="top">ros::ServiceClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#a2abdd945bb16caa1b6792acb442abbcf">unload_load_nodelet_client_</a></td></tr>
 <tr class="separator:a2abdd945bb16caa1b6792acb442abbcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b39b50a36c3978fdeac26bff5fa8349"><td class="memItemLeft" align="right" valign="top">ros::ServiceClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexecutive_1_1Executive.html#a0b39b50a36c3978fdeac26bff5fa8349">set_collision_distance_client_</a></td></tr>
@@ -1089,6 +1093,24 @@ Additional Inherited Members</h2></td></tr>
           <td>(</td>
           <td class="paramtype">ff_msgs::DockStateConstPtr const &amp;&#160;</td>
           <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7bf594cf42b30c024475528310f161f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7bf594cf42b30c024475528310f161f">&#9670;&nbsp;</a></span>EnableAstrobeeIntercomms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool executive::Executive::EnableAstrobeeIntercomms </td>
+          <td>(</td>
+          <td class="paramtype">ff_msgs::CommandStampedPtr const &amp;&#160;</td>
+          <td class="paramname"><em>cmd</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3568,6 +3590,28 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">ros::Subscriber executive::Executive::dock_state_sub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb8dc8a518d874e82c9268ddc8fd209e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb8dc8a518d874e82c9268ddc8fd209e">&#9670;&nbsp;</a></span>enable_astrobee_intercommunication_client_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::ServiceClient executive::Executive::enable_astrobee_intercommunication_client_</td>
         </tr>
       </table>
   </td>
