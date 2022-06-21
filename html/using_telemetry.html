@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('using_telemetry.html',''); initResizab
 <div class="title">Using Astrobee Robot Telemetry Logs </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The ISS Astrobee Facility has established an [Astrobee ISS telemetry log public release folder](<a href="https://nasagov.box.com/s/4ign43svk39guhy9ev8t5xkzui6tqjm1">https://nasagov.box.com/s/4ign43svk39guhy9ev8t5xkzui6tqjm1</a>).</p>
+<div class="textblock"><p>The ISS Astrobee Facility has established an <a href="https://nasagov.box.com/s/4ign43svk39guhy9ev8t5xkzui6tqjm1">Astrobee ISS telemetry log public release folder</a>.</p>
 <p>Astrobee telemetry logs are also called "bag files" and use the <a href="http://wiki.ros.org/rosbag">rosbag</a> format.</p>
 <h2><a class="anchor" id="autotoc_md167"></a>
 Understanding telemetry in context</h2>
@@ -132,7 +132,7 @@ Finding the right bag</h2>
 <p>The ZIP archive file name includes the Astrobee robot serial number and robot name. For example, in "2021-03-26_SN003_bumble.zip", "SN003_bumble" means Astrobee serial number 3, also known as "Bumble". If multiple robots were involved in an activity, there will be multiple ZIP files.</p>
 <p>When a ZIP archive is unpacked, it may contain multiple bag files. To explain why, we should first note that Astrobee flight software is able to log two concurrent telemetry streams:</p>
 <ol type="1">
-<li>The <code>immediate</code> stream contains relatively low-bandwidth housekeeping information useful for robot debugging. The list of topics logged in this stream stays fairly consistent over all Astrobee activities, only occasionally changing due to Astrobee baseline flight software upgrades. Bags that record the <code>immediate</code> stream typically have a filename ending in <code>ars_default.bag</code>. (Where "`ars`" stands for "Astrobee Robot Software".) Recording start/stop for this stream is usually related to starting or restarting the Astrobee baseline flight software.</li>
+<li>The <code>immediate</code> stream contains relatively low-bandwidth housekeeping information useful for robot debugging. The list of topics logged in this stream stays fairly consistent over all Astrobee activities, only occasionally changing due to Astrobee baseline flight software upgrades. Bags that record the <code>immediate</code> stream typically have a filename ending in <code>ars_default.bag</code>. (Where "ars" stands for "Astrobee Robot Software".) Recording start/stop for this stream is usually related to starting or restarting the Astrobee baseline flight software.</li>
 <li>The <code>delayed</code> stream is configured much more dynamically. Typically, the Astrobee user defining the objectives of the activity will develop one or more logging profiles (i.e., lists of topics to log) that suit their objectives. During the course of a single ISS activity, ground operators can start and stop bag recording as well as switching logging profiles, as directed by the ground procedure. The tail end of the filename for each <code>delayed</code> stream bag file is also set by the operator. Recording start/stop is frequently used to separate the bag files relating to different procedure steps and give them meaningful names. Because high-bandwidth imagery logging can quickly exhaust Astrobee's onboard storage, <code>delayed</code> stream bag recording is often disabled for most of the activity.</li>
 </ol>
 <p>To reiterate, these two streams are logged concurrently, so it is common to have an <code>immediate</code> bag file and a <code>delayed</code> bag file that cover overlapping time intervals, recording different topics. The fact that the two streams are stored in separate bag files is not a barrier to analyzing them together: if needed, we have tools that enable you to merge bag files in message timestamp order.</p>
@@ -146,7 +146,9 @@ Install before working with bags</h2>
 Preparing the bag for analysis</h2>
 <p>As Astrobee flight software continues to evolve, its telemetry message definitions occasionally change in ways that break backward compatibility for analysis of archived telemetry bags.</p>
 <p>We recommend "fixing" a bag (rewriting it for compatibility with the latest message definitions) before using it, as follows:</p>
-<div class="fragment"><div class="line">rosrun bag_processing rosbag_fix_all.py in.bag</div>
+<div class="fragment"><div class="line">source $ASTROBEE_WS/devel/setup.bash</div>
+<div class="line">rosrun bag_processing rosbag_fix_all.py 1.bag 2.bag</div>
+<div class="line"># should produce fixed output: 1.fix_all.bag 2.fix_all.bag</div>
 </div><!-- fragment --><p>However, fixing the bag may not be needed if you plan to analyze it only with <code>bagpy</code> and not with the core ROS tools.</p>
 <h2><a class="anchor" id="autotoc_md172"></a>
 Figuring out what's in the bag</h2>
@@ -168,7 +170,9 @@ Common bag processing tasks</h2>
 <h3><a class="anchor" id="autotoc_md174"></a>
 Converting a bag to CSV format</h3>
 <p>The following example CSV export uses a bag from the publicly released ZIP archive <code>2021-03-26_SN003_bumble.zip</code>:</p>
-<div class="fragment"><div class="line">BAG=20210326_1855_phase1Loc_survey_bay_5_attempt_2.bag</div>
+<div class="fragment"><div class="line">source $ASTROBEE_WS/devel/setup.bash</div>
+<div class="line">BAG=20210326_1855_phase1Loc_survey_bay_5_attempt_2.bag</div>
+<div class="line"> </div>
 <div class="line"># generate a smaller bag containing only the topic of interest (filtering out any bad message types)</div>
 <div class="line">rosrun bag_processing rosbag_topic_filter.py $BAG -a /loc/pose loc_pose.bag</div>
 <div class="line"># export to CSV</div>
@@ -177,7 +181,8 @@ Converting a bag to CSV format</h3>
 Combining different message topics based on their timestamps</h3>
 <p>Often we want to analyze two message topics together, combining the fields of messages on both topics that were received around the same time. For example, we might want to join sensor measurement messages with pose messages to generate combined sensor+pose records that can be used to plot a map.</p>
 <p>We provide the <code>csv_join.py</code> script to perform this task on exported CSV files. The following example uses a bag from the publicly released ZIP archive <code>2021-03-26_SN003_bumble.zip</code>:</p>
-<div class="fragment"><div class="line">BAG=20210326_1855_phase1Loc_survey_bay_5_attempt_2.bag</div>
+<div class="fragment"><div class="line">source $ASTROBEE_WS/devel/setup.bash</div>
+<div class="line">BAG=20210326_1855_phase1Loc_survey_bay_5_attempt_2.bag</div>
 <div class="line"> </div>
 <div class="line">rosrun bag_processing rosbag_topic_filter.py $BAG -a /hw/wifi hw_wifi.bag</div>
 <div class="line">rostopic echo -b hw_wifi.bag -p /hw/wifi &gt; hw_wifi.csv</div>
@@ -202,9 +207,11 @@ Incomplete bag metadata</h3>
 </pre><p>It typically indicates that the bag file metadata is missing some required message definition information, most commonly due to a <a href="https://github.com/rosjava/rosjava_bootstrap/issues/16">known</a> <a href="https://github.com/nasa/astrobee/issues/402">bug</a> with messages published by nodes using <code>rosjava</code>, which we use on the Astrobee HLP).</p>
 <p>If you encounter this problem, first make sure you <a href="#preparing-the-bag-for-analysis">fixed the bag as described above</a>.</p>
 <p>If that doesn't work, you can try filtering out the bad topics instead of trying to fix their message definitions:</p>
-<div class="fragment"><div class="line">rosrun bag_processing rosbag_topic_filter.py in.bag -r &quot;/gs/*&quot; -r /hw/cam_sci/compressed fixed.bag</div>
+<div class="fragment"><div class="line">source $ASTROBEE_WS/devel/setup.bash</div>
+<div class="line">rosrun bag_processing rosbag_topic_filter.py in.bag -r &quot;/gs/*&quot; -r /hw/cam_sci/compressed fixed.bag</div>
 </div><!-- fragment --><p>And this command may help determine which topics are problematic in case more topics need to be fixed with the filtering approach:</p>
-<div class="fragment"><div class="line">rosrun bag_processing rosbag_detect_bad_topics.py in.bag</div>
+<div class="fragment"><div class="line">source $ASTROBEE_WS/devel/setup.bash</div>
+<div class="line">rosrun bag_processing rosbag_detect_bad_topics.py in.bag</div>
 </div><!-- fragment --><p>As our processes improve, we hope to ensure future bag files have this metadata issue fixed before public data release, so you will not have to deal with it.</p>
 <h3><a class="anchor" id="autotoc_md180"></a>
 Bags containing messages with outdated message definitions</h3>
