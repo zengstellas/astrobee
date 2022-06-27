@@ -160,7 +160,8 @@ $SOURCE_PATH/submodules/platform/rootfs/make_xenial.sh dev $ARMHF_CHROOT_DIR
 </pre><p>From the root of the repository, run: </p><pre class="fragment">./scripts/docker/cross_compile/cross_compile.sh
 </pre><p>The code will be cross-compiles inside the docker container in /opt/astrobee, and can be copied to the robot.</p>
 <p>After the debian files are generated inside the docker image, they are copied to in order of priority: 1) To the INSTALL_PATH, if defined 2) To ${DIR}/../../../../astrobee_install/armhf/, if the directoy already exists, where $DIR is the directory where the cross_compile.sh script is located. 3) To $HOME/astrobee_build/armhf otherwise</p>
-<h2><a class="anchor" id="autotoc_md197"></a>
+<p>If you already cross-compiled once and just wish to rebuild the code, run: </p><pre class="fragment">./scripts/docker/cross_compile/rebuild_cross_compile.sh
+</pre><h2><a class="anchor" id="autotoc_md197"></a>
 Building an Astrobee Debian (NASA users only)</h2>
 <p>This step assumes that the cross compile setup was successful and that ARMHF_CHROOT_DIR and ARMHF_TOOLCHAIN are defined. If not, please follow the cross-compile instructions.</p>
 <p>To generate the debians, from the root of the repository, run: </p><pre class="fragment">./scripts/docker/cross_compile/debian_compile.sh
