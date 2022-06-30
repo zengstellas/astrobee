@@ -98,7 +98,7 @@ Experimental setup</h1>
 <h2><a class="anchor" id="autotoc_md210"></a>
 Hardware</h2>
 <p>The hardware setup is pictured below. It is essentially an Inforce IFC6501 system on module (SOM) plugged into a development board. This board is connected by a USB 2.0 hub to two PMD PicoFlexx sensors, and through Ethernet to a host PC (Ubuntu 16.04 64bit VM). The host PC acts as a DHCP server, NAT router, DNS forwarder and debugger.</p>
-<p><img src="../images/hw/pico-setup.jpg" alt="alt text" title="The experimental setup" class="inline"/></p>
+<p><img src="pico-setup.jpg" alt="" class="inline" title="alt text"/>   </p>
 <p>The SOM is fitted with a cooling solution (heatsink and fan) that roughly mimics what is on the actual platform. Thermal testing has shown that by default all cores are run at maximum speed and under high load the CPU frequency switches three of the four cores offline when a thermal barrier is reached. For this reason the following script is run on boot to lower the maximum operating frequency of all four cores to 1.96GHz (they may be throttled lower than this in response to demand).</p>
 <p>#!/bin/bash</p>
 <p>freq='2.0GHz'</p>
@@ -155,18 +155,18 @@ Performance : stock versus custom SDK</h2>
 <li>Oddly enough, running at 15Hz or 35Hz consumes similar resources, but 25% consumes substantially more. Whether this is because they are closer to perfect powers of two is yet to be determined.</li>
 </ul>
 <p>It is also important to note that, although it is not shown in the results, the output of the pico_flexx_driver showed the point cloud callback rate to be within 1% of the target rate. For this reason, frame dropping cannot be used as a justification for the plateau in load we see from 15Hz onwards.</p>
-<p><img src="../images/hw/pico-results.jpg" alt="alt text" title="Performance results" class="inline"/></p>
+<p><img src="pico-results.jpg" alt="" class="inline" title="alt text"/>   </p>
 <p>The raw data for this experiment, as well as the octave code used to generate the plots, is included in <a href="https://babelfish.arc.nasa.gov/trac/freeflyer/attachment/wiki/pmd_picoflexx/matlab-results.tar.gz">matlab-results.tar.gz</a>.</p>
 <h2><a class="anchor" id="autotoc_md220"></a>
 Performance : pico_flexx_driver vs pico_driver</h2>
 <p>The PicoFlexx SDK provides a C++ interface for querying point clouds from the camera. What remains to be done is to extract these point clouds, convert them to an appropriate ROS message type and publish them on the messaging backbone. The ''de faco'' method for doing this is through the <a href="https://github.com/code-iai/pico_flexx_driver">pico_flexx_driver</a>. However, this driver performs extra work &ndash; it allows for dynamic reconfiguration of the camera and also publishes the depth images.</p>
 <p>Here we compare the performance of the pico_flexx_driver to that of a light-weight driver written for the FreeFlyer flight software stack. For both drivers we used the same SDK (our custom build) and the ROS Kinetic test environment described in the previous section. We limit our analysis to just the 5Hz mode, because this is the only feasible configuration &ndash; all other moved are too resource-intensive for our application. The results are shown below.</p>
-<p><img src="../images/hw/pico-drivers.jpg" alt="alt text" title="Comparison to third party ROS drivers" class="inline"/></p>
+<p><img src="pico-drivers.jpg" alt="" class="inline" title="alt text"/>   </p>
 <p>Our results show that we are likely to gain a 1% improvement in resource usage by running our <a class="el" href="namespacepico__driver.html">pico_driver</a> rather than the pico_flexx_driver. However, the <a class="el" href="namespacepico__driver.html">pico_driver</a> does need to be updated to distinguish between multiple cameras; it currently just picks the first one that it finds on the bus.</p>
 <h2><a class="anchor" id="autotoc_md221"></a>
 Performance : optimizing the pico_driver</h2>
 <p>The current version of <a class="el" href="namespacepico__driver.html">pico_driver</a> performed an iterative copy of all points from the royale SDK to a point cloud, and then a message conversion from the PointCloud to a PointCloud2 data type. I added the improvements mentioned in the section below, and optimized the code to use a memcpy rather than an iterative copy, by exploiting the fact that the PointCloud2 data type accommodates complex data structures. This yielded a small improvement in speed for low rates, but a massive improvement for higher rates. The results are shown in the graph below:</p>
-<p><img src="../images/hw/pico-optimization.jpg" alt="alt text" title="Optimizing the ROS drivers" class="inline"/></p>
+<p><img src="pico-optimization.jpg" alt="" class="inline" title="alt text"/>   </p>
 <h1><a class="anchor" id="autotoc_md222"></a>
 Setup on a laptop</h1>
 <p>In order to test the PicoFlexx on a laptop, several configuration steps are necessary. The cameras.config file located in ../freeflyer/astrobee/config/ must be changed with the correct camera uuid: picoflexx = { api_key = "", devices = { { name = "perch_cam", &ndash; frame topic = "perch", &ndash; frame LINE TO CHANGE --&mdash;&gt; device = "0005-4804-0050-1421", &ndash; camera uuid ("" : automatic) exposure = 0, &ndash; exposure time (0: automatic) mode = "MODE_9_5FPS_2000", &ndash; use case required = true &ndash; is camera required },{ name = "haz_cam", &ndash; frame topic = "haz", &ndash; frame device = robot_haz_cam_device, &ndash; camera uuid ("" : automatic) exposure = 0, &ndash; exposure time (0: automatic) mode = "MODE_9_5FPS_2000", &ndash; use case required = false &ndash; is camera required },{ name = "test_cam", &ndash; special name topic = "test", &ndash; frame device = "0005-4805-0050-1520", &ndash; camera uuid ("" : automatic) exposure = 0, &ndash; exposure time (0: automatic) mode = "MODE_5_45FPS_500", &ndash; use case required = false &ndash; is camera required } } }</p>

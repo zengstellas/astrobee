@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('localization_manager.html',''); initRe
 <li>Ground truth (GT) - Localize using pose and twist feedback from a ground truth localization system, such as the HTC Vive or Gazebo simulator. This relies on either the vive node (real experiement) or the Gazebo simulator.</li>
 </ol>
 <p>Refer to the image below. Each localization system can be thought of as a pipeline that converts raw measurements from a sensor into features. Since there is a delay in this pipeline, a registration pulse is sent as soon as the image is received, and this is used in the update step of the filter to perform a delay-aware correction of the state estimate. The <b>set_input</b> service on the EKF is essentially a multiplexer, which passes only one pipeline's features into the filter at any point.</p>
-<p><img src="../images/localization-manager.png" alt="alt text" title="The localization manager" class="inline"/></p>
+<p><img src="localization-manager.png" alt="" class="inline" title="alt text"/>   </p>
 <p>In order to perform a safe switch, the localization manager must run through a fixed sequence of steps:</p>
 <ol type="1">
 <li>Power up the new pipeline.</li>

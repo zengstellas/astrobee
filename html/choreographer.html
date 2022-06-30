@@ -176,7 +176,7 @@ Trajectory checks</h2>
 </pre><p>Or manually through the <code>SetZones</code> service call on the ROS namespace <code>~/mob/set_zones</code>. Please refer to the definition of ff_msgs_SetZones for more information on how to update zones using a ROS service call.</p>
 <p>The resulting data structure is serialized into a binary file. If the option <code>zone_overwrite</code> in <code>mobility/choreographer.config</code> is activated (default), it will overwrite the current <code>&lt;world&gt;.bin</code> file containing the default set of zones at start-up.</p>
 <p>The <a class="el" href="mapper.html">Mapper</a> node publishes <a href="http://docs.ros.org/kinetic/api/visualization_msgs/html/msg/MarkerArray.html">visualization_msgs::MarkerArrays</a> on the namespace <code>~/mob/mapper/zones</code>. When listened to in rviz, these marker arrays render keep-in and keep-out zones as semi-transparent green and red cuboids. The two example zones should be rendered as shown below:</p>
-<p><img src="../images/mobility/zones.png" alt="alt text" title="How the RVIZ user interface draws zones" class="inline"/> </p>
+<p><img src="zones.png" alt="" class="inline" title="alt text"/>    </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

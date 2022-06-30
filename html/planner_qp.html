@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('planner_qp.html',''); initResizable();
 <div class="textblock"><h1><a class="anchor" id="autotoc_md453"></a>
 Overview</h1>
 <p>This planner is based off Michael Watterson's PhD thesis. We generate trajectories by running an optimization which minimizes the functional:</p>
-<p><img src="../images/mobility/planner_qp_cost.png" alt="alt text" class="inline"/></p>
+<p><img src="planner_qp_cost.png" alt="" class="inline" title="alt text"/>   </p>
 <p>With collision avoidance constraints and scaling to ensure dynamic feasibility.</p>
 <h1><a class="anchor" id="autotoc_md454"></a>
 Usage</h1>
@@ -104,14 +104,14 @@ Usage</h1>
 Trajectory Display</h1>
 <p>This planner comes with an rviz plug-in to view the generated trajectories. <br  />
 </p>
-<p><img src="../images/mobility/planner_qp_rviz_1.png" alt="alt text" class="inline"/></p>
+<p><img src="planner_qp_rviz_1.png" alt="" class="inline" title="alt text"/>   </p>
 <p>From the display panel, add the traj_opt_ros trajectory plug-in.</p>
-<p><img src="../images/mobility/planner_qp_rviz_2.png" alt="alt text" class="inline"/></p>
+<p><img src="planner_qp_rviz_2.png" alt="" class="inline" title="alt text"/>   </p>
 <p>Change the topic in the plug-in to either the current trajectory or a debug version. Here the regular trajectory is plotted in magenta and the debug is plotted in red. The debug shows the optimization at each iteration as it converges to the current trajectory.</p>
 <h1><a class="anchor" id="autotoc_md456"></a>
 Parameter Description</h1>
 <p>The planner has adjustable parameters which can affect the optimizer's performance which are configurable through the reconfigure GUI. </p><pre class="fragment">rosrun rqt_reconfigure rqt_reconfigure
-</pre><p><img src="../images/mobility/planner_qp_config.png" alt="alt text" class="inline"/></p>
+</pre><p><img src="planner_qp_config.png" alt="" class="inline" title="alt text"/>   </p>
 <ul>
 <li><code>sample_rate</code> - The optimization uses a continuous trajectory representation which is sub-sampled at this rate before being sent to the choreographer.</li>
 <li><code>planner_distance</code> - Additional distance that the planner should stay away from occupied areas. The occupied areas are defined by the zones and obstacles inflated using the robot radius plus the collision distance. The minimum planner distance is set to the map resolution because otherwise interpolation and upsampling of the trajectory points bordering the occupied areas will generate points inside the occupied areas. Increase this to create a trajectory further away from walls.</li>

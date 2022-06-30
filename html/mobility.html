@@ -96,7 +96,7 @@ Overview</h2>
 <p>The overarching objective of the mobility subsystem is to provide a clean interface for moving the Astrobee in such a way that avoids obstacles, adheres to kinematic constraints, and keeps within specified flight zones.</p>
 <p>It is necessary to first define a few terms that will be used throughout the rest of this document. A FreeFlyer <b>plan</b> comprises of a number of stations (static poses) connected by <b>segments</b> (motion). The executive subsystem splits a plan and feeds the resulting segments one by one to mobility.</p>
 <p>A segment is a time-ordered sequence of <b>setpoints</b> and a corresponding <b>flight mode</b>. Each setpoint is a vector containing a pose and its first and second time derivatives, or equivalently a second order curve in 6DoF that describes motion. The flight mode is a string ("nominal", "docking", etc.) that is used to reconfigure the system (set impeller speed, controller gains, planning limits, tolerance values, etc.) so that consistency is enforced. When integrated forward in time by the controller, the setpoint carves out a continous curve in 3D space, defined over the time interval that runs from the current setpoint to the next setpoint, which we call a <b>trajectory</b>.</p>
-<p><img src="../images/mobility/definitions.png" alt="alt text" title="Core nomenclature" class="inline"/></p>
+<p><img src="definitions.png" alt="" class="inline" title="alt text"/>   </p>
 <h2><a class="anchor" id="autotoc_md462"></a>
 Basic operation</h2>
 <p>The mobility subsystem provides the callee with a single action-based entry point for control, called <code>ff_msgs::MotionAction</code>. This "motion action" accepts one of the following five commands:</p>
@@ -116,7 +116,7 @@ Basic operation</h2>
 <li><code>Quadratic Program (QP) planner</code> - The QP planner is more complex planner that generates curved segments that avoid obstacles. Internally it represents the segment by a set of polynomial functions, which can be sampled at any desired rate to generate setpoints.</li>
 </ul>
 <p>The diagram below illustrates how the various ndoes in the system interact with each other. ROS ctions are drawn in red, while ROS services are drawn in blue. Nodes that are part of the mobility subsystem are drawn as black boxes, while external nodes are drawn as white boxes.</p>
-<p><img src="../images/mobility/mob_overview.png" alt="alt text" title="Interaction between mobility modules" class="inline"/></p>
+<p><img src="mob_overview.png" alt="" class="inline" title="alt text"/>   </p>
 <h2><a class="anchor" id="autotoc_md463"></a>
 Using the mobility subsystem</h2>
 <p>Typically, mobility will be controlled through the Ground Data System (GDS). However, The arm behavior is packaged with its own gflags-based tool called teleop. This tool is essentially a convenience wrapper around an action client can be used to control the arm from the command-line. </p><pre class="fragment">rosrun mobility teleop -helpshort
