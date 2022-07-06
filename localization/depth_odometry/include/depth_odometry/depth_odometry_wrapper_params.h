@@ -32,9 +32,6 @@ struct DepthOdometryWrapperParams {
   std::string method;
   Eigen::Isometry3d body_T_haz_cam;
   Eigen::Affine3d haz_cam_A_haz_depth;
-  Eigen::Isometry3d body_T_perch_cam; 
-  Eigen::Affine3d perch_cam_A_perch_depth;
-  
   PointToPlaneICPDepthOdometryParams icp;
   ImageFeaturesWithKnownCorrespondencesAlignerDepthOdometryParams image_features;
 };

@@ -83,7 +83,7 @@ std::vector<ff_msgs::DepthOdometry> DepthOdometryWrapper::ProcessDepthImageIfAva
       point_cloud_buffer_.GetNearby(image_msg_timestamp, params_.max_image_and_point_cloud_time_diff);
     if (point_cloud_msg) {
       const auto depth_image_measurement =
-        lm::MakeDepthImageMeasurement(*point_cloud_msg, image_msg.second, params_.perch_cam_A_perch_depth);
+        lm::MakeDepthImageMeasurement(*point_cloud_msg, image_msg.second, params_.haz_cam_A_haz_depth);
       if (!depth_image_measurement) {
         LogError("ProcessDepthImageIfAvailable: Failed to create depth image measurement.");
         continue;
@@ -104,7 +104,7 @@ std::vector<ff_msgs::DepthOdometry> DepthOdometryWrapper::ProcessDepthImageIfAva
     timer_.Stop();
     if (sensor_F_source_T_target) {
       const lc::PoseWithCovariance body_F_source_T_target = lc::FrameChangeRelativePoseWithCovariance(
-        sensor_F_source_T_target->pose_with_covariance, params_.perch_cam_A_perch_depth);
+        sensor_F_source_T_target->pose_with_covariance, params_.body_T_haz_cam);
       ff_msgs::DepthOdometry depth_odometry_msg =
         DepthOdometryMsg(*sensor_F_source_T_target, body_F_source_T_target, timer_.last_value());
       depth_odometry_msgs.emplace_back(depth_odometry_msg);
