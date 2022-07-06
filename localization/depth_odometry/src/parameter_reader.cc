@@ -27,11 +27,11 @@ namespace mc = msg_conversions;
 namespace pc = point_cloud_common;
 namespace vc = vision_common;
 
-void LoadDepthOdometryWrapperParams(config_reader::ConfigReader& config, DepthOdometryWrapperParams& params) {
+void LoadDepthOdometryWrapperParams(config_reader::ConfigReader& config, DepthOdometryWrapperParams& params) { //TODO
   params.max_image_and_point_cloud_time_diff = mc::LoadDouble(config, "max_image_and_point_cloud_time_diff");
   params.method = mc::LoadString(config, "depth_odometry_method");
-  params.body_T_haz_cam = msg_conversions::LoadEigenTransform(config, "haz_cam_transform");
-  params.haz_cam_A_haz_depth = Eigen::Affine3d::Identity();
+  params.body_T_perch_cam = msg_conversions::LoadEigenTransform(config, "perch_cam_transform"); // TODO
+  params.perch_cam_A_perch_depth = Eigen::Affine3d::Identity(); // TODO
   LoadPointToPlaneICPDepthOdometryParams(config, params.icp);
   LoadImageFeaturesWithKnownCorrespondencesAlignerDepthOdometryParams(config, params.image_features);
 }

@@ -149,7 +149,7 @@ class PerchNodelet : public ff_util::FreeFlyerNodelet {
     // to mapped landmark localization.
     fsm_.Add(STATE::UNPERCHED,
       GOAL_PERCH, [this](FSM::Event const& event) -> FSM::State {
-        Switch(LOCALIZATION_HANDRAIL);
+        Switch(LOCALIZATION_HANDRAIL); // TODO
         return STATE::PERCHING_SWITCHING_TO_HR_LOC;
       });
     // [4] - If we successfuly switched to handrail navigation
@@ -201,7 +201,7 @@ class PerchNodelet : public ff_util::FreeFlyerNodelet {
     // [11] - If we successfully stopped, we switch to perch localization (future work)
     fsm_.Add(STATE::PERCHING_WAITING_FOR_SPIN_DOWN,
       MOTION_SUCCESS, [this](FSM::Event const& event) -> FSM::State {
-        Switch(LOCALIZATION_MAPPED_LANDMARKS);
+        Switch(LOCALIZATION_MAPPED_LANDMARKS); // TODO-ML
         return STATE::PERCHING_SWITCHING_TO_PL_LOC;
       });
     // [12] - With all steps done, we conclude we are perched.
@@ -216,7 +216,7 @@ class PerchNodelet : public ff_util::FreeFlyerNodelet {
     // [13] - Switch to handrail localization.
     fsm_.Add(STATE::PERCHED,
       GOAL_UNPERCH, [this](FSM::Event const& event) -> FSM::State {
-        Switch(LOCALIZATION_MAPPED_LANDMARKS);
+        Switch(LOCALIZATION_MAPPED_LANDMARKS); //TODO-ML
         return STATE::UNPERCHING_SWITCHING_TO_ML_LOC;
       });
     // [14] -If the switch is successful,
@@ -267,7 +267,7 @@ class PerchNodelet : public ff_util::FreeFlyerNodelet {
       MOTION_FAILED, [this](FSM::Event const& event) -> FSM::State {
         err_ = RESPONSE::MOTION_FAILED;
         err_msg_ = "Failed while moving to approach pose";
-        Switch(LOCALIZATION_MAPPED_LANDMARKS);
+        Switch(LOCALIZATION_MAPPED_LANDMARKS); //TODO-ML
         return STATE::RECOVERY_SWITCHING_TO_ML_LOC;
       });
     // [21]
@@ -275,7 +275,7 @@ class PerchNodelet : public ff_util::FreeFlyerNodelet {
       ARM_FAILED, [this](FSM::Event const& event) -> FSM::State {
         err_ = RESPONSE::ARM_FAILED;
         err_msg_ = "Failed while deploying the arm";
-        Switch(LOCALIZATION_MAPPED_LANDMARKS);
+        Switch(LOCALIZATION_MAPPED_LANDMARKS); //TODO-ML
         return STATE::RECOVERY_SWITCHING_TO_ML_LOC;
       });
     // [22]
@@ -370,7 +370,7 @@ class PerchNodelet : public ff_util::FreeFlyerNodelet {
     // [33] - Opening gripper for recovery attempt: Success and Fail options
     fsm_.Add(STATE::RECOVERY_OPENING_GRIPPER,
       ARM_SUCCESS | ARM_FAILED, [this](FSM::Event const& event) -> FSM::State {
-        Switch(LOCALIZATION_MAPPED_LANDMARKS);
+        Switch(LOCALIZATION_MAPPED_LANDMARKS); //TODO-ML
         return STATE::RECOVERY_SWITCHING_TO_ML_LOC;
       });
     // [34] - Switching to ML loc in recovery: Success and Fail options

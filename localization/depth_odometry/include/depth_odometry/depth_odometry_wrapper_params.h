@@ -30,8 +30,13 @@ struct DepthOdometryWrapperParams {
   double max_image_and_point_cloud_time_diff;
   // icp or image_feature
   std::string method;
-  Eigen::Isometry3d body_T_haz_cam;
+  Eigen::Isometry3d body_T_haz_cam; 
   Eigen::Affine3d haz_cam_A_haz_depth;
+
+  // TODO
+  Eigen::Isometry3d body_T_perch_cam; 
+  Eigen::Affine3d perch_cam_A_perch_depth;
+
   PointToPlaneICPDepthOdometryParams icp;
   ImageFeaturesWithKnownCorrespondencesAlignerDepthOdometryParams image_features;
 };

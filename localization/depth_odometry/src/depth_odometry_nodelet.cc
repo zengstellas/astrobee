@@ -32,14 +32,14 @@ void DepthOdometryNodelet::Initialize(ros::NodeHandle* nh) { SubscribeAndAdverti
 
 void DepthOdometryNodelet::SubscribeAndAdvertise(ros::NodeHandle* nh) {
   const std::string point_cloud_topic = static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_PREFIX) +
-                                        static_cast<std::string>(TOPIC_HARDWARE_NAME_HAZ_CAM) +
+                                        static_cast<std::string>(TOPIC_HARDWARE_NAME_PERCH_CAM) + //TODO
                                         static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_SUFFIX);
   point_cloud_sub_ = nh->subscribe<sensor_msgs::PointCloud2>(
     point_cloud_topic, 1, &DepthOdometryNodelet::PointCloudCallback, this, ros::TransportHints().tcpNoDelay());
 
   image_transport::ImageTransport image_transport(*nh);
   const std::string image_topic = static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_PREFIX) +
-                                  static_cast<std::string>(TOPIC_HARDWARE_NAME_HAZ_CAM) +
+                                  static_cast<std::string>(TOPIC_HARDWARE_NAME_PERCH_CAM) + //TODO
                                   static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_SUFFIX_EXTENDED) +
                                   static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_SUFFIX_AMPLITUDE_IMAGE);
   image_sub_ = image_transport.subscribe(image_topic, 1, &DepthOdometryNodelet::ImageCallback, this);
