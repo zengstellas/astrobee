@@ -157,6 +157,7 @@ class PerchNodelet : public ff_util::FreeFlyerNodelet {
     fsm_.Add(STATE::PERCHING_SWITCHING_TO_HR_LOC,
       SWITCH_SUCCESS, [this](FSM::Event const& event) -> FSM::State {
         SaveApproachPose();
+        ros::Duration(5).sleep(); //sleep for 5 seconds
         Move(APPROACH_POSE, ff_msgs::MotionGoal::NOMINAL);
         return STATE::PERCHING_MOVING_TO_APPROACH_POSE;
       });
