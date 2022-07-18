@@ -29,8 +29,9 @@ namespace mc = msg_conversions;
 DepthOdometryNodelet::DepthOdometryNodelet() : ff_util::FreeFlyerNodelet(NODE_DEPTH_ODOM, true), enabled_(false) {}
 
 void DepthOdometryNodelet::Initialize(ros::NodeHandle* nh) { 
+  ROS_ERROR("Depth odometry nodelet initializing, before advertising");
   SubscribeAndAdvertise(nh); 
-  ROS_ERROR("Depth odometry nodelet initializing");
+  ROS_ERROR("Depth odometry nodelet initializing, after advertising");
 }
 
 void DepthOdometryNodelet::SubscribeAndAdvertise(ros::NodeHandle* nh) {
