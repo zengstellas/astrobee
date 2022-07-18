@@ -30,6 +30,7 @@ DepthOdometryNodelet::DepthOdometryNodelet() : ff_util::FreeFlyerNodelet(NODE_DE
 
 void DepthOdometryNodelet::Initialize(ros::NodeHandle* nh) { 
   ROS_ERROR("Depth odometry nodelet initializing, before advertising");
+  LogInfo("Depth odometry nodelet initializing, before advertising");
   SubscribeAndAdvertise(nh); 
   ROS_ERROR("Depth odometry nodelet initializing, after advertising");
 }
@@ -68,6 +69,7 @@ void DepthOdometryNodelet::ImageCallback(const sensor_msgs::ImageConstPtr& image
 }
 
 bool DepthOdometryNodelet::EnableService(ff_msgs::SetBool::Request& req, ff_msgs::SetBool::Response& res) {
+  ROS_ERROR("Depth odometry nodelet enable service");
   enabled_ = req.enable;
   res.success = true;
   return true;
