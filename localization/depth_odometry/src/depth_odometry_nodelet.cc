@@ -28,7 +28,10 @@ namespace mc = msg_conversions;
 
 DepthOdometryNodelet::DepthOdometryNodelet() : ff_util::FreeFlyerNodelet(NODE_DEPTH_ODOM, true), enabled_(false) {}
 
-void DepthOdometryNodelet::Initialize(ros::NodeHandle* nh) { SubscribeAndAdvertise(nh); }
+void DepthOdometryNodelet::Initialize(ros::NodeHandle* nh) { 
+  SubscribeAndAdvertise(nh); 
+  ROS_ERROR("Depth odometry nodelet initializing");
+}
 
 void DepthOdometryNodelet::SubscribeAndAdvertise(ros::NodeHandle* nh) {
   const std::string point_cloud_topic = static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_PREFIX) +
