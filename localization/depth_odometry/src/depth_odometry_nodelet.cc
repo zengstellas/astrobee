@@ -36,6 +36,7 @@ void DepthOdometryNodelet::Initialize(ros::NodeHandle* nh) {
 }
 
 void DepthOdometryNodelet::SubscribeAndAdvertise(ros::NodeHandle* nh) {
+  ROS_ERROR("DO sub, advert");
   const std::string point_cloud_topic = static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_PREFIX) +
                                         static_cast<std::string>(TOPIC_HARDWARE_NAME_PERCH_CAM) +
                                         static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_SUFFIX);
@@ -69,7 +70,7 @@ void DepthOdometryNodelet::ImageCallback(const sensor_msgs::ImageConstPtr& image
 }
 
 bool DepthOdometryNodelet::EnableService(ff_msgs::SetBool::Request& req, ff_msgs::SetBool::Response& res) {
-  // ROS_ERROR("Depth odometry nodelet enable service");
+  ROS_ERROR("DO enable service");
   enabled_ = req.enable;
   res.success = true;
   return true;
