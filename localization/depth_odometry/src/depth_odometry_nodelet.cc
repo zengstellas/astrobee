@@ -55,6 +55,7 @@ void DepthOdometryNodelet::SubscribeAndAdvertise(ros::NodeHandle* nh) {
 
 void DepthOdometryNodelet::PointCloudCallback(const sensor_msgs::PointCloud2ConstPtr& point_cloud_msg) {
   if (!enabled_) return;
+  ROS_ERROR("DO PointCloudCallback");
   const auto depth_odometry_msgs = depth_odometry_wrapper_.PointCloudCallback(point_cloud_msg);
   for (const auto& depth_odometry_msg : depth_odometry_msgs) {
     depth_odometry_pub_.publish(depth_odometry_msg);
@@ -63,6 +64,7 @@ void DepthOdometryNodelet::PointCloudCallback(const sensor_msgs::PointCloud2Cons
 
 void DepthOdometryNodelet::ImageCallback(const sensor_msgs::ImageConstPtr& image_msg) {
   if (!enabled_) return;
+  ROS_ERROR("DO ImageCallback");
   const auto depth_odometry_msgs = depth_odometry_wrapper_.ImageCallback(image_msg);
   for (const auto& depth_odometry_msg : depth_odometry_msgs) {
     depth_odometry_pub_.publish(depth_odometry_msg);
