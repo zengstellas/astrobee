@@ -78,10 +78,12 @@ std::vector<ff_msgs::DepthOdometry> DepthOdometryWrapper::ProcessDepthImageIfAva
   // Point clouds and depth images for the same measurement arrive on different topics.
   // Correlate pairs of these if possible.
   for (const auto& image_msg : image_buffer_.measurements()) {
+    ROS_ERROR("image_buffer_.measurements()");
     const auto image_msg_timestamp = image_msg.first;
     const auto point_cloud_msg =
       point_cloud_buffer_.GetNearby(image_msg_timestamp, params_.max_image_and_point_cloud_time_diff);
     if (point_cloud_msg) {
+      ROS_ERROR("image_buffer_.measurements() point_cloud_msg");
       const auto depth_image_measurement =
         lm::MakeDepthImageMeasurement(*point_cloud_msg, image_msg.second, params_.perch_cam_A_perch_depth);
       if (!depth_image_measurement) {
