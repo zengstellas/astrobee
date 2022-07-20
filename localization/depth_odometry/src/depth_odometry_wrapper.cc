@@ -99,6 +99,7 @@ std::vector<ff_msgs::DepthOdometry> DepthOdometryWrapper::ProcessDepthImageIfAva
 
   std::vector<ff_msgs::DepthOdometry> depth_odometry_msgs;
   for (const auto& depth_image_measurement : depth_image_measurements) {
+    ROS_ERROR("depth_image_measurements");
     timer_.Start();
     auto sensor_F_source_T_target = depth_odometry_->DepthImageCallback(depth_image_measurement);
     timer_.Stop();
