@@ -40,6 +40,7 @@ void DepthOdometryNodelet::SubscribeAndAdvertise(ros::NodeHandle* nh) {
   const std::string point_cloud_topic = static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_PREFIX) +
                                         static_cast<std::string>(TOPIC_HARDWARE_NAME_PERCH_CAM) +
                                         static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_SUFFIX);
+  ROS_ERROR("Point cloud topic: %s", point_cloud_topic);
   point_cloud_sub_ = nh->subscribe<sensor_msgs::PointCloud2>(
     point_cloud_topic, 1, &DepthOdometryNodelet::PointCloudCallback, this, ros::TransportHints().tcpNoDelay());
 
@@ -48,12 +49,10 @@ void DepthOdometryNodelet::SubscribeAndAdvertise(ros::NodeHandle* nh) {
                                   static_cast<std::string>(TOPIC_HARDWARE_NAME_PERCH_CAM) +
                                   static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_SUFFIX_EXTENDED) +
                                   static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_SUFFIX_AMPLITUDE_IMAGE);
+  ROS_ERROR("Image topic: %s", image_topic);
   image_sub_ = image_transport.subscribe(image_topic, 1, &DepthOdometryNodelet::ImageCallback, this);
   depth_odometry_pub_ = nh->advertise<ff_msgs::DepthOdometry>(TOPIC_LOCALIZATION_DEPTH_ODOM, 10);
   enable_srv_ = nh->advertiseService(SERVICE_LOCALIZATION_DO_ENABLE, &DepthOdometryNodelet::EnableService, this);
-
-  ROS_ERROR("Point cloud topic: %s", point_cloud_topic);
-  ROS_ERROR("IMage topic: %s", image_topic);
 }
 
 void DepthOdometryNodelet::PointCloudCallback(const sensor_msgs::PointCloud2ConstPtr& point_cloud_msg) {
