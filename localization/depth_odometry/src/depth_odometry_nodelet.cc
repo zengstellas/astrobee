@@ -52,8 +52,8 @@ void DepthOdometryNodelet::SubscribeAndAdvertise(ros::NodeHandle* nh) {
   depth_odometry_pub_ = nh->advertise<ff_msgs::DepthOdometry>(TOPIC_LOCALIZATION_DEPTH_ODOM, 10);
   enable_srv_ = nh->advertiseService(SERVICE_LOCALIZATION_DO_ENABLE, &DepthOdometryNodelet::EnableService, this);
 
-  ROS_ERROR(point_cloud_topic);
-  ROS_ERROR(image_topic);
+  ROS_ERROR("Point cloud topic: %s", point_cloud_topic);
+  ROS_ERROR("IMage topic: %s", image_topic);
 }
 
 void DepthOdometryNodelet::PointCloudCallback(const sensor_msgs::PointCloud2ConstPtr& point_cloud_msg) {
