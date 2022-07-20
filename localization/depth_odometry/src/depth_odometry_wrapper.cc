@@ -62,6 +62,7 @@ void DepthOdometryWrapper::Initialize(const DepthOdometryWrapperParams& params) 
 
 std::vector<ff_msgs::DepthOdometry> DepthOdometryWrapper::PointCloudCallback(
   const sensor_msgs::PointCloud2ConstPtr& point_cloud_msg) {
+  ROS_ERROR("wrapper callback");
   point_cloud_buffer_.Add(lc::TimeFromHeader(point_cloud_msg->header), point_cloud_msg);
   return ProcessDepthImageIfAvailable();
 }
@@ -72,6 +73,7 @@ std::vector<ff_msgs::DepthOdometry> DepthOdometryWrapper::ImageCallback(const se
 }
 
 std::vector<ff_msgs::DepthOdometry> DepthOdometryWrapper::ProcessDepthImageIfAvailable() {
+  ROS_ERROR("ProcessDepthImageIfAvailable");
   std::vector<lm::DepthImageMeasurement> depth_image_measurements;
   boost::optional<lc::Time> latest_added_point_cloud_msg_time;
   boost::optional<lc::Time> latest_added_image_msg_time;

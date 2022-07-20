@@ -59,7 +59,7 @@ void DepthOdometryNodelet::PointCloudCallback(const sensor_msgs::PointCloud2Cons
   if (!enabled_) return;
   ROS_ERROR("DO PointCloudCallback, %s", point_cloud_msg);
   const auto depth_odometry_msgs = depth_odometry_wrapper_.PointCloudCallback(point_cloud_msg);
-  // ROS_ERROR("DO msgs: %s", depth_odometry_msgs.c_str());
+  ROS_ERROR("DO msgs: %s", depth_odometry_msgs);
   for (const auto& depth_odometry_msg : depth_odometry_msgs) {
     ROS_ERROR("PointCloudCallback publish");
     depth_odometry_pub_.publish(depth_odometry_msg);
