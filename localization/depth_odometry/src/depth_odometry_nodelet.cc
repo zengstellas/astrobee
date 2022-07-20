@@ -51,6 +51,9 @@ void DepthOdometryNodelet::SubscribeAndAdvertise(ros::NodeHandle* nh) {
   image_sub_ = image_transport.subscribe(image_topic, 1, &DepthOdometryNodelet::ImageCallback, this);
   depth_odometry_pub_ = nh->advertise<ff_msgs::DepthOdometry>(TOPIC_LOCALIZATION_DEPTH_ODOM, 10);
   enable_srv_ = nh->advertiseService(SERVICE_LOCALIZATION_DO_ENABLE, &DepthOdometryNodelet::EnableService, this);
+
+  ROS_ERROR(point_cloud_topic);
+  ROS_ERROR(image_topic);
 }
 
 void DepthOdometryNodelet::PointCloudCallback(const sensor_msgs::PointCloud2ConstPtr& point_cloud_msg) {
@@ -58,6 +61,7 @@ void DepthOdometryNodelet::PointCloudCallback(const sensor_msgs::PointCloud2Cons
   ROS_ERROR("DO PointCloudCallback");
   const auto depth_odometry_msgs = depth_odometry_wrapper_.PointCloudCallback(point_cloud_msg);
   for (const auto& depth_odometry_msg : depth_odometry_msgs) {
+    ROS_ERROR("PointCloudCallback publish");
     depth_odometry_pub_.publish(depth_odometry_msg);
   }
 }
@@ -67,6 +71,7 @@ void DepthOdometryNodelet::ImageCallback(const sensor_msgs::ImageConstPtr& image
   ROS_ERROR("DO ImageCallback");
   const auto depth_odometry_msgs = depth_odometry_wrapper_.ImageCallback(image_msg);
   for (const auto& depth_odometry_msg : depth_odometry_msgs) {
+    ROS_ERROR("ImageCallback publish");
     depth_odometry_pub_.publish(depth_odometry_msg);
   }
 }
