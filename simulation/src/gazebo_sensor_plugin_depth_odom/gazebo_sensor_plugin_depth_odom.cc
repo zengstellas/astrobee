@@ -65,7 +65,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
 
     // Timer triggers message
     timer_ = nh->createTimer(ros::Duration(0.8 / rate_),
-      &GazeboSensorPluginDepthOdom::SendFeatures, this, true, false);
+      &GazeboSensorPluginDepthOdom::SendDepthOdom, this, true, false);
   }
 
   // Enable or disable the feature timer
@@ -90,6 +90,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
   bool active_;
   ff_msgs::DepthOdometry msg_do_;
   double rate_;
+  uint16_t id_;
 };
 
 GZ_REGISTER_SENSOR_PLUGIN(GazeboSensorPluginDepthOdom)
