@@ -53,6 +53,8 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
 
     // Create a publisher for the feature messages
     depth_odometry_pub_ = nh->advertise<ff_msgs::DepthOdometry>(TOPIC_LOCALIZATION_DEPTH_ODOM, 10);
+
+    msg_do_.header.frame_id = std::string(FRAME_NAME_WORLD);
   }
 
   // Only send measurements when extrinsics are available
@@ -74,10 +76,10 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
     return true;
   }
 
-  // Send a registration pulse
-  void SendFeatures(ros::TimerEvent const& event) {
+  // Send depth odometry output
+  void SendDepthOdom(ros::TimerEvent const& event) {
     if (!active_) return;
-    depth_odometry_pub_.publish(msg_feat_);
+    depth_odometry_pub_.publish(msg_do_);
   }
  
  private:
@@ -86,8 +88,9 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
   ros::ServiceServer srv_enable_;
   ros::Timer timer_;
   bool active_;
-  ff_msgs::DepthOdometry msg_feat;
+  ff_msgs::DepthOdometry msg_do_;
   double rate_;
+};
 
 GZ_REGISTER_SENSOR_PLUGIN(GazeboSensorPluginDepthOdom)
 

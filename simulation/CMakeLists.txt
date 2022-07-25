@@ -77,6 +77,7 @@ catkin_package(
     gazebo_sensor_plugin_perch_cam
     #gazebo_sensor_plugin_handrail_detect
     gazebo_sensor_plugin_haz_cam
+    gazebo_sensor_plugin_depth_odom
     gazebo_world_plugin_speed
     gazebo_system_plugin_client
   CATKIN_DEPENDS
@@ -317,6 +318,15 @@ add_library(gazebo_sensor_plugin_optical_flow
 )
 add_dependencies(gazebo_sensor_plugin_optical_flow ${catkin_EXPORTED_TARGETS})
 target_link_libraries(gazebo_sensor_plugin_optical_flow
+  ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES}
+)
+
+# Create a sensor plugin for depth odometry
+add_library(gazebo_sensor_plugin_depth_odom
+  src/gazebo_sensor_plugin_depth_odom/gazebo_sensor_plugin_depth_odom.cc
+)
+add_dependencies(gazebo_sensor_plugin_depth_odom ${catkin_EXPORTED_TARGETS})
+target_link_libraries(gazebo_sensor_plugin_depth_odom
   ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES}
 )
 
