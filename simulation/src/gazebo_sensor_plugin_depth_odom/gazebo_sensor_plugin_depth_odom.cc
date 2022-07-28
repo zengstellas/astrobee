@@ -36,7 +36,7 @@
 // STL includes
 #include <string>
 
-#include <tf2/Transform.h>
+#include <tf2/LinearMath/Transform.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 
 namespace gazebo {
