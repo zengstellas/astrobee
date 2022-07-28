@@ -36,7 +36,8 @@
 // STL includes
 #include <string>
 
-// #include <localization_common/utilities.h>
+#include <tf2/Transform.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 
 namespace gazebo {
 
@@ -116,10 +117,10 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
     // Get the current pose as a Transform object
     #if GAZEBO_MAJOR_VERSION > 7
       world_pose_ = GetModel()->WorldPose();
-      curr_pose_ = tf2::Transform(world_pose_.Rot(), world_pose_.Pos()); 
+      curr_pose_ = tf2::Transform::Transform(world_pose_.Rot(), world_pose_.Pos()); 
     #else
-      world_pose = GetModel()->GetWorldPose();
-      curr_pose_ = tf2::Transform(world_pose_.rot, world_pose_.pos); 
+      world_pose_ = GetModel()->GetWorldPose();
+      curr_pose_ = tf2::Transform::Transform(world_pose_.rot, world_pose_.pos); 
     #endif
     
     if (!prev_pose_) {
@@ -147,7 +148,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
     depth_odometry_pub_.publish(msg_do_);
 
     // Save current pose
-    prev_pose_ = tf2::Transform(curr_pose_); 
+    prev_pose_ = tf2::Transform::Transform(curr_pose_); 
   }
  
  private:
@@ -158,11 +159,11 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
   ros::Timer timer_;
   gazebo::physics::RayShapePtr shape_;
   bool active_;
-  ignition::math::Pose3d world_pose;
+  ignition::math::Pose3d world_pose_;
   geometry_msgs::msg::Pose pose_msg_;
-  tf2::Transform prev_pose_;
-  tf2::Transform curr_pose_;
-  tf2::Transform diff_;
+  tf2::Transform::Transform prev_pose_;
+  tf2::Transform::Transform curr_pose_;
+  tf2::Transform::Transform diff_;
   ff_msgs::DepthOdometry msg_do_;
   double rate_;
   uint16_t id_;
