@@ -24,6 +24,7 @@
 
 // FSW includes
 #include <config_reader/config_reader.h>
+#include <msg_conversions/msg_conversions.h>
 
 // General messages
 #include <sensor_msgs/PointCloud2.h>
@@ -58,7 +59,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
     config_.AddFile("simulation/simulation.config");
     config_.AddFile("transforms.config");
     config_.AddFile("geometry.config");
-    config_.AddFile(("localization/depth_odometry.config").c_str());
+    config_.AddFile("localization/depth_odometry.config");
 
     if (!config_.ReadFiles()) {
         ROS_ERROR("Failed to read config files.");
@@ -111,7 +112,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
   void SendDepthOdom(ros::TimerEvent const& event) {
     if (!active_) return;
 
-    msg_do_.camera_id++;
+    // msg_do_.camera_id++;
     ros::spinOnce();
 
     // Get the current pose as a Transform object
@@ -148,7 +149,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
     depth_odometry_pub_.publish(msg_do_);
 
     // Save current pose
-    prev_pose_ = tf2::Transform::Transform(curr_pose_); 
+    prev_pose_ = tf2::Transform(curr_pose_); 
   }
  
  private:
@@ -160,10 +161,10 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
   gazebo::physics::RayShapePtr shape_;
   bool active_;
   ignition::math::Pose3d world_pose_;
-  geometry_msgs::msg::Pose pose_msg_;
-  tf2::Transform::Transform prev_pose_;
-  tf2::Transform::Transform curr_pose_;
-  tf2::Transform::Transform diff_;
+  geometry_msgs::Pose pose_msg_;
+  tf2::Transform prev_pose_;
+  tf2::Transform curr_pose_;
+  tf2::Transform diff_;
   ff_msgs::DepthOdometry msg_do_;
   double rate_;
   uint16_t id_;
