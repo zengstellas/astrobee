@@ -36,6 +36,8 @@
 // STL includes
 #include <string>
 
+#include <localization_common/utilities.h>
+
 namespace gazebo {
 
 class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
@@ -50,9 +52,37 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
   // Called when plugin is loaded into gazebo
   void LoadCallback(ros::NodeHandle *nh,
     sensors::SensorPtr sensor, sdf::ElementPtr sdf) {
+    // Build the nav cam Camera Model
+    config_.AddFile("cameras.config");
+    config_.AddFile("simulation/simulation.config");
+    config_.AddFile("transforms.config");
+    config_.AddFile("geometry.config");
+    config_.AddFile(("localization/depth_odometry.config").c_str());
 
+    if (!config_.ReadFiles()) {
+        ROS_ERROR("Failed to read config files.");
+        return;
+    }
+
+    if (!config_.GetReal("perch_cam_rate", &rate_))
+      ROS_FATAL("Could not read the perch_cam_rate parameter.");
+    
     // Create a publisher for the feature messages
     depth_odometry_pub_ = nh->advertise<ff_msgs::DepthOdometry>(TOPIC_LOCALIZATION_DEPTH_ODOM, 10);
+
+    // Get the perch camera transform
+    body_T_perch_cam = msg_conversions::LoadEigenTransform(config_, "perch_cam_transform");
+
+    // Create a shape for collision testing
+    #if GAZEBO_MAJOR_VERSION > 7
+    GetWorld()->Physics()->InitForThread();
+    shape_ = boost::dynamic_pointer_cast<physics::RayShape>(GetWorld()
+        ->Physics()->CreateShape("ray", physics::CollisionPtr()));
+    #else
+    GetWorld()->GetPhysicsEngine()->InitForThread();
+    shape_ = boost::dynamic_pointer_cast<physics::RayShape>(GetWorld()
+        ->GetPhysicsEngine()->CreateShape("ray", physics::CollisionPtr()));
+    #endif
 
     msg_do_.header.frame_id = std::string(FRAME_NAME_WORLD);
   }
@@ -64,8 +94,8 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
       &GazeboSensorPluginDepthOdom::EnableService, this);
 
     // Timer triggers message
-    timer_ = nh->createTimer(ros::Duration(0.8 / rate_),
-      &GazeboSensorPluginDepthOdom::SendDepthOdom, this, true, false);
+    timer_ = nh->createTimer(ros::Duration(rate_),
+      &GazeboSensorPluginDepthOdom::SendDepthOdom, this, false, true);
   }
 
   // Enable or disable the feature timer
@@ -79,15 +109,60 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
   // Send depth odometry output
   void SendDepthOdom(ros::TimerEvent const& event) {
     if (!active_) return;
+
+    msg_do_.camera_id++;
+    ros::spinOnce();
+
+    // Get the current pose as a Transform object
+    #if GAZEBO_MAJOR_VERSION > 7
+      world_pose_ = GetModel()->WorldPose();
+      curr_pose_ = tf2::Transform(world_pose_.Rot(), world_pose_.Pos()); 
+    #else
+      world_pose = GetModel()->GetWorldPose();
+      curr_pose_ = tf2::Transform(world_pose_.rot, world_pose_.pos); 
+    #endif
+    
+    if (!prev_pose_) {
+      // First time, just use current pose
+      tf2::toMsg(prev_pose_, pose_msg_);
+      
+    } else {
+      // Find the difference between current and previous pose
+      diff_ = prev_pose_.inverseTimes(curr_pose_);
+
+      // Convert to a message
+      tf2::toMsg(diff_, pose_msg_);
+    }
+
+    msg_do_.odometry.sensor_F_source_T_target.pose = pose_msg_;
+
+    // const auto source_T_target = lc::InvertPoseWithCovariance(*target_T_source);
+    // auto sensor_F_source_T_target = PoseWithCovarianceAndCorrespondences(source_T_target, *correspondences, previous_timestamp_, latest_timestamp_);
+    
+    // const localization_common::PoseWithCovariance body_F_source_T_target = localization_common::FrameChangeRelativePoseWithCovariance(
+    //     sensor_F_source_T_target->pose_with_covariance, body_T_perch_cam);
+    // msg_do_ = DepthOdometryMsg(sensor_F_source_T_target, body_F_source_T_target, timer_.last_value()); //*sensor ??
+  
+    msg_do_.header.stamp = ros::Time::now();
     depth_odometry_pub_.publish(msg_do_);
+
+    // Save current pose
+    prev_pose_ = tf2::Transform(curr_pose_); 
   }
  
  private:
   config_reader::ConfigReader config_;
   ros::Publisher depth_odometry_pub_;
+  Eigen::Isometry3d body_T_perch_cam;
   ros::ServiceServer srv_enable_;
   ros::Timer timer_;
+  gazebo::physics::RayShapePtr shape_;
   bool active_;
+  ignition::math::Pose3d world_pose;
+  geometry_msgs::msg::Pose pose_msg_;
+  tf2::Transform prev_pose_;
+  tf2::Transform curr_pose_;
+  tf2::Transform diff_;
   ff_msgs::DepthOdometry msg_do_;
   double rate_;
   uint16_t id_;
