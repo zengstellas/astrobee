@@ -36,7 +36,7 @@
 // STL includes
 #include <string>
 
-#include <localization_common/utilities.h>
+// #include <localization_common/utilities.h>
 
 namespace gazebo {
 
@@ -125,7 +125,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
     if (!prev_pose_) {
       // First time, just use current pose
       tf2::toMsg(prev_pose_, pose_msg_);
-      
+
     } else {
       // Find the difference between current and previous pose
       diff_ = prev_pose_.inverseTimes(curr_pose_);
