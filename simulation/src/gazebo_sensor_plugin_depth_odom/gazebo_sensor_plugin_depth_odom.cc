@@ -140,17 +140,17 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
             GetModel()->GetWorldPose().pos.z));
     #endif
     
-    if (!prev_pose_) {
-      // First time, just use current pose
-      tf2::toMsg(prev_pose_, pose_msg_);
+    // if (!prev_pose_) {
+    //   // First time, just use current pose
+    //   tf2::toMsg(curr_pose_, pose_msg_);
 
-    } else {
-      // Find the difference between current and previous pose
-      diff_ = prev_pose_.inverseTimes(curr_pose_);
+    // } else {
+    // Find the difference between current and previous pose
+    diff_ = prev_pose_.inverseTimes(curr_pose_);
 
-      // Convert to a message
-      tf2::toMsg(diff_, pose_msg_);
-    }
+    // Convert to a message
+    tf2::toMsg(diff_, pose_msg_);
+    // }
 
     msg_do_.odometry.sensor_F_source_T_target.pose = pose_msg_;
 
