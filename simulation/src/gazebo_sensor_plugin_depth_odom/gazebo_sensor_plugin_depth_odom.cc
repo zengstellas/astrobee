@@ -54,6 +54,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
   // Called when plugin is loaded into gazebo
   void LoadCallback(ros::NodeHandle *nh,
     sensors::SensorPtr sensor, sdf::ElementPtr sdf) {
+    ROS_ERROR("LoadCallback");
     // Build the Camera Model
     config_.AddFile("cameras.config");
     config_.AddFile("simulation/simulation.config");
@@ -94,6 +95,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
 
   // Only send measurements when extrinsics are available
   void OnExtrinsicsReceived(ros::NodeHandle *nh) {
+    ROS_ERROR("OnExtrinsicsReceived");
     // Service for enabling depth odom
     srv_enable_ = nh->advertiseService(SERVICE_LOCALIZATION_DO_ENABLE,
       &GazeboSensorPluginDepthOdom::EnableService, this);
@@ -106,6 +108,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
   // Enable or disable the feature timer
   bool EnableService(ff_msgs::SetBool::Request & req,
                      ff_msgs::SetBool::Response & res) {
+    ROS_ERROR("EnableService");
     active_ = req.enable;
     res.success = true;
     return true;
@@ -113,6 +116,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
 
   // Send depth odometry output
   void SendDepthOdom(ros::TimerEvent const& event) {
+    ROS_ERROR("SendDepthOdom");
     if (!active_) return;
 
     // msg_do_.camera_id++;
@@ -159,7 +163,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
     msg_do_.odometry.sensor_F_source_T_target.pose = pose_msg_;
 
     // const auto source_T_target = lc::InvertPoseWithCovariance(*target_T_source);
-    // auto sensor_F_source_T_target = PoseWithCovarianceAndCorrespondences(source_T_target, *correspondences, previous_timestamp_, latest_timestamp_);
+    // auto sensor_F_source_T_target = PoseWithCovarianceAndCorrespondences(source_T_target, N*correspondencesN, previous_timestamp_, latest_timestamp_);
     
     // const localization_common::PoseWithCovariance body_F_source_T_target = localization_common::FrameChangeRelativePoseWithCovariance(
     //     sensor_F_source_T_target->pose_with_covariance, body_T_perch_cam_);

@@ -62,7 +62,6 @@ void DepthOdometryWrapper::Initialize(const DepthOdometryWrapperParams& params) 
 
 std::vector<ff_msgs::DepthOdometry> DepthOdometryWrapper::PointCloudCallback(
   const sensor_msgs::PointCloud2ConstPtr& point_cloud_msg) {
-  ROS_ERROR("wrapper callback");
   point_cloud_buffer_.Add(lc::TimeFromHeader(point_cloud_msg->header), point_cloud_msg);
   return ProcessDepthImageIfAvailable();
 }
@@ -73,19 +72,16 @@ std::vector<ff_msgs::DepthOdometry> DepthOdometryWrapper::ImageCallback(const se
 }
 
 std::vector<ff_msgs::DepthOdometry> DepthOdometryWrapper::ProcessDepthImageIfAvailable() {
-  ROS_ERROR("ProcessDepthImageIfAvailable");
   std::vector<lm::DepthImageMeasurement> depth_image_measurements;
   boost::optional<lc::Time> latest_added_point_cloud_msg_time;
   boost::optional<lc::Time> latest_added_image_msg_time;
   // Point clouds and depth images for the same measurement arrive on different topics.
   // Correlate pairs of these if possible.
   for (const auto& image_msg : image_buffer_.measurements()) {
-    ROS_ERROR("image_buffer_.measurements()");
     const auto image_msg_timestamp = image_msg.first;
     const auto point_cloud_msg =
       point_cloud_buffer_.GetNearby(image_msg_timestamp, params_.max_image_and_point_cloud_time_diff);
     if (point_cloud_msg) {
-      ROS_ERROR("image_buffer_.measurements() point_cloud_msg");
       const auto depth_image_measurement =
         lm::MakeDepthImageMeasurement(*point_cloud_msg, image_msg.second, params_.perch_cam_A_perch_depth);
       if (!depth_image_measurement) {
@@ -103,12 +99,10 @@ std::vector<ff_msgs::DepthOdometry> DepthOdometryWrapper::ProcessDepthImageIfAva
 
   std::vector<ff_msgs::DepthOdometry> depth_odometry_msgs;
   for (const auto& depth_image_measurement : depth_image_measurements) {
-    ROS_ERROR("depth_image_measurements");
     timer_.Start();
     auto sensor_F_source_T_target = depth_odometry_->DepthImageCallback(depth_image_measurement);
     timer_.Stop();
     if (sensor_F_source_T_target) {
-      ROS_ERROR("source_T_target");
       const lc::PoseWithCovariance body_F_source_T_target = lc::FrameChangeRelativePoseWithCovariance(
         sensor_F_source_T_target->pose_with_covariance, params_.body_T_perch_cam);
       ff_msgs::DepthOdometry depth_odometry_msg =

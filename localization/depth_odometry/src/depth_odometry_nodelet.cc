@@ -29,18 +29,13 @@ namespace mc = msg_conversions;
 DepthOdometryNodelet::DepthOdometryNodelet() : ff_util::FreeFlyerNodelet(NODE_DEPTH_ODOM, true), enabled_(false) {}
 
 void DepthOdometryNodelet::Initialize(ros::NodeHandle* nh) { 
-  ROS_ERROR("Depth odometry nodelet initializing, before advertising");
-  // LogInfo("Depth odometry nodelet initializing, before advertising");
   SubscribeAndAdvertise(nh); 
-  ROS_ERROR("Depth odometry nodelet initializing, after advertising");
 }
 
 void DepthOdometryNodelet::SubscribeAndAdvertise(ros::NodeHandle* nh) {
-  ROS_ERROR("DO sub, advert");
   const std::string point_cloud_topic = static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_PREFIX) +
                                         static_cast<std::string>(TOPIC_HARDWARE_NAME_PERCH_CAM) +
                                         static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_SUFFIX);
-  ROS_ERROR("Point cloud topic: %s", point_cloud_topic.c_str());
   point_cloud_sub_ = nh->subscribe<sensor_msgs::PointCloud2>(
     point_cloud_topic, 1, &DepthOdometryNodelet::PointCloudCallback, this, ros::TransportHints().tcpNoDelay());
 
@@ -49,7 +44,6 @@ void DepthOdometryNodelet::SubscribeAndAdvertise(ros::NodeHandle* nh) {
                                   static_cast<std::string>(TOPIC_HARDWARE_NAME_PERCH_CAM) +
                                   static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_SUFFIX_EXTENDED) +
                                   static_cast<std::string>(TOPIC_HARDWARE_PICOFLEXX_SUFFIX_AMPLITUDE_IMAGE);
-  ROS_ERROR("Image topic: %s", image_topic.c_str());
   image_sub_ = image_transport.subscribe(image_topic, 1, &DepthOdometryNodelet::ImageCallback, this);
   depth_odometry_pub_ = nh->advertise<ff_msgs::DepthOdometry>(TOPIC_LOCALIZATION_DEPTH_ODOM, 10);
   enable_srv_ = nh->advertiseService(SERVICE_LOCALIZATION_DO_ENABLE, &DepthOdometryNodelet::EnableService, this);
@@ -57,27 +51,21 @@ void DepthOdometryNodelet::SubscribeAndAdvertise(ros::NodeHandle* nh) {
 
 void DepthOdometryNodelet::PointCloudCallback(const sensor_msgs::PointCloud2ConstPtr& point_cloud_msg) {
   if (!enabled_) return;
-  ROS_ERROR("DO PointCloudCallback, %s", point_cloud_msg);
   const auto depth_odometry_msgs = depth_odometry_wrapper_.PointCloudCallback(point_cloud_msg);
-  ROS_ERROR("DO msgs: %s", depth_odometry_msgs);
   for (const auto& depth_odometry_msg : depth_odometry_msgs) {
-    ROS_ERROR("PointCloudCallback publish");
     depth_odometry_pub_.publish(depth_odometry_msg);
   }
 }
 
 void DepthOdometryNodelet::ImageCallback(const sensor_msgs::ImageConstPtr& image_msg) {
   if (!enabled_) return;
-  ROS_ERROR("DO ImageCallback");
   const auto depth_odometry_msgs = depth_odometry_wrapper_.ImageCallback(image_msg);
   for (const auto& depth_odometry_msg : depth_odometry_msgs) {
-    ROS_ERROR("ImageCallback publish");
     depth_odometry_pub_.publish(depth_odometry_msg);
   }
 }
 
 bool DepthOdometryNodelet::EnableService(ff_msgs::SetBool::Request& req, ff_msgs::SetBool::Response& res) {
-  ROS_ERROR("DO enable service");
   enabled_ = req.enable;
   res.success = true;
   return true;
