@@ -117,11 +117,27 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
 
     // Get the current pose as a Transform object
     #if GAZEBO_MAJOR_VERSION > 7
-      world_pose_ = GetModel()->WorldPose();
-      curr_pose_ = tf2::Transform::Transform(world_pose_.Rot(), world_pose_.Pos()); 
+      curr_pose_ = tf2::Transform(
+          tf2::Quaternion(
+            GetModel()->WorldPose().Rot().W(),
+            GetModel()->WorldPose().Rot().X(),
+            GetModel()->WorldPose().Rot().Y(),
+            GetModel()->WorldPose().Rot().Z()),
+          tf2::Vector3(
+            GetModel()->WorldPose().Pos().X(),
+            GetModel()->WorldPose().Pos().Y(),
+            GetModel()->WorldPose().Pos().Z()));
     #else
-      world_pose_ = GetModel()->GetWorldPose();
-      curr_pose_ = tf2::Transform::Transform(world_pose_.rot, world_pose_.pos); 
+      curr_pose_ = tf2::Transform(
+          tf2::Quaternion(
+            GetModel()->GetWorldPose().rot.w,
+            GetModel()->GetWorldPose().rot.x,
+            GetModel()->GetWorldPose().rot.y,
+            GetModel()->GetWorldPose().rot.z),
+          tf2::Vector3(
+            GetModel()->GetWorldPose().pos.x,
+            GetModel()->GetWorldPose().pos.y,
+            GetModel()->GetWorldPose().pos.z));
     #endif
     
     if (!prev_pose_) {
@@ -160,7 +176,6 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
   ros::Timer timer_;
   gazebo::physics::RayShapePtr shape_;
   bool active_;
-  ignition::math::Pose3d world_pose_;
   geometry_msgs::Pose pose_msg_;
   tf2::Transform prev_pose_;
   tf2::Transform curr_pose_;
