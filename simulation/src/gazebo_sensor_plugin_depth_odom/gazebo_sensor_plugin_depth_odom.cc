@@ -143,10 +143,10 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
             GetModel()->GetWorldPose().pos.z));
     #endif
     
-    if (first) {
+    if (first_) {
       // First time, just use current pose
       tf2::toMsg(curr_pose_, pose_msg_);
-      first = false;
+      first_ = false;
 
     } else {
       // Find the difference between current and previous pose
