@@ -174,7 +174,7 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
     // Calculate pose relative to body from sensor
     Eigen::Isometry3d sensor_pose_iso;
     tf2::fromMsg(sensor_pose_msg_, sensor_pose_iso);
-    tf2::toMsg(body_T_perch_cam_ * sensor_pose_iso * body_T_perch_cam_.inverse(), body_pose_msg_);
+    body_pose_msg_ = tf2::toMsg(body_T_perch_cam_ * sensor_pose_iso * body_T_perch_cam_.inverse());
     
     msg_do_.odometry.sensor_F_source_T_target.pose = sensor_pose_msg_;
     msg_do_.odometry.body_F_source_T_target.pose = body_pose_msg_;
