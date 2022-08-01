@@ -54,7 +54,19 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
   // Called when plugin is loaded into gazebo
   void LoadCallback(ros::NodeHandle *nh,
     sensors::SensorPtr sensor, sdf::ElementPtr sdf) {
-    ROS_ERROR("LoadCallback");
+    // Get a link to the parent sensor
+    sensor_ = std::dynamic_pointer_cast<sensors::DepthCameraSensor>(sensor);
+    if (!sensor_) {
+      gzerr << "GazeboSensorPluginPerchCam requires a parent camera sensor.\n";
+      return;
+    }
+    // Get a link to the depth camera
+    camera_ = sensor_->DepthCamera();
+    if (!camera_) {
+      gzerr << "GazeboSensorPluginPerchCam can't get rendering object.\n";
+      return;
+    }
+    
     // Build the Camera Model
     config_.AddFile("cameras.config");
     config_.AddFile("simulation/simulation.config");
@@ -95,7 +107,6 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
 
   // Only send measurements when extrinsics are available
   void OnExtrinsicsReceived(ros::NodeHandle *nh) {
-    ROS_ERROR("OnExtrinsicsReceived");
     // Service for enabling depth odom
     srv_enable_ = nh->advertiseService(SERVICE_LOCALIZATION_DO_ENABLE,
       &GazeboSensorPluginDepthOdom::EnableService, this);
@@ -108,7 +119,6 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
   // Enable or disable the feature timer
   bool EnableService(ff_msgs::SetBool::Request & req,
                      ff_msgs::SetBool::Response & res) {
-    ROS_ERROR("EnableService");
     active_ = req.enable;
     res.success = true;
     return true;
@@ -149,18 +159,22 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
     
     if (first_) {
       // First time, just use current pose
-      tf2::toMsg(curr_pose_, pose_msg_);
+      diff_ = tf2::Transform(curr_pose_); 
       first_ = false;
 
     } else {
       // Find the difference between current and previous pose
       diff_ = prev_pose_.inverseTimes(curr_pose_);
-
-      // Convert to a message
-      tf2::toMsg(diff_, pose_msg_);
     }
 
-    msg_do_.odometry.sensor_F_source_T_target.pose = pose_msg_;
+    // Convert to a message
+    tf2::toMsg(diff_, sensor_pose_msg_);
+
+    // Calculate pose relative to body from sensor
+    tf2::toMsg(body_T_perch_cam_ * diff_ * body_T_perch_cam_.inverse(), body_pose_msg_);
+
+    msg_do_.odometry.sensor_F_source_T_target.pose = sensor_pose_msg_;
+    msg_do_.odometry.body_F_source_T_target.pose = body_pose_msg_;
 
     // const auto source_T_target = lc::InvertPoseWithCovariance(*target_T_source);
     // auto sensor_F_source_T_target = PoseWithCovarianceAndCorrespondences(source_T_target, N*correspondencesN, previous_timestamp_, latest_timestamp_);
@@ -178,13 +192,16 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
  
  private:
   config_reader::ConfigReader config_;
+  sensors::DepthCameraSensorPtr sensor_;
+  rendering::DepthCameraPtr camera_;
   ros::Publisher depth_odometry_pub_;
   Eigen::Isometry3d body_T_perch_cam_;
   ros::ServiceServer srv_enable_;
   ros::Timer timer_;
   gazebo::physics::RayShapePtr shape_;
   bool active_;
-  geometry_msgs::Pose pose_msg_;
+  geometry_msgs::Pose sensor_pose_msg_;
+  geometry_msgs::Pose body_pose_msg_;
   tf2::Transform prev_pose_;
   tf2::Transform curr_pose_;
   tf2::Transform diff_;
