@@ -127,7 +127,6 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
 
   // Send depth odometry output
   void SendDepthOdom(ros::TimerEvent const& event) {
-    ROS_ERROR("SendDepthOdom");
     if (!active_) return;
 
     // msg_do_.camera_id++;
