@@ -61,6 +61,7 @@
 #define LOCALIZATION_AR_TAGS                        "ar"
 #define LOCALIZATION_HANDRAIL                       "hr"
 #define LOCALIZATION_PERCH                          "pl"
+#define LOCALIZATION_DEPTH_ODOM                     "do"
 
 //////////////////
 // FLIGHT MODES //
