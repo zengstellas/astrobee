@@ -30,6 +30,7 @@ string PIPELINE_AR_TAGS           = ar
 string PIPELINE_HANDRAIL          = hr
 string PIPELINE_PERCH             = pl
 string PIPELINE_TRUTH             = gt
+string PIPELINE_DEPTH_ODOM        = do
 
 ---
 

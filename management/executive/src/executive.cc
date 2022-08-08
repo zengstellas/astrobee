@@ -777,9 +777,11 @@ bool Executive::StartAction(Action action, std::string const& cmd_id) {
         localization_ac_.SetCmdInfo(action, cmd_id);
         localization_ac_.SendGoal(localization_goal_);
         NODELET_DEBUG("Localization action goal sent/started.");
+        ROS_ERROR("Localization action goal sent/started."); //TODO
       } else {
          successful = false;
          err_msg = "Localization action server not connected. Node may be dead";
+         ROS_ERROR("Localization action server not connected. Node may be dead"); //TODO
       }
       break;
     case PERCH:
@@ -3388,6 +3390,9 @@ bool Executive::SwitchLocalization(ff_msgs::CommandStampedPtr const& cmd) {
     } else if (cmd->args[0].s ==
                         CommandConstants::PARAM_NAME_LOCALIZATION_MODE_TRUTH) {
       localization_goal_.pipeline = ff_msgs::LocalizationGoal::PIPELINE_TRUTH;
+    } else if (cmd->args[0].s ==
+                        CommandConstants::PARAM_NAME_LOCALIZATION_MODE_DEPTH_ODOM) {
+      localization_goal_.pipeline = ff_msgs::LocalizationGoal::PIPELINE_DEPTH_ODOM;
     }
     return StartAction(LOCALIZATION, cmd->cmd_id);
   }
