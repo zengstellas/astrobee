@@ -26,6 +26,7 @@
 #include <ff_msgs/CameraRegistration.h>
 #include <ff_msgs/VisualLandmarks.h>
 #include <ff_msgs/DepthLandmarks.h>
+#include <ff_msgs/DepthOdometry.h>
 #include <ff_msgs/SetBool.h>
 #include <ff_msgs/EkfState.h>
 
