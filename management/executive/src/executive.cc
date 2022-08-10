@@ -777,11 +777,9 @@ bool Executive::StartAction(Action action, std::string const& cmd_id) {
         localization_ac_.SetCmdInfo(action, cmd_id);
         localization_ac_.SendGoal(localization_goal_);
         NODELET_DEBUG("Localization action goal sent/started.");
-        ROS_ERROR("Localization action goal sent/started."); //TODO
       } else {
          successful = false;
          err_msg = "Localization action server not connected. Node may be dead";
-         ROS_ERROR("Localization action server not connected. Node may be dead"); //TODO
       }
       break;
     case PERCH:

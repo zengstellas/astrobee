@@ -153,7 +153,7 @@ class PerchNodelet : public ff_util::FreeFlyerNodelet {
         return STATE::PERCHING_SWITCHING_TO_HR_LOC;
       });
     // [4] - If we successfuly switched to handrail navigation
-    // then we can try moving to the approach pose in nominal mode.
+    // then we can try moving to the approach pose in nominal mode and depth odometry localization.
     fsm_.Add(STATE::PERCHING_SWITCHING_TO_HR_LOC,
       SWITCH_SUCCESS, [this](FSM::Event const& event) -> FSM::State {
         SaveApproachPose();
