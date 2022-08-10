@@ -41,7 +41,8 @@ enum PipelineError : uint8_t {
   ERROR_VISUAL_TIMEOUT          = 1,      // Visual feature timeout
   ERROR_DEPTH_TIMEOUT           = 2,      // Depth timeout
   ERROR_FILTER_TIMEOUT          = 3,      // Filter timeout
-  ERROR_FILTER_BIAS             = 4       // Filter is sampling the bias
+  ERROR_FILTER_BIAS             = 4,      // Filter is sampling the bias
+  ERROR_DEPTH_ODOM_TIMEOUT      = 5       // Depth odometry timeout
 };
 
 typedef std::function<void(PipelineError)> PipelineCallbackType;
@@ -54,7 +55,8 @@ struct Pipeline {
     COMPONENT_SET_INPUT         = (1<<3),    // Needs EKF input to be set
     COMPONENT_REGISTRATIONS     = (1<<4),    // Needs registration pulses
     COMPONENT_VISUAL_FEATURES   = (1<<5),    // Needs viusal features
-    COMPONENT_DEPTH_FEATURES    = (1<<6)     // Needs depth features
+    COMPONENT_DEPTH_FEATURES    = (1<<6),    // Needs depth features
+    COMPONENT_DEPTH_ODOM        = (1<<7)     // Needs depth odometry
   };
 
   // Constructor
@@ -104,6 +106,15 @@ struct Pipeline {
     topic_depth_ = topic;
     timeout_depth_ = timeout;
     min_depth_ = min_features;
+    return *this;
+  }
+
+  // Needs depth odometry
+  Pipeline& NeedsDepthOdometry(
+    std::string const& topic, double timeout) {
+    components_ |= COMPONENT_DEPTH_ODOM;
+    topic_depth_odom_ = topic;
+    timeout_depth_odom_ = timeout;
     return *this;
   }
 
@@ -180,6 +191,12 @@ struct Pipeline {
         timer_depth_ = nh_->createTimer(ros::Duration(timeout_depth_),
           &Pipeline::DepthTimeoutCallback, this);
       }
+      if (components_ & COMPONENT_DEPTH_ODOM) {
+        sub_depth_odom_ = nh_->subscribe(topic_depth_odom_, 1,
+          &Pipeline::DepthOdomCallback, this);
+        timer_depth_odom_ = nh_->createTimer(ros::Duration(timeout_depth_odom_),
+          &Pipeline::DepthOdomTimeoutCallback, this);
+      }
     } else {
       // Make sure we don't keep monitoring the filter when the pipeline
       // is shutdown.
@@ -196,6 +213,10 @@ struct Pipeline {
       if (components_ & COMPONENT_REGISTRATIONS) {
         sub_reg_.shutdown();
         timer_reg_.stop();
+      }
+      if (components_ & COMPONENT_DEPTH_ODOM) {
+        sub_depth_odom_.shutdown();
+        timer_depth_odom_.stop();
       }
     }
     // Enable or disable the pipeline if neededs
@@ -280,15 +301,26 @@ struct Pipeline {
     callback_(ERROR_FILTER_TIMEOUT);
   }
 
+  // Called back when depth odometry arrives for processing
+  void DepthOdomCallback(ff_msgs::DepthOdometry::ConstPtr const& msg) {
+    timer_depth_odom_.stop();
+    timer_depth_odom_.start();
+  }
+
+  // Called when depth odometry doesn't arrive
+  void DepthOdomTimeoutCallback(ros::TimerEvent const& event) {
+    callback_(ERROR_DEPTH_ODOM_TIMEOUT);
+  }
+
  private:
   uint8_t mode_, components_;
-  std::string name_, topic_enable_, topic_reg_, topic_visual_, topic_depth_;
-  double timeout_reg_, timeout_visual_, timeout_depth_, timeout_enable_, timeout_filter_;
-  ros::Subscriber sub_visual_, sub_depth_, sub_reg_, sub_filter_;
+  std::string name_, topic_enable_, topic_reg_, topic_visual_, topic_depth_, topic_depth_odom_;
+  double timeout_reg_, timeout_visual_, timeout_depth_, timeout_enable_, timeout_filter_, timeout_depth_odom_;
+  ros::Subscriber sub_visual_, sub_depth_, sub_reg_, sub_filter_, sub_depth_odom_;
   uint32_t min_visual_, min_depth_, max_filter_;
   ff_util::FreeFlyerServiceClient<ff_msgs::SetBool> service_;
   ros::NodeHandle *nh_;
-  ros::Timer timer_visual_, timer_filter_, timer_depth_, timer_reg_;
+  ros::Timer timer_visual_, timer_filter_, timer_depth_, timer_reg_, timer_depth_odom_;
   PipelineCallbackType callback_;
 };
 

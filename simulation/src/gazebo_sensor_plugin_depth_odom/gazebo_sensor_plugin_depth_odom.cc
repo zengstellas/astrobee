@@ -43,6 +43,9 @@
 
 namespace gazebo {
 
+// The depth odometry topic (loc/depth/odom) doesn't exist in simulation, so this plugin simulates 
+// it by publishing pose information. There's other information published to the topic (such as correspondences 
+// and covariance), but as of now it looks like pose is all that's needed, so anything else is omitted.
 class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
  public:
   GazeboSensorPluginDepthOdom() :
@@ -158,34 +161,28 @@ class GazeboSensorPluginDepthOdom : public FreeFlyerSensorPlugin {
     #endif
     
     if (first_) {
-      // First time, just use current pose
+      // If it's the first time through, just use current pose
       diff_ = tf2::Transform(curr_pose_); 
       first_ = false;
 
     } else {
-      // Find the difference between current and previous pose
+      // Otherwise find the difference between current and previous pose
       diff_ = prev_pose_.inverseTimes(curr_pose_);
     }
 
-    // Convert to a message
+    // Convert the pose to a message; this is the pose relative to the sensor
     tf2::toMsg(diff_, sensor_pose_msg_);
 
-    // Calculate pose relative to body from sensor
+    // Calculate the pose relative to astrobee's body 
     Eigen::Isometry3d sensor_pose_iso;
     tf2::fromMsg(sensor_pose_msg_, sensor_pose_iso);
     body_pose_msg_ = tf2::toMsg(body_T_perch_cam_ * sensor_pose_iso * body_T_perch_cam_.inverse());
     
     msg_do_.odometry.sensor_F_source_T_target.pose = sensor_pose_msg_;
     msg_do_.odometry.body_F_source_T_target.pose = body_pose_msg_;
-
-    // const auto source_T_target = lc::InvertPoseWithCovariance(*target_T_source);
-    // auto sensor_F_source_T_target = PoseWithCovarianceAndCorrespondences(source_T_target, N*correspondencesN, previous_timestamp_, latest_timestamp_);
-    
-    // const localization_common::PoseWithCovariance body_F_source_T_target = localization_common::FrameChangeRelativePoseWithCovariance(
-    //     sensor_F_source_T_target->pose_with_covariance, body_T_perch_cam_);
-    // msg_do_ = DepthOdometryMsg(sensor_F_source_T_target, body_F_source_T_target, timer_.last_value()); //*sensor ??
-  
     msg_do_.header.stamp = ros::Time::now();
+
+    // Publish the message
     depth_odometry_pub_.publish(msg_do_);
 
     // Save current pose

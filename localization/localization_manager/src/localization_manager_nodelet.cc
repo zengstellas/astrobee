@@ -494,6 +494,21 @@ class LocalizationManagerNodelet : public ff_util::FreeFlyerNodelet {
           p.NeedsDepthFeatures(depth_topic, depth_timeout, depth_threshold);
         }
       }
+
+      // Depth odometry requirement
+      if (pipeline.CheckValExists("depth_odom_topic")) {
+        std::string depth_odom_topic;
+        if (pipeline.GetStr("depth_odom_topic", &depth_odom_topic)) {
+          double depth_odom_timeout = 1.0;
+          if (!pipeline.GetReal("depth_odom_timeout", &depth_odom_timeout)) {
+            AssertFault(ff_util::INITIALIZATION_FAILED,
+                        "Could not get depth_odom_timeout");
+          }
+
+          // Set a feature need
+          p.NeedsDepthOdometry(depth_odom_topic, depth_odom_timeout);
+        }
+      }
     }
 
     // Update config server with the pipelines
